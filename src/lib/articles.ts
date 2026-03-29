@@ -4,6 +4,28 @@ const DEFAULT_IMAGE =
   "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&fit=crop";
 
 const CATEGORY_IMAGES: Record<string, string> = {
+  // ビューティー・スキンケア
+  スキンケア:     "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80&fit=crop",
+  アンチエイジング: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80&fit=crop",
+  最先端成分:     "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80&fit=crop",
+  成分:           "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80&fit=crop",
+  ビューティーサイエンス: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&q=80&fit=crop",
+  ビューティーテック: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=800&q=80&fit=crop",
+  ウェルネス:     "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&fit=crop",
+  インナービューティー: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&fit=crop",
+  サプリメント:   "https://images.unsplash.com/photo-1607619662634-3ac55ec0e216?w=800&q=80&fit=crop",
+  美容機器:       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&fit=crop",
+  ルーティン:     "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80&fit=crop",
+  パーソナライズ: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80&fit=crop",
+  マイクロバイオーム: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80&fit=crop",
+  Kビューティー:  "https://images.unsplash.com/photo-1546961342-ea5f62d793f1?w=800&q=80&fit=crop",
+  Jビューティー:  "https://images.unsplash.com/photo-1546961342-ea5f62d793f1?w=800&q=80&fit=crop",
+  テクノロジー:   "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&fit=crop",
+  ヘアケア:       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&fit=crop",
+  メイク:         "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80&fit=crop",
+  フレグランス:   "https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80&fit=crop",
+  ネイル:         "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80&fit=crop",
+  サステナビリティ: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80&fit=crop",
   // 企業・ブランド
   OpenAI:       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80&fit=crop",
   Anthropic:    "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&fit=crop",
