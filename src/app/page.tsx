@@ -4,22 +4,20 @@ import Image from "next/image";
 import ArticleList from "@/components/ArticleList";
 import { getArticleImageUrl } from "@/lib/articles";
 
-// microCMS からデータを取得する（ない場合はローカルデータにフォールバック）
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "AI News Japan — 海外AIツール・最新ニュースを日本語で",
+  title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
   description:
-    "TechCrunch・VentureBeat・Product Huntなど海外100メディアから最新のAIツール・ニュースを毎日日本語でお届けします。",
+    "Allure・Byrdie・Vogue Beautyなど海外の人気美容メディアから最新のコスメ・スキンケア情報を毎日日本語でお届けします。",
   openGraph: {
-    title: "AI News Japan",
-    description: "海外AIツール・最新ニュースを日本語で毎日お届け",
+    title: "Beauty Tech Japan",
+    description: "海外美容・コスメ最新情報を日本語で毎日お届け",
     type: "website",
   },
 };
 
-// 毎時キャッシュを再生成（ISR）
 export const revalidate = 3600;
 
 async function fetchArticles() {
@@ -40,7 +38,7 @@ export default async function Home() {
   return (
     <div>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">最新のAIニュース</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">最新の美容ニュース</h1>
         <div className="flex items-center gap-3 mt-1">
           <p className="text-sm text-gray-500 dark:text-gray-400">
             海外メディアから厳選した {articles.length} 件の記事
@@ -53,12 +51,11 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* 今日の注目セクション */}
       {todayArticles.length > 0 && (
-        <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-2xl border border-blue-100 dark:border-blue-900">
+        <div className="mb-8 p-4 bg-pink-50 dark:bg-pink-950/30 rounded-2xl border border-pink-100 dark:border-pink-900">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-base">🔥</span>
-            <h2 className="text-sm font-bold text-blue-700 dark:text-blue-400">今日の注目記事</h2>
+            <span className="text-base">✨</span>
+            <h2 className="text-sm font-bold text-pink-700 dark:text-pink-400">今日の注目記事</h2>
           </div>
           <div className="flex flex-col gap-2">
             {todayArticles.map((a) => (
@@ -76,7 +73,7 @@ export default async function Home() {
                     sizes="56px"
                   />
                 </div>
-                <p className="text-xs font-semibold text-gray-800 dark:text-gray-200 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                <p className="text-xs font-semibold text-gray-800 dark:text-gray-200 line-clamp-2 group-hover:text-pink-600 transition-colors">
                   {a.title}
                 </p>
               </Link>

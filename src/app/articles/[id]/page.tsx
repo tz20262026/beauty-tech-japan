@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {};
   const imageUrl = getArticleImageUrl(article);
   return {
-    title: `${article.title} | AI News Japan`,
+    title: `${article.title} | Beauty Tech Japan`,
     description: article.summary,
     openGraph: {
       title: article.title,
@@ -85,13 +85,12 @@ export default async function ArticlePage({ params }: Props) {
       <ReadingProgress />
       <Link
         href="/"
-        className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600 transition-colors mb-6"
+        className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-pink-600 transition-colors mb-6"
       >
         ← 記事一覧に戻る
       </Link>
 
       <article className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-        {/* アイキャッチ画像 */}
         <div className="relative w-full h-52 sm:h-72 overflow-hidden">
           <Image
             src={getArticleImageUrl(article)}
@@ -117,7 +116,6 @@ export default async function ArticlePage({ params }: Props) {
         </div>
 
         <div className="p-6 sm:p-8">
-          {/* メタ情報 */}
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-3">
             <span>{getRelativeTime(article.publishedAt)}（{article.publishedAt}）</span>
             <span>·</span>
@@ -125,7 +123,7 @@ export default async function ArticlePage({ params }: Props) {
               href={article.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-pink-600 transition-colors"
             >
               {article.source} ↗
             </a>
@@ -133,35 +131,30 @@ export default async function ArticlePage({ params }: Props) {
             <span>約{getReadTime(article.body)}分で読める</span>
           </div>
 
-          {/* タイトル */}
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight mb-5">
             {article.title}
           </h1>
 
-          {/* リード文 */}
-          <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-xl px-5 py-4 mb-7 text-gray-700 leading-relaxed text-sm sm:text-base">
+          <div className="bg-pink-50 border-l-4 border-pink-400 rounded-r-xl px-5 py-4 mb-7 text-gray-700 leading-relaxed text-sm sm:text-base">
             {article.summary}
           </div>
 
-          {/* 本文 */}
           <div className="text-gray-800 leading-loose text-sm sm:text-base whitespace-pre-wrap">
             {article.body}
           </div>
 
-          {/* シェアボタン */}
           <ShareButtons
             title={article.title}
-            url={`https://ai-news-site-wheat.vercel.app/articles/${article.id}`}
+            url={`https://beauty-tech-japan.vercel.app/articles/${article.id}`}
           />
 
-          {/* フッター */}
           <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between">
             <span className="text-xs text-gray-400">情報元: {article.source}</span>
             <a
               href={article.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-blue-600 hover:underline"
+              className="text-xs text-pink-600 hover:underline"
             >
               原文を読む ↗
             </a>
@@ -169,7 +162,6 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </article>
 
-      {/* 関連記事 */}
       {related.length > 0 && (
         <div className="mt-10">
           <h2 className="text-lg font-bold text-gray-900 mb-4">関連記事</h2>
@@ -194,7 +186,7 @@ export default async function ArticlePage({ params }: Props) {
                   <div className="text-xs text-gray-400 mb-1">
                     {getRelativeTime(r.publishedAt)} · {getReadTime(r.body)}分
                   </div>
-                  <p className="text-xs font-semibold text-gray-900 leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
+                  <p className="text-xs font-semibold text-gray-900 leading-snug group-hover:text-pink-600 transition-colors line-clamp-2">
                     {r.title}
                   </p>
                 </div>
@@ -204,7 +196,6 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       )}
 
-      {/* JSON-LD 構造化データ（SEO） */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -216,8 +207,8 @@ export default async function ArticlePage({ params }: Props) {
             datePublished: article.publishedAt,
             publisher: {
               "@type": "Organization",
-              name: "AI News Japan",
-              url: "https://ai-news-site-wheat.vercel.app",
+              name: "Beauty Tech Japan",
+              url: "https://beauty-tech-japan.vercel.app",
             },
             ...(article.imageUrl ? { image: article.imageUrl } : {}),
           }),
@@ -227,7 +218,7 @@ export default async function ArticlePage({ params }: Props) {
       <div className="mt-6 text-center">
         <Link
           href="/"
-          className="inline-block text-sm text-gray-500 hover:text-blue-600 transition-colors"
+          className="inline-block text-sm text-gray-500 hover:text-pink-600 transition-colors"
         >
           ← 記事一覧に戻る
         </Link>

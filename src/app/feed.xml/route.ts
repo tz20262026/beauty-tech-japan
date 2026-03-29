@@ -1,10 +1,10 @@
 import { allArticles } from "@/lib/articles";
 
-const SITE_URL = "https://ai-news-site-wheat.vercel.app";
+const SITE_URL = "https://beauty-tech-japan.vercel.app";
 
 export async function GET() {
   const items = allArticles
-    .slice(0, 30) // 最新30件
+    .slice(0, 30)
     .map(
       (a) => `
     <item>
@@ -20,9 +20,9 @@ export async function GET() {
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>AI News Japan</title>
+    <title>Beauty Tech Japan</title>
     <link>${SITE_URL}</link>
-    <description>海外AIツール・最新ニュースを日本語で毎日お届け</description>
+    <description>海外美容・コスメ最新情報を日本語で毎日お届け</description>
     <language>ja</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${items}
