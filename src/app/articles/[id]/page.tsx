@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import ReactMarkdown from "react-markdown";
 import {
   getArticleImageUrl,
   getReadTime,
@@ -18,7 +19,7 @@ import {
 import ShareButtons from "@/components/ShareButtons";
 import ReadingProgress from "@/components/ReadingProgress";
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -139,8 +140,8 @@ export default async function ArticlePage({ params }: Props) {
             {article.summary}
           </div>
 
-          <div className="text-gray-800 leading-loose text-sm sm:text-base whitespace-pre-wrap">
-            {article.body}
+          <div className="prose prose-sm sm:prose max-w-none text-gray-800 leading-loose prose-headings:text-gray-900 prose-a:text-pink-600 prose-strong:text-gray-900 prose-li:marker:text-pink-400">
+            <ReactMarkdown>{article.body}</ReactMarkdown>
           </div>
 
           <ShareButtons

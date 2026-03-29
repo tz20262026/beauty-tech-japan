@@ -32,7 +32,7 @@ export async function summarizeArticle(
   const genAI = getClient();
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-  const prompt = `あなたはAI・テクノロジー専門の日本語メディア「AI News Japan」の編集者です。
+  const prompt = `あなたは海外美容・コスメ専門の日本語メディア「Beauty Tech Japan」の編集者です。
 以下の英語記事を日本語に変換し、JSON形式で出力してください。
 
 【出力形式（必ずこのJSONのみ出力）】
@@ -69,7 +69,7 @@ export async function summarizeFromUrl(
   const genAI = getClient();
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-  const prompt = `あなたはAI・テクノロジー専門の日本語メディア「AI News Japan」の編集者です。
+  const prompt = `あなたは海外美容・コスメ専門の日本語メディア「Beauty Tech Japan」の編集者です。
 以下のURLの記事を要約し、JSON形式で出力してください。
 
 URL: ${url}

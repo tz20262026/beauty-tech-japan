@@ -7,17 +7,39 @@ import type { Article } from "@/lib/articles";
 import { getArticleImageUrl, getReadTime, getRelativeTime, isNew } from "@/lib/articles";
 
 const TAG_COLORS: Record<string, string> = {
-  OpenAI:         "bg-emerald-100 text-emerald-700",
-  Anthropic:      "bg-orange-100 text-orange-700",
-  Google:         "bg-blue-100 text-blue-700",
-  Meta:           "bg-indigo-100 text-indigo-700",
-  Microsoft:      "bg-sky-100 text-sky-700",
-  画像生成:       "bg-pink-100 text-pink-700",
-  動画生成:       "bg-rose-100 text-rose-700",
-  音声AI:         "bg-yellow-100 text-yellow-700",
-  LLM:            "bg-teal-100 text-teal-700",
-  生産性:         "bg-emerald-100 text-emerald-700",
-  オープンソース: "bg-purple-100 text-purple-700",
+  // ビューティー系
+  スキンケア:         "bg-pink-100 text-pink-700",
+  アンチエイジング:   "bg-rose-100 text-rose-700",
+  ウェルネス:         "bg-green-100 text-green-700",
+  インナービューティー: "bg-lime-100 text-lime-700",
+  成分:               "bg-fuchsia-100 text-fuchsia-700",
+  最先端成分:         "bg-fuchsia-100 text-fuchsia-700",
+  ビューティーサイエンス: "bg-purple-100 text-purple-700",
+  ビューティーテック: "bg-violet-100 text-violet-700",
+  美容機器:           "bg-indigo-100 text-indigo-700",
+  サプリメント:       "bg-teal-100 text-teal-700",
+  Kビューティー:      "bg-pink-100 text-pink-700",
+  Jビューティー:      "bg-rose-100 text-rose-700",
+  マイクロバイオーム: "bg-emerald-100 text-emerald-700",
+  ルーティン:         "bg-orange-100 text-orange-700",
+  パーソナライズ:     "bg-sky-100 text-sky-700",
+  ヘアケア:           "bg-amber-100 text-amber-700",
+  メイク:             "bg-red-100 text-red-700",
+  フレグランス:       "bg-purple-100 text-purple-700",
+  サステナビリティ:   "bg-green-100 text-green-700",
+  テクノロジー:       "bg-blue-100 text-blue-700",
+  // テック系
+  OpenAI:             "bg-emerald-100 text-emerald-700",
+  Anthropic:          "bg-orange-100 text-orange-700",
+  Google:             "bg-blue-100 text-blue-700",
+  Meta:               "bg-indigo-100 text-indigo-700",
+  Microsoft:          "bg-sky-100 text-sky-700",
+  画像生成:           "bg-pink-100 text-pink-700",
+  動画生成:           "bg-rose-100 text-rose-700",
+  音声AI:             "bg-yellow-100 text-yellow-700",
+  LLM:                "bg-teal-100 text-teal-700",
+  生産性:             "bg-emerald-100 text-emerald-700",
+  オープンソース:     "bg-purple-100 text-purple-700",
 };
 
 function tagColor(tag: string) {
@@ -208,7 +230,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                 </span>
                 <span>{getReadTime(article.body)}分</span>
               </div>
-              <h2 className="text-sm font-semibold text-gray-900 leading-snug mb-1.5 group-hover:text-blue-600 transition-colors line-clamp-2">
+              <h2 className="text-sm font-semibold text-gray-900 leading-snug mb-1.5 group-hover:text-pink-600 transition-colors line-clamp-2">
                 {article.title}
               </h2>
               <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
