@@ -1,0 +1,402 @@
+[
+  {
+    "id": "beauty_001",
+    "name": "Skin Cycling",
+    "url": "https://www.allure.com/story/skin-cycling-routine",
+    "description": "A skincare routine method that rotates active ingredients (retinol, exfoliants) with recovery nights to minimize irritation and maximize efficacy. Popularized on TikTok and endorsed by dermatologists.",
+    "tags": ["スキンケア", "トレンド", "ルーティン"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_002",
+    "name": "Glass Skin",
+    "url": "https://www.byrdie.com/glass-skin",
+    "description": "K-Beauty trend focused on achieving an ultra-luminous, poreless, perfectly hydrated complexion. Involves layering lightweight hydrating products including essences, serums, and ampoules.",
+    "tags": ["Kビューティー", "スキンケア", "トレンド"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_003",
+    "name": "Niacinamide Serums",
+    "url": "https://www.vogue.com/article/niacinamide-skincare-benefits",
+    "description": "Vitamin B3 derivative that addresses multiple skin concerns simultaneously: minimizes pores, evens skin tone, reduces fine lines, controls sebum, and strengthens the skin barrier. Widely formulated in concentrations of 5-10%.",
+    "tags": ["成分", "スキンケア", "美容成分"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_004",
+    "name": "Slugging",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/a38701617/slugging-skin-care-trend",
+    "description": "Applying a thick layer of petrolatum or occlusive balm as the final step in a nighttime skincare routine to lock in moisture and accelerate skin barrier repair. Popular in Korean skincare and trending globally.",
+    "tags": ["スキンケア", "トレンド", "保湿"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "beauty_005",
+    "name": "LED Light Therapy Masks",
+    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43200000/led-face-mask-review",
+    "description": "At-home LED devices using red light (collagen stimulation), blue light (acne-fighting), and near-infrared light (deep tissue repair). Professional-grade results now accessible to consumers through brands like Omnilux and CurrentBody.",
+    "tags": ["美容機器", "テクノロジー", "スキンケア"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_006",
+    "name": "Retinol Alternatives — Bakuchiol",
+    "url": "https://www.allure.com/story/bakuchiol-retinol-alternative",
+    "description": "Plant-derived retinol alternative from Psoralea corylifolia seeds. Clinically proven to reduce fine lines and improve skin tone with minimal irritation, suitable for sensitive skin and during pregnancy.",
+    "tags": ["成分", "スキンケア", "クリーンビューティー"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_007",
+    "name": "Scalp Care Revolution",
+    "url": "https://www.byrdie.com/scalp-care-trend",
+    "description": "The skincare-ification of scalp treatment. Serums, exfoliants, and SPF products designed specifically for the scalp. Addresses dandruff, hair loss, oil balance, and scalp microbiome health.",
+    "tags": ["ヘアケア", "スキンケア", "トレンド"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_008",
+    "name": "Peptide Skincare",
+    "url": "https://www.vogue.com/article/peptides-skin-care-benefits",
+    "description": "Short chains of amino acids that signal skin to produce more collagen and elastin. New generation peptides target specific receptors for anti-aging, skin repair, and barrier strengthening with clinical efficacy data.",
+    "tags": ["成分", "アンチエイジング", "スキンケア"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_009",
+    "name": "Barrier Repair Skincare",
+    "url": "https://www.allure.com/story/skin-barrier-repair-products",
+    "description": "Products focused on restoring the stratum corneum using ceramides, fatty acids, and cholesterol in ratios matching the skin's natural composition. Key for eczema, rosacea, and over-exfoliated skin recovery.",
+    "tags": ["スキンケア", "成分", "センシティブスキン"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_010",
+    "name": "AI-Powered Skin Analysis",
+    "url": "https://www.techcrunch.com/ai-skin-analysis-beauty-tech",
+    "description": "Smartphone apps and in-store devices using computer vision and AI to analyze skin conditions, pore size, pigmentation, and wrinkles. Brands like L'Oréal and Perfect Corp offer personalized product recommendations based on facial scans.",
+    "tags": ["ビューティーテック", "AI", "スキンケア"],
+    "source": "techcrunch_beauty"
+  },
+  {
+    "id": "beauty_011",
+    "name": "Tranexamic Acid for Hyperpigmentation",
+    "url": "https://www.byrdie.com/tranexamic-acid-skin-care",
+    "description": "Originally a medical hemostatic agent, now widely adopted in skincare for its ability to interrupt melanin production pathways. More tolerable than hydroquinone with comparable brightening results.",
+    "tags": ["成分", "美白", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_012",
+    "name": "Waterless Beauty",
+    "url": "https://www.vogue.com/article/waterless-beauty-products-trend",
+    "description": "Products formulated without water as a primary ingredient, using plant extracts, oils, and butters as the base. Higher concentration of active ingredients, longer shelf life without preservatives, and reduced environmental footprint.",
+    "tags": ["サステナビリティ", "クリーンビューティー", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_013",
+    "name": "Microcurrent Facial Devices",
+    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43100000/microcurrent-face-devices",
+    "description": "At-home devices delivering low-level electrical currents to stimulate facial muscles and boost ATP production. Brands like NuFACE and ZIIP offer results comparable to professional facial treatments for lifting and toning.",
+    "tags": ["美容機器", "アンチエイジング", "テクノロジー"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_014",
+    "name": "Azelaic Acid Skincare",
+    "url": "https://www.allure.com/story/azelaic-acid-skin-care-benefits",
+    "description": "Dicarboxylic acid derived from grains with multi-functional benefits: anti-inflammatory for rosacea, antibacterial for acne, and melanin-inhibiting for hyperpigmentation. Safe for all skin types and pregnancy.",
+    "tags": ["成分", "スキンケア", "多機能"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_015",
+    "name": "Upcycled Beauty Ingredients",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/upcycled-beauty-ingredients",
+    "description": "Cosmetic formulations using byproducts from food and beverage industries: coffee grounds, grape seeds, spent vanilla, and fruit peels. Rich in antioxidants while reducing agricultural waste.",
+    "tags": ["サステナビリティ", "クリーンビューティー", "成分"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "beauty_016",
+    "name": "Probiotic Skincare",
+    "url": "https://www.byrdie.com/probiotic-skincare-benefits",
+    "description": "Skincare products containing live beneficial bacteria or bacterial lysates to balance the skin microbiome, reduce inflammation, and strengthen barrier function. Growing evidence supports microbiome-focused formulations for sensitive and acne-prone skin.",
+    "tags": ["成分", "マイクロバイオーム", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_017",
+    "name": "Sunscreen Innovation 2025",
+    "url": "https://www.vogue.com/article/best-sunscreens-2025",
+    "description": "New generation UV filters including Tinosorb M and S offering broad-spectrum protection with improved aesthetics. Mineral-chemical hybrid formulas, tinted SPFs with skincare benefits, and photostable formulations that don't degrade in sunlight.",
+    "tags": ["日焼け止め", "スキンケア", "UVケア"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_018",
+    "name": "Gua Sha and Facial Massage Tools",
+    "url": "https://www.allure.com/story/gua-sha-facial-benefits",
+    "description": "Traditional Chinese medicine tool experiencing mainstream beauty revival. Jade and rose quartz tools used for lymphatic drainage, reducing puffiness, and releasing facial tension. Dermatologist-approved for improving circulation.",
+    "tags": ["ウェルネス", "スキンケア", "フェイシャルケア"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_019",
+    "name": "Bonding Hair Treatments",
+    "url": "https://www.harpersbazaar.com/beauty/hair/a43000000/hair-bonding-treatments",
+    "description": "Chemistry-based hair treatments that repair broken disulfide bonds in the hair cortex. Olaplex pioneered the category; now joined by K18, Redken Acidic Bonding, and Schwarzkopf Bond Enforcing for chemical-damaged hair restoration.",
+    "tags": ["ヘアケア", "ダメージケア", "トリートメント"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_020",
+    "name": "Skin Microbiome Testing",
+    "url": "https://www.byrdie.com/skin-microbiome-testing",
+    "description": "Consumer DNA-sequencing kits and professional lab tests that analyze the bacterial ecosystem on skin. Results used to personalize probiotic skincare routines, identify dysbiosis patterns, and address chronic skin conditions.",
+    "tags": ["ビューティーテック", "マイクロバイオーム", "パーソナライズ"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_021",
+    "name": "Cushion Foundation Technology",
+    "url": "https://www.allure.com/story/cushion-foundation-best",
+    "description": "Korean-originated applicator system delivering buildable coverage with skincare benefits. Modern formulations include SPF, hyaluronic acid, and long-wear technology. Expanding beyond K-beauty into global luxury brands.",
+    "tags": ["メイクアップ", "Kビューティー", "ファンデーション"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_022",
+    "name": "Body Care Premiumization",
+    "url": "https://www.vogue.com/article/luxury-body-care-trend-2025",
+    "description": "Consumers applying facial skincare standards to body products. Exfoliating body serums, targeted treatments for body acne and stretch marks, and luxury body oils with active ingredients like retinol and vitamin C for below-the-neck skincare.",
+    "tags": ["ボディケア", "スキンケア", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_023",
+    "name": "Lip Blushing and Semi-Permanent Makeup",
+    "url": "https://www.cosmopolitan.com/beauty/makeup/a43200000/lip-blushing-trend",
+    "description": "Cosmetic tattooing technique adding natural-looking color and definition to lips with 2-3 year longevity. Part of the semi-permanent makeup revolution including microblading, powder brows, and lash enhancement.",
+    "tags": ["セミパーマネントメイク", "美容施術", "トレンド"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "beauty_024",
+    "name": "Vitamin C Serums — New Stable Derivatives",
+    "url": "https://www.byrdie.com/vitamin-c-serum-stable-forms",
+    "description": "Beyond ascorbic acid: new stable vitamin C derivatives including ascorbyl glucoside, 3-O-ethyl ascorbic acid, and THD ascorbate offering oxidation resistance with comparable brightening efficacy. Solve the shelf-stability problem plaguing pure vitamin C.",
+    "tags": ["成分", "美白", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_025",
+    "name": "Refillable Beauty Packaging",
+    "url": "https://www.vogue.com/article/refillable-beauty-brands",
+    "description": "Luxury and mass-market brands adopting refillable cartridge systems for fragrance, skincare, and makeup. Chanel, Hourglass, and Charlotte Tilbury lead the movement reducing packaging waste by up to 80% per refill purchase.",
+    "tags": ["サステナビリティ", "パッケージング", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_026",
+    "name": "Retinol in Body Care",
+    "url": "https://www.allure.com/story/retinol-body-lotion",
+    "description": "Extension of the retinol boom beyond facial skincare to address body aging signs: keratosis pilaris, rough elbows, body acne, and stretch marks. Lower concentrations than face products ensure tolerability for larger surface areas.",
+    "tags": ["ボディケア", "成分", "アンチエイジング"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_027",
+    "name": "Fermented Skincare",
+    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43300000/fermented-skincare",
+    "description": "Fermentation process enhances bioavailability of active ingredients and creates new beneficial compounds. Galactomyces ferment filtrate, bifida ferment lysate, and saccharomyces ferment are powerhouse ingredients in K-beauty formulations.",
+    "tags": ["Kビューティー", "成分", "スキンケア"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_028",
+    "name": "Fragrance Layering",
+    "url": "https://www.vogue.com/article/fragrance-layering-guide",
+    "description": "Technique of combining multiple fragrances to create a personalized signature scent. Niche perfume houses now offering layering guides and complementary collections. Body lotion, oil, and parfum coordination for all-day scent longevity.",
+    "tags": ["フレグランス", "パーソナライズ", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_029",
+    "name": "Invisible Acne Patches",
+    "url": "https://www.byrdie.com/hydrocolloid-acne-patches",
+    "description": "Ultra-thin hydrocolloid patches that absorb pus and sebum overnight while protecting blemishes. Advanced versions include salicylic acid, tea tree oil, and microneedle technology for deeper penetration. Daytime-wear innovations with makeup compatibility.",
+    "tags": ["スキンケア", "ニキビケア", "テクノロジー"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_030",
+    "name": "Hyaluronic Acid — Molecular Weight Science",
+    "url": "https://www.allure.com/story/hyaluronic-acid-molecular-weight",
+    "description": "Understanding how different molecular weights of hyaluronic acid work at different skin depths. High molecular weight plumps the surface; low molecular weight penetrates deeper for structural hydration. Multi-weight formulas offer comprehensive moisture.",
+    "tags": ["成分", "保湿", "スキンケア"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_031",
+    "name": "Tone-Up Sunscreen",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/tone-up-sunscreen",
+    "description": "Korean innovation combining SPF protection with optical brightening pigments that instantly neutralize dullness and sallowness. Available in various tones to correct different undertones. Replaced traditional tinted moisturizers for daily UV protection.",
+    "tags": ["日焼け止め", "Kビューティー", "メイクアップ"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "beauty_032",
+    "name": "Postbiotic Skincare",
+    "url": "https://www.byrdie.com/postbiotic-skincare",
+    "description": "Inactivated microorganisms and their metabolites used in skincare for stability advantages over live probiotics. Bacterial ferment filtrates provide anti-inflammatory, soothing, and barrier-enhancing benefits without shelf-stability challenges.",
+    "tags": ["成分", "マイクロバイオーム", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_033",
+    "name": "Hair Lamination Treatments",
+    "url": "https://www.harpersbazaar.com/beauty/hair/a43400000/hair-lamination",
+    "description": "Salon treatment coating each hair strand with a protective film of plant-based proteins, sealing the cuticle for extreme shine and smoothness lasting 4-6 weeks. Different from Keratin: no formaldehyde, safe for color-treated hair.",
+    "tags": ["ヘアケア", "サロントリートメント", "ツヤ"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_034",
+    "name": "Personalized Beauty AI Apps",
+    "url": "https://www.allure.com/story/ai-beauty-apps-personalized",
+    "description": "Apps using machine learning to analyze face shape, skin undertone, and lifestyle factors to recommend personalized makeup shades, skincare routines, and haircolor. Perfect Corp's YouCam and L'Oréal's Modiface lead the segment.",
+    "tags": ["ビューティーテック", "AI", "パーソナライズ"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_035",
+    "name": "Bromelain and Enzyme Exfoliants",
+    "url": "https://www.vogue.com/article/enzyme-exfoliants-skincare",
+    "description": "Fruit-derived proteolytic enzymes (papain from papaya, bromelain from pineapple) that digest dead skin proteins without the sensitization risk of AHAs/BHAs. Ideal for sensitive skin seeking gentle chemical exfoliation.",
+    "tags": ["成分", "スキンケア", "エクスフォリエーション"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_036",
+    "name": "Lymphatic Drainage Beauty Devices",
+    "url": "https://www.byrdie.com/lymphatic-drainage-face-tools",
+    "description": "At-home devices using vibration, suction, or gentle pressure to stimulate lymphatic drainage and reduce facial puffiness. Popularized by gua sha, now expanded to electronic devices from brands like Foreo and NuFACE.",
+    "tags": ["美容機器", "フェイシャルケア", "ウェルネス"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_037",
+    "name": "Blue Light Protection Skincare",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/blue-light-skincare",
+    "description": "Products incorporating antioxidants and physical blockers to defend against high-energy visible (HEV) blue light from screens. Iron oxides in tinted sunscreens offer meaningful protection. Debate continues on actual damage levels from indoor screens.",
+    "tags": ["スキンケア", "テクノロジー", "UVケア"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "beauty_038",
+    "name": "Multifunction Beauty Sticks",
+    "url": "https://www.allure.com/story/multi-stick-makeup-trend",
+    "description": "Solid stick products for cheeks, lips, and eyes in one product for minimal beauty routines. Hybrid formulas blending skincare and color cosmetics. Fast application for a 'your skin but better' aesthetic dominating Gen Z beauty.",
+    "tags": ["メイクアップ", "ミニマリスト", "トレンド"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_039",
+    "name": "Adaptogens in Skincare",
+    "url": "https://www.vogue.com/article/adaptogens-skincare-ingredients",
+    "description": "Plant extracts traditionally used in herbal medicine now formulated into skincare: ashwagandha, rhodiola, reishi mushroom, and holy basil. Claims center on anti-stress benefits for skin, reducing cortisol-induced inflammation and oxidative damage.",
+    "tags": ["成分", "ウェルネス", "スキンケア"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_040",
+    "name": "Hair Gloss Treatments",
+    "url": "https://www.harpersbazaar.com/beauty/hair/a43500000/hair-gloss-treatments",
+    "description": "Semi-permanent treatment depositing tone and shine without the commitment of permanent color. Clear glosses enhance natural hair's luminosity; tinted versions refresh faded color. At-home versions from brands like Kristin Ess democratize salon results.",
+    "tags": ["ヘアカラー", "ヘアケア", "サロン"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_041",
+    "name": "Squalane in Skincare",
+    "url": "https://www.byrdie.com/squalane-skin-care",
+    "description": "Stabilized form of squalene (naturally in human sebum) derived from sugarcane or olive oil. Lightweight, non-comedogenic oil that mimics skin's natural lipids for superior absorption. Safe for all skin types including acne-prone.",
+    "tags": ["成分", "保湿", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_042",
+    "name": "Makeup for Mature Skin",
+    "url": "https://www.allure.com/story/best-makeup-mature-skin",
+    "description": "Growing category addressing specific needs of skin 40+: thinner consistency foundations that don't settle into lines, blurring primers, and hydrating-first formulations. Brands like Charlotte Tilbury and ILIA now offer dedicated mature skin ranges.",
+    "tags": ["メイクアップ", "アンチエイジング", "スキンケア"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_043",
+    "name": "At-Home Radiofrequency Devices",
+    "url": "https://www.vogue.com/article/radiofrequency-at-home-devices",
+    "description": "Consumer-grade RF devices delivering controlled heat to stimulate fibroblast activity and collagen neogenesis. Brands like Tripollar and Newa offer clinical results for skin tightening and wrinkle reduction with weekly home treatments.",
+    "tags": ["美容機器", "アンチエイジング", "テクノロジー"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_044",
+    "name": "Centella Asiatica (Cica) Skincare",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/cica-cream-benefits",
+    "description": "Traditional healing herb with clinically validated wound healing, anti-inflammatory, and barrier repair properties. Key active compounds: asiaticoside, madecassoside, and asiatic acid. Cornerstone of sensitive skin and post-procedure recovery routines.",
+    "tags": ["成分", "Kビューティー", "センシティブスキン"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "beauty_045",
+    "name": "Clean Fragrance Movement",
+    "url": "https://www.byrdie.com/clean-fragrance-brands",
+    "description": "Transparent fragrance formulations avoiding synthetic musks, phthalates, and known allergens. Brands like Skylar, Phlur, and Ellis Brooklyn offer full ingredient disclosure. Driving demand for natural isolates and sustainably sourced materials.",
+    "tags": ["フレグランス", "クリーンビューティー", "サステナビリティ"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_046",
+    "name": "Collagen-Boosting Skincare Science",
+    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43600000/collagen-boosting-ingredients",
+    "description": "Beyond topical collagen (too large to penetrate): ingredients clinically proven to stimulate fibroblasts — retinoids, vitamin C, copper peptides, and growth factors. Distinction between actual collagen synthesis vs. surface-level plumping.",
+    "tags": ["成分", "アンチエイジング", "スキンケア"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "beauty_047",
+    "name": "Underarm and Intimate Skincare",
+    "url": "https://www.allure.com/story/intimate-skincare-trend",
+    "description": "Premium skincare extending to underarms, bikini line, and intimate areas. Dedicated deodorants with skin-brightening actives, exfoliating solutions for ingrowns, and pH-balanced intimate wash formulations. Fastest-growing personal care subcategory.",
+    "tags": ["ボディケア", "スキンケア", "トレンド"],
+    "source": "allure"
+  },
+  {
+    "id": "beauty_048",
+    "name": "Biodegradable Glitter and Eco Makeup",
+    "url": "https://www.vogue.com/article/biodegradable-glitter-eco-makeup",
+    "description": "Plant cellulose-based glitter alternatives biodegrading within weeks vs. plastic microplastic versions persisting centuries. Cosmetology schools and festivals adopting eco-glitter. Driving broader conversation about microplastics in beauty formulations.",
+    "tags": ["サステナビリティ", "メイクアップ", "エコ"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "beauty_049",
+    "name": "Snowmushroom (Tremella) Hydration",
+    "url": "https://www.byrdie.com/snow-mushroom-skin-care-benefits",
+    "description": "Tremella fuciformis polysaccharide derived from white snow mushrooms holding up to 500x its weight in water — outperforming hyaluronic acid. Creates flexible moisture film adapting to humidity levels. Star ingredient in Gen Z clean beauty.",
+    "tags": ["成分", "保湿", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "beauty_050",
+    "name": "Dermaplaning at Home",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/a43300000/dermaplaning-at-home",
+    "description": "Controlled exfoliation removing dead skin cells and vellus hair using a surgical-grade blade or consumer-safe device. Instantly improves skin texture and product absorption. At-home tools from Dermaflash and Tinkle make the technique accessible.",
+    "tags": ["スキンケア", "エクスフォリエーション", "美容施術"],
+    "source": "cosmopolitan"
+  }
+]
