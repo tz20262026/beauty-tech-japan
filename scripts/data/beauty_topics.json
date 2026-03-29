@@ -1,402 +1,402 @@
 [
   {
-    "id": "beauty_001",
-    "name": "Skin Cycling",
-    "url": "https://www.allure.com/story/skin-cycling-routine",
-    "description": "A skincare routine method that rotates active ingredients (retinol, exfoliants) with recovery nights to minimize irritation and maximize efficacy. Popularized on TikTok and endorsed by dermatologists.",
-    "tags": ["スキンケア", "トレンド", "ルーティン"],
+    "id": "btj2026_001",
+    "name": "エクソソーム美容の最前線",
+    "url": "https://www.allure.com/story/exosome-skincare-2026",
+    "description": "Exosome-based skincare using cell-derived nano-vesicles for deep skin regeneration. Clinical studies in 2025 confirmed faster post-procedure healing and collagen synthesis beyond traditional growth factors. Leading brands now offer topical exosome serums.",
+    "tags": ["スキンケア", "最先端成分", "アンチエイジング"],
     "source": "allure"
   },
   {
-    "id": "beauty_002",
-    "name": "Glass Skin",
-    "url": "https://www.byrdie.com/glass-skin",
-    "description": "K-Beauty trend focused on achieving an ultra-luminous, poreless, perfectly hydrated complexion. Involves layering lightweight hydrating products including essences, serums, and ampoules.",
-    "tags": ["Kビューティー", "スキンケア", "トレンド"],
+    "id": "btj2026_002",
+    "name": "ニューロコスメティクス：肌と脳のつながり",
+    "url": "https://www.byrdie.com/neurocosmetics-skin-brain-connection",
+    "description": "Neurocosmetics targeting the skin-brain axis. Products formulated with neuropeptides and sensory ingredients that modulate stress responses, reduce cortisol-induced skin inflammation, and improve the skin's stress resilience through the nervous system.",
+    "tags": ["最先端成分", "スキンケア", "ウェルネス"],
     "source": "byrdie"
   },
   {
-    "id": "beauty_003",
-    "name": "Niacinamide Serums",
-    "url": "https://www.vogue.com/article/niacinamide-skincare-benefits",
-    "description": "Vitamin B3 derivative that addresses multiple skin concerns simultaneously: minimizes pores, evens skin tone, reduces fine lines, controls sebum, and strengthens the skin barrier. Widely formulated in concentrations of 5-10%.",
-    "tags": ["成分", "スキンケア", "美容成分"],
+    "id": "btj2026_003",
+    "name": "再生医療コスメ：幹細胞由来成分",
+    "url": "https://www.vogue.com/article/stem-cell-skincare-2026",
+    "description": "Plant and human-derived stem cell conditioned media used in luxury skincare for cellular renewal signals. Swiss apple stem cell extracts, adipose-derived growth factors, and bone marrow conditioned media represent the cutting edge of regenerative cosmetics.",
+    "tags": ["アンチエイジング", "最先端成分", "ラグジュアリー"],
     "source": "vogue_beauty"
   },
   {
-    "id": "beauty_004",
-    "name": "Slugging",
-    "url": "https://www.cosmopolitan.com/beauty/skin-care/a38701617/slugging-skin-care-trend",
-    "description": "Applying a thick layer of petrolatum or occlusive balm as the final step in a nighttime skincare routine to lock in moisture and accelerate skin barrier repair. Popular in Korean skincare and trending globally.",
-    "tags": ["スキンケア", "トレンド", "保湿"],
-    "source": "cosmopolitan"
-  },
-  {
-    "id": "beauty_005",
-    "name": "LED Light Therapy Masks",
-    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43200000/led-face-mask-review",
-    "description": "At-home LED devices using red light (collagen stimulation), blue light (acne-fighting), and near-infrared light (deep tissue repair). Professional-grade results now accessible to consumers through brands like Omnilux and CurrentBody.",
-    "tags": ["美容機器", "テクノロジー", "スキンケア"],
+    "id": "btj2026_004",
+    "name": "サーカディアンリズム スキンケア",
+    "url": "https://www.harpersbazaar.com/beauty/skin-care/circadian-skincare-routine",
+    "description": "Skincare products and routines synced with the body's 24-hour biological clock. AM formulas boost antioxidant defense for daytime environmental protection; PM formulas enhance the skin's natural repair cycle during sleep with DNA repair enzymes and retinoids.",
+    "tags": ["スキンケア", "ルーティン", "ウェルネス"],
     "source": "harpers_bazaar"
   },
   {
-    "id": "beauty_006",
-    "name": "Retinol Alternatives — Bakuchiol",
-    "url": "https://www.allure.com/story/bakuchiol-retinol-alternative",
-    "description": "Plant-derived retinol alternative from Psoralea corylifolia seeds. Clinically proven to reduce fine lines and improve skin tone with minimal irritation, suitable for sensitive skin and during pregnancy.",
-    "tags": ["成分", "スキンケア", "クリーンビューティー"],
+    "id": "btj2026_005",
+    "name": "スキンロンジェビティ：長寿科学の美容応用",
+    "url": "https://www.allure.com/story/longevity-skincare-science-2026",
+    "description": "Anti-aging skincare informed by longevity science: senolytics targeting senescent cells, NAD+ precursors (NMN, NR) for cellular energy, and sirtuin activators. Collaboration between longevity biotech and luxury beauty brands reshaping the anti-aging category.",
+    "tags": ["アンチエイジング", "成分", "ビューティーサイエンス"],
     "source": "allure"
   },
   {
-    "id": "beauty_007",
-    "name": "Scalp Care Revolution",
-    "url": "https://www.byrdie.com/scalp-care-trend",
-    "description": "The skincare-ification of scalp treatment. Serums, exfoliants, and SPF products designed specifically for the scalp. Addresses dandruff, hair loss, oil balance, and scalp microbiome health.",
-    "tags": ["ヘアケア", "スキンケア", "トレンド"],
+    "id": "btj2026_006",
+    "name": "パーソナライズドAIスキンケア診断 2026",
+    "url": "https://www.byrdie.com/ai-personalized-skincare-2026",
+    "description": "Advanced AI skin analysis using multispectral imaging, microbiome data, and genetic markers to create hyper-personalized skincare formulas. Companies like Proven, Atolla, and Curology now offer fully customized serums mixed to order based on real-time skin data.",
+    "tags": ["ビューティーテック", "AI", "パーソナライズ"],
     "source": "byrdie"
   },
   {
-    "id": "beauty_008",
-    "name": "Peptide Skincare",
-    "url": "https://www.vogue.com/article/peptides-skin-care-benefits",
-    "description": "Short chains of amino acids that signal skin to produce more collagen and elastin. New generation peptides target specific receptors for anti-aging, skin repair, and barrier strengthening with clinical efficacy data.",
-    "tags": ["成分", "アンチエイジング", "スキンケア"],
+    "id": "btj2026_007",
+    "name": "マイクロバイオーム最適化スキンケア",
+    "url": "https://www.vogue.com/article/microbiome-skincare-2026",
+    "description": "Next-generation microbiome skincare beyond probiotics: prebiotic complexes feeding beneficial bacteria species, postbiotic metabolites with targeted functions, and synbiotic formulations. Microbiome testing now guides personalized probiotic routines.",
+    "tags": ["スキンケア", "マイクロバイオーム", "成分"],
     "source": "vogue_beauty"
   },
   {
-    "id": "beauty_009",
-    "name": "Barrier Repair Skincare",
-    "url": "https://www.allure.com/story/skin-barrier-repair-products",
-    "description": "Products focused on restoring the stratum corneum using ceramides, fatty acids, and cholesterol in ratios matching the skin's natural composition. Key for eczema, rosacea, and over-exfoliated skin recovery.",
-    "tags": ["スキンケア", "成分", "センシティブスキン"],
-    "source": "allure"
-  },
-  {
-    "id": "beauty_010",
-    "name": "AI-Powered Skin Analysis",
-    "url": "https://www.techcrunch.com/ai-skin-analysis-beauty-tech",
-    "description": "Smartphone apps and in-store devices using computer vision and AI to analyze skin conditions, pore size, pigmentation, and wrinkles. Brands like L'Oréal and Perfect Corp offer personalized product recommendations based on facial scans.",
-    "tags": ["ビューティーテック", "AI", "スキンケア"],
-    "source": "techcrunch_beauty"
-  },
-  {
-    "id": "beauty_011",
-    "name": "Tranexamic Acid for Hyperpigmentation",
-    "url": "https://www.byrdie.com/tranexamic-acid-skin-care",
-    "description": "Originally a medical hemostatic agent, now widely adopted in skincare for its ability to interrupt melanin production pathways. More tolerable than hydroquinone with comparable brightening results.",
-    "tags": ["成分", "美白", "スキンケア"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_012",
-    "name": "Waterless Beauty",
-    "url": "https://www.vogue.com/article/waterless-beauty-products-trend",
-    "description": "Products formulated without water as a primary ingredient, using plant extracts, oils, and butters as the base. Higher concentration of active ingredients, longer shelf life without preservatives, and reduced environmental footprint.",
-    "tags": ["サステナビリティ", "クリーンビューティー", "トレンド"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_013",
-    "name": "Microcurrent Facial Devices",
-    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43100000/microcurrent-face-devices",
-    "description": "At-home devices delivering low-level electrical currents to stimulate facial muscles and boost ATP production. Brands like NuFACE and ZIIP offer results comparable to professional facial treatments for lifting and toning.",
-    "tags": ["美容機器", "アンチエイジング", "テクノロジー"],
+    "id": "btj2026_008",
+    "name": "レッドライト療法：ホームデバイス革命",
+    "url": "https://www.harpersbazaar.com/beauty/skin-care/red-light-therapy-home-2026",
+    "description": "Red and near-infrared light therapy panels for home use showing clinical evidence for collagen production, wound healing, hair growth, and mood regulation. Joovv, Mito Red, and BonCharge offer full-body panels as the category moves beyond facial LEDs.",
+    "tags": ["美容機器", "テクノロジー", "ウェルネス"],
     "source": "harpers_bazaar"
   },
   {
-    "id": "beauty_014",
-    "name": "Azelaic Acid Skincare",
-    "url": "https://www.allure.com/story/azelaic-acid-skin-care-benefits",
-    "description": "Dicarboxylic acid derived from grains with multi-functional benefits: anti-inflammatory for rosacea, antibacterial for acne, and melanin-inhibiting for hyperpigmentation. Safe for all skin types and pregnancy.",
-    "tags": ["成分", "スキンケア", "多機能"],
+    "id": "btj2026_009",
+    "name": "スキンケアサプリメント：インナービューティー科学",
+    "url": "https://www.allure.com/story/inner-beauty-supplements-2026",
+    "description": "Evidence-based beauty supplements with clinical backing: marine collagen peptides for skin elasticity, astaxanthin for photoprotection, ceramide supplements for internal barrier support, and spermidine for cellular autophagy in skin aging.",
+    "tags": ["インナービューティー", "サプリメント", "スキンケア"],
     "source": "allure"
   },
   {
-    "id": "beauty_015",
-    "name": "Upcycled Beauty Ingredients",
-    "url": "https://www.cosmopolitan.com/beauty/skin-care/upcycled-beauty-ingredients",
-    "description": "Cosmetic formulations using byproducts from food and beverage industries: coffee grounds, grape seeds, spent vanilla, and fruit peels. Rich in antioxidants while reducing agricultural waste.",
-    "tags": ["サステナビリティ", "クリーンビューティー", "成分"],
-    "source": "cosmopolitan"
-  },
-  {
-    "id": "beauty_016",
-    "name": "Probiotic Skincare",
-    "url": "https://www.byrdie.com/probiotic-skincare-benefits",
-    "description": "Skincare products containing live beneficial bacteria or bacterial lysates to balance the skin microbiome, reduce inflammation, and strengthen barrier function. Growing evidence supports microbiome-focused formulations for sensitive and acne-prone skin.",
-    "tags": ["成分", "マイクロバイオーム", "スキンケア"],
+    "id": "btj2026_010",
+    "name": "ペプチドメイクアップ：美容成分入りコスメ",
+    "url": "https://www.byrdie.com/peptide-infused-makeup-2026",
+    "description": "Makeup formulations delivering active skincare ingredients while providing coverage. Peptide-infused foundations, copper-peptide lip treatments, and growth factor-containing eye shadows blur the line between cosmetics and skincare.",
+    "tags": ["メイクアップ", "成分", "スキンケア"],
     "source": "byrdie"
   },
   {
-    "id": "beauty_017",
-    "name": "Sunscreen Innovation 2025",
-    "url": "https://www.vogue.com/article/best-sunscreens-2025",
-    "description": "New generation UV filters including Tinosorb M and S offering broad-spectrum protection with improved aesthetics. Mineral-chemical hybrid formulas, tinted SPFs with skincare benefits, and photostable formulations that don't degrade in sunlight.",
-    "tags": ["日焼け止め", "スキンケア", "UVケア"],
+    "id": "btj2026_011",
+    "name": "ヨモギビューティー：日本・韓国の伝統成分復活",
+    "url": "https://www.vogue.com/article/yomogi-mugwort-beauty-2026",
+    "description": "Artemisia (yomogi/mugwort) experiencing global revival as a hero ingredient. Traditional East Asian medicinal herb with potent anti-inflammatory, antibacterial, and antioxidant properties. Key in calming sensitive skin, redness, and post-procedure care.",
+    "tags": ["成分", "Jビューティー", "Kビューティー"],
     "source": "vogue_beauty"
   },
   {
-    "id": "beauty_018",
-    "name": "Gua Sha and Facial Massage Tools",
-    "url": "https://www.allure.com/story/gua-sha-facial-benefits",
-    "description": "Traditional Chinese medicine tool experiencing mainstream beauty revival. Jade and rose quartz tools used for lymphatic drainage, reducing puffiness, and releasing facial tension. Dermatologist-approved for improving circulation.",
+    "id": "btj2026_012",
+    "name": "バイオミメティック スキンケア",
+    "url": "https://www.cosmopolitan.com/beauty/skin-care/biomimetic-skincare",
+    "description": "Ingredients engineered to mimic the skin's own molecules for superior compatibility: bio-identical ceramides matching skin's exact ceramide profile, synthetic peptides mimicking skin growth factors, and lab-grown squalene identical to human sebum composition.",
+    "tags": ["成分", "スキンケア", "ビューティーサイエンス"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_013",
+    "name": "ホルモン対応スキンケア：更年期ビューティー",
+    "url": "https://www.byrdie.com/menopause-skincare-2026",
+    "description": "Skincare specifically formulated for hormonal fluctuations during perimenopause and menopause. Estrogen-mimicking phytoestrogens, collagen-boosting actives to counter estrogen decline, and barrier-repair formulations for hormonally dry skin.",
+    "tags": ["スキンケア", "ウェルネス", "アンチエイジング"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_014",
+    "name": "スマート美容デバイス：アプリ連携の進化",
+    "url": "https://www.harpersbazaar.com/beauty/tech-devices-2026",
+    "description": "New generation smart beauty devices with real-time skin monitoring, AI coaching via smartphone apps, and adaptive treatment protocols. Foreo Luna 5, LG Pra.L, and Neutrogena Skin360 exemplify devices that learn and adapt to individual skin responses.",
+    "tags": ["美容機器", "ビューティーテック", "AI"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_015",
+    "name": "クライオビューティー：冷却美容法",
+    "url": "https://www.allure.com/story/cryotherapy-beauty-2026",
+    "description": "Cold therapy applied to beauty: cryo facial chambers, ice globes, cold plunge routines, and cryogenic skincare products. Clinical evidence supports reduced inflammation, pore tightening, increased circulation, and mood enhancement benefits.",
     "tags": ["ウェルネス", "スキンケア", "フェイシャルケア"],
     "source": "allure"
   },
   {
-    "id": "beauty_019",
-    "name": "Bonding Hair Treatments",
-    "url": "https://www.harpersbazaar.com/beauty/hair/a43000000/hair-bonding-treatments",
-    "description": "Chemistry-based hair treatments that repair broken disulfide bonds in the hair cortex. Olaplex pioneered the category; now joined by K18, Redken Acidic Bonding, and Schwarzkopf Bond Enforcing for chemical-damaged hair restoration.",
-    "tags": ["ヘアケア", "ダメージケア", "トリートメント"],
-    "source": "harpers_bazaar"
-  },
-  {
-    "id": "beauty_020",
-    "name": "Skin Microbiome Testing",
-    "url": "https://www.byrdie.com/skin-microbiome-testing",
-    "description": "Consumer DNA-sequencing kits and professional lab tests that analyze the bacterial ecosystem on skin. Results used to personalize probiotic skincare routines, identify dysbiosis patterns, and address chronic skin conditions.",
-    "tags": ["ビューティーテック", "マイクロバイオーム", "パーソナライズ"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_021",
-    "name": "Cushion Foundation Technology",
-    "url": "https://www.allure.com/story/cushion-foundation-best",
-    "description": "Korean-originated applicator system delivering buildable coverage with skincare benefits. Modern formulations include SPF, hyaluronic acid, and long-wear technology. Expanding beyond K-beauty into global luxury brands.",
-    "tags": ["メイクアップ", "Kビューティー", "ファンデーション"],
-    "source": "allure"
-  },
-  {
-    "id": "beauty_022",
-    "name": "Body Care Premiumization",
-    "url": "https://www.vogue.com/article/luxury-body-care-trend-2025",
-    "description": "Consumers applying facial skincare standards to body products. Exfoliating body serums, targeted treatments for body acne and stretch marks, and luxury body oils with active ingredients like retinol and vitamin C for below-the-neck skincare.",
-    "tags": ["ボディケア", "スキンケア", "トレンド"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_023",
-    "name": "Lip Blushing and Semi-Permanent Makeup",
-    "url": "https://www.cosmopolitan.com/beauty/makeup/a43200000/lip-blushing-trend",
-    "description": "Cosmetic tattooing technique adding natural-looking color and definition to lips with 2-3 year longevity. Part of the semi-permanent makeup revolution including microblading, powder brows, and lash enhancement.",
-    "tags": ["セミパーマネントメイク", "美容施術", "トレンド"],
-    "source": "cosmopolitan"
-  },
-  {
-    "id": "beauty_024",
-    "name": "Vitamin C Serums — New Stable Derivatives",
-    "url": "https://www.byrdie.com/vitamin-c-serum-stable-forms",
-    "description": "Beyond ascorbic acid: new stable vitamin C derivatives including ascorbyl glucoside, 3-O-ethyl ascorbic acid, and THD ascorbate offering oxidation resistance with comparable brightening efficacy. Solve the shelf-stability problem plaguing pure vitamin C.",
-    "tags": ["成分", "美白", "スキンケア"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_025",
-    "name": "Refillable Beauty Packaging",
-    "url": "https://www.vogue.com/article/refillable-beauty-brands",
-    "description": "Luxury and mass-market brands adopting refillable cartridge systems for fragrance, skincare, and makeup. Chanel, Hourglass, and Charlotte Tilbury lead the movement reducing packaging waste by up to 80% per refill purchase.",
-    "tags": ["サステナビリティ", "パッケージング", "トレンド"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_026",
-    "name": "Retinol in Body Care",
-    "url": "https://www.allure.com/story/retinol-body-lotion",
-    "description": "Extension of the retinol boom beyond facial skincare to address body aging signs: keratosis pilaris, rough elbows, body acne, and stretch marks. Lower concentrations than face products ensure tolerability for larger surface areas.",
-    "tags": ["ボディケア", "成分", "アンチエイジング"],
-    "source": "allure"
-  },
-  {
-    "id": "beauty_027",
-    "name": "Fermented Skincare",
-    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43300000/fermented-skincare",
-    "description": "Fermentation process enhances bioavailability of active ingredients and creates new beneficial compounds. Galactomyces ferment filtrate, bifida ferment lysate, and saccharomyces ferment are powerhouse ingredients in K-beauty formulations.",
-    "tags": ["Kビューティー", "成分", "スキンケア"],
-    "source": "harpers_bazaar"
-  },
-  {
-    "id": "beauty_028",
-    "name": "Fragrance Layering",
-    "url": "https://www.vogue.com/article/fragrance-layering-guide",
-    "description": "Technique of combining multiple fragrances to create a personalized signature scent. Niche perfume houses now offering layering guides and complementary collections. Body lotion, oil, and parfum coordination for all-day scent longevity.",
-    "tags": ["フレグランス", "パーソナライズ", "トレンド"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_029",
-    "name": "Invisible Acne Patches",
-    "url": "https://www.byrdie.com/hydrocolloid-acne-patches",
-    "description": "Ultra-thin hydrocolloid patches that absorb pus and sebum overnight while protecting blemishes. Advanced versions include salicylic acid, tea tree oil, and microneedle technology for deeper penetration. Daytime-wear innovations with makeup compatibility.",
-    "tags": ["スキンケア", "ニキビケア", "テクノロジー"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_030",
-    "name": "Hyaluronic Acid — Molecular Weight Science",
-    "url": "https://www.allure.com/story/hyaluronic-acid-molecular-weight",
-    "description": "Understanding how different molecular weights of hyaluronic acid work at different skin depths. High molecular weight plumps the surface; low molecular weight penetrates deeper for structural hydration. Multi-weight formulas offer comprehensive moisture.",
+    "id": "btj2026_016",
+    "name": "ポリグルタミン酸：次世代保湿成分",
+    "url": "https://www.byrdie.com/polyglutamic-acid-skincare",
+    "description": "Polyglutamic acid (PGA) derived from fermented soybeans holding 5,000x its weight in water — far outperforming hyaluronic acid. Creates a moisture-locking film on skin while delivering hydration. Key ingredient in J-beauty and K-beauty advanced serums.",
     "tags": ["成分", "保湿", "スキンケア"],
-    "source": "allure"
-  },
-  {
-    "id": "beauty_031",
-    "name": "Tone-Up Sunscreen",
-    "url": "https://www.cosmopolitan.com/beauty/skin-care/tone-up-sunscreen",
-    "description": "Korean innovation combining SPF protection with optical brightening pigments that instantly neutralize dullness and sallowness. Available in various tones to correct different undertones. Replaced traditional tinted moisturizers for daily UV protection.",
-    "tags": ["日焼け止め", "Kビューティー", "メイクアップ"],
-    "source": "cosmopolitan"
-  },
-  {
-    "id": "beauty_032",
-    "name": "Postbiotic Skincare",
-    "url": "https://www.byrdie.com/postbiotic-skincare",
-    "description": "Inactivated microorganisms and their metabolites used in skincare for stability advantages over live probiotics. Bacterial ferment filtrates provide anti-inflammatory, soothing, and barrier-enhancing benefits without shelf-stability challenges.",
-    "tags": ["成分", "マイクロバイオーム", "スキンケア"],
     "source": "byrdie"
   },
   {
-    "id": "beauty_033",
-    "name": "Hair Lamination Treatments",
-    "url": "https://www.harpersbazaar.com/beauty/hair/a43400000/hair-lamination",
-    "description": "Salon treatment coating each hair strand with a protective film of plant-based proteins, sealing the cuticle for extreme shine and smoothness lasting 4-6 weeks. Different from Keratin: no formaldehyde, safe for color-treated hair.",
-    "tags": ["ヘアケア", "サロントリートメント", "ツヤ"],
-    "source": "harpers_bazaar"
-  },
-  {
-    "id": "beauty_034",
-    "name": "Personalized Beauty AI Apps",
-    "url": "https://www.allure.com/story/ai-beauty-apps-personalized",
-    "description": "Apps using machine learning to analyze face shape, skin undertone, and lifestyle factors to recommend personalized makeup shades, skincare routines, and haircolor. Perfect Corp's YouCam and L'Oréal's Modiface lead the segment.",
-    "tags": ["ビューティーテック", "AI", "パーソナライズ"],
-    "source": "allure"
-  },
-  {
-    "id": "beauty_035",
-    "name": "Bromelain and Enzyme Exfoliants",
-    "url": "https://www.vogue.com/article/enzyme-exfoliants-skincare",
-    "description": "Fruit-derived proteolytic enzymes (papain from papaya, bromelain from pineapple) that digest dead skin proteins without the sensitization risk of AHAs/BHAs. Ideal for sensitive skin seeking gentle chemical exfoliation.",
-    "tags": ["成分", "スキンケア", "エクスフォリエーション"],
+    "id": "btj2026_017",
+    "name": "サウンドセラピー＆バイブレーション美容",
+    "url": "https://www.vogue.com/article/sound-therapy-beauty-2026",
+    "description": "Ultrasonic and vibration-based beauty treatments using specific sound frequencies to enhance product penetration, stimulate collagen, and reduce muscle tension. Professional-grade ultrasound devices now available for home use alongside sonic cleansing.",
+    "tags": ["美容機器", "ウェルネス", "スキンケア"],
     "source": "vogue_beauty"
   },
   {
-    "id": "beauty_036",
-    "name": "Lymphatic Drainage Beauty Devices",
-    "url": "https://www.byrdie.com/lymphatic-drainage-face-tools",
-    "description": "At-home devices using vibration, suction, or gentle pressure to stimulate lymphatic drainage and reduce facial puffiness. Popularized by gua sha, now expanded to electronic devices from brands like Foreo and NuFACE.",
-    "tags": ["美容機器", "フェイシャルケア", "ウェルネス"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_037",
-    "name": "Blue Light Protection Skincare",
-    "url": "https://www.cosmopolitan.com/beauty/skin-care/blue-light-skincare",
-    "description": "Products incorporating antioxidants and physical blockers to defend against high-energy visible (HEV) blue light from screens. Iron oxides in tinted sunscreens offer meaningful protection. Debate continues on actual damage levels from indoor screens.",
-    "tags": ["スキンケア", "テクノロジー", "UVケア"],
+    "id": "btj2026_018",
+    "name": "ジェネレーティブAIビューティーコンテンツ",
+    "url": "https://www.cosmopolitan.com/beauty/ai-beauty-content-2026",
+    "description": "How generative AI is transforming beauty content creation, virtual try-on, and product recommendations. AI beauty advisors offering real-time personalized guidance, virtual makeup tutorials, and AI-generated skincare regimens tailored to individual needs.",
+    "tags": ["ビューティーテック", "AI", "トレンド"],
     "source": "cosmopolitan"
   },
   {
-    "id": "beauty_038",
-    "name": "Multifunction Beauty Sticks",
-    "url": "https://www.allure.com/story/multi-stick-makeup-trend",
-    "description": "Solid stick products for cheeks, lips, and eyes in one product for minimal beauty routines. Hybrid formulas blending skincare and color cosmetics. Fast application for a 'your skin but better' aesthetic dominating Gen Z beauty.",
-    "tags": ["メイクアップ", "ミニマリスト", "トレンド"],
+    "id": "btj2026_019",
+    "name": "スカルプケア 2026：毛髪再生の科学",
+    "url": "https://www.allure.com/story/scalp-hair-growth-science-2026",
+    "description": "Advanced scalp care combining topical minoxidil alternatives (redensyl, procapil, AnaGain), exosome hair treatments, low-level laser therapy (LLLT), and microbiome-balancing scalp serums. Hair loss treatment now a mainstream beauty category.",
+    "tags": ["ヘアケア", "スキンケア", "ビューティーサイエンス"],
     "source": "allure"
   },
   {
-    "id": "beauty_039",
-    "name": "Adaptogens in Skincare",
-    "url": "https://www.vogue.com/article/adaptogens-skincare-ingredients",
-    "description": "Plant extracts traditionally used in herbal medicine now formulated into skincare: ashwagandha, rhodiola, reishi mushroom, and holy basil. Claims center on anti-stress benefits for skin, reducing cortisol-induced inflammation and oxidative damage.",
+    "id": "btj2026_020",
+    "name": "スリープビューティー：睡眠と肌の科学",
+    "url": "https://www.byrdie.com/sleep-beauty-skincare-2026",
+    "description": "Sleep optimization as a beauty strategy: chronobiology-informed nighttime routines, magnesium and adaptogen sleep supplements for skin recovery, blue light-blocking skincare, and melatonin-enhanced overnight masks for circadian-aligned skin repair.",
+    "tags": ["ウェルネス", "スキンケア", "インナービューティー"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_021",
+    "name": "グルタチオン美容：全身美白の新標準",
+    "url": "https://www.vogue.com/article/glutathione-beauty-2026",
+    "description": "Glutathione gaining mainstream beauty status beyond its medical use. The master antioxidant now available in topical serums, oral supplements, and IV drip beauty treatments. Clinically validated for melanin reduction and overall skin luminosity.",
+    "tags": ["成分", "美白", "インナービューティー"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_022",
+    "name": "バイオテクノロジー発酵コスメ 2026",
+    "url": "https://www.harpersbazaar.com/beauty/biotech-fermentation-2026",
+    "description": "Precision fermentation producing rare skincare actives: lab-grown hyaluronic acid, biosynthetic squalene, fermented ceramides, and bioidentical retinol alternatives. Sustainable biotechnology delivering consistent quality without environmental extraction.",
+    "tags": ["成分", "サステナビリティ", "ビューティーサイエンス"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_023",
+    "name": "オメガ皮膚栄養学：脂肪酸と肌の関係",
+    "url": "https://www.allure.com/story/omega-fatty-acids-skincare-2026",
+    "description": "Omega-3, 6, and 9 fatty acids in topical and ingestible skincare for barrier repair, inflammation reduction, and skin elasticity. Cold-pressed algae oils, rosehip seed oil, and hemp seed oil formulations delivering essential fatty acids to skin-deficient barriers.",
+    "tags": ["成分", "スキンケア", "インナービューティー"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_024",
+    "name": "マスキュリンビューティー：男性美容市場の拡大",
+    "url": "https://www.byrdie.com/masculine-beauty-market-2026",
+    "description": "Men's beauty and skincare market expanding beyond grooming basics. Gender-neutral and male-specific skincare, BB creams, eyebrow grooming, and nail care normalizing across demographics. Brands like Tom Ford Beauty and Humanrace leading male beauty.",
+    "tags": ["メンズビューティー", "トレンド", "メイクアップ"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_025",
+    "name": "スキンフラッシング：赤み改善の最新アプローチ",
+    "url": "https://www.vogue.com/article/skin-flushing-redness-treatment-2026",
+    "description": "Comprehensive approach to managing chronic skin flushing and rosacea: brimonidine and oxymetazoline topicals, IPL and vascular laser treatments, anti-inflammatory microbiome strategies, and niacinamide-based barrier reinforcement.",
+    "tags": ["スキンケア", "成分", "美容施術"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_026",
+    "name": "エビデンスベースドメイクアップ",
+    "url": "https://www.cosmopolitan.com/beauty/evidence-based-makeup-2026",
+    "description": "Makeup products backed by dermatological clinical studies: clinically tested foundation for acne-prone skin, allergen-tested formulas, microbiome-safe cosmetics, and dermatologist-developed makeup removing the dichotomy between skincare and color cosmetics.",
+    "tags": ["メイクアップ", "スキンケア", "ビューティーサイエンス"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_027",
+    "name": "プラズマビューティー治療",
+    "url": "https://www.harpersbazaar.com/beauty/plasma-treatment-2026",
+    "description": "Cold atmospheric plasma (CAP) treatments gaining traction in medical aesthetics for skin sterilization, wound healing, and collagen stimulation. Plasma pens for fibroblast tightening and plasma-infused skincare entering professional and at-home markets.",
+    "tags": ["美容施術", "テクノロジー", "アンチエイジング"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_028",
+    "name": "キノコ（マッシュルーム）成分の美容革命",
+    "url": "https://www.allure.com/story/mushroom-beauty-ingredients-2026",
+    "description": "Medicinal mushrooms dominating beauty formulations: lion's mane for skin barrier and nerve calming, chaga for antioxidant protection, reishi for anti-inflammatory benefits, and shiitake kojic acid for brightening. Adaptogens meeting clinical beauty science.",
+    "tags": ["成分", "スキンケア", "ウェルネス"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_029",
+    "name": "ポストオゼンピックスキンケア",
+    "url": "https://www.byrdie.com/ozempic-face-skincare-2026",
+    "description": "Skincare solutions addressing 'Ozempic face' — volume loss and skin laxity from rapid weight loss caused by GLP-1 medications. Targeted protocols combining collagen-boosting actives, volume-plumping ingredients, and professional treatments for medication-related skin changes.",
+    "tags": ["スキンケア", "アンチエイジング", "トレンド"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_030",
+    "name": "サステナブルラグジュアリービューティー",
+    "url": "https://www.vogue.com/article/sustainable-luxury-beauty-2026",
+    "description": "Luxury beauty brands achieving genuine sustainability: carbon-negative formulations, zero-waste manufacturing, fair-trade ingredient sourcing with blockchain traceability, and biodegradable packaging without compromising performance or aesthetic standards.",
+    "tags": ["サステナビリティ", "ラグジュアリー", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_031",
+    "name": "ブリッジングケア：医療と美容の融合",
+    "url": "https://www.cosmopolitan.com/beauty/bridging-medical-beauty-2026",
+    "description": "Medical-grade skincare ingredients now available in cosmetic formulations: prescription-strength retinoids in OTC serums, pharmaceutical ceramide formulations, and clinically-dosed vitamin C at concentrations previously limited to medical practices.",
+    "tags": ["スキンケア", "成分", "ビューティーサイエンス"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_032",
+    "name": "デジタルデトックス ビューティー",
+    "url": "https://www.harpersbazaar.com/beauty/digital-detox-beauty-2026",
+    "description": "Beauty routines as digital wellness rituals. Screen-free self-care practices, analog beauty tools (gua sha, jade rollers, facial massage), and mindful application techniques gaining appeal as antidotes to tech oversaturation and beauty overconsumption.",
+    "tags": ["ウェルネス", "トレンド", "スキンケア"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_033",
+    "name": "腸活ビューティー：腸内環境と肌",
+    "url": "https://www.allure.com/story/gut-skin-axis-beauty-2026",
+    "description": "Gut-skin axis science driving beauty product innovation. Probiotic and prebiotic supplements formulated specifically for skin health, fermented food beauty protocols, and leaky gut interventions as upstream treatment for inflammatory skin conditions.",
+    "tags": ["インナービューティー", "ウェルネス", "サプリメント"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_034",
+    "name": "メラニン調整ビューティー：包括的美白科学",
+    "url": "https://www.byrdie.com/melanin-regulation-skincare-2026",
+    "description": "Comprehensive melanin regulation beyond traditional brightening: melanocyte-targeting actives (alpha-arbutin, kojic acid, tranexamic acid) combined with inflammation control (post-inflammatory hyperpigmentation), DNA protection, and exfoliation for inclusive skincare.",
+    "tags": ["スキンケア", "美白", "成分"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_035",
+    "name": "グロウスキン：2026年の輝き肌メソッド",
+    "url": "https://www.vogue.com/article/glow-skin-method-2026",
+    "description": "The glow skin aesthetic evolving: from glass skin to glazed donut skin to healthy glow. 2026 version emphasizes skin health over illusion — optimized barrier, hydration, and radiance from functional skincare rather than optical tricks or heavy highlighting.",
+    "tags": ["スキンケア", "トレンド", "メイクアップ"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_036",
+    "name": "ヘアスキンケア融合：頭皮バリア理論",
+    "url": "https://www.cosmopolitan.com/beauty/scalp-barrier-theory-2026",
+    "description": "Applying skin barrier science to scalp health: sebum-regulating, barrier-reinforcing scalp serums using ceramides and fatty acids to address scalp dysbiosis, dandruff, and hair loss from the root cause of compromised scalp barrier function.",
+    "tags": ["ヘアケア", "スキンケア", "成分"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_037",
+    "name": "ビタミンD美容：太陽と肌の新常識",
+    "url": "https://www.harpersbazaar.com/beauty/vitamin-d-skincare-2026",
+    "description": "Topical and internal vitamin D in skincare for its immunomodulatory and anti-inflammatory effects on skin. Vitamin D deficiency linked to eczema, psoriasis, and accelerated aging. Formulations combining vitamin D with ceramides for barrier-enhancing benefits.",
+    "tags": ["成分", "スキンケア", "ウェルネス"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_038",
+    "name": "コンシャスビューティー：倫理消費と美容",
+    "url": "https://www.allure.com/story/conscious-beauty-ethics-2026",
+    "description": "Consumers demanding full supply chain transparency, fair labor practices, and meaningful diversity representation. Conscious beauty extends to ingredient sourcing ethics, community benefit programs, and brands with proven positive social and environmental impact.",
+    "tags": ["サステナビリティ", "トレンド", "クリーンビューティー"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_039",
+    "name": "エアロビクス肌ケア：運動と美容の科学",
+    "url": "https://www.byrdie.com/exercise-beauty-skincare-2026",
+    "description": "Exercise as a beauty treatment: aerobic exercise-induced BDNF for skin cell renewal, sweat microbiome effects on skin health, post-workout skincare protocols, and exercise-specific products designed for gym environments and outdoor athletic use.",
+    "tags": ["ウェルネス", "スキンケア", "トレンド"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_040",
+    "name": "パーフュームテック：デジタル香水の時代",
+    "url": "https://www.vogue.com/article/perfume-tech-digital-fragrance-2026",
+    "description": "Technology transforming fragrance: AI-composed perfumes using algorithm-driven scent combinations, molecular perfumery with ultra-stable synthetic musks, and subscription fragrance services using behavioral data to predict scent preferences.",
+    "tags": ["フレグランス", "ビューティーテック", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_041",
+    "name": "アダプトジェン美容：ストレス耐性スキンケア",
+    "url": "https://www.cosmopolitan.com/beauty/adaptogen-stress-skincare-2026",
+    "description": "Adaptogenic ingredients (ashwagandha, rhodiola, holy basil, eleuthero) in targeted stress-resilience skincare. Clinical studies confirming reduction in cortisol-induced skin inflammation and improving skin's adaptive response to environmental stressors.",
     "tags": ["成分", "ウェルネス", "スキンケア"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_040",
-    "name": "Hair Gloss Treatments",
-    "url": "https://www.harpersbazaar.com/beauty/hair/a43500000/hair-gloss-treatments",
-    "description": "Semi-permanent treatment depositing tone and shine without the commitment of permanent color. Clear glosses enhance natural hair's luminosity; tinted versions refresh faded color. At-home versions from brands like Kristin Ess democratize salon results.",
-    "tags": ["ヘアカラー", "ヘアケア", "サロン"],
-    "source": "harpers_bazaar"
-  },
-  {
-    "id": "beauty_041",
-    "name": "Squalane in Skincare",
-    "url": "https://www.byrdie.com/squalane-skin-care",
-    "description": "Stabilized form of squalene (naturally in human sebum) derived from sugarcane or olive oil. Lightweight, non-comedogenic oil that mimics skin's natural lipids for superior absorption. Safe for all skin types including acne-prone.",
-    "tags": ["成分", "保湿", "スキンケア"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_042",
-    "name": "Makeup for Mature Skin",
-    "url": "https://www.allure.com/story/best-makeup-mature-skin",
-    "description": "Growing category addressing specific needs of skin 40+: thinner consistency foundations that don't settle into lines, blurring primers, and hydrating-first formulations. Brands like Charlotte Tilbury and ILIA now offer dedicated mature skin ranges.",
-    "tags": ["メイクアップ", "アンチエイジング", "スキンケア"],
-    "source": "allure"
-  },
-  {
-    "id": "beauty_043",
-    "name": "At-Home Radiofrequency Devices",
-    "url": "https://www.vogue.com/article/radiofrequency-at-home-devices",
-    "description": "Consumer-grade RF devices delivering controlled heat to stimulate fibroblast activity and collagen neogenesis. Brands like Tripollar and Newa offer clinical results for skin tightening and wrinkle reduction with weekly home treatments.",
-    "tags": ["美容機器", "アンチエイジング", "テクノロジー"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_044",
-    "name": "Centella Asiatica (Cica) Skincare",
-    "url": "https://www.cosmopolitan.com/beauty/skin-care/cica-cream-benefits",
-    "description": "Traditional healing herb with clinically validated wound healing, anti-inflammatory, and barrier repair properties. Key active compounds: asiaticoside, madecassoside, and asiatic acid. Cornerstone of sensitive skin and post-procedure recovery routines.",
-    "tags": ["成分", "Kビューティー", "センシティブスキン"],
     "source": "cosmopolitan"
   },
   {
-    "id": "beauty_045",
-    "name": "Clean Fragrance Movement",
-    "url": "https://www.byrdie.com/clean-fragrance-brands",
-    "description": "Transparent fragrance formulations avoiding synthetic musks, phthalates, and known allergens. Brands like Skylar, Phlur, and Ellis Brooklyn offer full ingredient disclosure. Driving demand for natural isolates and sustainably sourced materials.",
-    "tags": ["フレグランス", "クリーンビューティー", "サステナビリティ"],
-    "source": "byrdie"
-  },
-  {
-    "id": "beauty_046",
-    "name": "Collagen-Boosting Skincare Science",
-    "url": "https://www.harpersbazaar.com/beauty/skin-care/a43600000/collagen-boosting-ingredients",
-    "description": "Beyond topical collagen (too large to penetrate): ingredients clinically proven to stimulate fibroblasts — retinoids, vitamin C, copper peptides, and growth factors. Distinction between actual collagen synthesis vs. surface-level plumping.",
-    "tags": ["成分", "アンチエイジング", "スキンケア"],
+    "id": "btj2026_042",
+    "name": "ノーメイク肌革命：スキンクオリティの重視",
+    "url": "https://www.harpersbazaar.com/beauty/no-makeup-skin-quality-2026",
+    "description": "The 'no makeup' movement maturing into skin quality obsession. Investment in skincare as makeup replacement: skin cycling, barrier building, and the 'clean girl aesthetic' driving consumers toward fewer, higher-efficacy products for naturally radiant skin.",
+    "tags": ["スキンケア", "トレンド", "メイクアップ"],
     "source": "harpers_bazaar"
   },
   {
-    "id": "beauty_047",
-    "name": "Underarm and Intimate Skincare",
-    "url": "https://www.allure.com/story/intimate-skincare-trend",
-    "description": "Premium skincare extending to underarms, bikini line, and intimate areas. Dedicated deodorants with skin-brightening actives, exfoliating solutions for ingrowns, and pH-balanced intimate wash formulations. Fastest-growing personal care subcategory.",
-    "tags": ["ボディケア", "スキンケア", "トレンド"],
+    "id": "btj2026_043",
+    "name": "水素水スキンケア：抗酸化美容の新展開",
+    "url": "https://www.allure.com/story/hydrogen-water-skincare-2026",
+    "description": "Hydrogen-infused water and hydrogen-generating skincare products delivering molecular hydrogen as a selective antioxidant. Clinical evidence from Japan and Korea supporting reduction of oxidative stress in skin with selective neutralization of hydroxyl radicals.",
+    "tags": ["成分", "スキンケア", "ビューティーサイエンス"],
     "source": "allure"
   },
   {
-    "id": "beauty_048",
-    "name": "Biodegradable Glitter and Eco Makeup",
-    "url": "https://www.vogue.com/article/biodegradable-glitter-eco-makeup",
-    "description": "Plant cellulose-based glitter alternatives biodegrading within weeks vs. plastic microplastic versions persisting centuries. Cosmetology schools and festivals adopting eco-glitter. Driving broader conversation about microplastics in beauty formulations.",
-    "tags": ["サステナビリティ", "メイクアップ", "エコ"],
-    "source": "vogue_beauty"
-  },
-  {
-    "id": "beauty_049",
-    "name": "Snowmushroom (Tremella) Hydration",
-    "url": "https://www.byrdie.com/snow-mushroom-skin-care-benefits",
-    "description": "Tremella fuciformis polysaccharide derived from white snow mushrooms holding up to 500x its weight in water — outperforming hyaluronic acid. Creates flexible moisture film adapting to humidity levels. Star ingredient in Gen Z clean beauty.",
-    "tags": ["成分", "保湿", "スキンケア"],
+    "id": "btj2026_044",
+    "name": "マルチタスクサンスクリーン：美容下地＆SPF",
+    "url": "https://www.byrdie.com/multitasking-sunscreen-2026",
+    "description": "Next-generation hybrid sunscreens combining SPF protection with primer, serum, tint, and anti-pollution benefits. Mineral-chemical hybrid filters offering elegant textures with Asian-inspired lightweight aesthetics now penetrating Western markets.",
+    "tags": ["日焼け止め", "メイクアップ", "スキンケア"],
     "source": "byrdie"
   },
   {
-    "id": "beauty_050",
-    "name": "Dermaplaning at Home",
-    "url": "https://www.cosmopolitan.com/beauty/skin-care/a43300000/dermaplaning-at-home",
-    "description": "Controlled exfoliation removing dead skin cells and vellus hair using a surgical-grade blade or consumer-safe device. Instantly improves skin texture and product absorption. At-home tools from Dermaflash and Tinkle make the technique accessible.",
-    "tags": ["スキンケア", "エクスフォリエーション", "美容施術"],
+    "id": "btj2026_045",
+    "name": "ボディスキンケアの高機能化 2026",
+    "url": "https://www.vogue.com/article/body-skincare-advanced-2026",
+    "description": "Body skincare matching facial skincare sophistication: retinol body creams for keratosis pilaris and body aging, vitamin C body serums for hyperpigmentation, ceramide-rich body lotions for eczema, and AHA body exfoliants for texture smoothing.",
+    "tags": ["ボディケア", "スキンケア", "成分"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_046",
+    "name": "フォトバイオモジュレーション：光美容の科学",
+    "url": "https://www.cosmopolitan.com/beauty/photobiomodulation-2026",
+    "description": "Photobiomodulation (PBM) clinical applications expanding in beauty: specific wavelength combinations for acne (blue 415nm), collagen (red 633nm), and deep tissue (NIR 830nm). Combination light therapy protocols showing superior results versus single wavelengths.",
+    "tags": ["美容機器", "テクノロジー", "スキンケア"],
     "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_047",
+    "name": "センシティブスキン 2026：過敏肌ケア新常識",
+    "url": "https://www.harpersbazaar.com/beauty/sensitive-skin-care-2026",
+    "description": "Sensitive skin care evolving beyond avoidance: understanding skin sensitization triggers, allergen mapping, microbiome correction for reactive skin, and building skin resilience through strategic barrier strengthening rather than simply eliminating ingredients.",
+    "tags": ["センシティブスキン", "スキンケア", "成分"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_048",
+    "name": "ナノテクノロジー美容：成分浸透革命",
+    "url": "https://www.allure.com/story/nanotechnology-beauty-2026",
+    "description": "Nanoencapsulation technology delivering previously skin-impermeable actives into deeper layers. Nano-retinol with reduced irritation, liposomal vitamin C with enhanced stability, and nanoparticle sunscreens achieving UV protection without white cast.",
+    "tags": ["ビューティーサイエンス", "成分", "テクノロジー"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_049",
+    "name": "コーヒービューティー：カフェインの美容効果",
+    "url": "https://www.byrdie.com/caffeine-coffee-beauty-2026",
+    "description": "Caffeine as a multi-functional skincare ingredient beyond eye creams: body contour products reducing appearance of cellulite, scalp serums for hair growth stimulation, and antioxidant face serums leveraging caffeine's vasoconstrictive and antioxidant properties.",
+    "tags": ["成分", "スキンケア", "ボディケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_050",
+    "name": "ホリスティックヘアケア：頭皮から毛先まで",
+    "url": "https://www.vogue.com/article/holistic-hair-care-2026",
+    "description": "Holistic hair health approach integrating scalp microbiome care, nutritional supplementation (biotin, collagen, iron), stress management for hair loss prevention, and low-manipulation styling. Moving beyond product-only solutions to systemic hair wellness.",
+    "tags": ["ヘアケア", "ウェルネス", "インナービューティー"],
+    "source": "vogue_beauty"
   }
 ]
