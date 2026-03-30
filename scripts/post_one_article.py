@@ -28,7 +28,7 @@ BEAUTY_TOPICS_PATH  = DATA_DIR / "beauty_topics.json"
 POSTED_LOG          = DATA_DIR / "posted_ids.log"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_NAME     = "gemini-2.0-flash-lite"
+MODEL_NAME     = "gemini-2.5-flash"
 
 logging.basicConfig(
     level=logging.INFO,
