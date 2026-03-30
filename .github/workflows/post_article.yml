@@ -17,23 +17,17 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: GCP認証
-        uses: google-github-actions/auth@v2.1.8
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
       - name: Pythonセットアップ
         uses: actions/setup-python@v5.4.0
         with:
           python-version: '3.12'
 
       - name: 依存関係インストール
-        run: pip install google-genai google-cloud-storage
+        run: pip install google-genai
 
       - name: 記事生成
         env:
-          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
-          GCP_LOCATION: us-central1
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/post_one_article.py
 
       - name: GitHubにプッシュ（Vercelが自動デプロイ）

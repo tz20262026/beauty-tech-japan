@@ -2,7 +2,6 @@
 """
 scripts/post_one_article.py
 未掲載の美容トピック1件を900〜1000字の日本語記事に生成し、
-Imagen 3 で画像を生成して GCS にアップロードし、
 src/data/extra_articles.json に追加する。
 （デプロイはGitHub pushでVercelが自動実行）
 """
@@ -28,11 +27,8 @@ DATA_DIR            = Path(__file__).parent / "data"
 BEAUTY_TOPICS_PATH  = DATA_DIR / "beauty_topics.json"
 POSTED_LOG          = DATA_DIR / "posted_ids.log"
 
-GCP_PROJECT    = os.environ.get("GCP_PROJECT", "")
-GCP_LOCATION   = os.environ.get("GCP_LOCATION", "us-central1")
-MODEL_NAME     = "gemini-2.5-pro"
-IMAGE_MODEL    = "imagen-3.0-generate-001"
-GCS_BUCKET     = f"{GCP_PROJECT}-beauty-images" if GCP_PROJECT else ""
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+MODEL_NAME     = "gemini-2.0-flash"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -49,9 +45,6 @@ SYSTEM_INSTRUCTION = (
     "1. ソースが英語であっても、出力はすべて自然な日本語のみで行うこと。英語を一切混入させないこと。\n"
     "2. 記事本文の合計文字数は900〜1000文字を厳守すること。\n"
     "3. 箇条書きを一切使わず、読み物として深掘りした「解説文」形式で書くこと。\n"
-    "4. 画像プロンプトは毎回、記事の具体的な文脈に基づいた新しい内容にすること。"
-    "美しい女性・コスメ・スキンケア・サロンなど美容に関連する具体的なシーンを英語で描写すること。"
-    "必ず「Photorealistic, Cinematic lighting, High resolution」を含めること。"
 )
 
 ARTICLE_PROMPT = """\
@@ -76,13 +69,8 @@ ARTICLE_PROMPT = """\
 ・入手方法・価格帯（約150字）：おすすめブランド例、価格帯、購入できる場所を簡潔に。
 ・まとめ（約100字）：魅力を一言で締め、読者の行動を促す一文で終わる。
 
-[画像プロンプト]
-記事の内容・美容シーン・ターゲットユーザーを具体的に反映した英語の画像生成プロンプト。
-美しい女性・コスメ・スキンケア・サロンなど美容関連の具体的なシーンを描写すること。
-必ず「Photorealistic, Cinematic lighting, High resolution」を含めること。
-
 ---
-出力はすべて日本語のみ（画像プロンプトの英語部分を除く）。余計な前置き不要。
+出力はすべて日本語のみ。余計な前置き不要。
 """
 
 SOURCE_NAMES = {
@@ -108,50 +96,9 @@ def append_posted(topic_id: str) -> None:
     with open(POSTED_LOG, "a", encoding="utf-8") as f:
         f.write(topic_id + "\n")
 
-def generate_and_upload_image(client: genai.Client, image_prompt: str, article_id: str) -> str:
-    """Imagen 3 で画像生成 → GCS にアップロード → 公開URLを返す。失敗時は空文字。"""
-    if not image_prompt or not GCS_BUCKET:
-        return ""
-
-    # 画像生成
-    try:
-        img_response = client.models.generate_images(
-            model=IMAGE_MODEL,
-            prompt=image_prompt,
-            config=types.GenerateImagesConfig(
-                number_of_images=1,
-                aspect_ratio="16:9",
-            ),
-        )
-        image_bytes = img_response.generated_images[0].image.image_bytes
-        logger.info("画像生成: 成功")
-    except Exception as e:
-        logger.warning(f"画像生成スキップ: {e}")
-        return ""
-
-    # GCS にアップロード
-    try:
-        from google.cloud import storage
-        gcs = storage.Client(project=GCP_PROJECT)
-
-        bucket = gcs.bucket(GCS_BUCKET)
-        if not bucket.exists():
-            bucket = gcs.create_bucket(GCS_BUCKET, location="US")
-            logger.info(f"GCSバケット作成: {GCS_BUCKET}")
-
-        blob = bucket.blob(f"{article_id}.jpg")
-        blob.upload_from_string(image_bytes, content_type="image/jpeg")
-        blob.make_public()
-        url = blob.public_url
-        logger.info(f"画像URL: {url}")
-        return url
-    except Exception as e:
-        logger.warning(f"画像アップロードスキップ: {e}")
-        return ""
-
 def main() -> int:
-    if not GCP_PROJECT:
-        logger.error("GCP_PROJECT が未設定です。")
+    if not GEMINI_API_KEY:
+        logger.error("GEMINI_API_KEY が未設定です。")
         return 1
 
     if not BEAUTY_TOPICS_PATH.exists():
@@ -169,7 +116,7 @@ def main() -> int:
     topic = pending[0]
     logger.info(f"対象: {topic['name']}")
 
-    client = genai.Client(vertexai=True, project=GCP_PROJECT, location=GCP_LOCATION)
+    client = genai.Client(api_key=GEMINI_API_KEY)
 
     # 記事テキスト生成
     prompt = ARTICLE_PROMPT.format(
@@ -184,7 +131,7 @@ def main() -> int:
         config=types.GenerateContentConfig(
             system_instruction=SYSTEM_INSTRUCTION,
             temperature=0.8,
-            max_output_tokens=16384,
+            max_output_tokens=8192,
         ),
     )
     raw_text = response.text.strip()
@@ -195,9 +142,8 @@ def main() -> int:
         m = re.search(rf"\[{label}\]\s*\n(.*?)(?=\n\[|\Z)", text, re.DOTALL)
         return m.group(1).strip() if m else ""
 
-    catchcopy    = extract_section("キャッチコピー", raw_text)
-    body         = extract_section("本文", raw_text)
-    image_prompt = extract_section("画像プロンプト", raw_text)
+    catchcopy = extract_section("キャッチコピー", raw_text)
+    body      = extract_section("本文", raw_text)
 
     if not body:
         body = raw_text
@@ -215,9 +161,6 @@ def main() -> int:
     published_at = datetime.now().strftime("%Y-%m-%d")
     tags         = topic.get("tags") or ["美容"]
 
-    # 画像生成（失敗しても記事は保存される）
-    image_url = generate_and_upload_image(client, image_prompt, article_id)
-
     # extra_articles.json 更新
     existing = json.loads(EXTRA_ARTICLES_PATH.read_text(encoding="utf-8")) if EXTRA_ARTICLES_PATH.exists() else []
 
@@ -230,8 +173,7 @@ def main() -> int:
         "sourceUrl":   topic.get("url", ""),
         "tags":        tags[:5],
         "publishedAt": published_at,
-        "imagePrompt": image_prompt,
-        "imageUrl":    image_url,
+        "imageUrl":    "",
     }
 
     updated = [new_article] + existing
