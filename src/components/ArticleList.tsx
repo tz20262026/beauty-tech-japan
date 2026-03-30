@@ -3,15 +3,66 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Scissors,
+  Droplets,
+  Palette,
+  Wind,
+  Leaf,
+  Sparkles,
+  Stethoscope,
+  Sprout,
+  Gem,
+  Moon,
+  Clock,
+  TrendingUp,
+  CalendarDays,
+} from "lucide-react";
 import type { Article } from "@/lib/articles";
 import { getArticleImageUrl, getReadTime, getRelativeTime, isNew } from "@/lib/articles";
 
+const BEAUTY_CATEGORIES = [
+  { id: "ヘアケア",                     label: "ヘアケア",                     icon: Scissors },
+  { id: "ボディケア",                   label: "ボディケア",                   icon: Droplets },
+  { id: "メイクアップ",                 label: "メイクアップ",                 icon: Palette },
+  { id: "フレグランス",                 label: "フレグランス",                 icon: Wind },
+  { id: "インナービューティー",         label: "インナービューティー",         icon: Leaf },
+  { id: "エイジングケア・再生美容",     label: "エイジングケア・再生美容",     icon: Sparkles },
+  { id: "美容医療",                     label: "美容医療",                     icon: Stethoscope },
+  { id: "オーガニック・クリーンビューティー", label: "オーガニック・クリーンビューティー", icon: Sprout },
+  { id: "ネイルケア",                   label: "ネイルケア",                   icon: Gem },
+  { id: "スリープビューティー",         label: "スリープビューティー",         icon: Moon },
+] as const;
+
+// 旧タグ → 新カテゴリID のマッピング（記事データを変更せず吸収する）
+const CATEGORY_TAG_MAP: Record<string, string[]> = {
+  ヘアケア:                         ["ヘアケア"],
+  ボディケア:                       ["スキンケア", "ルーティン", "ボディケア"],
+  メイクアップ:                     ["メイク", "メイクアップ", "Kビューティー"],
+  フレグランス:                     ["フレグランス"],
+  インナービューティー:             ["インナービューティー", "ウェルネス", "サプリメント", "メンタルヘルス"],
+  "エイジングケア・再生美容":       ["アンチエイジング", "最先端成分", "成分", "ビューティーサイエンス", "パーソナライズ"],
+  美容医療:                         ["美容医療", "美容機器", "ビューティーテック"],
+  "オーガニック・クリーンビューティー": ["マイクロバイオーム", "Jビューティー", "サステナビリティ", "オーガニック", "クリーンビューティー"],
+  ネイルケア:                       ["ネイル", "ネイルケア"],
+  スリープビューティー:             ["スリープビューティー", "睡眠"],
+};
+
 const TAG_COLORS: Record<string, string> = {
-  // ビューティー系
+  ヘアケア:                         "bg-amber-100 text-amber-700",
+  ボディケア:                       "bg-sky-100 text-sky-700",
+  メイクアップ:                     "bg-red-100 text-red-700",
+  フレグランス:                     "bg-purple-100 text-purple-700",
+  インナービューティー:             "bg-lime-100 text-lime-700",
+  "エイジングケア・再生美容":       "bg-rose-100 text-rose-700",
+  美容医療:                         "bg-indigo-100 text-indigo-700",
+  "オーガニック・クリーンビューティー": "bg-green-100 text-green-700",
+  ネイルケア:                       "bg-fuchsia-100 text-fuchsia-700",
+  スリープビューティー:             "bg-violet-100 text-violet-700",
+  // 既存タグ
   スキンケア:         "bg-pink-100 text-pink-700",
   アンチエイジング:   "bg-rose-100 text-rose-700",
   ウェルネス:         "bg-green-100 text-green-700",
-  インナービューティー: "bg-lime-100 text-lime-700",
   成分:               "bg-fuchsia-100 text-fuchsia-700",
   最先端成分:         "bg-fuchsia-100 text-fuchsia-700",
   ビューティーサイエンス: "bg-purple-100 text-purple-700",
@@ -23,46 +74,31 @@ const TAG_COLORS: Record<string, string> = {
   マイクロバイオーム: "bg-emerald-100 text-emerald-700",
   ルーティン:         "bg-orange-100 text-orange-700",
   パーソナライズ:     "bg-sky-100 text-sky-700",
-  ヘアケア:           "bg-amber-100 text-amber-700",
   メイク:             "bg-red-100 text-red-700",
-  フレグランス:       "bg-purple-100 text-purple-700",
   サステナビリティ:   "bg-green-100 text-green-700",
   テクノロジー:       "bg-blue-100 text-blue-700",
-  // テック系
-  OpenAI:             "bg-emerald-100 text-emerald-700",
-  Anthropic:          "bg-orange-100 text-orange-700",
-  Google:             "bg-blue-100 text-blue-700",
-  Meta:               "bg-indigo-100 text-indigo-700",
-  Microsoft:          "bg-sky-100 text-sky-700",
-  画像生成:           "bg-pink-100 text-pink-700",
-  動画生成:           "bg-rose-100 text-rose-700",
-  音声AI:             "bg-yellow-100 text-yellow-700",
-  LLM:                "bg-teal-100 text-teal-700",
-  生産性:             "bg-emerald-100 text-emerald-700",
-  オープンソース:     "bg-purple-100 text-purple-700",
 };
 
 function tagColor(tag: string) {
   return TAG_COLORS[tag] ?? "bg-gray-100 text-gray-600";
 }
 
-function getTopTags(articles: Article[]): { tag: string; count: number }[] {
-  const count: Record<string, number> = {};
-  articles.forEach((a) => a.tags.forEach((t) => { count[t] = (count[t] || 0) + 1; }));
-  return Object.entries(count)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10)
-    .map(([tag, count]) => ({ tag, count }));
-}
+const PAGE_SIZE = 12;
+
+type SortKey = "new" | "old" | "short";
+const SORT_OPTIONS: { key: SortKey; label: string; icon: typeof Clock }[] = [
+  { key: "new",   label: "新着順",         icon: CalendarDays },
+  { key: "old",   label: "人気順",         icon: TrendingUp },
+  { key: "short", label: "短い順",         icon: Clock },
+];
 
 export default function ArticleList({ articles }: { articles: Article[] }) {
   const [search, setSearch] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-
-  const topTags = useMemo(() => getTopTags(articles), [articles]);
+  const [sort, setSort] = useState<SortKey>("new");
+  const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
-    // ひらがな→カタカナに統一して比較（例：「おーぷん」でも「オープン」を検索できる）
     const normalize = (str: string) =>
       str
         .toLowerCase()
@@ -70,18 +106,30 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           String.fromCharCode(ch.charCodeAt(0) + 0x60)
         );
     const q = normalize(search);
-    return articles.filter((a) => {
+    let result = articles.filter((a) => {
       const matchSearch =
         !search ||
         normalize(a.title).includes(q) ||
         normalize(a.summary).includes(q) ||
         a.tags.some((t) => normalize(t).includes(q));
-      const matchTag = !selectedTag || a.tags.includes(selectedTag);
+      const allowedTags = selectedTag ? (CATEGORY_TAG_MAP[selectedTag] ?? [selectedTag]) : null;
+      const matchTag = !allowedTags || a.tags.some((t) => allowedTags.includes(t));
       return matchSearch && matchTag;
     });
-  }, [articles, search, selectedTag]);
 
-  const [featured, ...rest] = filtered;
+    if (sort === "new") result = [...result].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    else if (sort === "old") result = [...result].sort((a, b) => a.publishedAt.localeCompare(b.publishedAt));
+    else if (sort === "short") result = [...result].sort((a, b) => getReadTime(a.body) - getReadTime(b.body));
+
+    return result;
+  }, [articles, search, selectedTag, sort]);
+
+  // フィルターが変わったらページをリセット
+  const resetPage = () => setPage(1);
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  const paginated = filtered.slice(0, page * PAGE_SIZE);
+  const [featured, ...rest] = paginated;
 
   return (
     <div>
@@ -91,36 +139,61 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           type="text"
           placeholder="キーワードで検索..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white"
+          onChange={(e) => { setSearch(e.target.value); resetPage(); }}
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white dark:bg-gray-800 dark:text-white"
         />
       </div>
 
       {/* カテゴリフィルター */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        <button
-          onClick={() => setSelectedTag(null)}
-          className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${
-            !selectedTag
-              ? "bg-blue-600 text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-          }`}
-        >
-          すべて ({articles.length})
-        </button>
-        {topTags.map(({ tag, count }) => (
+      <div className="overflow-x-auto mb-4 -mx-4 px-4">
+        <div className="flex gap-2 w-max">
           <button
-            key={tag}
-            onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-            className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${
-              selectedTag === tag
-                ? "bg-blue-600 text-white"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+            onClick={() => { setSelectedTag(null); resetPage(); }}
+            className={`flex items-center gap-1.5 text-xs px-3 py-2 rounded-full font-medium whitespace-nowrap transition-colors ${
+              !selectedTag
+                ? "bg-pink-500 text-white shadow-sm"
+                : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
             }`}
           >
-            {tag} ({count})
+            すべて
           </button>
-        ))}
+          {BEAUTY_CATEGORIES.map(({ id, label, icon: Icon }) => (
+            <button
+              key={id}
+              onClick={() => { setSelectedTag(id === selectedTag ? null : id); resetPage(); }}
+              className={`flex items-center gap-1.5 text-xs px-3 py-2 rounded-full font-medium whitespace-nowrap transition-colors ${
+                selectedTag === id
+                  ? "bg-pink-500 text-white shadow-sm"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+              }`}
+            >
+              <Icon size={12} />
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ソート切り替え */}
+      <div className="flex items-center gap-2 mb-6">
+        <span className="text-xs text-gray-400 dark:text-gray-500 shrink-0">並び替え:</span>
+        <div className="flex gap-1.5">
+          {SORT_OPTIONS.map(({ key, label, icon: Icon }) => (
+            <button
+              key={key}
+              onClick={() => { setSort(key); resetPage(); }}
+              className={`flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg font-medium transition-colors ${
+                sort === key
+                  ? "bg-pink-500 text-white"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+              }`}
+            >
+              <Icon size={11} />
+              {label}
+            </button>
+          ))}
+        </div>
+        <span className="text-xs text-gray-400 dark:text-gray-500 ml-auto">{filtered.length} 件</span>
       </div>
 
       {/* 検索結果なし */}
@@ -131,11 +204,11 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
         </div>
       )}
 
-      {/* 注目記事（一番上の大きいカード） */}
+      {/* 注目記事 */}
       {featured && (
         <Link
           href={`/articles/${featured.id}`}
-          className="block bg-white rounded-2xl border border-gray-200 overflow-hidden mb-6 hover:shadow-xl transition-all duration-300 group"
+          className="block bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-6 hover:shadow-xl transition-all duration-300 group"
         >
           <div className="relative w-full h-56 sm:h-72 overflow-hidden">
             <Image
@@ -166,7 +239,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
             </div>
           </div>
           <div className="p-5">
-            <p className="text-gray-600 leading-relaxed text-sm line-clamp-2">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm line-clamp-2">
               {featured.summary}
             </p>
             <div className="mt-3 flex flex-wrap gap-2 items-center justify-between">
@@ -180,7 +253,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                   </span>
                 ))}
               </div>
-              <span className="text-xs text-gray-400">
+              <span className="text-xs text-gray-400 dark:text-gray-500">
                 {getReadTime(featured.body)}分で読める
               </span>
             </div>
@@ -194,7 +267,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           <Link
             key={article.id}
             href={`/articles/${article.id}`}
-            className="block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:scale-[1.02] transition-all duration-300 group"
+            className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg hover:scale-[1.02] transition-all duration-300 group"
           >
             <div className="relative w-full h-40 overflow-hidden">
               <Image
@@ -224,22 +297,34 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
               </div>
             </div>
             <div className="p-4">
-              <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5">
+              <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500 mb-1.5">
                 <span>
                   {getRelativeTime(article.publishedAt)} · {article.source}
                 </span>
                 <span>{getReadTime(article.body)}分</span>
               </div>
-              <h2 className="text-sm font-semibold text-gray-900 leading-snug mb-1.5 group-hover:text-pink-600 transition-colors line-clamp-2">
+              <h2 className="text-sm font-semibold text-gray-900 dark:text-white leading-snug mb-1.5 group-hover:text-pink-600 transition-colors line-clamp-2">
                 {article.title}
               </h2>
-              <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
+              <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
                 {article.summary}
               </p>
             </div>
           </Link>
         ))}
       </div>
+
+      {/* ページネーション */}
+      {totalPages > 1 && page < totalPages && (
+        <div className="mt-8 text-center">
+          <button
+            onClick={() => setPage((p) => p + 1)}
+            className="px-6 py-3 rounded-xl bg-pink-500 text-white text-sm font-bold hover:bg-pink-600 transition-colors"
+          >
+            もっと見る ({filtered.length - page * PAGE_SIZE} 件)
+          </button>
+        </div>
+      )}
     </div>
   );
 }
