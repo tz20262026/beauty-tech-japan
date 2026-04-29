@@ -398,5 +398,85 @@
     "description": "Holistic hair health approach integrating scalp microbiome care, nutritional supplementation (biotin, collagen, iron), stress management for hair loss prevention, and low-manipulation styling. Moving beyond product-only solutions to systemic hair wellness.",
     "tags": ["ヘアケア", "ウェルネス", "インナービューティー"],
     "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_051",
+    "name": "Gen Zビューティートレンド：素肌感とセルフケア",
+    "url": "https://www.allure.com/story/gen-z-beauty-trends-2026",
+    "description": "Gen Z is redefining beauty by prioritizing skin health over coverage, embracing 'skinimalism' with multi-step serums, sun protection, and minimal makeup. Authenticity, mental wellness alignment, and inclusive shade ranges define Gen Z's approach to cosmetics in 2026.",
+    "tags": ["トレンド", "スキンケア", "メイクアップ"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_052",
+    "name": "AIビューティーコーチ：スマホが肌主治医に",
+    "url": "https://www.byrdie.com/ai-beauty-coach-apps-2026",
+    "description": "AI-powered beauty coaching apps providing real-time skin analysis, personalized routine recommendations, ingredient conflict detection, and progress tracking. Apps like Skincare.ai and YourSkin use camera-based diagnostics to replace dermatologist consultations for routine guidance.",
+    "tags": ["ビューティーテック", "AI", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_053",
+    "name": "ビーガンコスメの進化：動物フリー×高機能",
+    "url": "https://www.vogue.com/article/vegan-cosmetics-innovation-2026",
+    "description": "Vegan cosmetics achieving performance parity with traditional formulations through biotechnology. Lab-grown alternatives to beeswax, lanolin, squalene, and carmine using fermentation and cell culture. Vegan certification becoming a baseline expectation rather than premium distinction.",
+    "tags": ["サステナビリティ", "クリーンビューティー", "成分"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_054",
+    "name": "ジェンダーニュートラルビューティー2026",
+    "url": "https://www.cosmopolitan.com/beauty/gender-neutral-beauty-2026",
+    "description": "Gender-neutral beauty formulations and marketing expanding beyond grooming. Shared skincare routines between partners, unisex fragrance collections, and beauty brands removing gender categories entirely. Ritual-focused rather than gender-defined beauty culture.",
+    "tags": ["トレンド", "メンズビューティー", "スキンケア"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_055",
+    "name": "マルチタスクスキンケア：1本で5役の時代",
+    "url": "https://www.harpersbazaar.com/beauty/multitasking-skincare-2026",
+    "description": "The skincare minimalism movement driving demand for high-efficacy multifunctional products. Moisturizers combining SPF, antioxidants, peptides, and tint in single formulas. Consumer fatigue with 10-step routines accelerating 'skincare editing' toward fewer, more powerful products.",
+    "tags": ["スキンケア", "トレンド", "ルーティン"],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_056",
+    "name": "メンタルビューティー：ストレスホルモンと肌荒れ",
+    "url": "https://www.allure.com/story/mental-health-beauty-skin-connection-2026",
+    "description": "Scientific understanding of the stress-skin axis driving a new category of 'psychodermatology' products. Adaptogens, neuropeptides, and mindfulness-integrated beauty rituals addressing cortisol-induced acne, eczema flares, and accelerated aging from chronic psychological stress.",
+    "tags": ["ウェルネス", "スキンケア", "成分"],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_057",
+    "name": "日焼け止め革命：次世代UVフィルターの登場",
+    "url": "https://www.byrdie.com/new-generation-sunscreen-filters-2026",
+    "description": "New UV filter technologies approved in global markets offering broader spectrum protection with elegant cosmetic elegance. Bemotrizinol, bisoctrizole, and encapsulated zinc oxide delivering invisible protection. The FDA's finally approved new filters reshaping US sunscreen formulation.",
+    "tags": ["日焼け止め", "成分", "スキンケア"],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_058",
+    "name": "テクスチャー革命：新感覚処方が変えるコスメ体験",
+    "url": "https://www.vogue.com/article/texture-innovation-cosmetics-2026",
+    "description": "Sensory innovation in cosmetic textures creating new product categories. Bouncy gel-creams, powder-to-serum hybrids, phase-changing balms, and skin-adhering mesh patches delivering unique application experiences. Texture as the primary differentiation in an ingredient-saturated market.",
+    "tags": ["スキンケア", "メイクアップ", "トレンド"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_059",
+    "name": "ホルモンサイクル連動スキンケア",
+    "url": "https://www.cosmopolitan.com/beauty/cycle-syncing-skincare-2026",
+    "description": "Cycle-syncing skincare tailoring product use to menstrual cycle phases. Follicular phase focusing on brightening, ovulation phase on glow enhancement, luteal phase on oil control and anti-inflammation, and menstruation phase on barrier repair. Apps tracking cycles now recommending skincare adjustments.",
+    "tags": ["スキンケア", "ウェルネス", "パーソナライズ"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_060",
+    "name": "ラグジュアリースキンケアの民主化",
+    "url": "https://www.harpersbazaar.com/beauty/luxury-skincare-democratization-2026",
+    "description": "Prestige skincare ingredients and technologies becoming accessible at mid-market price points. Retinol alternatives, peptide complexes, and professional-grade acids now available in drugstore formulations. The premium-mass beauty gap narrowing as biotech reduces manufacturing costs.",
+    "tags": ["スキンケア", "トレンド", "成分"],
+    "source": "harpers_bazaar"
   }
 ]
