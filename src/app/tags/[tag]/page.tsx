@@ -69,7 +69,7 @@ export default async function TagPage({ params }: Props) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {articles.map((article) => (
+        {articles.map((article, i) => (
           <Link
             key={article.id}
             href={`/articles/${article.id}`}
@@ -77,7 +77,7 @@ export default async function TagPage({ params }: Props) {
           >
             <div className="relative w-full h-40 overflow-hidden">
               <Image
-                src={getArticleImageUrl(article)}
+                src={getArticleImageUrl(article, i)}
                 alt={article.title}
                 fill
                 className="object-cover"

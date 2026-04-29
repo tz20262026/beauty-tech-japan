@@ -70,8 +70,8 @@ async function generateArticle(topic: Topic): Promise<{
   const result = await model.generateContent(prompt);
   const raw = result.response.text().trim();
 
-  const catchMatch = raw.match(/\[キャッチコピー\]\s*\n(.*?)(?=\n\[|\Z)/s);
-  const bodyMatch = raw.match(/\[本文\]\s*\n(.*?)(?=\n---|$)/s);
+  const catchMatch = raw.match(/\[キャッチコピー\]\s*\n([\s\S]*?)(?=\n\[)/);
+  const bodyMatch = raw.match(/\[本文\]\s*\n([\s\S]*?)(?=\n---|$)/);
 
   const catchcopy = catchMatch?.[1]?.trim() ?? "";
   const body = bodyMatch?.[1]?.trim() ?? raw;

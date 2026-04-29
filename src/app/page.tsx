@@ -58,7 +58,7 @@ export default async function Home() {
             <h2 className="text-sm font-bold text-pink-700 dark:text-pink-400">今日の注目記事</h2>
           </div>
           <div className="flex flex-col gap-2">
-            {todayArticles.map((a) => (
+            {todayArticles.map((a, i) => (
               <Link
                 key={a.id}
                 href={`/articles/${a.id}`}
@@ -66,7 +66,7 @@ export default async function Home() {
               >
                 <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0">
                   <Image
-                    src={getArticleImageUrl(a)}
+                    src={getArticleImageUrl(a, i)}
                     alt={a.title}
                     fill
                     className="object-cover"
