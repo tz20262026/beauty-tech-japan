@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateBeautyArticleFromTopic, generateBeautyArticleFree } from "@/lib/gemini";
-import { createArticle, getAllArticles } from "@/lib/microcms";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import topicsData from "@/data/beauty_topics.json";
+import articlesData from "@/data/extra_articles.json";
 
 export const maxDuration = 60;
 
@@ -14,7 +14,15 @@ type Topic = {
   source: string;
 };
 
-const topics = topicsData as Topic[];
+const SOURCE_NAMES: Record<string, string> = {
+  allure: "Allure",
+  byrdie: "Byrdie",
+  vogue_beauty: "Vogue Beauty",
+  cosmopolitan: "Cosmopolitan",
+  harpers_bazaar: "Harper's Bazaar",
+  instyle: "InStyle",
+  refinery29: "Refinery29",
+};
 
 function isAuthorized(req: NextRequest): boolean {
   const secret = process.env.CRON_SECRET;
@@ -23,56 +31,95 @@ function isAuthorized(req: NextRequest): boolean {
   return auth === `Bearer ${secret}`;
 }
 
+async function generateArticle(topic: Topic): Promise<{
+  id: string;
+  title: string;
+  summary: string;
+  body: string;
+  source: string;
+  sourceUrl: string;
+  tags: string[];
+  publishedAt: string;
+  imageUrl: string;
+}> {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) throw new Error("GEMINI_API_KEY が未設定");
+
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+
+  const prompt = `あなたは人気美容・コスメメディアの編集長です。読者が「今すぐ試したい！」と思うような文章を書いてください。
+
+以下の海外美容トレンド・コスメ情報について記事を作成してください。
+
+トピック名: ${topic.name}
+英語概要: ${topic.description}
+カテゴリ: ${topic.tags.join(", ")}
+
+【出力フォーマット（ラベルをそのまま使うこと）】
+
+[キャッチコピー]
+日本人読者が「気になる！」と思う一文タイトル。
+
+[本文]
+導入・詳細解説・活用シーン・まとめの流れで合計800〜1000文字の解説文。箇条書き不可。
+
+---
+すべて日本語のみ。余計な前置き不要。`;
+
+  const result = await model.generateContent(prompt);
+  const raw = result.response.text().trim();
+
+  const catchMatch = raw.match(/\[キャッチコピー\]\s*\n(.*?)(?=\n\[|\Z)/s);
+  const bodyMatch = raw.match(/\[本文\]\s*\n(.*?)(?=\n---|$)/s);
+
+  const catchcopy = catchMatch?.[1]?.trim() ?? "";
+  const body = bodyMatch?.[1]?.trim() ?? raw;
+  const title = catchcopy || topic.name;
+  const summary = catchcopy.length > 120 ? catchcopy.slice(0, 120) + "…" : catchcopy || body.slice(0, 120) + "…";
+
+  return {
+    id: `b_${topic.id.slice(0, 12)}_${Date.now()}`,
+    title,
+    summary,
+    body,
+    source: SOURCE_NAMES[topic.source] ?? topic.source,
+    sourceUrl: topic.url,
+    tags: topic.tags.slice(0, 5),
+    publishedAt: new Date().toISOString().slice(0, 10),
+    imageUrl: "",
+  };
+}
+
 export async function GET(req: NextRequest) {
   if (!isAuthorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  // 既存記事のsource_urlを収集して重複投稿を防ぐ
-  const postedUrls = new Set<string>();
-  try {
-    const existing = await getAllArticles();
-    existing.forEach((a) => {
-      if (a.source_url) postedUrls.add(a.source_url);
-    });
-  } catch (e) {
-    console.warn("[cron] 既存記事取得失敗:", e);
-  }
+  const topics = topicsData as Topic[];
+  const existing = articlesData as Array<{ sourceUrl: string }>;
+  const postedUrls = new Set(existing.map((a) => a.sourceUrl).filter(Boolean));
 
-  // まだ投稿していないトピックを選ぶ
   const unposted = topics.filter((t) => !postedUrls.has(t.url));
-
-  let articlePayload;
-  let topicUsed: string;
-
-  try {
-    if (unposted.length > 0) {
-      const topic = unposted[Math.floor(Math.random() * unposted.length)];
-      topicUsed = topic.name;
-      articlePayload = await generateBeautyArticleFromTopic(topic);
-    } else {
-      // 全トピック投稿済みなら自由生成
-      topicUsed = "AI自由生成";
-      articlePayload = await generateBeautyArticleFree();
-    }
-  } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ error: `Gemini生成エラー: ${message}` }, { status: 500 });
+  if (unposted.length === 0) {
+    return NextResponse.json({ message: "全トピック投稿済み" });
   }
 
-  let result;
+  const topic = unposted[Math.floor(Math.random() * unposted.length)];
+
+  let article;
   try {
-    result = await createArticle(articlePayload);
+    article = await generateArticle(topic);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ error: `microCMS投稿エラー: ${message}` }, { status: 500 });
+    return NextResponse.json({ error: `生成エラー: ${message}` }, { status: 500 });
   }
 
   return NextResponse.json({
     success: true,
-    id: result.id,
-    title: articlePayload.title,
-    topic: topicUsed,
-    remaining: Math.max(0, unposted.length - 1),
+    title: article.title,
+    topic: topic.name,
+    remaining: unposted.length - 1,
+    note: "記事を生成しました（静的JSONへの書き込みはCIで対応）",
   });
 }
