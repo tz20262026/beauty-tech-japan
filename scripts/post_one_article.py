@@ -14,6 +14,7 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import quote
 
 from google import genai
 from google.genai import types
@@ -72,6 +73,52 @@ ARTICLE_PROMPT = """\
 ---
 出力はすべて日本語のみ。余計な前置き不要。
 """
+
+TAG_TO_EN: dict[str, str] = {
+    "スキンケア": "skincare luxury",
+    "メイクアップ": "makeup cosmetics",
+    "ヘアケア": "haircare salon",
+    "ウェルネス": "wellness spa",
+    "成分": "beauty serum ingredients",
+    "テクノロジー": "beauty technology",
+    "サステナビリティ": "natural organic beauty",
+    "ネイル": "nail art manicure",
+    "ボディケア": "body care lotion",
+    "フレグランス": "perfume fragrance",
+    "サンケア": "sunscreen spf beach",
+    "アイメイク": "eye makeup shadow",
+    "リップ": "lipstick lip gloss",
+    "ファンデーション": "foundation makeup skin",
+    "美白": "brightening skin glow",
+    "保湿": "moisturizer hydration skin",
+    "エイジングケア": "anti-aging skincare luxury",
+    "毛穴": "pore cleansing skin",
+    "日焼け止め": "sunscreen protection beach",
+    "クレンジング": "cleansing foam skincare",
+    "美容液": "serum essence face",
+    "化粧水": "toner skincare lotion",
+    "乳液": "emulsion moisturizer",
+    "マスク": "face mask beauty treatment",
+    "洗顔": "face wash cleanser",
+    "美容": "beauty cosmetics",
+    "ダイエット": "wellness healthy lifestyle",
+    "メンタル": "wellness mindfulness calm",
+    "ホルモン": "wellness women health",
+    "ジェンダー": "gender neutral beauty",
+    "ビーガン": "vegan natural beauty",
+    "AI": "artificial intelligence beauty tech",
+    "Gen Z": "gen z trendy beauty colorful",
+}
+
+def make_image_url(topic: dict, article_id: str) -> str:
+    tags = topic.get("tags", [])
+    en_parts = [TAG_TO_EN.get(t, "beauty") for t in tags[:3]]
+    if not en_parts:
+        en_parts = ["beauty cosmetics"]
+    prompt = " ".join(en_parts) + " professional photography soft light elegant"
+    seed = abs(hash(article_id)) % 100000
+    encoded = quote(prompt)
+    return f"https://image.pollinations.ai/prompt/{encoded}?width=800&height=450&nologo=true&seed={seed}"
 
 SOURCE_NAMES = {
     "allure":            "Allure",
@@ -173,7 +220,7 @@ def main() -> int:
         "sourceUrl":   topic.get("url", ""),
         "tags":        tags[:5],
         "publishedAt": published_at,
-        "imageUrl":    "",
+        "imageUrl":    make_image_url(topic, article_id),
     }
 
     updated = [new_article] + existing
