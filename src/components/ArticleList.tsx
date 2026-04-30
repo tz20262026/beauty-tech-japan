@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -92,11 +92,20 @@ const SORT_OPTIONS: { key: SortKey; label: string; icon: typeof Clock }[] = [
   { key: "short", label: "短い順",         icon: Clock },
 ];
 
+const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=800&q=80&fit=crop";
+
 export default function ArticleList({ articles }: { articles: Article[] }) {
   const [search, setSearch] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [sort, setSort] = useState<SortKey>("new");
   const [page, setPage] = useState(1);
+  const [brokenImages, setBrokenImages] = useState<Set<string>>(new Set());
+
+  const handleImageError = useCallback((src: string) => {
+    setBrokenImages((prev) => new Set(prev).add(src));
+  }, []);
+
+  const getSrc = useCallback((src: string) => brokenImages.has(src) ? FALLBACK_IMAGE : src, [brokenImages]);
 
   const filtered = useMemo(() => {
     const normalize = (str: string) =>
@@ -212,11 +221,12 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
         >
           <div className="relative w-full h-56 sm:h-72 overflow-hidden">
             <Image
-              src={getArticleImageUrl(featured, 0)}
+              src={getSrc(getArticleImageUrl(featured, 0))}
               alt={featured.title}
               fill
               className="object-cover article-image"
               sizes="(max-width: 768px) 100vw, 50vw"
+              onError={() => handleImageError(getArticleImageUrl(featured, 0))}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-4 left-5 right-5">
@@ -271,11 +281,12 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           >
             <div className="relative w-full h-40 overflow-hidden">
               <Image
-                src={getArticleImageUrl(article, i + 1)}
+                src={getSrc(getArticleImageUrl(article, i + 1))}
                 alt={article.title}
                 fill
                 className="object-cover article-image"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                onError={() => handleImageError(getArticleImageUrl(article, i + 1))}
               />
               {isNew(article.publishedAt) && (
                 <span className="absolute top-2 right-2 text-xs font-bold bg-red-500 text-white px-2 py-0.5 rounded animate-pulse z-10">
