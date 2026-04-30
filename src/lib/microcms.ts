@@ -125,6 +125,9 @@ export async function createArticle(
 
 /** microCMS の Article を既存の Article 型に変換するアダプター */
 export function adaptMicroCMSArticle(a: MicroCMSArticle) {
+  const rawImageUrl = a.eyecatch?.url;
+  // pollinations.ai は不安定なため除外し、Unsplash プールにフォールバックさせる
+  const imageUrl = rawImageUrl && !rawImageUrl.includes("pollinations.ai") ? rawImageUrl : undefined;
   return {
     id: a.id,
     title: a.title,
@@ -134,6 +137,6 @@ export function adaptMicroCMSArticle(a: MicroCMSArticle) {
     sourceUrl: a.source_url,
     tags: a.tags ? a.tags.split(",").map((t) => t.trim()).filter(Boolean) : [],
     publishedAt: a.publishedAt.slice(0, 10), // "YYYY-MM-DD"
-    imageUrl: a.eyecatch?.url,
+    imageUrl,
   };
 }
