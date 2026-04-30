@@ -66,7 +66,7 @@ export async function getArticles(options?: {
 
   const res = await fetch(`${BASE_URL}/${ENDPOINT}?${params}`, {
     headers: { "X-MICROCMS-API-KEY": API_KEY },
-    next: { revalidate: 3600 }, // 1時間キャッシュ
+    next: { revalidate: 300 }, // 5分キャッシュ
   });
 
   if (!res.ok) {
