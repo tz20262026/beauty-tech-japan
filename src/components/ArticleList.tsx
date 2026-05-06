@@ -221,12 +221,12 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
         >
           <div className="relative w-full h-56 sm:h-72 overflow-hidden">
             <Image
-              src={getSrc(getArticleImageUrl(featured))}
+              src={getSrc(getArticleImageUrl(featured, articles))}
               alt={featured.title}
               fill
               className="object-cover article-image"
               sizes="(max-width: 768px) 100vw, 50vw"
-              onError={() => handleImageError(getArticleImageUrl(featured))}
+              onError={() => handleImageError(getArticleImageUrl(featured, articles))}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-4 left-5 right-5">
@@ -281,12 +281,12 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           >
             <div className="relative w-full h-40 overflow-hidden">
               <Image
-                src={getSrc(getArticleImageUrl(article))}
+                src={getSrc(getArticleImageUrl(article, articles))}
                 alt={article.title}
                 fill
                 className="object-cover article-image"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                onError={() => handleImageError(getArticleImageUrl(article))}
+                onError={() => handleImageError(getArticleImageUrl(article, articles))}
               />
               {isNew(article.publishedAt) && (
                 <span className="absolute top-2 right-2 text-xs font-bold bg-red-500 text-white px-2 py-0.5 rounded animate-pulse z-10">

@@ -64,9 +64,14 @@ function hashId(id: string): number {
 }
 
 export function getArticleImageUrl(
-  article: { id?: string; imageUrl?: string; tags?: string[] }
+  article: { id?: string; imageUrl?: string; tags?: string[] },
+  allArticles?: { id?: string }[]
 ): string {
   if (article.imageUrl) return article.imageUrl;
+  if (allArticles && article.id) {
+    const idx = allArticles.findIndex((a) => a.id === article.id);
+    if (idx >= 0) return BEAUTY_IMAGE_POOL[idx % BEAUTY_IMAGE_POOL.length];
+  }
   const seed = article.id ? hashId(article.id) : 0;
   return BEAUTY_IMAGE_POOL[seed % BEAUTY_IMAGE_POOL.length];
 }

@@ -77,7 +77,7 @@ export default async function TagPage({ params }: Props) {
           >
             <div className="relative w-full h-40 overflow-hidden">
               <Image
-                src={getArticleImageUrl(article)}
+                src={getArticleImageUrl(article, all)}
                 alt={article.title}
                 fill
                 className="object-cover"
