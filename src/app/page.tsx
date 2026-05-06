@@ -66,7 +66,7 @@ export default async function Home() {
               >
                 <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0">
                   <Image
-                    src={getArticleImageUrl(a, i)}
+                    src={getArticleImageUrl(a)}
                     alt={a.title}
                     fill
                     className="object-cover"

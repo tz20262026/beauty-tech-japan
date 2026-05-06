@@ -63,23 +63,10 @@ function hashId(id: string): number {
   return Math.abs(hash);
 }
 
-/**
- * 記事の画像URLを返す。
- * @param article 記事オブジェクト
- * @param index リスト内での表示位置（渡すと確実に重複しない）
- */
 export function getArticleImageUrl(
-  article: { id?: string; imageUrl?: string; tags?: string[] },
-  index?: number
+  article: { id?: string; imageUrl?: string; tags?: string[] }
 ): string {
   if (article.imageUrl) return article.imageUrl;
-
-  // indexが渡された場合はそのまま使う（完全重複排除）
-  if (index !== undefined) {
-    return BEAUTY_IMAGE_POOL[index % BEAUTY_IMAGE_POOL.length];
-  }
-
-  // indexがない場合（個別記事ページ等）はIDのハッシュで選ぶ
   const seed = article.id ? hashId(article.id) : 0;
   return BEAUTY_IMAGE_POOL[seed % BEAUTY_IMAGE_POOL.length];
 }
