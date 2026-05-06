@@ -2,10 +2,11 @@
 """
 scripts/post_one_article.py
 未掲載の美容トピック1件を900〜1000字の日本語記事に生成し、
+Gemini で記事専用画像を生成して public/images/articles/ に保存、
 src/data/extra_articles.json に追加する。
-（デプロイはGitHub pushでVercelが自動実行）
 """
 
+import base64
 import json
 import logging
 import os
@@ -24,12 +25,14 @@ from google.genai import types
 # ---------------------------------------------------------------------------
 BASE_DIR            = Path(__file__).parent.parent
 EXTRA_ARTICLES_PATH = BASE_DIR / "src" / "data" / "extra_articles.json"
+IMAGES_DIR          = BASE_DIR / "public" / "images" / "articles"
 DATA_DIR            = Path(__file__).parent / "data"
 BEAUTY_TOPICS_PATH  = DATA_DIR / "beauty_topics.json"
 POSTED_LOG          = DATA_DIR / "posted_ids.log"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME     = "gemini-2.5-flash"
+IMAGE_MODEL    = "gemini-2.0-flash-preview-image-generation"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -74,52 +77,6 @@ ARTICLE_PROMPT = """\
 出力はすべて日本語のみ。余計な前置き不要。
 """
 
-TAG_TO_EN: dict[str, str] = {
-    "スキンケア": "skincare luxury",
-    "メイクアップ": "makeup cosmetics",
-    "ヘアケア": "haircare salon",
-    "ウェルネス": "wellness spa",
-    "成分": "beauty serum ingredients",
-    "テクノロジー": "beauty technology",
-    "サステナビリティ": "natural organic beauty",
-    "ネイル": "nail art manicure",
-    "ボディケア": "body care lotion",
-    "フレグランス": "perfume fragrance",
-    "サンケア": "sunscreen spf beach",
-    "アイメイク": "eye makeup shadow",
-    "リップ": "lipstick lip gloss",
-    "ファンデーション": "foundation makeup skin",
-    "美白": "brightening skin glow",
-    "保湿": "moisturizer hydration skin",
-    "エイジングケア": "anti-aging skincare luxury",
-    "毛穴": "pore cleansing skin",
-    "日焼け止め": "sunscreen protection beach",
-    "クレンジング": "cleansing foam skincare",
-    "美容液": "serum essence face",
-    "化粧水": "toner skincare lotion",
-    "乳液": "emulsion moisturizer",
-    "マスク": "face mask beauty treatment",
-    "洗顔": "face wash cleanser",
-    "美容": "beauty cosmetics",
-    "ダイエット": "wellness healthy lifestyle",
-    "メンタル": "wellness mindfulness calm",
-    "ホルモン": "wellness women health",
-    "ジェンダー": "gender neutral beauty",
-    "ビーガン": "vegan natural beauty",
-    "AI": "artificial intelligence beauty tech",
-    "Gen Z": "gen z trendy beauty colorful",
-}
-
-def make_image_url(topic: dict, article_id: str) -> str:
-    tags = topic.get("tags", [])
-    en_parts = [TAG_TO_EN.get(t, "beauty") for t in tags[:3]]
-    if not en_parts:
-        en_parts = ["beauty cosmetics"]
-    prompt = " ".join(en_parts) + " professional photography soft light elegant"
-    seed = abs(hash(article_id)) % 100000
-    encoded = quote(prompt)
-    return f"https://image.pollinations.ai/prompt/{encoded}?width=800&height=450&nologo=true&seed={seed}"
-
 SOURCE_NAMES = {
     "allure":            "Allure",
     "byrdie":            "Byrdie",
@@ -142,6 +99,39 @@ def load_posted() -> set:
 def append_posted(topic_id: str) -> None:
     with open(POSTED_LOG, "a", encoding="utf-8") as f:
         f.write(topic_id + "\n")
+
+def generate_image(client, article_id: str, title: str, tags: list) -> str:
+    """Gemini で画像生成し public/images/articles/ に保存。失敗時は空文字を返す。"""
+    prompt = (
+        f"美容雑誌のプロフェッショナルな広告写真。テーマ: {title}。"
+        f"キーワード: {', '.join(tags[:3])}。"
+        "高品質スタジオ撮影、清潔感のある白背景またはパステルカラー、"
+        "コスメ・スキンケア製品が主役。人物の顔なし。"
+    )
+    try:
+        response = client.models.generate_content(
+            model=IMAGE_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_modalities=["IMAGE"],
+            ),
+        )
+        for part in response.candidates[0].content.parts:
+            inline = getattr(part, "inline_data", None)
+            if inline is not None:
+                image_bytes = base64.b64decode(inline.data)
+                mime = getattr(inline, "mime_type", "image/png")
+                ext = "jpg" if "jpeg" in mime or "jpg" in mime else "png"
+                IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+                out_path = IMAGES_DIR / f"{article_id}.{ext}"
+                out_path.write_bytes(image_bytes)
+                logger.info(f"画像保存: {out_path} ({len(image_bytes):,} bytes)")
+                return f"/images/articles/{article_id}.{ext}"
+        logger.warning("画像データが返されませんでした")
+        return ""
+    except Exception as e:
+        logger.warning(f"Gemini画像生成失敗（フォールバックなし）: {e}")
+        return ""
 
 def main() -> int:
     if not GEMINI_API_KEY:
@@ -208,6 +198,14 @@ def main() -> int:
     published_at = datetime.now().strftime("%Y-%m-%d")
     tags         = topic.get("tags") or ["美容"]
 
+    # 画像生成
+    logger.info("記事専用画像を生成中...")
+    image_url = generate_image(client, article_id, title, tags)
+    if image_url:
+        logger.info(f"画像URL: {image_url}")
+    else:
+        logger.warning("画像生成スキップ（imageUrlなし）")
+
     # extra_articles.json 更新
     existing = json.loads(EXTRA_ARTICLES_PATH.read_text(encoding="utf-8")) if EXTRA_ARTICLES_PATH.exists() else []
 
@@ -220,7 +218,7 @@ def main() -> int:
         "sourceUrl":   topic.get("url", ""),
         "tags":        tags[:5],
         "publishedAt": published_at,
-        "imageUrl":    make_image_url(topic, article_id),
+        "imageUrl":    image_url,
     }
 
     updated = [new_article] + existing
