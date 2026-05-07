@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import ArticleList from "@/components/ArticleList";
-import { getArticleImageUrl } from "@/lib/articles";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -33,7 +30,6 @@ async function fetchArticles() {
 export default async function Home() {
   const articles = await fetchArticles();
   const latestDate = articles.map((a) => a.publishedAt).sort().at(-1) ?? "";
-  const todayArticles = articles.filter((a) => a.publishedAt === latestDate).slice(0, 3);
 
   return (
     <div>
@@ -50,37 +46,6 @@ export default async function Home() {
           )}
         </div>
       </div>
-
-      {todayArticles.length > 0 && (
-        <div className="mb-8 p-4 bg-pink-50 dark:bg-pink-950/30 rounded-2xl border border-pink-100 dark:border-pink-900">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-base">✨</span>
-            <h2 className="text-sm font-bold text-pink-700 dark:text-pink-400">今日の注目記事</h2>
-          </div>
-          <div className="flex flex-col gap-2">
-            {todayArticles.map((a, i) => (
-              <Link
-                key={a.id}
-                href={`/articles/${a.id}`}
-                className="flex items-center gap-3 bg-white dark:bg-gray-900 rounded-xl p-3 hover:shadow-md transition-all group"
-              >
-                <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0">
-                  <Image
-                    src={getArticleImageUrl(a, articles)}
-                    alt={a.title}
-                    fill
-                    className="object-cover"
-                    sizes="56px"
-                  />
-                </div>
-                <p className="text-xs font-semibold text-gray-800 dark:text-gray-200 line-clamp-2 group-hover:text-pink-600 transition-colors">
-                  {a.title}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
 
       <ArticleList articles={articles} />
     </div>
