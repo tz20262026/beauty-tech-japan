@@ -32,7 +32,7 @@ POSTED_LOG          = DATA_DIR / "posted_ids.log"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME     = "gemini-2.5-flash"
-IMAGE_MODEL    = "gemini-2.0-flash-preview-image-generation"
+IMAGE_MODEL    = "gemini-2.5-flash-image"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -119,7 +119,8 @@ def generate_image(client, article_id: str, title: str, tags: list) -> str:
         for part in response.candidates[0].content.parts:
             inline = getattr(part, "inline_data", None)
             if inline is not None:
-                image_bytes = base64.b64decode(inline.data)
+                raw = inline.data
+                image_bytes = raw if isinstance(raw, (bytes, bytearray)) else base64.b64decode(raw)
                 mime = getattr(inline, "mime_type", "image/png")
                 ext = "jpg" if "jpeg" in mime or "jpg" in mime else "png"
                 IMAGES_DIR.mkdir(parents=True, exist_ok=True)
