@@ -149,9 +149,7 @@ export default async function Home() {
               sizes="420px"
             />
             {/* 左側グラデーション（テキストエリアとのブレンド） */}
-            <div className="absolute inset-0 bg-gradient-to-r from-rose-500 via-rose-500/40 to-transparent" />
-            {/* 下部グラデーション */}
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-600/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-500 via-rose-500/20 to-transparent" />
           </div>
         </div>
       </div>
