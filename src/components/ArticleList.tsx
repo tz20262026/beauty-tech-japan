@@ -215,7 +215,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           href={`/articles/${featured.id}`}
           className="block bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-6 hover:shadow-xl transition-all duration-300 group"
         >
-          <div className="relative w-full h-56 sm:h-72 overflow-hidden">
+          <div className="relative w-full h-56 sm:h-72 lg:h-96 overflow-hidden">
             <Image
               src={getSrc(getArticleImageUrl(featured, articles))}
               alt={featured.title}
@@ -269,7 +269,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
       )}
 
       {/* 記事グリッド */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {rest.map((article, i) => (
           <Link
             key={article.id}

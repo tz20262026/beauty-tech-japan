@@ -86,7 +86,7 @@ export default async function Home() {
       />
 
       {/* ヒーローバナー */}
-      <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 min-h-[200px] sm:min-h-[320px]">
+      <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 min-h-[200px] sm:min-h-[320px] lg:min-h-[440px]">
         {/* 背景装飾サークル */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

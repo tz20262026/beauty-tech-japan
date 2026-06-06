@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Globe, Cpu, BookOpen, Tag, RefreshCw, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About | Beauty Tech Japan",
   description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
+  openGraph: {
+    title: "About | Beauty Tech Japan",
+    description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
+  },
 };
+
+const MEDIA_LIST = [
+  "Allure", "Byrdie", "Vogue Beauty", "Harper's Bazaar",
+  "Cosmopolitan", "InStyle", "Refinery29", "WWD Beauty", "その他多数",
+];
+
+const STEPS = [
+  { icon: Globe,     text: "海外メディアから美容・コスメ関連情報を自動収集" },
+  { icon: Cpu,       text: "AIが内容を解析し、注目トレンドを選別" },
+  { icon: BookOpen,  text: "日本語に自動翻訳・解説記事として執筆" },
+  { icon: Tag,       text: "カテゴリタグを付けてサイトに公開" },
+];
 
 export default function AboutPage() {
   return (
@@ -18,74 +35,99 @@ export default function AboutPage() {
         </Link>
       </div>
 
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="text-xs font-bold bg-pink-500 text-white px-2 py-0.5 rounded">Beauty</span>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Beauty Tech Japan とは</h1>
+      {/* ヒーローバナー */}
+      <div className="relative overflow-hidden rounded-2xl mb-6 bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 px-8 py-10 text-white">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="90%" cy="10%" r="160" fill="white" />
+            <circle cx="5%"  cy="90%" r="100" fill="white" />
+          </svg>
         </div>
-
-        <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
-          <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">サービス概要</h2>
-            <p>
-              Beauty Tech Japan は、世界中の最新美容トレンド・コスメ・スキンケア情報を自動で収集し、
-              日本語に翻訳してお届けするニュースサイトです。
-              海外の美容情報をいち早くキャッチしたい方に向けて、
-              3日おきに更新しています。
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">仕組み</h2>
-            <p className="mb-3">
-              Allure・Byrdie・Vogue Beauty・Harper's Bazaar など
-              <strong className="text-gray-900 dark:text-white"> 海外の人気美容メディア</strong>
-              から情報を自動収集しています。
-            </p>
-            <ol className="list-decimal list-inside space-y-2 text-sm">
-              <li>海外メディアから美容・コスメ関連情報を自動収集</li>
-              <li>AIが内容を解析し、注目トレンドを選別</li>
-              <li>日本語に自動翻訳・解説記事として執筆</li>
-              <li>カテゴリタグを付けてサイトに公開</li>
-            </ol>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">カバーするメディア</h2>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Allure", "Byrdie", "Vogue Beauty", "Harper's Bazaar",
-                "Cosmopolitan", "InStyle", "Refinery29",
-                "WWD Beauty", "その他多数"
-              ].map((media) => (
-                <span
-                  key={media}
-                  className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full"
-                >
-                  {media}
-                </span>
-              ))}
+        <div className="relative">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium mb-3">
+            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+            海外美容情報を日本語でお届け
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2 leading-tight">Beauty Tech Japan とは</h1>
+          <p className="text-white/80 text-sm max-w-lg">
+            世界の美容メディアから最新トレンドを自動収集し、AIが日本語でわかりやすくお届けするニュースサイトです。
+          </p>
+          <div className="flex flex-wrap gap-5 mt-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold">8+</div>
+              <div className="text-xs text-white/70">提携メディア</div>
             </div>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">更新頻度</h2>
-            <p>3日おきに自動更新。新しい美容トレンドやコスメ情報が定期的に追加されます。</p>
-          </section>
-
-          <section className="pt-4 border-t border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              掲載内容はすべて元の情報をもとにAIが要約・翻訳したものです。
-              詳細は各記事ページの「原文を読む」リンクからご確認ください。
-            </p>
-          </section>
+            <div className="w-px h-10 bg-white/30" />
+            <div className="text-center">
+              <div className="text-2xl font-bold">3日</div>
+              <div className="text-xs text-white/70">おきに更新</div>
+            </div>
+            <div className="w-px h-10 bg-white/30" />
+            <div className="text-center">
+              <div className="text-2xl font-bold">9</div>
+              <div className="text-xs text-white/70">カテゴリ</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mt-8 text-center">
+      {/* 仕組みセクション */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-4">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5">仕組み</h2>
+        <div className="space-y-4">
+          {STEPS.map(({ icon: Icon, text }, i) => (
+            <div key={i} className="flex items-start gap-4">
+              <div className="w-9 h-9 rounded-xl bg-pink-50 dark:bg-pink-900/30 flex items-center justify-center shrink-0">
+                <Icon size={18} className="text-pink-500" />
+              </div>
+              <div className="flex items-center gap-3 flex-1 pt-1.5">
+                <span className="text-xs font-bold text-pink-500 bg-pink-50 dark:bg-pink-900/30 px-2 py-0.5 rounded-full">
+                  Step {i + 1}
+                </span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">{text}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* カバーするメディア */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-4">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">カバーするメディア</h2>
+        <div className="flex flex-wrap gap-2">
+          {MEDIA_LIST.map((media) => (
+            <span
+              key={media}
+              className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1.5 rounded-full font-medium"
+            >
+              {media}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* 更新頻度・免責 */}
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-8">
+        <div className="flex items-center gap-3 mb-3">
+          <RefreshCw size={18} className="text-pink-500" />
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">更新頻度</h2>
+        </div>
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-5">
+          3日おきに自動更新。新しい美容トレンドやコスメ情報が定期的に追加されます。
+        </p>
+        <div className="pt-4 border-t border-gray-200 dark:border-gray-700 flex items-start gap-2">
+          <ExternalLink size={14} className="text-gray-400 mt-0.5 shrink-0" />
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            掲載内容はすべて元の情報をもとにAIが要約・翻訳したものです。
+            詳細は各記事ページの「原文を読む」リンクからご確認ください。
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center">
         <Link
           href="/"
-          className="inline-block bg-pink-600 hover:bg-pink-700 text-white text-sm font-medium px-6 py-2.5 rounded-full transition-colors"
+          className="inline-block bg-pink-600 hover:bg-pink-700 text-white text-sm font-bold px-8 py-3 rounded-full transition-colors shadow-lg shadow-pink-500/30"
         >
           記事一覧を見る
         </Link>
