@@ -1,6 +1,6 @@
 import extraArticlesData from "@/data/extra_articles.json";
 
-// 美容・コスメ系のUnsplash画像プール（重複なし）
+// ????????Unsplash?????(????)
 const BEAUTY_IMAGE_POOL = [
   "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80&fit=crop",
   "https://images.unsplash.com/photo-1571781565036-d3f759be73e4?w=800&q=80&fit=crop",
@@ -53,7 +53,7 @@ const BEAUTY_IMAGE_POOL = [
   "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&q=80&fit=crop",
 ];
 
-// djb2ハッシュ関数（均等分散）
+// djb2??????(????)
 function hashId(id: string): number {
   let hash = 5381;
   for (let i = 0; i < id.length; i++) {
@@ -67,7 +67,7 @@ export function getArticleImageUrl(
   article: { id?: string; imageUrl?: string; tags?: string[] },
   allArticles?: { id?: string }[]
 ): string {
-  // 空文字列・undefined・null はすべてフォールバック扱い
+  // ?????undefined?null ?????????????
   if (article.imageUrl && article.imageUrl.trim() !== "") return article.imageUrl;
   if (allArticles && article.id) {
     const idx = allArticles.findIndex((a) => a.id === article.id);
@@ -86,14 +86,14 @@ export function getReadTime(body: string | undefined | null): number {
 export function getRelativeTime(dateStr: string | undefined | null): string {
   if (!dateStr) return "";
   const date = new Date(dateStr);
-  // 不正な日付文字列の場合はそのまま返す
+  // ??????????????????
   if (isNaN(date.getTime())) return dateStr;
   const now = new Date();
   const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
-  if (diffDays === 0) return "今日";
-  if (diffDays === 1) return "昨日";
-  if (diffDays < 7) return `${diffDays}日前`;
-  if (diffDays < 30) return `${Math.floor(diffDays / 7)}週間前`;
+  if (diffDays === 0) return "??";
+  if (diffDays === 1) return "??";
+  if (diffDays < 7) return `${diffDays}??`;
+  if (diffDays < 30) return `${Math.floor(diffDays / 7)}???`;
   return dateStr;
 }
 
