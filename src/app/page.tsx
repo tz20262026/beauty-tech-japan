@@ -33,17 +33,51 @@ export default async function Home() {
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">最新の美容ニュース</h1>
-        <div className="flex items-center gap-3 mt-1">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            海外メディアから厳選した {articles.length} 件の記事
+      {/* ヒーローバナー */}
+      <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="80%" cy="20%" r="180" fill="white" />
+            <circle cx="10%" cy="80%" r="120" fill="white" />
+            <circle cx="60%" cy="110%" r="100" fill="white" />
+          </svg>
+        </div>
+        <div className="relative px-6 py-8 sm:px-10 sm:py-10 text-white">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium mb-4">
+            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+            海外美容情報を日本語でお届け
+          </div>
+          <h1 className="text-2xl sm:text-4xl font-bold mb-3 leading-tight">
+            Beauty Tech Japan
+          </h1>
+          <p className="text-white/80 text-xs sm:text-sm mb-6 max-w-md">
+            Allure・Vogue Beauty・Byrdieなど世界の美容メディアから最新トレンドを厳選してお届け
           </p>
-          {latestDate && (
-            <p className="text-xs text-gray-400 dark:text-gray-500">
-              最終更新: {latestDate}
-            </p>
-          )}
+          <div className="flex items-center gap-5">
+            <div className="text-center">
+              <div className="text-xl sm:text-2xl font-bold">{articles.length}</div>
+              <div className="text-xs text-white/70">記事</div>
+            </div>
+            <div className="w-px h-8 bg-white/30" />
+            <div className="text-center">
+              <div className="text-xl sm:text-2xl font-bold">9</div>
+              <div className="text-xs text-white/70">カテゴリ</div>
+            </div>
+            <div className="w-px h-8 bg-white/30" />
+            <div className="text-center">
+              <div className="text-xl sm:text-2xl font-bold">3日</div>
+              <div className="text-xs text-white/70">おき更新</div>
+            </div>
+            {latestDate && (
+              <>
+                <div className="w-px h-8 bg-white/30 hidden sm:block" />
+                <div className="text-center hidden sm:block">
+                  <div className="text-sm font-semibold">{latestDate.slice(0, 10)}</div>
+                  <div className="text-xs text-white/70">最終更新</div>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
 

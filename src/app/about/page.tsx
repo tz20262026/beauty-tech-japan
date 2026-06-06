@@ -70,7 +70,7 @@ export default function AboutPage() {
 
           <section>
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">更新頻度</h2>
-            <p>毎日自動更新。新しい美容トレンドやコスメ情報が出るたびに追加されます。</p>
+            <p>3日おきに自動更新。新しい美容トレンドやコスメ情報が定期的に追加されます。</p>
           </section>
 
           <section className="pt-4 border-t border-gray-200 dark:border-gray-700">
