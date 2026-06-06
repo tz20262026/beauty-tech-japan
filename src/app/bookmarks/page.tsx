@@ -3,8 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { allArticles } from "@/lib/articles";
-import { getArticleImageUrl, getReadTime, getRelativeTime } from "@/lib/articles";
+import { allArticles, getArticleImageUrl, getReadTime, getRelativeTime } from "@/lib/articles";
 import { Bookmark } from "lucide-react";
 
 export default function BookmarksPage() {
