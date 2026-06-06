@@ -13,7 +13,6 @@ import {
   Stethoscope,
   Sprout,
   Gem,
-  Moon,
   Clock,
   TrendingUp,
   CalendarDays,
@@ -31,7 +30,6 @@ const BEAUTY_CATEGORIES = [
   { id: "美容医療",                     label: "美容医療",                     icon: Stethoscope },
   { id: "オーガニック・クリーンビューティー", label: "オーガニック・クリーンビューティー", icon: Sprout },
   { id: "ネイルケア",                   label: "ネイルケア",                   icon: Gem },
-  { id: "スリープビューティー",         label: "スリープビューティー",         icon: Moon },
 ] as const;
 
 // 旧タグ → 新カテゴリID のマッピング（記事データを変更せず吸収する）
@@ -45,7 +43,6 @@ const CATEGORY_TAG_MAP: Record<string, string[]> = {
   美容医療:                         ["美容医療", "美容機器", "ビューティーテック"],
   "オーガニック・クリーンビューティー": ["マイクロバイオーム", "Jビューティー", "サステナビリティ", "オーガニック", "クリーンビューティー"],
   ネイルケア:                       ["ネイル", "ネイルケア"],
-  スリープビューティー:             ["スリープビューティー", "睡眠"],
 };
 
 const TAG_COLORS: Record<string, string> = {
@@ -58,7 +55,6 @@ const TAG_COLORS: Record<string, string> = {
   美容医療:                         "bg-indigo-100 text-indigo-700",
   "オーガニック・クリーンビューティー": "bg-green-100 text-green-700",
   ネイルケア:                       "bg-fuchsia-100 text-fuchsia-700",
-  スリープビューティー:             "bg-violet-100 text-violet-700",
   // 既存タグ
   スキンケア:         "bg-pink-100 text-pink-700",
   アンチエイジング:   "bg-rose-100 text-rose-700",
