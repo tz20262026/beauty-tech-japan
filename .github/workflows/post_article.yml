@@ -2,9 +2,7 @@ name: 毎日3記事自動投稿
 
 on:
   schedule:
-    - cron: '0 22 * * *'   # 日本時間 7:00 (UTC 22:00)
-    - cron: '0 0 * * *'    # 日本時間 9:00 (UTC 0:00)
-    - cron: '0 3 * * *'    # 日本時間 12:00 (UTC 3:00)
+    - cron: '0 0 */3 * *'  # 3日おき JST 9:00 (UTC 0:00)
   workflow_dispatch:        # 手動実行ボタン
 
 jobs:
