@@ -141,8 +141,8 @@ export default async function Home() {
           {/* 右: 女性画像（PCのみ） */}
           <div className="hidden sm:block relative">
             <Image
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=85&fit=crop&crop=faces,center"
-              alt="Beauty Tech Japan — 海外最新美容情報"
+              src="https://images.unsplash.com/photo-1778291165732-bca4de5c3b07?w=500&q=85&fit=crop&crop=faces,center"
+              alt="Beauty Tech Japan — 日本人女性・海外最新美容情報"
               fill
               className="object-cover object-center"
               priority
