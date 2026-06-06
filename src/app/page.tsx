@@ -97,9 +97,9 @@ export default async function Home() {
         </div>
 
         {/* PC: 2カラム / スマホ: 1カラム */}
-        <div className="relative grid grid-cols-1 sm:grid-cols-[1fr_340px] lg:grid-cols-[1fr_420px] h-full">
+        <div className="relative grid grid-cols-1 sm:grid-cols-[1fr_340px] lg:grid-cols-[1fr_420px]">
           {/* 左: テキストコンテンツ */}
-          <div className="px-6 py-8 sm:px-10 sm:py-12 text-white flex flex-col justify-center">
+          <div className="px-6 py-8 sm:px-10 sm:py-12 sm:min-h-[320px] lg:min-h-[440px] text-white flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium mb-4 w-fit">
               <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
               海外美容情報を日本語でお届け
@@ -139,7 +139,7 @@ export default async function Home() {
           </div>
 
           {/* 右: 女性画像（PCのみ） */}
-          <div className="hidden sm:block relative">
+          <div className="hidden sm:block relative sm:min-h-[320px] lg:min-h-[440px]">
             <Image
               src="/images/hero-woman.png"
               alt="Beauty Tech Japan — 日本人女性・海外最新美容情報"
