@@ -220,8 +220,9 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
               src={getSrc(getArticleImageUrl(featured, articles))}
               alt={featured.title}
               fill
+              priority
               className="object-cover article-image"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) calc(100vw - 32px), 992px"
               onError={() => handleImageError(getArticleImageUrl(featured, articles))}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -281,7 +282,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                 alt={article.title}
                 fill
                 className="object-cover article-image"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
                 onError={() => handleImageError(getArticleImageUrl(article, articles))}
               />
               {isNew(article.publishedAt) && (
