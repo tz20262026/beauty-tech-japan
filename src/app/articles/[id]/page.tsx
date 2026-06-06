@@ -93,8 +93,62 @@ export default async function ArticlePage({ params }: Props) {
   const newerArticle = currentIdx > 0 ? sorted[currentIdx - 1] : null;
   const olderArticle = currentIdx < sorted.length - 1 ? sorted[currentIdx + 1] : null;
 
+  const articleUrl = `${siteBase}/articles/${article.id}`;
+  const articleImageUrl = getArticleImageUrl(article);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.summary,
+    url: articleUrl,
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    inLanguage: "ja",
+    author: {
+      "@type": "Organization",
+      name: "Beauty Tech Japan",
+      url: siteBase,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Beauty Tech Japan",
+      url: siteBase,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteBase}/icon.png`,
+        width: 512,
+        height: 512,
+      },
+    },
+    image: {
+      "@type": "ImageObject",
+      url: articleImageUrl,
+      width: 1200,
+      height: 630,
+    },
+    keywords: article.tags.join(", "),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "ホーム", item: siteBase },
+        ...(article.tags[0]
+          ? [{ "@type": "ListItem", position: 2, name: article.tags[0], item: `${siteBase}/tags/${encodeURIComponent(article.tags[0])}` }]
+          : []),
+        { "@type": "ListItem", position: article.tags[0] ? 3 : 2, name: article.title, item: articleUrl },
+      ],
+    },
+  };
+
   return (
     <div className="max-w-2xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ReadingProgress />
 
       {/* パンくず */}

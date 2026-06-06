@@ -8,15 +8,18 @@ import { allArticles as localArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
   description:
-    "Allure・Byrdie・Vogue Beautyなど海外の人気美容メディアから最新のコスメ・スキンケア情報を毎日日本語でお届けします。",
+    "Allure・Byrdie・Vogue Beautyなど海外の人気美容メディアから、スキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け。3日おきに新記事を自動更新。",
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app" },
   openGraph: {
-    title: "Beauty Tech Japan",
-    description: "海外美容・コスメ最新情報を日本語で毎日お届け",
+    title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
+    description: "Allure・Byrdie・Vogue Beautyなど海外美容メディアから最新トレンドを日本語でお届け。",
     type: "website",
   },
 };
 
 export const revalidate = 300;
+
+const SITE_URL = "https://beauty-tech-japan.vercel.app";
 
 async function fetchArticles() {
   try {
@@ -32,8 +35,55 @@ export default async function Home() {
   const articles = await fetchArticles();
   const latestDate = articles.map((a) => a.publishedAt).sort().at(-1) ?? "";
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Beauty Tech Japan",
+      url: SITE_URL,
+      description: "海外美容・コスメ最新情報を日本語でお届けするメディア",
+      inLanguage: "ja",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Beauty Tech Japan",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.png`,
+        width: 512,
+        height: 512,
+      },
+      description: "海外の最新美容トレンド・コスメ・スキンケア情報をAIが日本語でお届けするメディア",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "最新の美容記事一覧",
+      url: SITE_URL,
+      numberOfItems: articles.length,
+      itemListElement: articles.slice(0, 10).map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/articles/${a.id}`,
+        name: a.title,
+      })),
+    },
+  ];
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* ヒーローバナー */}
       <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
