@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const CATEGORIES = [
-  { label: "ヘアケア", tag: "ヘアケア" },
   { label: "スキンケア", tag: "スキンケア" },
-  { label: "メイクアップ", tag: "メイク" },
-  { label: "ネイルケア", tag: "ネイルケア" },
+  { label: "メイクアップ", tag: "メイクアップ" },
+  { label: "ヘアケア", tag: "ヘアケア" },
+  { label: "ネイル", tag: "ネイル" },
   { label: "インナービューティー", tag: "インナービューティー" },
-  { label: "美容医療", tag: "美容医療" },
+  { label: "美容テック", tag: "美容テック" },
 ];
 
 export default function Footer() {
