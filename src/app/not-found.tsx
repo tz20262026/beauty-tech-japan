@@ -17,7 +17,7 @@ export default function NotFound() {
         ページが見つかりません
       </h1>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 max-w-sm">
-        お探しのページは削除されたか、URLが変更された可能性があります。
+        お探しのページは移動したか、URLが変更された可能性があります。
       </p>
       <div className="flex flex-col sm:flex-row gap-3">
         <Link

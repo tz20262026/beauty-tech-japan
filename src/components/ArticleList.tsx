@@ -84,7 +84,7 @@ const PAGE_SIZE = 12;
 type SortKey = "new" | "old" | "short";
 const SORT_OPTIONS: { key: SortKey; label: string; icon: typeof Clock }[] = [
   { key: "new",   label: "新着順",         icon: CalendarDays },
-  { key: "old",   label: "古い順",         icon: TrendingUp },
+  { key: "old",   label: "さかのぼる順",    icon: TrendingUp },
   { key: "short", label: "短い順",         icon: Clock },
 ];
 
