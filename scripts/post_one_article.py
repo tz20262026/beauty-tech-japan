@@ -151,6 +151,15 @@ def main() -> int:
         logger.info("未掲載のトピックがありません。")
         return 0
 
+    # 残量チェック・警告
+    remaining = len(pending)
+    if remaining <= 10:
+        logger.warning(f"🚨 緊急: トピック残量が{remaining}件です！今すぐ補充が必要です。")
+    elif remaining <= 30:
+        logger.warning(f"⚠️  トピック残量が{remaining}件です（30件以下）。近いうちに補充してください。")
+    else:
+        logger.info(f"トピック残量: {remaining}件")
+
     topic = pending[0]
     logger.info(f"対象: {topic['name']}")
 
@@ -185,6 +194,30 @@ def main() -> int:
 
     if not body:
         body = raw_text
+
+    # 品質チェック：本文400字未満またはタイトル空の場合は再生成
+    MIN_BODY_CHARS = 400
+    if len(body) < MIN_BODY_CHARS or not catchcopy:
+        logger.warning(f"品質不足（本文{len(body)}字、タイトル={'あり' if catchcopy else 'なし'}）→ 再生成します")
+        response2 = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_INSTRUCTION,
+                temperature=0.9,
+                max_output_tokens=8192,
+            ),
+        )
+        raw_text2 = response2.text.strip()
+        catchcopy2 = extract_section("キャッチコピー", raw_text2)
+        body2      = extract_section("本文", raw_text2)
+        if not body2:
+            body2 = raw_text2
+        if len(body2) >= MIN_BODY_CHARS:
+            logger.info(f"再生成成功（本文{len(body2)}字）")
+            catchcopy, body = catchcopy2, body2
+        else:
+            logger.warning(f"再生成後も品質不足（{len(body2)}字）→ 元のテキストを使用")
 
     title   = catchcopy if catchcopy else topic["name"]
     summary = catchcopy[:150] + "…" if len(catchcopy) > 150 else catchcopy

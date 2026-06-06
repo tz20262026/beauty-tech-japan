@@ -33,3 +33,38 @@
 
 ## デプロイ
 - 作業完了後は必ず `vercel --prod` でデプロイする（git push だけでなく）
+- デプロイ後は `Invoke-WebRequest https://beauty-tech-japan.vercel.app/ -UseBasicParsing` でHTTP 200を確認する
+- 200以外が返ったらすぐ原因を調査して修正する
+
+## セッション開始時の自動チェック（毎回実行）
+- `scripts/data/posted_ids.log` の行数と `scripts/data/beauty_topics.json` の件数を比較し、残りトピック数を確認する
+- 残り30件以下なら自動的に新トピックを100件生成して追加する
+- 最終記事の `publishedAt` を確認し、7日以上更新がなければ GitHub Actions の状態を確認する
+- Vercel の最新デプロイが正常かを確認する
+
+## トピック残量の監視・補充
+- セッション開始時に必ず残量を確認する
+- 残り30件以下：即座に Gemini API で100件生成して `beauty_topics.json` に追加する
+- 残り10件以下：緊急アラートとして先にユーザーに報告する
+- トピック補充後は必ずコミット＆デプロイする
+
+## SEO・MEO・パフォーマンス（高いパフォーマンスを常に発揮する）
+- **SEO**: 新ページには必ず `title`・`description`・`openGraph`・`twitter` の4点セットを設定する
+- **SEO**: 構造化データ（JSON-LD）を記事ページ・トップページに正確に設定する
+- **SEO**: `<h1>` は1ページに1つ、`<h2>/<h3>` で情報を階層化する
+- **SEO**: canonical URL・robots meta を適切に設定する
+- **SEO**: 内部リンクを意識的に張る（関連記事・タグページへのリンク）
+- **パフォーマンス**: Core Web Vitals（LCP・FID・CLS）を常に意識する
+- **パフォーマンス**: ファーストビューのLCPを改善するため `priority` 画像を正しく設定する
+- **パフォーマンス**: 不要なJavaScriptを減らし、Clientコンポーネントは必要最小限にする
+- 上記を作業の中で問題を発見したら自律的に修正する
+
+## 記事品質の自律チェック
+- 生成記事は本文400字未満・タイトル空・要約空の場合は品質不足と判定して再生成する
+- `post_one_article.py` の品質チェック機能を活用する
+- 品質不足が連続した場合はプロンプトを見直して改善する
+
+## TypeScript品質
+- `strict: true` は常に維持する（`tsconfig.json` で設定済み）
+- `any` 型は使わない。型が不明な場合は `unknown` を使って型ガードを書く
+- 新しいコンポーネントにはPropsの型定義を必ず書く
