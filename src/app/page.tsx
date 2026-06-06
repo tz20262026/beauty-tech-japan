@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ArticleList from "@/components/ArticleList";
+import RandomArticleButton from "@/components/RandomArticleButton";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -53,7 +54,7 @@ export default async function Home() {
           <p className="text-white/80 text-xs sm:text-sm mb-6 max-w-md">
             Allure・Vogue Beauty・Byrdieなど世界の美容メディアから最新トレンドを厳選してお届け
           </p>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 mb-5">
             <div className="text-center">
               <div className="text-xl sm:text-2xl font-bold">{articles.length}</div>
               <div className="text-xs text-white/70">記事</div>
@@ -78,6 +79,7 @@ export default async function Home() {
               </>
             )}
           </div>
+          <RandomArticleButton ids={articles.map((a) => a.id)} />
         </div>
       </div>
 

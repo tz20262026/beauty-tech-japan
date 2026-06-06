@@ -20,6 +20,7 @@ import ShareButtons from "@/components/ShareButtons";
 import ReadingProgress from "@/components/ReadingProgress";
 import BookmarkButton from "@/components/BookmarkButton";
 import NewsletterForm from "@/components/NewsletterForm";
+import TableOfContents, { extractHeadings } from "@/components/TableOfContents";
 
 export const revalidate = 300;
 
@@ -84,6 +85,13 @@ export default async function ArticlePage({ params }: Props) {
   const allArticles = await fetchAllArticles();
   const related = getRelatedArticles(article, allArticles);
   const siteBase = "https://beauty-tech-japan.vercel.app";
+  const headings = extractHeadings(article.body ?? "");
+
+  // 前後の記事（日付降順で並べて隣接する記事を取得）
+  const sorted = [...allArticles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  const currentIdx = sorted.findIndex((a) => a.id === article.id);
+  const newerArticle = currentIdx > 0 ? sorted[currentIdx - 1] : null;
+  const olderArticle = currentIdx < sorted.length - 1 ? sorted[currentIdx + 1] : null;
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -157,9 +165,40 @@ export default async function ArticlePage({ params }: Props) {
             {article.summary}
           </div>
 
+          <TableOfContents headings={headings} />
+
           <div className="prose prose-sm sm:prose max-w-none text-gray-800 dark:text-gray-200 leading-loose prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-pink-600 prose-strong:text-gray-900 dark:prose-strong:text-white prose-li:marker:text-pink-400 dark:prose-invert">
             <ReactMarkdown>{article.body}</ReactMarkdown>
           </div>
+
+          {/* 読了後CTA：次に読む記事 */}
+          {related[0] && (
+            <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+              <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-3">✨ 次にこれを読む</p>
+              <Link
+                href={`/articles/${related[0].id}`}
+                className="flex gap-4 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 border border-pink-100 dark:border-pink-900 rounded-xl overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all group"
+              >
+                <div className="relative w-24 sm:w-32 shrink-0">
+                  <Image
+                    src={getArticleImageUrl(related[0], allArticles)}
+                    alt={related[0].title}
+                    fill
+                    className="object-cover"
+                    sizes="128px"
+                  />
+                </div>
+                <div className="py-4 pr-4 flex flex-col justify-center min-w-0">
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">
+                    {getRelativeTime(related[0].publishedAt)} · {getReadTime(related[0].body)}分で読める
+                  </p>
+                  <p className="text-sm font-bold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-pink-600 transition-colors">
+                    {related[0].title}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          )}
 
           {/* タグリンク */}
           <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
@@ -204,20 +243,20 @@ export default async function ArticlePage({ params }: Props) {
       {related.length > 0 && (
         <div className="mt-10">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">関連記事</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {related.map((r) => (
               <Link
                 key={r.id}
                 href={`/articles/${r.id}`}
                 className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 group"
               >
-                <div className="relative w-full h-32 overflow-hidden">
+                <div className="relative w-full h-28 overflow-hidden">
                   <Image
-                    src={getArticleImageUrl(r)}
+                    src={getArticleImageUrl(r, allArticles)}
                     alt={r.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 224px"
+                    sizes="(max-width: 768px) 50vw, 224px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
@@ -231,6 +270,38 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* 前後の記事ナビ */}
+      {(newerArticle || olderArticle) && (
+        <div className="mt-8 grid grid-cols-2 gap-3">
+          <div>
+            {newerArticle && (
+              <Link
+                href={`/articles/${newerArticle.id}`}
+                className="flex flex-col gap-1 p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-700 transition-all group h-full"
+              >
+                <span className="text-xs text-pink-500 font-semibold">← 新しい記事</span>
+                <span className="text-xs text-gray-700 dark:text-gray-300 line-clamp-2 group-hover:text-pink-600 transition-colors">
+                  {newerArticle.title}
+                </span>
+              </Link>
+            )}
+          </div>
+          <div>
+            {olderArticle && (
+              <Link
+                href={`/articles/${olderArticle.id}`}
+                className="flex flex-col gap-1 p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-700 transition-all group text-right h-full"
+              >
+                <span className="text-xs text-pink-500 font-semibold">古い記事 →</span>
+                <span className="text-xs text-gray-700 dark:text-gray-300 line-clamp-2 group-hover:text-pink-600 transition-colors">
+                  {olderArticle.title}
+                </span>
+              </Link>
+            )}
           </div>
         </div>
       )}

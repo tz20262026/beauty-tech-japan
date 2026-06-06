@@ -105,9 +105,14 @@ export function isNew(dateStr: string | undefined | null): boolean {
 }
 
 export function getRelatedArticles(article: Article, all: Article[]): Article[] {
-  return all
-    .filter((a) => a.id !== article.id && a.tags.some((t) => article.tags.includes(t)))
-    .slice(0, 3);
+  const tagMatched = all.filter(
+    (a) => a.id !== article.id && a.tags.some((t) => article.tags.includes(t))
+  );
+  if (tagMatched.length >= 6) return tagMatched.slice(0, 6);
+  const others = all
+    .filter((a) => a.id !== article.id && !tagMatched.some((m) => m.id === a.id))
+    .slice(0, 6 - tagMatched.length);
+  return [...tagMatched, ...others];
 }
 
 export type Article = {
