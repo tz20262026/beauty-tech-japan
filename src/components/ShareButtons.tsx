@@ -33,7 +33,7 @@ export default function ShareButtons({ title, url }: Props) {
   return (
     <div className="mt-8 pt-6 border-t border-gray-100">
       <p className="text-sm font-semibold text-gray-700 mb-3">この記事をシェア</p>
-      <div className="flex flex-wrap gap-3">
+      <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 [&>*]:justify-center">
         {/* LINE */}
         <a
           href={lineUrl}

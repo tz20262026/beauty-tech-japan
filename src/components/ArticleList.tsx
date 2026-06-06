@@ -154,8 +154,8 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
       </div>
 
       {/* カテゴリフィルター */}
-      <div className="overflow-x-auto mb-4 -mx-4 px-4">
-        <div className="flex gap-2 w-max">
+      <div className="mb-4">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => { setSelectedTag(null); resetPage(); }}
             className={`flex items-center gap-1.5 text-xs px-3 py-2 rounded-full font-medium whitespace-nowrap transition-colors ${

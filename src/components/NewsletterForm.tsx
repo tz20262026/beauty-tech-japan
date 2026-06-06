@@ -34,7 +34,7 @@ export default function NewsletterForm() {
       <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
         海外美容トレンド・新コスメ情報を週1回お届けします。登録無料。
       </p>
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
           required
@@ -45,9 +45,9 @@ export default function NewsletterForm() {
         />
         <button
           type="submit"
-          className="px-4 py-2 rounded-xl bg-pink-500 text-white text-sm font-bold hover:bg-pink-600 transition-colors whitespace-nowrap"
+          className="w-full sm:w-auto px-4 py-2 rounded-xl bg-pink-500 text-white text-sm font-bold hover:bg-pink-600 transition-colors"
         >
-          登録
+          メルマガに登録する
         </button>
       </form>
     </div>
