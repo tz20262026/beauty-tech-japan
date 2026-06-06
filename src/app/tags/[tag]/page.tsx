@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   const articles = await fetchArticles();
   const tags = Array.from(new Set(articles.flatMap((a) => a.tags)));
-  return tags.map((tag) => ({ tag: encodeURIComponent(tag) }));
+  return tags.map((tag) => ({ tag }));
 }
 
 export default async function TagPage({ params }: Props) {
