@@ -350,7 +350,7 @@ export default async function ArticlePage({ params }: Props) {
                 href={`/articles/${olderArticle.id}`}
                 className="flex flex-col gap-1 p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-700 transition-all group text-right h-full"
               >
-                <span className="text-xs text-pink-500 font-semibold">古い記事 →</span>
+                <span className="text-xs text-pink-500 font-semibold">前の記事 →</span>
                 <span className="text-xs text-gray-700 dark:text-gray-300 line-clamp-2 group-hover:text-pink-600 transition-colors">
                   {olderArticle.title}
                 </span>
