@@ -67,7 +67,8 @@ export function getArticleImageUrl(
   article: { id?: string; imageUrl?: string; tags?: string[] },
   allArticles?: { id?: string }[]
 ): string {
-  if (article.imageUrl) return article.imageUrl;
+  // 空文字列・undefined・null はすべてフォールバック扱い
+  if (article.imageUrl && article.imageUrl.trim() !== "") return article.imageUrl;
   if (allArticles && article.id) {
     const idx = allArticles.findIndex((a) => a.id === article.id);
     if (idx >= 0) return BEAUTY_IMAGE_POOL[idx % BEAUTY_IMAGE_POOL.length];
@@ -76,13 +77,17 @@ export function getArticleImageUrl(
   return BEAUTY_IMAGE_POOL[seed % BEAUTY_IMAGE_POOL.length];
 }
 
-export function getReadTime(body: string): number {
+export function getReadTime(body: string | undefined | null): number {
+  if (!body) return 1;
   const chars = body.replace(/\s/g, "").length;
   return Math.max(1, Math.round(chars / 500));
 }
 
-export function getRelativeTime(dateStr: string): string {
+export function getRelativeTime(dateStr: string | undefined | null): string {
+  if (!dateStr) return "";
   const date = new Date(dateStr);
+  // 不正な日付文字列の場合はそのまま返す
+  if (isNaN(date.getTime())) return dateStr;
   const now = new Date();
   const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
   if (diffDays === 0) return "今日";
@@ -92,8 +97,11 @@ export function getRelativeTime(dateStr: string): string {
   return dateStr;
 }
 
-export function isNew(dateStr: string): boolean {
-  const diffMs = new Date().getTime() - new Date(dateStr).getTime();
+export function isNew(dateStr: string | undefined | null): boolean {
+  if (!dateStr) return false;
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return false;
+  const diffMs = new Date().getTime() - date.getTime();
   return diffMs < 1000 * 60 * 60 * 24 * 3;
 }
 
