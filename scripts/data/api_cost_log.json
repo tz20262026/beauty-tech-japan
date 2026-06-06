@@ -1,0 +1,7 @@
+{
+  "total_usd": 0.0,
+  "budget_warn_usd": 8.0,
+  "budget_stop_usd": 10.0,
+  "note": "Gemini APIの推定コスト記録。実際の請求はGoogle Cloud Consoleで確認してください。",
+  "runs": []
+}

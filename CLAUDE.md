@@ -42,6 +42,14 @@
 - 最終記事の `publishedAt` を確認し、7日以上更新がなければ GitHub Actions の状態を確認する
 - Vercel の最新デプロイが正常かを確認する
 
+## API予算の監視（Gemini API）
+- **$10を超えたら即座にユーザーに報告する**（記事生成も自動停止される）
+- **$8を超えたら事前に警告する**
+- セッション開始時に `scripts/data/api_cost_log.json` を確認して累計コストをチェックする
+- 累計コストが $8 以上なら会話の最初にユーザーへ報告する
+- コスト確認コマンド: `python -c "import json; log=json.load(open('scripts/data/api_cost_log.json')); print(f'累計: \${log[\"total_usd\"]:.3f}')"`
+- 実際の請求は Google Cloud Console / Gemini API ダッシュボードで確認する
+
 ## トピック残量の監視・補充
 - セッション開始時に必ず残量を確認する
 - 残り30件以下：即座に Gemini API で100件生成して `beauty_topics.json` に追加する

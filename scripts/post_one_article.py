@@ -34,6 +34,53 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME     = "gemini-2.5-flash"
 IMAGE_MODEL    = "gemini-2.5-flash-image"
 
+# ---------------------------------------------------------------------------
+# API コスト追跡
+# ---------------------------------------------------------------------------
+COST_LOG_PATH   = DATA_DIR / "api_cost_log.json"
+BUDGET_WARN_USD = 8.0   # この金額を超えたら警告
+BUDGET_STOP_USD = 10.0  # この金額を超えたら停止
+
+# Gemini 2.5 Flash の推定単価（概算）
+COST_PER_TEXT_RUN  = 0.002   # テキスト生成1回あたり（入出力合計）
+COST_PER_IMAGE_RUN = 0.015   # 画像生成1回あたり（概算）
+
+def load_cost_log() -> dict:
+    if not COST_LOG_PATH.exists():
+        return {"total_usd": 0.0, "runs": []}
+    try:
+        return json.loads(COST_LOG_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {"total_usd": 0.0, "runs": []}
+
+def save_cost_log(log: dict) -> None:
+    COST_LOG_PATH.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
+
+def check_budget() -> tuple[float, bool]:
+    """現在の累計コストを返す。予算超過なら (total, True) を返す。"""
+    log = load_cost_log()
+    total = log.get("total_usd", 0.0)
+    if total >= BUDGET_STOP_USD:
+        logger.error(f"🚨 API予算上限（${BUDGET_STOP_USD}）に達しました！現在の累計: ${total:.3f}")
+        logger.error("記事生成を停止します。Google Cloud Consoleで請求を確認してください。")
+        return total, True
+    if total >= BUDGET_WARN_USD:
+        logger.warning(f"⚠️  API予算警告: 累計${total:.3f} / 上限${BUDGET_STOP_USD} に近づいています！")
+    return total, False
+
+def record_cost(cost_usd: float, article_title: str) -> float:
+    """コストを記録し、新しい累計を返す。"""
+    log = load_cost_log()
+    log["total_usd"] = round(log.get("total_usd", 0.0) + cost_usd, 4)
+    log.setdefault("runs", []).append({
+        "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "article": article_title[:40],
+        "cost_usd": round(cost_usd, 4),
+        "cumulative_usd": log["total_usd"],
+    })
+    save_cost_log(log)
+    return log["total_usd"]
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -142,6 +189,12 @@ def main() -> int:
     if not BEAUTY_TOPICS_PATH.exists():
         logger.error(f"データファイルが見つかりません: {BEAUTY_TOPICS_PATH}")
         return 1
+
+    # 予算チェック（開始前）
+    current_total, over_budget = check_budget()
+    if over_budget:
+        return 1
+    logger.info(f"💰 API累計コスト: ${current_total:.3f} / 上限${BUDGET_STOP_USD}")
 
     topics  = json.loads(BEAUTY_TOPICS_PATH.read_text(encoding="utf-8"))
     posted  = load_posted()
@@ -260,6 +313,14 @@ def main() -> int:
     logger.info(f"extra_articles.json 更新: 合計{len(updated)}件")
 
     append_posted(topic.get("id", ""))
+
+    # コスト記録
+    run_cost = COST_PER_TEXT_RUN + (COST_PER_IMAGE_RUN if image_url else 0)
+    new_total = record_cost(run_cost, title)
+    logger.info(f"💰 今回のコスト: ${run_cost:.3f} / 累計: ${new_total:.3f} / 上限: ${BUDGET_STOP_USD}")
+    if new_total >= BUDGET_WARN_USD:
+        logger.warning(f"⚠️  累計コストが${BUDGET_WARN_USD}を超えました。Google Cloud Consoleで確認してください。")
+
     logger.info(f"完了: {topic['name']}")
     return 0
 
