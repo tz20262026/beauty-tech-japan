@@ -86,14 +86,13 @@ export function getReadTime(body: string | undefined | null): number {
 export function getRelativeTime(dateStr: string | undefined | null): string {
   if (!dateStr) return "";
   const date = new Date(dateStr);
-  // ??????????????????
   if (isNaN(date.getTime())) return dateStr;
   const now = new Date();
   const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
-  if (diffDays === 0) return "??";
-  if (diffDays === 1) return "??";
-  if (diffDays < 7) return `${diffDays}??`;
-  if (diffDays < 30) return `${Math.floor(diffDays / 7)}???`;
+  if (diffDays === 0) return "今日";
+  if (diffDays === 1) return "昨日";
+  if (diffDays < 7) return `${diffDays}日前`;
+  if (diffDays < 30) return `${Math.floor(diffDays / 7)}週間前`;
   return dateStr;
 }
 
