@@ -131,9 +131,9 @@ export default async function ArticlePage({ params }: Props) {
         </div>
 
         <div className="p-6 sm:p-8">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
-              <span>{getRelativeTime(article.publishedAt)}（{article.publishedAt}）</span>
+          <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-400 dark:text-gray-500">
+              <span>{getRelativeTime(article.publishedAt)}</span>
               <span>·</span>
               <a
                 href={article.sourceUrl}

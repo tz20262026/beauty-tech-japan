@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Bookmark } from "lucide-react";
 import DarkModeToggle from "./DarkModeToggle";
 
 export default function Header() {
@@ -11,9 +12,12 @@ export default function Header() {
             Tech Japan
           </span>
         </Link>
-        <nav className="flex items-center gap-4 text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">記事一覧</Link>
-          <Link href="/about" className="hover:text-white transition-colors">About</Link>
+        <nav className="flex items-center gap-3 text-sm text-gray-400">
+          <Link href="/" className="hover:text-white transition-colors hidden sm:block">記事一覧</Link>
+          <Link href="/about" className="hover:text-white transition-colors hidden sm:block">About</Link>
+          <Link href="/bookmarks" aria-label="保存した記事" className="hover:text-pink-400 transition-colors">
+            <Bookmark size={18} />
+          </Link>
           <DarkModeToggle />
         </nav>
       </div>
