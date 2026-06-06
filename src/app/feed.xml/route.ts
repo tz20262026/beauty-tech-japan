@@ -7,7 +7,8 @@ export async function GET() {
   const items = allArticles
     .slice(0, 30)
     .map((a) => {
-      const imageUrl = getArticleImageUrl(a);
+      const rawImageUrl = getArticleImageUrl(a);
+      const imageUrl = rawImageUrl.startsWith("http") ? rawImageUrl : `${SITE_URL}${rawImageUrl}`;
       const categories = a.tags.map((t) => `<category><![CDATA[${t}]]></category>`).join("\n      ");
       return `
     <item>
@@ -24,6 +25,7 @@ export async function GET() {
     .join("");
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/rss-style.xsl"?>
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:media="http://search.yahoo.com/mrss/"
