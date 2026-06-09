@@ -86,44 +86,61 @@ export default async function Home() {
       />
 
       {/* ヒーローバナー */}
-      <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 min-h-[200px] sm:min-h-[320px] lg:min-h-[440px]">
-        {/* 背景装飾サークル */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="80%" cy="20%" r="180" fill="white" />
-            <circle cx="10%" cy="80%" r="120" fill="white" />
-            <circle cx="60%" cy="110%" r="100" fill="white" />
+      <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-400 to-purple-600 min-h-[220px] sm:min-h-[340px] lg:min-h-[460px]">
+        {/* 背景装飾：浮かぶサークル */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-8 -right-8 w-64 h-64 bg-white/10 rounded-full blur-xl" />
+          <div className="absolute bottom-0 -left-16 w-80 h-80 bg-purple-400/20 rounded-full blur-2xl" />
+          <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-pink-300/20 rounded-full blur-lg" />
+          {/* キラキラ装飾（SVG）*/}
+          <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="80%" cy="15%" r="160" fill="white" />
+            <circle cx="5%" cy="85%" r="100" fill="white" />
+            <circle cx="55%" cy="105%" r="90" fill="white" />
+            <circle cx="30%" cy="30%" r="40" fill="white" />
           </svg>
         </div>
 
         {/* PC: 2カラム / スマホ: 1カラム */}
         <div className="relative grid grid-cols-1 sm:grid-cols-[1fr_340px] lg:grid-cols-[1fr_420px]">
           {/* 左: テキストコンテンツ */}
-          <div className="px-6 py-8 sm:px-10 sm:py-12 sm:min-h-[320px] lg:min-h-[440px] text-white flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium mb-4 w-fit">
-              <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-              海外美容情報を日本語でお届け
+          <div className="px-6 py-8 sm:px-10 sm:py-12 sm:min-h-[340px] lg:min-h-[460px] text-white flex flex-col justify-center">
+            {/* 上部バッジ */}
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium">
+                <span className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse" />
+                毎週新記事を自動更新中
+              </div>
+              <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium border border-white/20">
+                🌏 海外5メディア厳選
+              </div>
             </div>
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
+
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight">
               Beauty Tech Japan
             </h1>
-            <p className="text-white/80 text-xs sm:text-sm mb-6 max-w-md">
+            <p className="text-white/90 text-sm sm:text-base font-medium mb-1">
+              海外の最新コスメ・美容トレンドを日本語でチェック
+            </p>
+            <p className="text-white/70 text-xs sm:text-sm mb-6 max-w-md">
               Allure・Vogue Beauty・Byrdieなど世界の美容メディアから最新トレンドを厳選してお届け
             </p>
-            <div className="flex items-center gap-5 mb-6">
+
+            {/* 統計 */}
+            <div className="flex items-center gap-4 sm:gap-6 mb-6 flex-wrap">
               <div className="text-center">
-                <div className="text-xl sm:text-3xl font-bold">{articles.length}</div>
+                <div className="text-2xl sm:text-3xl font-bold">{articles.length}<span className="text-base font-normal">+</span></div>
                 <div className="text-xs text-white/70">記事</div>
               </div>
               <div className="w-px h-10 bg-white/30" />
               <div className="text-center">
-                <div className="text-xl sm:text-3xl font-bold">9</div>
+                <div className="text-2xl sm:text-3xl font-bold">9</div>
                 <div className="text-xs text-white/70">カテゴリ</div>
               </div>
               <div className="w-px h-10 bg-white/30" />
               <div className="text-center">
-                <div className="text-xl sm:text-3xl font-bold">3日</div>
-                <div className="text-xs text-white/70">おき更新</div>
+                <div className="text-2xl sm:text-3xl font-bold">5</div>
+                <div className="text-xs text-white/70">メディア</div>
               </div>
               {latestDate && (
                 <>
@@ -135,11 +152,27 @@ export default async function Home() {
                 </>
               )}
             </div>
-            <RandomArticleButton ids={articles.map((a) => a.id)} />
+
+            {/* CTA ボタン群 */}
+            <div className="flex flex-wrap gap-3 items-center">
+              <RandomArticleButton ids={articles.map((a) => a.id)} />
+              {/* X シェアボタン */}
+              <a
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Beauty Tech Japan — 海外コスメ・美容の最新情報を日本語でチェック🌸")}&url=${encodeURIComponent(SITE_URL)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-black/40 hover:bg-black/60 backdrop-blur-sm text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition-all border border-white/20 hover:border-white/40"
+              >
+                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-white shrink-0">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                Xでシェア
+              </a>
+            </div>
           </div>
 
           {/* 右: 女性画像（PCのみ） */}
-          <div className="hidden sm:block relative sm:min-h-[320px] lg:min-h-[440px]">
+          <div className="hidden sm:block relative sm:min-h-[340px] lg:min-h-[460px]">
             <Image
               src="/images/hero-woman.png"
               alt="Beauty Tech Japan — 日本人女性・海外最新美容情報"
@@ -149,7 +182,7 @@ export default async function Home() {
               sizes="420px"
             />
             {/* 左側グラデーション（テキストエリアとのブレンド） */}
-            <div className="absolute inset-0 bg-gradient-to-r from-rose-500 via-rose-500/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-400 via-rose-400/30 to-transparent" />
           </div>
         </div>
       </div>

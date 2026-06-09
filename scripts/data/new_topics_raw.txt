@@ -1,0 +1,30 @@
+```json
+[
+  {
+    "id": "btj2026_191",
+    "name": "AI搭載型パーソナルスキンケアデバイス",
+    "url": "https://example.com/ai_skincare_device_2026",
+    "description": "Advanced AI-powered at-home skincare devices are becoming mainstream, offering hyper-personalized treatments based on real-time skin analysis. These gadgets utilize sophisticated sensors to monitor hydration, elasticity, and microbiome balance, then dispense custom serum blends or deliver targeted light/microcurrent therapies. This trend emphasizes precision beauty, moving beyond generic routines to highly specific, data-driven solutions that adapt daily to individual skin needs, promising optimized results and a truly bespoke experience right from your bathroom counter.",
+    "tags": ["パーソナルスキンケア", "AI美容", "スマートデバイス", "ホームエステ"],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_192",
+    "name": "ホログラフィック・サイバーメイクアップ",
+    "url": "https://example.com/holographic_cyber_makeup",
+    "description": "The future of makeup embraces holographic and cyber-inspired aesthetics, moving beyond subtle glows to multi-dimensional, shifting colors and metallic accents. This trend features iridescent pigments, light-refracting formulas, and innovative textures that create a digital-art-like effect on the skin. Expect eyeshadows that morph colors with movement, lip products with a liquid metal finish, and highlighters that mimic a glitchy, futuristic shimmer. It's about bold, experimental self-expression that blur the lines between reality and virtual aesthetics.",
+    "tags": ["フューチャーメイク", "サイバーパンク", "ホログラフィック", "高輝度"],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_193",
+    "name": "水不要ヘアケア革命",
+    "url": "https://example.com/waterless_haircare_revolution",
+    "description": "A major shift in haircare focuses on water conservation through innovative waterless formulations. This trend includes solid shampoos and conditioners, concentrated powders that activate with minimal water, and leave-in treatments designed for dry application. Driven by environmental consciousness and the global water crisis, brands are developing highly effective products that reduce water usage during manufacturing and consumer routines. This not only minimizes ecological impact but also offers convenience for travel and a longer shelf life for concentrated formulas.",
+    "tags": ["サステナブルヘアケア", "水不要", "固形シャンプー", "環境配慮"],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_194",
+    "name": "アダプトゲン配合インナービューティー",
+    "url": "https://example.com/adaptogen_inner_
