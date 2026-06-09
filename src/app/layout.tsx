@@ -17,6 +17,9 @@ const notoSansJP = Noto_Sans_JP({
 const OG_IMAGE = "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80&fit=crop";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "uc1EpOPB8-ZZ_x-_mTNsSRgzG9qJlOSV7T7HbxcJ0UI",
+  },
   title: {
     default: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
     template: "%s | Beauty Tech Japan",
