@@ -189,6 +189,7 @@ export default async function Home() {
       </div>
 
       <ArticleList articles={articles} />
+      <AffiliateSectionBeauty />
     </div>
   );
 }
