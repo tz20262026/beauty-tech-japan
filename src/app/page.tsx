@@ -1,3 +1,4 @@
+import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import type { Metadata } from "next";
 import Image from "next/image";
 import ArticleList from "@/components/ArticleList";
