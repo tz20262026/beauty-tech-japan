@@ -1,95 +1,114 @@
-
 "use client";
+
+const items = [
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+7581E+4GDM+1BMW42",
+    badge: "💃 体を動かす美",
+    badgeColor: "#ec4899",
+    title: "ナユタスダンス",
+    tagline: "ダンス習得で内側から輝く美しさへ",
+    desc: "K-POP・ヒップホップ・バレエ等60以上のジャンル。体幹・姿勢改善で美しいボディラインに。全国180教室・無料体験あり。",
+    cta: "無料体験を予約する →",
+    color: "#ec4899",
+  },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+5YCTU+5OGK+5YJRM",
+    badge: "🎤 声も磨く",
+    badgeColor: "#a855f7",
+    title: "WACCA MUSIC SCHOOL",
+    tagline: "ボイトレで声・滑舌・第一印象を改善",
+    desc: "声のトーンや話し方を改善するだけで第一印象が変わる。仕事・プレゼン・日常会話にも効果的。オンライン受講可。",
+    cta: "無料体験レッスンを申込 →",
+    color: "#a855f7",
+  },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+EVUWI+5T74+5YJRM",
+    badge: "🎵 オンラインOK",
+    badgeColor: "#7c3aed",
+    title: "Voice Camp ボイトレ",
+    tagline: "オンライン完結ボイトレ ｜ 自宅で声磨き",
+    desc: "自宅でプロのボイストレーニング。滑舌・発声・表現力を改善。配信・YouTube・SNS動画発信にも活かせるスキルに。",
+    cta: "無料体験レッスンはこちら →",
+    color: "#7c3aed",
+  },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+9IYGI+408S+60WN6",
+    badge: "📚 300資格以上",
+    badgeColor: "#0891b2",
+    title: "オンスク.JP",
+    tagline: "美容系資格もスマホで取得 ｜ 月1,628円〜",
+    desc: "メイクアップアドバイザー・カラーコーディネーター・アロマテラピー等の美容系資格もスマホで学習。月額見放題。",
+    cta: "7日間無料で始める →",
+    color: "#0891b2",
+  },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+1SBLE+38W2+5YJRM",
+    badge: "🎬 動画で映え",
+    badgeColor: "#d97706",
+    title: "Aiseesoft 動画ソフト",
+    tagline: "美容動画・ルーティン動画を簡単編集",
+    desc: "スキンケアルーティン・メイク動画をサクッと編集してSNSに投稿。AI美肌補正・フィルター機能搭載の高機能ソフト。",
+    cta: "無料版を試す →",
+    color: "#d97706",
+  },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS6+EMWN5E+4V0U+BX3J6",
+    badge: "✍️ 発信で収益化",
+    badgeColor: "#059669",
+    title: "ハンドメイドブログライター",
+    tagline: "美容・趣味ブログで副収入を得るスキル習得",
+    desc: "美容レビュー・コスメ紹介ブログを収益化するライティング技術を習得。SEOライティング×アフィリエイトで月収アップ。",
+    cta: "詳細を確認する →",
+    color: "#059669",
+  },
+];
 
 export default function AffiliateSectionBeauty() {
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-pink-50">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="py-16 bg-gradient-to-b from-pink-50/50 to-white">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-10">
-          <p className="text-sm font-bold text-pink-600 uppercase tracking-wider mb-2">
-            おすすめサービス
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            美容・スキルアップのおすすめサービス
+          <span className="inline-block text-xs font-bold text-pink-600 uppercase tracking-widest bg-pink-50 px-4 py-1.5 rounded-full mb-3">
+            PR / 広告
+          </span>
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
+            美しさをもっと高めるおすすめサービス
           </h2>
-          <p className="text-gray-600">あなたの可能性を広げるスクール＆ツールを厳選</p>
+          <p className="text-gray-500 text-sm">内側から輝くためのスクール・ツール・学習を厳選</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          
-        <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+7581E+4GDM+1BMW42"
-          rel="nofollow sponsored"
-          target="_blank"
-          className="group flex flex-col gap-2 p-4 rounded-xl border border-pink-200 bg-white hover:border-pink-400 hover:shadow-md transition-all"
-        >
-          <span className="text-xs font-bold text-pink-600">💄 おすすめ</span>
-          <span className="text-sm font-semibold text-gray-800 leading-snug">ナユタスダンス</span>
-          <span className="text-xs text-pink-700 bg-pink-50 rounded-full px-3 py-1 w-fit mt-1 group-hover:bg-pink-100 transition-colors">
-            詳細を見る →
-          </span>
-        </a>
-        <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+5YCTU+5OGK+5YJRM"
-          rel="nofollow sponsored"
-          target="_blank"
-          className="group flex flex-col gap-2 p-4 rounded-xl border border-pink-200 bg-white hover:border-pink-400 hover:shadow-md transition-all"
-        >
-          <span className="text-xs font-bold text-pink-600">💄 おすすめ</span>
-          <span className="text-sm font-semibold text-gray-800 leading-snug">WACCA MUSIC SCHOOLボイトレ</span>
-          <span className="text-xs text-pink-700 bg-pink-50 rounded-full px-3 py-1 w-fit mt-1 group-hover:bg-pink-100 transition-colors">
-            詳細を見る →
-          </span>
-        </a>
-        <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+EVUWI+5T74+5YJRM"
-          rel="nofollow sponsored"
-          target="_blank"
-          className="group flex flex-col gap-2 p-4 rounded-xl border border-pink-200 bg-white hover:border-pink-400 hover:shadow-md transition-all"
-        >
-          <span className="text-xs font-bold text-pink-600">💄 おすすめ</span>
-          <span className="text-sm font-semibold text-gray-800 leading-snug">Voice Campボイトレ</span>
-          <span className="text-xs text-pink-700 bg-pink-50 rounded-full px-3 py-1 w-fit mt-1 group-hover:bg-pink-100 transition-colors">
-            詳細を見る →
-          </span>
-        </a>
-        <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+9IYGI+408S+60WN6"
-          rel="nofollow sponsored"
-          target="_blank"
-          className="group flex flex-col gap-2 p-4 rounded-xl border border-pink-200 bg-white hover:border-pink-400 hover:shadow-md transition-all"
-        >
-          <span className="text-xs font-bold text-pink-600">💄 おすすめ</span>
-          <span className="text-sm font-semibold text-gray-800 leading-snug">オンスク.JP資格学習</span>
-          <span className="text-xs text-pink-700 bg-pink-50 rounded-full px-3 py-1 w-fit mt-1 group-hover:bg-pink-100 transition-colors">
-            詳細を見る →
-          </span>
-        </a>
-        <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+1SBLE+38W2+5YJRM"
-          rel="nofollow sponsored"
-          target="_blank"
-          className="group flex flex-col gap-2 p-4 rounded-xl border border-pink-200 bg-white hover:border-pink-400 hover:shadow-md transition-all"
-        >
-          <span className="text-xs font-bold text-pink-600">💄 おすすめ</span>
-          <span className="text-sm font-semibold text-gray-800 leading-snug">Aiseesoft動画ソフト</span>
-          <span className="text-xs text-pink-700 bg-pink-50 rounded-full px-3 py-1 w-fit mt-1 group-hover:bg-pink-100 transition-colors">
-            詳細を見る →
-          </span>
-        </a>
-        <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+EMWN5E+4V0U+BX3J6"
-          rel="nofollow sponsored"
-          target="_blank"
-          className="group flex flex-col gap-2 p-4 rounded-xl border border-pink-200 bg-white hover:border-pink-400 hover:shadow-md transition-all"
-        >
-          <span className="text-xs font-bold text-pink-600">💄 おすすめ</span>
-          <span className="text-sm font-semibold text-gray-800 leading-snug">ハンドメイドブログライター</span>
-          <span className="text-xs text-pink-700 bg-pink-50 rounded-full px-3 py-1 w-fit mt-1 group-hover:bg-pink-100 transition-colors">
-            詳細を見る →
-          </span>
-        </a>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {items.map((item) => (
+            <a
+              key={item.title}
+              href={item.href}
+              rel="nofollow sponsored noopener"
+              target="_blank"
+              className="group flex flex-col gap-3 p-5 rounded-2xl border border-pink-100 bg-white hover:shadow-lg hover:border-pink-200 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <div>
+                <span
+                  className="text-xs font-bold px-3 py-1 rounded-full"
+                  style={{ background: `${item.badgeColor}12`, color: item.badgeColor, border: `1px solid ${item.badgeColor}25` }}
+                >
+                  {item.badge}
+                </span>
+              </div>
+              <div>
+                <p className="font-black text-gray-900 text-base leading-tight">{item.title}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{item.tagline}</p>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed flex-1">{item.desc}</p>
+              <span
+                className="inline-flex items-center text-xs font-bold mt-auto py-2 px-4 rounded-xl transition-all group-hover:opacity-80"
+                style={{ background: `${item.color}10`, color: item.color, border: `1px solid ${item.color}22` }}
+              >
+                {item.cta}
+              </span>
+            </a>
+          ))}
         </div>
-        <p className="text-center text-xs text-gray-400 mt-6">※ 広告・PR</p>
+        <p className="text-center text-xs text-gray-400 mt-6">※ 広告・PR表示　クリックでアフィリエイトページに移動します</p>
       </div>
     </section>
   );

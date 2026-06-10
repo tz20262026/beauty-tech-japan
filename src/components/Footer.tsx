@@ -61,6 +61,12 @@ export default function Footer() {
                 <Link href="/" className="text-xs hover:text-pink-400 transition-colors">記事一覧</Link>
               </li>
               <li>
+                <Link href="/skincare-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-400">スキンケア完全ガイド</Link>
+              </li>
+              <li>
+                <Link href="/k-beauty-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-300">K-Beautyガイド</Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-xs hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>
