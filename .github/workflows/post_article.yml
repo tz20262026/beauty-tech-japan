@@ -1,9 +1,7 @@
 name: 毎日3記事自動投稿
 
 on:
-  schedule:
-    - cron: '0 0 */3 * *'  # 3日おき JST 9:00 (UTC 0:00)
-  workflow_dispatch:        # 手動実行ボタン
+  workflow_dispatch:        # 手動実行ボタン（auto-post.yml が自動実行を担当）
 
 jobs:
   post:

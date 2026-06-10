@@ -2,8 +2,8 @@ name: 美容記事 自動投稿
 
 on:
   schedule:
-    # 3日おき JST 9:00（UTC 0:00）に実行
-    - cron: '0 0 */3 * *'
+    # 2日おき JST 9:00（UTC 0:00）に実行
+    - cron: '0 0 */2 * *'
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
