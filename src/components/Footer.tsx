@@ -94,6 +94,9 @@ export default function Footer() {
                 <Link href="/eye-makeup-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-rose-300">アイメイクガイド</Link>
               </li>
               <li>
+                <Link href="/lip-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-300">リップメイクガイド</Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-xs hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>
