@@ -12,7 +12,9 @@ export default function BookmarksPage() {
 
   useEffect(() => {
     const saved: string[] = JSON.parse(localStorage.getItem("btj_bookmarks") ?? "[]");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIds(saved);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

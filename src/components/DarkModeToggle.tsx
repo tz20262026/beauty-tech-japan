@@ -10,6 +10,7 @@ export default function DarkModeToggle() {
     const saved = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const isDark = saved ? saved === "dark" : prefersDark;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(isDark);
     document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
     if (isDark) {

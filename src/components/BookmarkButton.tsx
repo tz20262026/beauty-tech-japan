@@ -8,6 +8,7 @@ export default function BookmarkButton({ articleId }: { articleId: string }) {
 
   useEffect(() => {
     const bookmarks: string[] = JSON.parse(localStorage.getItem("btj_bookmarks") ?? "[]");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSaved(bookmarks.includes(articleId));
   }, [articleId]);
 
