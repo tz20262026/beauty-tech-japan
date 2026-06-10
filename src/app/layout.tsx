@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
     template: "%s | Beauty Tech Japan",
   },
-  description: "Allure・Vogue Beauty・Byrdieなど海外の人気美容メディアから、スキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け。3日おきに新記事を自動更新。",
+  description: "Allure・Vogue Beauty・Byrdieなど海外人気美容メディアからスキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け。韓国コスメ・プチプラ・成分解析など3日おきに自動更新。",
   metadataBase: new URL("https://beauty-tech-japan.vercel.app"),
   keywords: ["美容", "コスメ", "スキンケア", "メイク", "ヘアケア", "海外美容", "トレンド", "ビューティー"],
   authors: [{ name: "Beauty Tech Japan" }],
