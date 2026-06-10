@@ -70,6 +70,9 @@ export default function Footer() {
                 <Link href="/cosme-ranking" className="text-xs hover:text-pink-400 transition-colors font-semibold text-yellow-400">プチプラコスメランキング</Link>
               </li>
               <li>
+                <Link href="/haircare-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-amber-400">ヘアケア完全ガイド</Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-xs hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>
