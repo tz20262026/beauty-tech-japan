@@ -21,6 +21,7 @@ import ReadingProgress from "@/components/ReadingProgress";
 import BookmarkButton from "@/components/BookmarkButton";
 import NewsletterForm from "@/components/NewsletterForm";
 import TableOfContents, { extractHeadings } from "@/components/TableOfContents";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const revalidate = 300;
 
@@ -224,6 +225,9 @@ export default async function ArticlePage({ params }: Props) {
           <div className="prose prose-sm sm:prose max-w-none text-gray-800 dark:text-gray-200 leading-loose prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-pink-600 prose-strong:text-gray-900 dark:prose-strong:text-white prose-li:marker:text-pink-400 dark:prose-invert">
             <ReactMarkdown>{article.body}</ReactMarkdown>
           </div>
+
+          {/* アフィリエイトカード（記事1本につき1つ） */}
+          <ArticleAffiliateCard tags={article.tags} articleId={article.id} />
 
           {/* 読了後CTA：次に読む記事 */}
           {related[0] && (
