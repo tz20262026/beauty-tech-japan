@@ -103,6 +103,15 @@ export default function Footer() {
               <Link href="/foundation-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-rose-400">ファンデーション選びガイド</Link>
               </li>
               <li>
+                <Link href="/anti-aging-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-amber-400">エイジングケアガイド</Link>
+              </li>
+              <li>
+                <Link href="/serum-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-orange-400">美容液の選び方ガイド</Link>
+              </li>
+              <li>
+                <Link href="/pore-care-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-rose-300">毛穴ケアガイド</Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-xs hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>
