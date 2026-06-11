@@ -11,7 +11,6 @@ type AffiliateItem = {
   gradient: string;
   ctaBg: string;
   ctaText: string;
-  tags: string[];
 };
 
 const AFFILIATES: AffiliateItem[] = [
@@ -26,7 +25,6 @@ const AFFILIATES: AffiliateItem[] = [
     gradient: "from-cyan-500 to-blue-600",
     ctaBg: "bg-white",
     ctaText: "text-blue-600",
-    tags: ["スキンケア", "美容", "コスメ", "メイク", "資格", "学習"],
   },
   {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+7581E+4GDM+1BMW42",
@@ -39,7 +37,6 @@ const AFFILIATES: AffiliateItem[] = [
     gradient: "from-pink-500 to-rose-600",
     ctaBg: "bg-white",
     ctaText: "text-pink-600",
-    tags: ["ボディ", "姿勢", "ダイエット", "エクササイズ", "ウェルネス"],
   },
   {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+5YCTU+5OGK+5YJRM",
@@ -52,7 +49,6 @@ const AFFILIATES: AffiliateItem[] = [
     gradient: "from-purple-500 to-violet-600",
     ctaBg: "bg-white",
     ctaText: "text-purple-600",
-    tags: ["自己表現", "SNS", "インフルエンサー", "トレンド"],
   },
   {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+EVUWI+5T74+5YJRM",
@@ -65,7 +61,6 @@ const AFFILIATES: AffiliateItem[] = [
     gradient: "from-violet-500 to-indigo-600",
     ctaBg: "bg-white",
     ctaText: "text-violet-600",
-    tags: ["テクノロジー", "AI", "デジタル", "オンライン"],
   },
   {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+1SBLE+38W2+5YJRM",
@@ -78,7 +73,6 @@ const AFFILIATES: AffiliateItem[] = [
     gradient: "from-amber-500 to-orange-600",
     ctaBg: "bg-white",
     ctaText: "text-amber-600",
-    tags: ["ネイル", "アイメイク", "ヘア", "フレグランス", "コスメ"],
   },
   {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS6+EMWN5E+4V0U+BX3J6",
@@ -91,19 +85,21 @@ const AFFILIATES: AffiliateItem[] = [
     gradient: "from-emerald-500 to-teal-600",
     ctaBg: "bg-white",
     ctaText: "text-emerald-600",
-    tags: ["エイジングケア", "スキンケア", "美白"],
   },
 ];
 
-function pickAffiliate(tags: string[], articleId: string): AffiliateItem {
-  for (const affiliate of AFFILIATES) {
-    if (tags.some((t) => affiliate.tags.some((at) => t.includes(at) || at.includes(t)))) {
-      return affiliate;
-    }
+function hashId(id: string): number {
+  let h = 5381;
+  for (let i = 0; i < id.length; i++) {
+    h = ((h << 5) + h) + id.charCodeAt(i);
+    h = h & h;
   }
-  // タグが一致しない場合はIDのハッシュで決定的に選ぶ
-  const idx = articleId.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % AFFILIATES.length;
-  return AFFILIATES[idx];
+  return Math.abs(h);
+}
+
+function pickAffiliate(_tags: string[], articleId: string): AffiliateItem {
+  // IDハッシュで6種を均等ローテーション（記事ごとに必ず異なる広告が出る）
+  return AFFILIATES[hashId(articleId) % AFFILIATES.length];
 }
 
 type Props = {
