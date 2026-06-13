@@ -6,13 +6,42 @@ import { Mail } from "lucide-react";
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    // メール送信 (mailto フォールバック — 本番では Resend / Buttondown に差し替え)
-    window.location.href = `mailto:hello@beauty-tech-japan.vercel.app?subject=メルマガ登録&body=${encodeURIComponent(email)} からの登録リクエスト`;
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg("");
+    try {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("_subject", "Beauty Tech Japan メルマガ登録");
+      formData.append("_template", "table");
+      formData.append("_captcha", "false");
+      formData.append("_replyto", email);
+      const response = await fetch("https://formsubmit.co/ajax/tz77772014@gmail.com", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const result: unknown = await response.json();
+      if (
+        result !== null &&
+        typeof result === "object" &&
+        "success" in result &&
+        (result as Record<string, unknown>).success === "true"
+      ) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg("送信に失敗しました。再度お試しください。");
+      }
+    } catch {
+      setErrorMsg("送信に失敗しました。再度お試しください。");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -45,11 +74,15 @@ export default function NewsletterForm() {
         />
         <button
           type="submit"
-          className="w-full sm:w-auto px-4 py-2 rounded-xl bg-pink-500 text-white text-sm font-bold hover:bg-pink-600 transition-colors"
+          disabled={loading}
+          className="w-full sm:w-auto px-4 py-2 rounded-xl bg-pink-500 text-white text-sm font-bold hover:bg-pink-600 transition-colors disabled:opacity-60"
         >
-          メルマガに登録する
+          {loading ? "送信中..." : "メルマガに登録する"}
         </button>
       </form>
+      {errorMsg && (
+        <p className="mt-2 text-xs text-red-500">{errorMsg}</p>
+      )}
     </div>
   );
 }
