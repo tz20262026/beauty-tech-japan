@@ -159,6 +159,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/beauty-tools-guide`,
+      lastModified: new Date("2026-06-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/skincare-ai-guide`,
+      lastModified: new Date("2026-06-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/korean-beauty-guide`,
+      lastModified: new Date("2026-06-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     ...tagUrls,
     ...articleUrls,
   ];

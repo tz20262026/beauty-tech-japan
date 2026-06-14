@@ -1,6 +1,7 @@
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ArticleList from "@/components/ArticleList";
 import RandomArticleButton from "@/components/RandomArticleButton";
 
@@ -157,6 +158,12 @@ export default async function Home() {
             {/* CTA ボタン群 */}
             <div className="flex flex-wrap gap-3 items-center">
               <RandomArticleButton ids={articles.map((a) => a.id)} />
+              <Link
+                href="/skincare-guide"
+                className="inline-flex items-center gap-2 bg-white/90 hover:bg-white text-pink-700 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md"
+              >
+                ✨ ガイドを読む
+              </Link>
               {/* X シェアボタン */}
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Beauty Tech Japan — 海外コスメ・美容の最新情報を日本語でチェック🌸")}&url=${encodeURIComponent(SITE_URL)}`}
@@ -189,6 +196,101 @@ export default async function Home() {
       </div>
 
       <AffiliateSectionBeauty />
+
+      {/* 人気ガイドリンクセクション */}
+      <section className="py-10 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">人気ガイド記事</h2>
+            <p className="text-gray-500 text-sm">スキンケア・コスメ・美容テックの基礎から最新トレンドまで</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                href: "/beauty-tools-guide",
+                emoji: "🤖",
+                color: "#8b5cf6",
+                bg: "from-purple-50 to-purple-100",
+                border: "border-purple-200",
+                label: "NEW",
+                title: "ビューティーテック15選",
+                desc: "AI肌診断・ARメイク・美容デバイスを徹底比較",
+              },
+              {
+                href: "/skincare-ai-guide",
+                emoji: "📱",
+                color: "#3b82f6",
+                bg: "from-blue-50 to-blue-100",
+                border: "border-blue-200",
+                label: "NEW",
+                title: "AIスキンケアガイド",
+                desc: "AI肌診断の仕組み・おすすめアプリ完全解説",
+              },
+              {
+                href: "/korean-beauty-guide",
+                emoji: "🇰🇷",
+                color: "#ec4899",
+                bg: "from-pink-50 to-rose-100",
+                border: "border-pink-200",
+                label: "NEW",
+                title: "韓国コスメガイド2026",
+                desc: "最新トレンド・人気ブランド・購入方法",
+              },
+              {
+                href: "/skincare-guide",
+                emoji: "✨",
+                color: "#f59e0b",
+                bg: "from-orange-50 to-amber-100",
+                border: "border-orange-200",
+                label: "人気",
+                title: "スキンケア完全ガイド",
+                desc: "朝晩のルーティン・肌質別の選び方",
+              },
+              {
+                href: "/k-beauty-guide",
+                emoji: "💄",
+                color: "#10b981",
+                bg: "from-emerald-50 to-teal-100",
+                border: "border-emerald-200",
+                label: "人気",
+                title: "K-Beautyルーティン",
+                desc: "韓国美容10ステップを完全解説",
+              },
+              {
+                href: "/anti-aging-guide",
+                emoji: "🌸",
+                color: "#d946ef",
+                bg: "from-fuchsia-50 to-pink-100",
+                border: "border-fuchsia-200",
+                label: "おすすめ",
+                title: "エイジングケアガイド",
+                desc: "年齢肌に効く成分・ルーティン解説",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`group flex gap-4 items-start p-5 rounded-2xl bg-gradient-to-br ${item.bg} border ${item.border} hover:shadow-md hover:-translate-y-0.5 transition-all duration-200`}
+              >
+                <span className="text-3xl flex-shrink-0">{item.emoji}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span
+                      className="text-xs font-black px-2 py-0.5 rounded-full text-white"
+                      style={{ background: item.color }}
+                    >
+                      {item.label}
+                    </span>
+                  </div>
+                  <p className="font-black text-gray-900 text-sm leading-tight mb-0.5">{item.title}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ArticleList articles={articles} />
     </div>
   );
