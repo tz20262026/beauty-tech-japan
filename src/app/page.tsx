@@ -195,8 +195,6 @@ export default async function Home() {
         </div>
       </div>
 
-      <AffiliateSectionBeauty />
-
       {/* 人気ガイドリンクセクション */}
       <section className="py-10 px-4">
         <div className="max-w-5xl mx-auto">
@@ -292,6 +290,8 @@ export default async function Home() {
       </section>
 
       <ArticleList articles={articles} />
+
+      <AffiliateSectionBeauty />
     </div>
   );
 }
