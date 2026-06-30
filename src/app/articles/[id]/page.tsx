@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const imageUrl = getArticleImageUrl(article);
   const ogImageUrl = `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent(article.title)}&tag=${encodeURIComponent(article.tags[0] ?? "")}`;
   return {
-    title: `${article.title} | Beauty Tech Japan`,
+    title: `${article.title}`,
     description: article.summary,
     openGraph: {
       title: article.title,
@@ -153,7 +153,7 @@ export default async function ArticlePage({ params }: Props) {
       <ReadingProgress />
 
       {/* パンくず */}
-      <nav className="text-xs text-gray-400 dark:text-gray-500 mb-4 flex items-center gap-1.5">
+      <nav className="text-xs text-gray-600 dark:text-gray-300 mb-4 flex items-center gap-1.5">
         <Link href="/" className="hover:text-pink-500 transition-colors">ホーム</Link>
         <span>/</span>
         {article.tags[0] && (
@@ -195,7 +195,7 @@ export default async function ArticlePage({ params }: Props) {
 
         <div className="p-6 sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-400 dark:text-gray-500">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-600 dark:text-gray-300">
               <span>{getRelativeTime(article.publishedAt)}</span>
               <span>·</span>
               <a
@@ -232,7 +232,7 @@ export default async function ArticlePage({ params }: Props) {
           {/* 読了後CTA：次に読む記事 */}
           {related[0] && (
             <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
-              <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-3">✨ 次にこれを読む</p>
+              <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-3">✨ 次にこれを読む</p>
               <Link
                 href={`/articles/${related[0].id}`}
                 className="flex gap-4 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 border border-pink-100 dark:border-pink-900 rounded-xl overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all group"
@@ -247,7 +247,7 @@ export default async function ArticlePage({ params }: Props) {
                   />
                 </div>
                 <div className="py-4 pr-4 flex flex-col justify-center min-w-0">
-                  <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">
+                  <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">
                     {getRelativeTime(related[0].publishedAt)} · {getReadTime(related[0].body)}分で読める
                   </p>
                   <p className="text-sm font-bold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-pink-600 transition-colors">
@@ -260,7 +260,7 @@ export default async function ArticlePage({ params }: Props) {
 
           {/* タグリンク */}
           <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">タグ</p>
+            <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-2">タグ</p>
             <div className="flex flex-wrap gap-2">
               {article.tags.map((tag) => (
                 <Link
@@ -280,7 +280,7 @@ export default async function ArticlePage({ params }: Props) {
           />
 
           <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
-            <span className="text-xs text-gray-400 dark:text-gray-500">情報元: {article.source}</span>
+            <span className="text-xs text-gray-600 dark:text-gray-300">情報元: {article.source}</span>
             <a
               href={article.sourceUrl}
               target="_blank"
@@ -319,7 +319,7 @@ export default async function ArticlePage({ params }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
                 <div className="p-3">
-                  <div className="text-xs text-gray-400 dark:text-gray-500 mb-1">
+                  <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
                     {getRelativeTime(r.publishedAt)} · {getReadTime(r.body)}分
                   </div>
                   <p className="text-xs font-semibold text-gray-900 dark:text-white leading-snug group-hover:text-pink-600 transition-colors line-clamp-2">

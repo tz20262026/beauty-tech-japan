@@ -191,7 +191,7 @@ export default function HaircareGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">おすすめシャンプー&トリートメント</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             ダメージ毛・くせ毛・パサつきを改善する正しいヘアケア方法と<br />
             2026年のおすすめアイテムを髪質別に徹底解説します。
           </p>
@@ -211,10 +211,10 @@ export default function HaircareGuidePage() {
                   </div>
                   <h3 className="text-white font-bold text-sm">{s.title}</h3>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed mb-2">{s.description}</p>
+                <p className="text-gray-600 text-xs leading-relaxed mb-2">{s.description}</p>
                 <ul className="space-y-1">
                   {s.tips.map((tip, i) => (
-                    <li key={i} className="text-gray-400 text-xs flex gap-1.5">
+                    <li key={i} className="text-gray-600 text-xs flex gap-1.5">
                       <span className="text-amber-400">✓</span>{tip}
                     </li>
                   ))}
@@ -238,10 +238,10 @@ export default function HaircareGuidePage() {
                   </div>
                   <h3 className="text-white font-bold text-sm">{s.title}</h3>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed mb-2">{s.description}</p>
+                <p className="text-gray-600 text-xs leading-relaxed mb-2">{s.description}</p>
                 <ul className="space-y-1">
                   {s.tips.map((tip, i) => (
-                    <li key={i} className="text-gray-400 text-xs flex gap-1.5">
+                    <li key={i} className="text-gray-600 text-xs flex gap-1.5">
                       <span className="text-purple-400">✓</span>{tip}
                     </li>
                   ))}
@@ -264,7 +264,7 @@ export default function HaircareGuidePage() {
                   <p className="text-red-400 text-xs font-bold mb-1">主な悩み</p>
                   <ul className="space-y-0.5">
                     {h.issues.map((issue, j) => (
-                      <li key={j} className="text-gray-400 text-xs">・{issue}</li>
+                      <li key={j} className="text-gray-600 text-xs">・{issue}</li>
                     ))}
                   </ul>
                 </div>
@@ -272,13 +272,13 @@ export default function HaircareGuidePage() {
                   <p className="text-green-400 text-xs font-bold mb-1">おすすめアプローチ</p>
                   <ul className="space-y-0.5">
                     {h.recommendations.map((r, j) => (
-                      <li key={j} className="text-gray-400 text-xs">・{r}</li>
+                      <li key={j} className="text-gray-600 text-xs">・{r}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="bg-orange-500/10 border border-orange-500/20 rounded px-2 py-1.5">
                   <span className="text-orange-400 text-xs font-bold">避けるべき: </span>
-                  <span className="text-gray-400 text-xs">{h.avoid}</span>
+                  <span className="text-gray-600 text-xs">{h.avoid}</span>
                 </div>
               </div>
             ))}
@@ -310,7 +310,7 @@ export default function HaircareGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

@@ -15,7 +15,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
 
   return (
     <nav className="my-6 bg-pink-50 dark:bg-pink-950/20 border border-pink-100 dark:border-pink-900 rounded-xl p-5">
-      <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
+      <p className="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wide mb-3">
         📋 この記事の内容
       </p>
       <ol className="space-y-2">

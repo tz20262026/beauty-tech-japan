@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "韓国コスメ完全ガイド2026【最新トレンド・人気ブランド】| Beauty Tech Japan",
+  title: "韓国コスメ完全ガイド2026【最新トレンド・人気ブランド】",
   description: "2026年最新の韓国コスメトレンド・人気ブランド・購入方法を完全解説。K-Beautyの注目成分・おすすめアイテム・日本での買い方まで網羅。韓国コスメ初心者から上級者まで対応。",
   keywords: ["韓国コスメ 2026", "韓国コスメ トレンド", "K-Beauty おすすめ", "韓国コスメ ブランド", "韓国コスメ 購入"],
   openGraph: {

@@ -142,7 +142,7 @@ export default function LipGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【塗り方・乾燥対策・おすすめリップ選び】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             リップの正しい塗り方・種類・乾燥対策・おすすめアイテムを<br />
             初心者向けに2026年版で完全解説します。
           </p>
@@ -163,10 +163,10 @@ export default function LipGuidePage() {
                   <span className={`text-xs border px-2 py-0.5 rounded-full ${moisturizeColors[lip.moisturize]}`}>保湿：{lip.moisturize}</span>
                 </div>
                 <div className="bg-gray-800 rounded px-2.5 py-1.5 text-xs mb-3">
-                  <span className="text-gray-400">✨ 仕上がり：</span>
+                  <span className="text-gray-600">✨ 仕上がり：</span>
                   <span className="text-gray-200">{lip.finish}</span>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{lip.best}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{lip.best}</p>
               </div>
             ))}
           </div>
@@ -198,7 +198,7 @@ export default function LipGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

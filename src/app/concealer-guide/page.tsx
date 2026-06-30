@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】| Beauty Tech Japan",
+  title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】",
   description: "コンシーラーの種類（スティック・リキッド・クリーム・ペンシル）から悩み別の選び方・正しい塗り方・色選びのコツまで徹底解説。クマ・シミ・ニキビ跡を自然にカバー。",
   keywords: ["コンシーラー 選び方", "クマ 隠し方", "コンシーラー 使い方", "シミ コンシーラー", "ニキビ跡 カバー", "コンシーラー 色選び"],
   openGraph: {

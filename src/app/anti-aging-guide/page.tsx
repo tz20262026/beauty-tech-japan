@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "エイジングケア完全ガイド2026年版【年齢肌対策・成分・ルーティン】| Beauty Tech Japan",
+  title: "エイジングケア完全ガイド2026年版【年齢肌対策・成分・ルーティン】",
   description: "レチノール・ナイアシンアミド・ビタミンC誘導体・ペプチドなど、エイジングケアに効く成分を徹底解説。年齢肌のお悩み別おすすめ成分と正しいルーティンを2026年最新情報でご紹介。",
   keywords: ["エイジングケア", "年齢肌", "レチノール", "ナイアシンアミド", "ビタミンC誘導体", "ペプチド", "アンチエイジング", "シワ 対策", "シミ 対策"],
   openGraph: {

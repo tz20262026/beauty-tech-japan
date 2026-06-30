@@ -136,7 +136,7 @@ export default function MensBeautyGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【スキンケア・眉毛・脱毛・ヘアケア】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             男性のための美容ケア入門ガイド。<br />
             スキンケアから脱毛まで優先順位・予算・方法を解説。
           </p>
@@ -158,13 +158,13 @@ export default function MensBeautyGuidePage() {
                   </span>
                 </div>
                 <div className="bg-gray-800 rounded px-2.5 py-1.5 text-xs mb-3">
-                  <span className="text-gray-400">💰 費用目安：</span>
+                  <span className="text-gray-600">💰 費用目安：</span>
                   <span className="text-gray-200">{item.budget}</span>
                 </div>
                 <div>
                   <p className="text-blue-400 text-xs font-bold mb-1">📋 実践ステップ</p>
                   <ul className="space-y-0.5">
-                    {item.steps.map((s, j) => <li key={j} className="text-gray-400 text-xs">・{s}</li>)}
+                    {item.steps.map((s, j) => <li key={j} className="text-gray-600 text-xs">・{s}</li>)}
                   </ul>
                 </div>
               </div>
@@ -198,7 +198,7 @@ export default function MensBeautyGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

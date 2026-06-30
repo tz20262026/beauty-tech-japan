@@ -6,7 +6,7 @@ import { getArticleImageUrl } from "@/lib/articles";
 import { Rss, ExternalLink, Copy } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "RSSフィード | Beauty Tech Japan",
+  title: "RSSフィード",
   description: "Beauty Tech Japan の最新記事をRSSリーダーで購読する方法と、最新記事一覧。",
 };
 
@@ -39,7 +39,7 @@ export default async function RssPage() {
       <div className="mb-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors"
+          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-pink-600 dark:text-gray-300 dark:hover:text-pink-400 transition-colors"
         >
           ← 記事一覧に戻る
         </Link>
@@ -79,7 +79,7 @@ export default async function RssPage() {
             <ExternalLink size={16} />
           </a>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+        <p className="text-xs text-gray-600 dark:text-gray-300 mt-2">
           上記URLをRSSリーダーにコピー&amp;ペーストして登録してください
         </p>
       </div>
@@ -118,7 +118,7 @@ export default async function RssPage() {
                 <p className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors line-clamp-2 leading-snug">
                   {a.title}
                 </p>
-                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+                <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">
                   {a.publishedAt?.slice(0, 10)}
                 </p>
               </div>

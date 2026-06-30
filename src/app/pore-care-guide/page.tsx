@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "毛穴ケア完全ガイド2026年版【開き・黒ずみ・たるみ毛穴の種類別対策】| Beauty Tech Japan",
+  title: "毛穴ケア完全ガイド2026年版【開き・黒ずみ・たるみ毛穴の種類別対策】",
   description: "開き毛穴・黒ずみ毛穴・たるみ毛穴の原因と正しいケア方法を完全解説。ナイアシンアミド・サリチル酸・レチノールなどおすすめ成分も紹介。2026年最新の毛穴ケア情報。",
   keywords: ["毛穴 ケア", "毛穴 開き", "毛穴 黒ずみ", "たるみ毛穴", "毛穴 原因", "毛穴 対策", "毛穴 成分", "毛穴 美容液"],
   openGraph: {

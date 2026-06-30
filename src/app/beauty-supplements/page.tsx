@@ -6,7 +6,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 // メタデータ（SEO）
 // =============================================
 export const metadata: Metadata = {
-  title: "飲む美容サプリ最強ランキング2026年【美白・コラーゲン・腸活】| Beauty Tech Japan",
+  title: "飲む美容サプリ最強ランキング2026年【美白・コラーゲン・腸活】",
   description:
     "2026年最新の飲む美容サプリをカテゴリ別にランキング。美白・コラーゲン・ヒアルロン酸・腸活・抗酸化など目的別に最強サプリを徹底比較。選び方・飲み合わせ・タイミングも解説。",
   keywords: [

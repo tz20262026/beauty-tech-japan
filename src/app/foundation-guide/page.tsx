@@ -3,7 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ファンデーション選び方完全ガイド2026年版【種類・肌タイプ別おすすめ・塗り方・崩れない方法】| Beauty Tech Japan",
+  title: "ファンデーション選び方完全ガイド2026年版【種類・肌タイプ別おすすめ・塗り方・崩れない方法】",
   description:
     "ファンデーションの選び方を2026年版で完全解説。リキッド・パウダー・クッション・スティックの違い・肌タイプ別おすすめ・正しい塗り方・崩れない方法・プチプラ〜デパコス比較を詳しく解説します。",
   keywords: [
@@ -212,7 +212,7 @@ export default function FoundationGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【種類・肌タイプ別・塗り方・崩れない方法・プチプラ比較】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             リキッド・パウダー・クッション・スティックの違いから<br />
             肌タイプ別選び方・崩れない塗り方・プチプラ〜デパコス比較まで完全解説します。
           </p>
@@ -250,7 +250,7 @@ export default function FoundationGuidePage() {
                   </div>
                 </div>
                 <div className="bg-gray-800 rounded px-3 py-2 text-xs">
-                  <span className="text-gray-400">⏱️ 持続性：</span>
+                  <span className="text-gray-600">⏱️ 持続性：</span>
                   <span className="text-gray-200">{type.longevity}</span>
                 </div>
               </div>
@@ -278,11 +278,11 @@ export default function FoundationGuidePage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div className="bg-gray-800 rounded px-3 py-2">
-                    <p className="text-gray-400 font-bold mb-1">✅ おすすめポイント</p>
+                    <p className="text-gray-600 font-bold mb-1">✅ おすすめポイント</p>
                     <p className="text-gray-300 leading-relaxed">{rec.rec}</p>
                   </div>
                   <div className="bg-gray-800 rounded px-3 py-2">
-                    <p className="text-gray-400 font-bold mb-1">⚠️ 避けるべき</p>
+                    <p className="text-gray-600 font-bold mb-1">⚠️ 避けるべき</p>
                     <p className="text-gray-300 leading-relaxed">{rec.avoid}</p>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function FoundationGuidePage() {
                 </div>
                 <div>
                   <p className="font-black text-white text-sm mb-1">{s.name}</p>
-                  <p className="text-gray-400 text-xs leading-relaxed">{s.detail}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{s.detail}</p>
                 </div>
               </div>
             ))}
@@ -336,7 +336,7 @@ export default function FoundationGuidePage() {
                 ].map((row, i) => (
                   <tr key={row.type} className={i % 2 === 0 ? "bg-gray-900" : "bg-gray-950"}>
                     <td className="px-4 py-3 font-semibold text-rose-300">{row.type}</td>
-                    <td className="px-4 py-3 text-gray-400">{row.cause}</td>
+                    <td className="px-4 py-3 text-gray-600">{row.cause}</td>
                     <td className="px-4 py-3 text-gray-300">{row.fix}</td>
                   </tr>
                 ))}
@@ -422,7 +422,7 @@ export default function FoundationGuidePage() {
             {FAQ.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">A. {faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">A. {faq.a}</p>
               </div>
             ))}
           </div>

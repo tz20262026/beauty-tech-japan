@@ -162,7 +162,7 @@ export default function MakeupGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【順番・やり方・プチプラコスメ】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             ベースメイク・アイメイク・リップの正しい順番・やり方を<br />
             2026年版で初心者向けに完全解説します。
           </p>
@@ -186,7 +186,7 @@ export default function MakeupGuidePage() {
                       <h3 className="text-white font-black text-sm">{s.step}</h3>
                       <span className="text-xs bg-gray-700 text-gray-300 px-2 py-0.5 rounded">{s.product}</span>
                     </div>
-                    <p className="text-gray-400 text-xs leading-relaxed mb-1">{s.how}</p>
+                    <p className="text-gray-600 text-xs leading-relaxed mb-1">{s.how}</p>
                     <p className="text-pink-400 text-xs">💡 {s.tip}</p>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ export default function MakeupGuidePage() {
                   <span className="text-xl">{t.icon}</span>
                   <h3 className="text-white font-bold text-sm">{t.name}</h3>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{t.desc}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{t.desc}</p>
               </div>
             ))}
           </div>
@@ -239,7 +239,7 @@ export default function MakeupGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

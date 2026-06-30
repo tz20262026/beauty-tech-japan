@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "AIで変わる美容ケア2026【最新ビューティーテック15選】| Beauty Tech Japan",
+  title: "AIで変わる美容ケア2026【最新ビューティーテック15選】",
   description: "AI肌診断・ARメイクアプリ・美容デバイスを徹底比較。スマホで使える最新ビューティーテックツール15選を解説。2026年の美容テクノロジートレンドを完全網羅。",
   keywords: ["AI 肌診断", "美容テック", "ARメイク アプリ", "美容デバイス おすすめ", "ビューティーテック 2026"],
   openGraph: {

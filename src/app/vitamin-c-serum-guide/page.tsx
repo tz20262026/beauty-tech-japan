@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "ビタミンC美容液のおすすめ選び方2026年【シミ・毛穴・美白に効果的な使い方】| Beauty Tech Japan",
+  title: "ビタミンC美容液のおすすめ選び方2026年【シミ・毛穴・美白に効果的な使い方】",
   description: "ビタミンC美容液の種類（L-アスコルビン酸・誘導体）の違い、美白・シミ・毛穴への効果、使い方・重ね付けの順番、敏感肌向けの選び方を2026年最新版で完全解説。",
   keywords: [
     "ビタミンC 美容液",
@@ -223,7 +223,7 @@ export default function VitaminCSerumGuidePage() {
                   { label: "コスパ", value: price },
                 ].map(({ label, value }) => (
                   <div key={label} className="bg-white rounded-xl p-2 border border-gray-100 text-center">
-                    <p className="text-xs text-gray-400 font-bold">{label}</p>
+                    <p className="text-xs text-gray-600 font-bold">{label}</p>
                     <p className="text-xs text-gray-700 mt-1 font-bold">{value}</p>
                   </div>
                 ))}

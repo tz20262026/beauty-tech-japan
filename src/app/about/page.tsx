@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Globe, Cpu, BookOpen, Tag, RefreshCw, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About | Beauty Tech Japan",
+  title: "About",
   description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
   openGraph: {
     title: "About | Beauty Tech Japan",
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <div className="mb-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors"
+          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-pink-600 dark:text-gray-300 dark:hover:text-pink-400 transition-colors"
         >
           ← 記事一覧に戻る
         </Link>
@@ -98,7 +98,7 @@ export default function AboutPage() {
           {MEDIA_LIST.map((media) => (
             <span
               key={media}
-              className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1.5 rounded-full font-medium"
+              className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-3 py-1.5 rounded-full font-medium"
             >
               {media}
             </span>
@@ -116,8 +116,8 @@ export default function AboutPage() {
           3日おきに自動更新。新しい美容トレンドやコスメ情報が定期的に追加されます。
         </p>
         <div className="pt-4 border-t border-gray-200 dark:border-gray-700 flex items-start gap-2">
-          <ExternalLink size={14} className="text-gray-400 mt-0.5 shrink-0" />
-          <p className="text-xs text-gray-500 dark:text-gray-400">
+          <ExternalLink size={14} className="text-gray-600 mt-0.5 shrink-0" />
+          <p className="text-xs text-gray-600 dark:text-gray-300">
             掲載内容はすべて元の情報をもとにAIが要約・翻訳したものです。
             詳細は各記事ページの「原文を読む」リンクからご確認ください。
           </p>

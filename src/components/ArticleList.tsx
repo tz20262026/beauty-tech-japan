@@ -257,7 +257,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                   <p className="text-xs font-semibold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-pink-600 transition-colors">
                     {a.title}
                   </p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">{getRelativeTime(a.publishedAt)}</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">{getRelativeTime(a.publishedAt)}</p>
                 </div>
               </a>
             ))}
@@ -268,7 +268,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
       {/* 検索ボックス */}
       <div className="mb-4">
         <div className="relative">
-          <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7 7 0 1010 17a7 7 0 006.65-4.35z" />
           </svg>
           <input
@@ -281,7 +281,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           {search && (
             <button
               onClick={() => { setSearch(""); resetPage(); }}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-600 dark:hover:text-gray-200"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -323,7 +323,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
 
       {/* ソート切り替え */}
       <div className="flex items-center gap-2 mb-6">
-        <span className="text-xs text-gray-400 dark:text-gray-500 shrink-0">並び替え:</span>
+        <span className="text-xs text-gray-600 dark:text-gray-300 shrink-0">並び替え:</span>
         <div className="flex gap-1.5">
           {SORT_OPTIONS.map(({ key, label, icon: Icon }) => (
             <button
@@ -340,12 +340,12 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
             </button>
           ))}
         </div>
-        <span className="text-xs text-gray-400 dark:text-gray-500 ml-auto">{filtered.length} 件</span>
+        <span className="text-xs text-gray-600 dark:text-gray-300 ml-auto">{filtered.length} 件</span>
       </div>
 
       {/* 検索結果なし */}
       {filtered.length === 0 && (
-        <div className="text-center py-16 text-gray-400">
+        <div className="text-center py-16 text-gray-600">
           <p className="text-4xl mb-3">🔍</p>
           <p>「{search}」に一致する記事が見つかりませんでした</p>
         </div>
@@ -402,7 +402,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                   </span>
                 ))}
               </div>
-              <span className="text-xs text-gray-400 dark:text-gray-500">
+              <span className="text-xs text-gray-600 dark:text-gray-300">
                 {getReadTime(featured.body)}分で読める
               </span>
             </div>
@@ -447,7 +447,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
               </div>
             </div>
             <div className="p-4">
-              <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500 mb-1.5">
+              <div className="flex items-center justify-between text-xs text-gray-600 dark:text-gray-300 mb-1.5">
                 <span>
                   {getRelativeTime(article.publishedAt)} · {article.source}
                 </span>
@@ -456,7 +456,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
               <h2 className="text-sm font-semibold text-gray-900 dark:text-white leading-snug mb-1.5 group-hover:text-pink-600 transition-colors line-clamp-2">
                 {article.title}
               </h2>
-              <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+              <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">
                 {article.summary}
               </p>
             </div>

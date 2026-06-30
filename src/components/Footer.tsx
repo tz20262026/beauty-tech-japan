@@ -11,7 +11,7 @@ const CATEGORIES = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-400 border-t border-gray-800 mt-16">
+    <footer className="bg-gray-950 text-gray-300 border-t border-gray-800 mt-16">
       <div className="max-w-5xl mx-auto px-4 pt-10 pb-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           {/* ブランド */}
@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="text-xs font-bold bg-pink-500 text-white px-2 py-0.5 rounded">Beauty</span>
               <span className="text-white font-semibold">Tech Japan</span>
             </div>
-            <p className="text-xs leading-relaxed text-gray-500">
+            <p className="text-xs leading-relaxed text-gray-300">
               海外の最新美容トレンド・コスメ・スキンケア情報をAIが日本語でお届けするメディアです。
             </p>
             <div className="flex items-center gap-3 mt-4">
@@ -122,7 +122,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <h3 className="text-xs font-semibold text-white mb-2 uppercase tracking-wide">情報源</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <p className="text-xs text-gray-300 leading-relaxed">
                 Allure / Byrdie / Vogue Beauty<br />
                 Harper&apos;s Bazaar / Refinery29
               </p>
@@ -130,9 +130,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-600">
+        <div className="border-t border-gray-800 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-300">
           <p>© {new Date().getFullYear()} Beauty Tech Japan. All rights reserved.</p>
-          <p className="text-gray-700">掲載内容はAIによる要約・翻訳です</p>
+          <p className="text-gray-300">掲載内容はAIによる要約・翻訳です</p>
         </div>
       </div>
     </footer>

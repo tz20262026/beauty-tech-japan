@@ -122,7 +122,7 @@ export default function SuncareGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【SPF・PA・種類別おすすめ・正しい塗り方】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             日焼け止めのSPF・PA・種類・正しい塗り方・塗り直しの<br />
             タイミングを初心者向けに2026年版で完全解説します。
           </p>
@@ -137,19 +137,19 @@ export default function SuncareGuidePage() {
             <div className="bg-orange-900/20 border border-orange-500/30 rounded-xl p-4">
               <h3 className="text-orange-300 font-black text-sm mb-2">SPF（UV-B防御）</h3>
               <div className="space-y-1 text-xs">
-                <div className="flex justify-between text-gray-300"><span>SPF15〜20</span><span className="text-gray-400">普段使い・室内</span></div>
-                <div className="flex justify-between text-gray-300"><span>SPF30</span><span className="text-gray-400">外出・通勤</span></div>
-                <div className="flex justify-between text-gray-300"><span>SPF50</span><span className="text-gray-400">炎天下・アウトドア</span></div>
-                <div className="flex justify-between text-gray-300"><span>SPF50+</span><span className="text-gray-400">海水浴・登山</span></div>
+                <div className="flex justify-between text-gray-300"><span>SPF15〜20</span><span className="text-gray-600">普段使い・室内</span></div>
+                <div className="flex justify-between text-gray-300"><span>SPF30</span><span className="text-gray-600">外出・通勤</span></div>
+                <div className="flex justify-between text-gray-300"><span>SPF50</span><span className="text-gray-600">炎天下・アウトドア</span></div>
+                <div className="flex justify-between text-gray-300"><span>SPF50+</span><span className="text-gray-600">海水浴・登山</span></div>
               </div>
             </div>
             <div className="bg-purple-900/20 border border-purple-500/30 rounded-xl p-4">
               <h3 className="text-purple-300 font-black text-sm mb-2">PA（UV-A防御）</h3>
               <div className="space-y-1 text-xs">
-                <div className="flex justify-between text-gray-300"><span>PA+</span><span className="text-gray-400">室内・普段使い</span></div>
-                <div className="flex justify-between text-gray-300"><span>PA++</span><span className="text-gray-400">外出・野外活動</span></div>
-                <div className="flex justify-between text-gray-300"><span>PA+++</span><span className="text-gray-400">炎天下・スポーツ</span></div>
-                <div className="flex justify-between text-gray-300"><span>PA++++</span><span className="text-gray-400">最強防御・海水浴</span></div>
+                <div className="flex justify-between text-gray-300"><span>PA+</span><span className="text-gray-600">室内・普段使い</span></div>
+                <div className="flex justify-between text-gray-300"><span>PA++</span><span className="text-gray-600">外出・野外活動</span></div>
+                <div className="flex justify-between text-gray-300"><span>PA+++</span><span className="text-gray-600">炎天下・スポーツ</span></div>
+                <div className="flex justify-between text-gray-300"><span>PA++++</span><span className="text-gray-600">最強防御・海水浴</span></div>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function SuncareGuidePage() {
                   <span className="text-xs bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-2 py-0.5 rounded-full">{type.texture}</span>
                 </div>
                 <div className="bg-gray-800 rounded px-2.5 py-1.5 text-xs mb-2">
-                  <span className="text-gray-400">🌟 SPF/PA目安：</span>
+                  <span className="text-gray-600">🌟 SPF/PA目安：</span>
                   <span className="text-gray-200">{type.spf}</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3 text-xs">
@@ -213,7 +213,7 @@ export default function SuncareGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

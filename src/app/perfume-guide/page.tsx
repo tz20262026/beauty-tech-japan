@@ -170,7 +170,7 @@ export default function PerfumeGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【レディース・メンズ・プチプラ・デート向け】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             2026年に人気の香水をレディース・メンズ・プチプラ別に<br />
             シーン・季節・年代を考慮してランキング形式で紹介します。
           </p>
@@ -205,24 +205,24 @@ export default function PerfumeGuidePage() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3 text-xs">
                   <div className="bg-gray-800 rounded px-2 py-1.5">
-                    <span className="text-gray-400 block mb-0.5">💰 価格帯</span>
+                    <span className="text-gray-600 block mb-0.5">💰 価格帯</span>
                     <span className="text-white">{p.priceRange}</span>
                   </div>
                   <div className="bg-gray-800 rounded px-2 py-1.5">
-                    <span className="text-gray-400 block mb-0.5">🎭 シーン</span>
+                    <span className="text-gray-600 block mb-0.5">🎭 シーン</span>
                     <span className="text-white">{p.scene}</span>
                   </div>
                   <div className="bg-gray-800 rounded px-2 py-1.5">
-                    <span className="text-gray-400 block mb-0.5">🌸 季節</span>
+                    <span className="text-gray-600 block mb-0.5">🌸 季節</span>
                     <span className="text-white">{p.season}</span>
                   </div>
                 </div>
 
                 <div className="bg-pink-500/10 border border-pink-500/20 rounded-lg px-3 py-2 text-xs">
                   <p className="text-pink-300 font-bold mb-1">🌸 香りのノート</p>
-                  <p className="text-gray-400">トップ: {p.notes.top}</p>
-                  <p className="text-gray-400">ミドル: {p.notes.middle}</p>
-                  <p className="text-gray-400">ベース: {p.notes.base}</p>
+                  <p className="text-gray-600">トップ: {p.notes.top}</p>
+                  <p className="text-gray-600">ミドル: {p.notes.middle}</p>
+                  <p className="text-gray-600">ベース: {p.notes.base}</p>
                 </div>
               </div>
             ))}
@@ -240,7 +240,7 @@ export default function PerfumeGuidePage() {
                 <h3 className="text-pink-400 font-bold text-sm mb-3">{h.title}</h3>
                 <ul className="space-y-1.5">
                   {h.tips.map((tip, j) => (
-                    <li key={j} className="text-gray-400 text-xs flex gap-2">
+                    <li key={j} className="text-gray-600 text-xs flex gap-2">
                       <span className="text-pink-400 flex-shrink-0">✓</span>{tip}
                     </li>
                   ))}
@@ -276,7 +276,7 @@ export default function PerfumeGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

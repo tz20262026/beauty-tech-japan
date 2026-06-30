@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const decoded = decodeURIComponent(tag);
   const ogUrl = `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent(decoded)}&tag=${encodeURIComponent(decoded)}`;
   return {
-    title: `#${decoded} の記事一覧 | Beauty Tech Japan`,
+    title: `#${decoded} の記事一覧`,
     description: `${decoded} に関する美容・コスメの最新情報をまとめました。`,
     openGraph: {
       title: `#${decoded} | Beauty Tech Japan`,
@@ -52,7 +52,7 @@ export default async function TagPage({ params }: Props) {
   return (
     <div>
       {/* パンくず */}
-      <nav className="text-xs text-gray-400 dark:text-gray-500 mb-4 flex items-center gap-1.5">
+      <nav className="text-xs text-gray-600 dark:text-gray-300 mb-4 flex items-center gap-1.5">
         <Link href="/" className="hover:text-pink-500 transition-colors">ホーム</Link>
         <span>/</span>
         <span className="text-gray-600 dark:text-gray-300">{decoded}</span>
@@ -65,7 +65,7 @@ export default async function TagPage({ params }: Props) {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
           {decoded} の記事一覧
         </h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{articles.length} 件の記事</p>
+        <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{articles.length} 件の記事</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -91,14 +91,14 @@ export default async function TagPage({ params }: Props) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             </div>
             <div className="p-4">
-              <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500 mb-1.5">
+              <div className="flex items-center justify-between text-xs text-gray-600 dark:text-gray-300 mb-1.5">
                 <span>{getRelativeTime(article.publishedAt)} · {article.source}</span>
                 <span>{getReadTime(article.body)}分</span>
               </div>
               <h2 className="text-sm font-semibold text-gray-900 dark:text-white leading-snug mb-1.5 group-hover:text-pink-600 transition-colors line-clamp-2">
                 {article.title}
               </h2>
-              <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+              <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">
                 {article.summary}
               </p>
             </div>

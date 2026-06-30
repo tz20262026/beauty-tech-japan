@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年【皮膚科医監修】| Beauty Tech Japan",
+  title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年【皮膚科医監修】",
   description: "レチノールの効果（シワ・毛穴・美白）、濃度の選び方（初心者向け0.1%〜）、副作用（A反応）の対処法、使い方のステップアップ方法を徹底解説。2026年最新版。",
   keywords: [
     "レチノール 美容液",

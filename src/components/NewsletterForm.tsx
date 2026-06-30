@@ -7,7 +7,7 @@ export default function NewsletterForm() {
         <Mail size={18} className="text-pink-500" />
         <h3 className="text-sm font-bold text-gray-900 dark:text-white">最新情報をメールで受け取る</h3>
       </div>
-      <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+      <p className="text-xs text-gray-600 dark:text-gray-300 mb-4">
         海外美容トレンド・新コスメ情報を週1回お届けします。登録無料。
       </p>
       <form

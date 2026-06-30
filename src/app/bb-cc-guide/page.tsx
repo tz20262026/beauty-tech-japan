@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】| Beauty Tech Japan",
+  title: "BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】",
   description: "BBクリームとCCクリームの違いを徹底比較。カバー力・保湿力・UV効果・肌タイプ別の選び方から正しい使い方・重ねヅケの方法まで。2026年最新版。",
   keywords: ["BB クリーム CCクリーム 違い", "BBクリーム 選び方", "CCクリーム 効果", "BBクリーム 肌タイプ", "BBクリーム 使い方"],
   openGraph: {

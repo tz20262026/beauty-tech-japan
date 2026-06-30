@@ -123,7 +123,7 @@ export default function BodycareGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【保湿・スクラブ・むくみ・脱毛ケア】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             全身ボディケアの正しい方法・おすすめアイテムを<br />
             2026年版で完全解説します。
           </p>
@@ -143,10 +143,10 @@ export default function BodycareGuidePage() {
                   <span className="text-xs bg-teal-500/20 text-teal-300 border border-teal-500/30 px-2 py-0.5 rounded-full">{step.timing}</span>
                 </div>
                 <div className="bg-gray-800 rounded px-2.5 py-1.5 text-xs mb-3">
-                  <span className="text-gray-400">🧴 おすすめアイテム：</span>
+                  <span className="text-gray-600">🧴 おすすめアイテム：</span>
                   <span className="text-gray-200">{step.product}</span>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{step.method}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{step.method}</p>
               </div>
             ))}
           </div>
@@ -178,7 +178,7 @@ export default function BodycareGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

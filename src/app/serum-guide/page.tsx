@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "美容液の選び方完全ガイド2026年版【悩み別・成分別・タイプ別】| Beauty Tech Japan",
+  title: "美容液の選び方完全ガイド2026年版【悩み別・成分別・タイプ別】",
   description: "保湿系・ビタミンC系・レチノール系・美白系・鎮静系など美容液の種類を徹底解説。乾燥・シミ・毛穴・シワなど悩み別に最適な美容液の選び方を2026年最新情報でご紹介。",
   keywords: ["美容液 選び方", "美容液 種類", "セラム おすすめ", "美容液 成分", "美容液 比較", "ビタミンC 美容液", "レチノール 美容液", "美白 美容液"],
   openGraph: {

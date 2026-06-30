@@ -34,14 +34,14 @@ export default function BookmarksPage() {
         <Bookmark size={22} className="text-pink-500 fill-pink-100" />
         <div>
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">保存した記事</h1>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{bookmarked.length} 件</p>
+          <p className="text-xs text-gray-600 dark:text-gray-300 mt-0.5">{bookmarked.length} 件</p>
         </div>
       </div>
 
       {bookmarked.length === 0 ? (
         <div className="text-center py-20">
           <p className="text-5xl mb-4">🔖</p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
+          <p className="text-gray-600 dark:text-gray-300 text-sm mb-6">
             まだ保存した記事がありません。
           </p>
           <Link
@@ -69,7 +69,7 @@ export default function BookmarksPage() {
                 />
               </div>
               <div className="py-3 pr-4 flex flex-col justify-center min-w-0">
-                <div className="flex flex-wrap items-center gap-x-2 text-xs text-gray-400 dark:text-gray-500 mb-1">
+                <div className="flex flex-wrap items-center gap-x-2 text-xs text-gray-600 dark:text-gray-300 mb-1">
                   <span>{getRelativeTime(article.publishedAt)}</span>
                   <span>·</span>
                   <span>{article.source}</span>
@@ -79,7 +79,7 @@ export default function BookmarksPage() {
                 <h2 className="text-sm font-semibold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-pink-600 transition-colors">
                   {article.title}
                 </h2>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">
+                <p className="text-xs text-gray-600 dark:text-gray-300 mt-1 line-clamp-1">
                   {article.summary}
                 </p>
               </div>

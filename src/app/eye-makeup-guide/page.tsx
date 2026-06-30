@@ -130,7 +130,7 @@ export default function EyeMakeupGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【アイシャドウ・ライナー・マスカラ初心者入門】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             アイメイクの正しい順番・塗り方・コツを<br />
             初心者向けに2026年版で完全解説します。
           </p>
@@ -151,15 +151,15 @@ export default function EyeMakeupGuidePage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3 text-xs">
                   <div className="bg-gray-800 rounded px-2.5 py-1.5">
-                    <span className="text-gray-400">🖌️ 道具：</span>
+                    <span className="text-gray-600">🖌️ 道具：</span>
                     <span className="text-gray-200">{step.tool}</span>
                   </div>
                   <div className="bg-gray-800 rounded px-2.5 py-1.5">
-                    <span className="text-gray-400">✅ ポイント：</span>
+                    <span className="text-gray-600">✅ ポイント：</span>
                     <span className="text-gray-200">{step.key}</span>
                   </div>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed">{step.tip}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{step.tip}</p>
               </div>
             ))}
           </div>
@@ -191,7 +191,7 @@ export default function EyeMakeupGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

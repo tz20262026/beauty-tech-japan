@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "ナイアシンアミドの効果・選び方完全ガイド2026年【毛穴・美白・ニキビ跡に】| Beauty Tech Japan",
+  title: "ナイアシンアミドの効果・選び方完全ガイド2026年【毛穴・美白・ニキビ跡に】",
   description: "ナイアシンアミドの毛穴・美白・ニキビ跡・くすみへの効果、推奨濃度（5〜10%）、レチノールやビタミンCとの使い分け、スキンケアの順番を2026年最新版で完全解説。",
   keywords: [
     "ナイアシンアミド 効果",

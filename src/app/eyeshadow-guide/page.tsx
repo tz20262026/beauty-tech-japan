@@ -3,7 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "アイシャドウの使い方・色選びガイド2026年版【初心者・奥二重・二重別・プチプラおすすめ】| Beauty Tech Japan",
+  title: "アイシャドウの使い方・色選びガイド2026年版【初心者・奥二重・二重別・プチプラおすすめ】",
   description:
     "アイシャドウの使い方・色選び・ぼかし方を2026年版で完全解説。一重・奥二重・二重別の塗り方・プチプラからデパコスまでのおすすめ・季節別カラー選びを初心者向けに詳しく紹介します。",
   keywords: [
@@ -228,7 +228,7 @@ export default function EyeshadowGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【初心者・奥二重・二重別・プチプラおすすめ】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             アイシャドウの正しい使い方・色選び・ぼかし方を<br />
             まぶたの形別テクニックも含めて2026年最新情報で完全解説します。
           </p>
@@ -258,11 +258,11 @@ export default function EyeshadowGuidePage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div className="bg-gray-800 rounded px-3 py-2">
-                    <p className="text-gray-400 font-bold mb-1">✨ 効果</p>
+                    <p className="text-gray-600 font-bold mb-1">✨ 効果</p>
                     <p className="text-gray-300 leading-relaxed">{trend.effect}</p>
                   </div>
                   <div className="bg-gray-800 rounded px-3 py-2">
-                    <p className="text-gray-400 font-bold mb-1">🌸 おすすめ肌色</p>
+                    <p className="text-gray-600 font-bold mb-1">🌸 おすすめ肌色</p>
                     <p className="text-gray-300 leading-relaxed">{trend.skinTone}</p>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ export default function EyeshadowGuidePage() {
                     {eyelid.type}
                   </h3>
                 </div>
-                <p className="text-gray-400 text-xs mb-3 leading-relaxed">{eyelid.point}</p>
+                <p className="text-gray-600 text-xs mb-3 leading-relaxed">{eyelid.point}</p>
                 <div className="bg-gray-800 rounded-xl px-4 py-3 text-xs">
                   <p className="font-bold mb-1" style={{ color: eyelid.color }}>💡 おすすめテクニック</p>
                   <p className="text-gray-300 leading-relaxed">{eyelid.technique}</p>
@@ -320,7 +320,7 @@ export default function EyeshadowGuidePage() {
                     <span className="text-xs bg-gray-700 text-gray-300 px-2 py-0.5 rounded">道具: {s.tool}</span>
                     <span className="text-xs bg-gray-700 text-gray-300 px-2 py-0.5 rounded">塗布部位: {s.area}</span>
                   </div>
-                  <p className="text-gray-400 text-xs leading-relaxed">{s.tip}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{s.tip}</p>
                 </div>
               </div>
             ))}
@@ -352,7 +352,7 @@ export default function EyeshadowGuidePage() {
                   <tr key={row.brush} className={i % 2 === 0 ? "bg-gray-900" : "bg-gray-950"}>
                     <td className="px-4 py-3 font-semibold text-gray-200">{row.brush}</td>
                     <td className="px-4 py-3 text-gray-300">{row.use}</td>
-                    <td className="px-4 py-3 text-gray-400">{row.tip}</td>
+                    <td className="px-4 py-3 text-gray-600">{row.tip}</td>
                   </tr>
                 ))}
               </tbody>
@@ -443,7 +443,7 @@ export default function EyeshadowGuidePage() {
             {FAQ.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">A. {faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">A. {faq.a}</p>
               </div>
             ))}
           </div>

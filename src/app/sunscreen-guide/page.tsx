@@ -3,7 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "日焼け止め完全ガイド2026年版【SPF・PA・種類・正しい塗り方・おすすめ】| Beauty Tech Japan",
+  title: "日焼け止め完全ガイド2026年版【SPF・PA・種類・正しい塗り方・おすすめ】",
   description:
     "日焼け止めの選び方を2026年版で完全解説。SPF・PAの意味・違い・正しい塗り方・塗り直しのタイミング・クリーム/スプレー/スティック種類別おすすめ・敏感肌向け選び方まで詳しく解説。",
   keywords: [
@@ -188,7 +188,7 @@ export default function SunscreenGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【SPF・PA・種類・正しい塗り方・おすすめ】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             日焼け止めのSPF・PAの意味・種類の違い・正しい塗り方・<br />
             塗り直しタイミング・肌タイプ別おすすめを2026年最新情報で完全解説。
           </p>
@@ -211,7 +211,7 @@ export default function SunscreenGuidePage() {
                 ].map((row) => (
                   <div key={row.val} className="flex justify-between border-b border-orange-900/30 pb-1">
                     <span className="text-orange-200 font-bold">{row.val}</span>
-                    <span className="text-gray-400">{row.use}</span>
+                    <span className="text-gray-600">{row.use}</span>
                   </div>
                 ))}
               </div>
@@ -227,7 +227,7 @@ export default function SunscreenGuidePage() {
                 ].map((row) => (
                   <div key={row.val} className="flex justify-between border-b border-purple-900/30 pb-1">
                     <span className="text-purple-200 font-bold">{row.val}</span>
-                    <span className="text-gray-400">{row.use}</span>
+                    <span className="text-gray-600">{row.use}</span>
                   </div>
                 ))}
               </div>
@@ -261,7 +261,7 @@ export default function SunscreenGuidePage() {
                   </span>
                 </div>
                 <div className="bg-gray-800 rounded px-3 py-2 text-xs mb-3">
-                  <span className="text-gray-400">🌟 SPF/PA目安：</span>
+                  <span className="text-gray-600">🌟 SPF/PA目安：</span>
                   <span className="text-gray-200">{type.spf}</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -301,11 +301,11 @@ export default function SunscreenGuidePage() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div className="bg-gray-800 rounded px-3 py-2">
-                    <p className="text-gray-400 font-bold mb-1">✅ おすすめ</p>
+                    <p className="text-gray-600 font-bold mb-1">✅ おすすめ</p>
                     <p className="text-gray-300 leading-relaxed">{rec.rec}</p>
                   </div>
                   <div className="bg-gray-800 rounded px-3 py-2">
-                    <p className="text-gray-400 font-bold mb-1">⚠️ 避けるべき</p>
+                    <p className="text-gray-600 font-bold mb-1">⚠️ 避けるべき</p>
                     <p className="text-gray-300 leading-relaxed">{rec.avoid}</p>
                   </div>
                 </div>
@@ -329,7 +329,7 @@ export default function SunscreenGuidePage() {
                 </div>
                 <div>
                   <p className="font-black text-white text-sm mb-1">{s.title}</p>
-                  <p className="text-gray-400 text-xs leading-relaxed">{s.detail}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{s.detail}</p>
                 </div>
               </div>
             ))}
@@ -359,7 +359,7 @@ export default function SunscreenGuidePage() {
                   { item: "おすすめ肌質", absorb: "普通肌・オイリー肌", scatter: "敏感肌・乾燥肌・赤ちゃん" },
                 ].map((row, i) => (
                   <tr key={row.item} className={i % 2 === 0 ? "bg-gray-900" : "bg-gray-950"}>
-                    <td className="px-4 py-3 font-semibold text-gray-400">{row.item}</td>
+                    <td className="px-4 py-3 font-semibold text-gray-600">{row.item}</td>
                     <td className="px-4 py-3 text-gray-300">{row.absorb}</td>
                     <td className="px-4 py-3 text-gray-300">{row.scatter}</td>
                   </tr>
@@ -403,7 +403,7 @@ export default function SunscreenGuidePage() {
             {FAQ.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">A. {faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">A. {faq.a}</p>
               </div>
             ))}
           </div>

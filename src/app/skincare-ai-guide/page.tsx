@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "AIスキンケア完全ガイド2026【肌診断・おすすめアプリ】| Beauty Tech Japan",
+  title: "AIスキンケア完全ガイド2026【肌診断・おすすめアプリ】",
   description: "AI肌診断の仕組み・おすすめアプリ・自宅でできるAIスキンケアを完全解説。2026年最新のAI美容技術でパーソナライズされたスキンケアルーティンを構築する方法。",
   keywords: ["AI スキンケア", "AI 肌診断 アプリ", "パーソナライズ スキンケア", "AI 美容", "肌分析 AI"],
   openGraph: {
@@ -232,7 +232,7 @@ export default function SkincareAiGuidePage() {
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
             <span className="text-blue-600">AIスキンケア</span>完全ガイド<br className="sm:hidden" />
-            <span className="text-lg font-normal ml-2 text-gray-400">2026年版</span>
+            <span className="text-lg font-normal ml-2 text-gray-600">2026年版</span>
           </h1>
           <p className="text-gray-600 leading-relaxed">
             AI肌診断の仕組みからおすすめアプリ・自宅でできるAIスキンケアルーティンまで完全解説。

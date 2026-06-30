@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "美白ケア完全ガイド2026年版【シミ・くすみに効く成分・ルーティン】| Beauty Tech Japan",
+  title: "美白ケア完全ガイド2026年版【シミ・くすみに効く成分・ルーティン】",
   description: "美白ケアの正しい方法を解説。ビタミンC・アルブチン・ナイアシンアミドなど有効成分別の選び方・使い方・朝夜ルーティンまで。2026年最新情報。",
   keywords: ["美白 成分", "シミ 対策", "くすみ 改善", "ビタミンC 美白", "ナイアシンアミド 効果", "美白ケア 順番"],
   openGraph: {

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ページが見つかりません | Beauty Tech Japan",
+  title: "ページが見つかりません",
 };
 
 export default function NotFound() {
@@ -16,7 +16,7 @@ export default function NotFound() {
       <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
         ページが見つかりません
       </h1>
-      <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 max-w-sm">
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-8 max-w-sm">
         お探しのページは移動したか、URLが変更された可能性があります。
       </p>
       <div className="flex flex-col sm:flex-row gap-3">

@@ -96,7 +96,7 @@ export default function AffiliateSectionBeauty() {
               </div>
               <div>
                 <p className="font-black text-gray-900 text-base leading-tight">{item.title}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{item.tagline}</p>
+                <p className="text-xs text-gray-600 mt-0.5">{item.tagline}</p>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed flex-1">{item.desc}</p>
               <span
@@ -116,7 +116,7 @@ export default function AffiliateSectionBeauty() {
           </a>
           <img width={1} height={1} src="https://www13.a8.net/0.gif?a8mat=4B67CJ+2W6VN6+3A98+5YZ77" alt="" className="hidden" />
         </div>
-        <p className="text-center text-xs text-gray-400 mt-6">※ 広告・PR表示　クリックでアフィリエイトページに移動します</p>
+        <p className="text-center text-xs text-gray-600 mt-6">※ 広告・PR表示　クリックでアフィリエイトページに移動します</p>
       </div>
     </section>
   );

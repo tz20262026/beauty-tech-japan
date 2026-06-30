@@ -3,7 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
-  title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版【10ステップ＆おすすめ成分】| Beauty Tech Japan",
+  title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版【10ステップ＆おすすめ成分】",
   description: "韓国美容（K-Beauty）の10ステップスキンケアを日本語で完全解説。おすすめの成分・使い方・肌質別の選び方から、K-Beautyブームの秘密まで2026年最新版で網羅。",
   keywords: ["韓国コスメ おすすめ", "K-Beauty スキンケア", "韓国スキンケア 順番", "トナーパッド 使い方", "韓国コスメ 成分"],
   openGraph: {
@@ -129,7 +129,7 @@ export default function KBeautyGuidePage() {
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
             韓国コスメ・<span className="text-pink-600">K-Beauty</span><br className="sm:hidden" />
             ルーティン完全ガイド
-            <span className="text-base font-normal ml-2 text-gray-400">2026年版</span>
+            <span className="text-base font-normal ml-2 text-gray-600">2026年版</span>
           </h1>
           <p className="text-gray-600 leading-relaxed">
             世界が注目する韓国美容（K-Beauty）の10ステップスキンケアを日本語で完全解説。

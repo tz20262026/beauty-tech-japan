@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "2026年版 スキンケアの基本ルーティン完全ガイド【朝晩の順番・選び方】| Beauty Tech Japan",
+  title: "2026年版 スキンケアの基本ルーティン完全ガイド【朝晩の順番・選び方】",
   description: "スキンケアの正しい順番・使い方を完全解説。洗顔・化粧水・乳液・美容液・日焼け止めの順番から、肌質別（乾燥・混合・脂性）の選び方まで。2026年最新の海外美容法も紹介。",
   keywords: ["スキンケア 順番", "スキンケア ルーティン", "洗顔 化粧水 順番", "スキンケア 基本", "肌荒れ 対策"],
   openGraph: {

@@ -141,7 +141,7 @@ export default function DietBeautyGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【食事・運動・サプリ・痩せる方法】</span>
           </h1>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             食事・運動・サプリを組み合わせた<br />
             効果的な美容ダイエット方法を2026年版で完全解説。
           </p>
@@ -165,11 +165,11 @@ export default function DietBeautyGuidePage() {
                     難易度：{dm.difficulty}
                   </span>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed mb-3">{dm.desc}</p>
+                <p className="text-gray-600 text-xs leading-relaxed mb-3">{dm.desc}</p>
                 <div>
                   <p className="text-green-400 text-xs font-bold mb-1">✅ 実践のコツ</p>
                   <ul className="space-y-0.5">
-                    {dm.dos.map((d, j) => <li key={j} className="text-gray-400 text-xs">・{d}</li>)}
+                    {dm.dos.map((d, j) => <li key={j} className="text-gray-600 text-xs">・{d}</li>)}
                   </ul>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export default function DietBeautyGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

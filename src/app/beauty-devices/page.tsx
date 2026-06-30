@@ -6,7 +6,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 // メタデータ（SEO）
 // =============================================
 export const metadata: Metadata = {
-  title: "美顔器・美容機器おすすめランキング2026年【自宅エステ完全版】| Beauty Tech Japan",
+  title: "美顔器・美容機器おすすめランキング2026年【自宅エステ完全版】",
   description:
     "2026年最新の美顔器・美容機器をランキング形式で完全解説。EMS・RF（ラジオ波）・LED・超音波・ハイフ家庭用など種類別に効果・使い方・予算を徹底比較。自宅エステの最強機器を見つけよう。",
   keywords: [
