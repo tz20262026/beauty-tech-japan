@@ -60,6 +60,37 @@ export const metadata: Metadata = {
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
+// JSON-LD: WebSite + NewsMediaOrganization 構造化データ
+const beautyJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://beauty-tech-japan.vercel.app/#website",
+    name: "Beauty Tech Japan",
+    url: "https://beauty-tech-japan.vercel.app",
+    description: "海外人気美容メディアからスキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け",
+    inLanguage: "ja",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://beauty-tech-japan.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://beauty-tech-japan.vercel.app/#organization",
+    name: "Beauty Tech Japan",
+    url: "https://beauty-tech-japan.vercel.app",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&q=80&fit=crop",
+    },
+    description: "Allure・Vogue Beauty・Byrdieなど海外人気美容メディアの最新情報を日本語でお届けするメディア",
+    sameAs: [],
+  },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,6 +98,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${notoSansJP.variable} h-full`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(beautyJsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased transition-colors">
         {/* ─── Google Analytics 4 ─────────────────────────── */}
         {GA_ID && GA_ID !== "G-XXXXXXXXXX" && (
