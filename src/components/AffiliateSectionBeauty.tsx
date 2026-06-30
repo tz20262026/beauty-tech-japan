@@ -108,6 +108,14 @@ export default function AffiliateSectionBeauty() {
             </a>
           ))}
         </div>
+        {/* 新規A8アフィリエイト（2026-06-30追加） */}
+        <div className="mt-6 space-y-2">
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B67CJ+2W6VN6+3A98+5YZ77" rel="nofollow" target="_blank"
+             className="block p-3 bg-gradient-to-r from-pink-600 to-rose-500 text-white font-bold text-sm rounded-xl text-center no-underline my-2">
+            💄 美容・コスメのお得情報を見る
+          </a>
+          <img width={1} height={1} src="https://www13.a8.net/0.gif?a8mat=4B67CJ+2W6VN6+3A98+5YZ77" alt="" className="hidden" />
+        </div>
         <p className="text-center text-xs text-gray-400 mt-6">※ 広告・PR表示　クリックでアフィリエイトページに移動します</p>
       </div>
     </section>
