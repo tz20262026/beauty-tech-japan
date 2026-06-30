@@ -95,7 +95,8 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <Analytics />
-      </body>
+      <Script src="https://gc.zgo.at/count.js" data-goatcounter="https://beautytech.goatcounter.com/count" strategy="afterInteractive" />
+</body>
     </html>
   );
 }
