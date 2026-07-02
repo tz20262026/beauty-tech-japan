@@ -1,5 +1,3 @@
-@AGENTS.md
-
 # Beauty Tech Japan プロジェクト固有ルール
 
 ## 画像パフォーマンス（自律対応）
