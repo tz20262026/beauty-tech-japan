@@ -127,6 +127,17 @@ export default function Footer() {
                 Harper&apos;s Bazaar / Refinery29
               </p>
             </div>
+            <div className="mt-6">
+              <h3 className="text-xs font-semibold text-white mb-2 uppercase tracking-wide">関連サイト</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="https://fortune-site-neon.vercel.app/" className="text-xs hover:text-pink-400 transition-colors">暴露仙人（AI占いサイト）</a>
+                </li>
+                <li>
+                  <a href="https://fukugyou-shindan-eosin.vercel.app/" className="text-xs hover:text-pink-400 transition-colors">副業タイプ診断AI</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
