@@ -23,6 +23,7 @@ import BookmarkButton from "@/components/BookmarkButton";
 import NewsletterForm from "@/components/NewsletterForm";
 import TableOfContents, { extractHeadings, headingId } from "@/components/TableOfContents";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const revalidate = 300;
 
@@ -320,6 +321,11 @@ export default async function ArticlePage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      {/* おすすめサービス（記事内のみ表示・メインページには非表示） */}
+      <div className="mt-8">
+        <AffiliateSectionBeauty />
+      </div>
 
       {/* ニュースレター */}
       <div className="mt-8">
