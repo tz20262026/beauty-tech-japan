@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
   title: "2026年版 スキンケアの基本ルーティン完全ガイド【朝晩の順番・選び方】",
@@ -11,6 +12,12 @@ export const metadata: Metadata = {
     type: "article",
     locale: "ja_JP",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "2026年版 スキンケア完全ガイド｜朝晩のルーティン・順番・選び方",
+    description: "スキンケアの正しい順番・使い方を完全解説。肌質別の選び方・海外最新美容法も紹介",
+  },
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/skincare-guide" },
 };
 
 const MORNING_STEPS = [
@@ -200,6 +207,30 @@ export default function SkincareGuidePage() {
           最新記事を読む →
         </Link>
       </section>
+
+      {/* 関連ガイドへ誘導 */}
+      <section className="bg-gradient-to-br from-amber-50 to-pink-50 border border-amber-200 rounded-2xl p-6 space-y-4">
+        <h2 className="font-black text-gray-900">関連ガイドもチェック</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link
+            href="/serum-guide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #f59e0b, #ec4899)" }}
+          >
+            美容液の選び方ガイド →
+          </Link>
+          <Link
+            href="/sunscreen-guide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #3b82f6, #ec4899)" }}
+          >
+            日焼け止め完全ガイド →
+          </Link>
+        </div>
+      </section>
+
+      {/* アフィリエイト */}
+      <AffiliateSectionBeauty />
     </div>
   );
 }

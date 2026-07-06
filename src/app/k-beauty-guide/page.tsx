@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     type: "article",
     locale: "ja_JP",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版",
+    description: "韓国美容10ステップを完全解説。成分・使い方・肌質別の選び方まで全網羅",
+  },
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/k-beauty-guide" },
 };
 
 const K_BEAUTY_STEPS = [

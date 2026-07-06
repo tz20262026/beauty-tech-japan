@@ -3,12 +3,19 @@ import Link from "next/link";
 import { Globe, Cpu, BookOpen, Tag, RefreshCw, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
   description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
   openGraph: {
-    title: "About | Beauty Tech Japan",
+    title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
+    description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
     description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
   },
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/about" },
 };
 
 const MEDIA_LIST = [
