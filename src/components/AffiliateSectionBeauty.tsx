@@ -61,6 +61,26 @@ const items = [
     cta: "詳細を確認する →",
     color: "#059669",
   },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B7USZ+G7GTMA+1USQ+2Z68LU",
+    badge: "🧴 スキンケア",
+    badgeColor: "#db2777",
+    title: "ORBIS Mr.",
+    tagline: "オルビス発メンズスキンケア｜初回990円",
+    desc: "洗顔・化粧水・乳液がこれ1本。ヒゲ剃り後の肌荒れ・テカリ・毛穴悩みに。初回送料無料でお試しできる高評価スキンケアシリーズ。",
+    cta: "初回990円で試す →",
+    color: "#db2777",
+  },
+  {
+    href: "https://px.a8.net/svt/ejp?a8mat=4B7USZ+G8NOTU+8UW+69HA9",
+    badge: "💇 ヘアケア",
+    badgeColor: "#0d9488",
+    title: "ラサーナ La Sana",
+    tagline: "海藻ヘアエッセンスの人気ヘアケアブランド",
+    desc: "ダメージヘア・アウトバストリートメントで話題の海藻由来ヘアケア。乾燥・パサつきが気になる髪に。",
+    cta: "公式サイトを見る →",
+    color: "#0d9488",
+  },
 ];
 
 export default function AffiliateSectionBeauty() {
