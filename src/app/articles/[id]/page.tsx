@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import type { ComponentPropsWithoutRef } from "react";
 import ReactMarkdown from "react-markdown";
 import {
   getArticleImageUrl,
@@ -20,12 +21,39 @@ import ShareButtons from "@/components/ShareButtons";
 import ReadingProgress from "@/components/ReadingProgress";
 import BookmarkButton from "@/components/BookmarkButton";
 import NewsletterForm from "@/components/NewsletterForm";
-import TableOfContents, { extractHeadings } from "@/components/TableOfContents";
+import TableOfContents, { extractHeadings, headingId } from "@/components/TableOfContents";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const revalidate = 300;
 
 type Props = { params: Promise<{ id: string }> };
+
+// 本文中の見出し（h1〜h3）にid属性を付与し、目次からのジャンプリンクを有効にする。
+// extractHeadings() と同じ「出現順」でid採番することで、目次のリンク先と一致させる。
+function createHeadingComponents() {
+  let counter = 0;
+  const renderHeading = (tag: "h2" | "h3") =>
+    function HeadingRenderer({
+      children,
+      className,
+      ...rest
+    }: ComponentPropsWithoutRef<"h2">) {
+      const id = headingId(counter);
+      counter += 1;
+      const Tag = tag;
+      return (
+        <Tag id={id} className={["scroll-mt-20", className].filter(Boolean).join(" ")} {...rest}>
+          {children}
+        </Tag>
+      );
+    };
+  // 本文にh1が含まれる場合はページ本来のh1と重複しないようh2として描画する
+  return {
+    h1: renderHeading("h2"),
+    h2: renderHeading("h2"),
+    h3: renderHeading("h3"),
+  };
+}
 
 async function fetchAllArticles(): Promise<Article[]> {
   try {
@@ -223,7 +251,7 @@ export default async function ArticlePage({ params }: Props) {
           <TableOfContents headings={headings} />
 
           <div className="prose prose-sm sm:prose max-w-none text-gray-800 dark:text-gray-200 leading-loose prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-pink-600 prose-strong:text-gray-900 dark:prose-strong:text-white prose-li:marker:text-pink-400 dark:prose-invert">
-            <ReactMarkdown>{article.body}</ReactMarkdown>
+            <ReactMarkdown components={createHeadingComponents()}>{article.body}</ReactMarkdown>
           </div>
 
           {/* アフィリエイトカード（記事1本につき1つ） */}
@@ -319,6 +347,11 @@ export default async function ArticlePage({ params }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
                 <div className="p-3">
+                  {r.tags[0] && (
+                    <span className="inline-block text-[10px] font-bold text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/40 border border-pink-100 dark:border-pink-900 rounded-full px-2 py-0.5 mb-1.5">
+                      {r.tags[0]}
+                    </span>
+                  )}
                   <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
                     {getRelativeTime(r.publishedAt)} · {getReadTime(r.body)}分
                   </div>
@@ -363,38 +396,6 @@ export default async function ArticlePage({ params }: Props) {
           </div>
         </div>
       )}
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "NewsArticle",
-              headline: article.title,
-              description: article.summary,
-              datePublished: article.publishedAt,
-              publisher: {
-                "@type": "Organization",
-                name: "Beauty Tech Japan",
-                url: siteBase,
-              },
-              ...(article.imageUrl ? { image: article.imageUrl } : {}),
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "ホーム", item: siteBase },
-                ...(article.tags[0]
-                  ? [{ "@type": "ListItem", position: 2, name: article.tags[0], item: `${siteBase}/tags/${encodeURIComponent(article.tags[0])}` }]
-                  : []),
-                { "@type": "ListItem", position: article.tags[0] ? 3 : 2, name: article.title, item: `${siteBase}/articles/${article.id}` },
-              ],
-            },
-          ]),
-        }}
-      />
 
       <div className="mt-6 text-center">
         <Link
