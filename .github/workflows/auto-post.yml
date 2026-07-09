@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: リポジトリをチェックアウト
@@ -30,9 +31,30 @@ jobs:
         run: python scripts/post_one_article.py
 
       - name: 画像ファイルが実際にコミット対象か検証
-        run: python scripts/verify_latest_image.py
+        id: verify_image
+        run: |
+          set +e
+          python scripts/verify_latest_image.py
+          echo "verify_exit=$?" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: 画像異常をIssueで通知
+        if: steps.verify_image.outputs.verify_exit != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERIFY_MESSAGE: ${{ steps.verify_image.outputs.verify_message }}
+          VERIFY_EXIT: ${{ steps.verify_image.outputs.verify_exit }}
+        run: |
+          BODY="${VERIFY_MESSAGE}
+
+          verify_exit=1（エラー）: 画像がコミットされずブロックされました。原因調査が必要です。
+          verify_exit=2（警告）: Gemini画像生成が失敗し記事本文のみ公開されました。scripts/backfill_images.py で後から補完してください。"
+          gh issue create \
+            --title "🖼️ 記事画像に問題発生（$(date '+%Y-%m-%d')・code=${VERIFY_EXIT}）" \
+            --body "$BODY"
 
       - name: 変更をコミット＆プッシュ
+        if: steps.verify_image.outputs.verify_exit != '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
