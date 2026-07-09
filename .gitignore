@@ -42,9 +42,10 @@ next-env.d.ts
 
 .vercel
 
-# playwright / screenshots
+# playwright / screenshots (public/images 配下の記事画像は対象外)
 .playwright-mcp/
-*.png
+/*.png
+/screenshots/**/*.png
 
 # database
 *.db

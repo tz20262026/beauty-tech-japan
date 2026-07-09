@@ -30,7 +30,7 @@ IMAGE_MODEL = "gemini-2.5-flash-image"
 
 def is_corrupt(path: Path) -> bool:
     if not path.exists():
-        return False
+        return True
     return path.stat().st_size < 1000
 
 def generate_image(client, article_id: str, title: str, tags: list) -> str:

@@ -58,7 +58,7 @@ export default async function Home() {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/icon.png`,
+        url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=512&q=80&fit=crop",
         width: 512,
         height: 512,
       },
