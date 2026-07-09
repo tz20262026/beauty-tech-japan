@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -186,6 +187,9 @@ export default function SuncareGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="suncare-guide" />
 
         {/* CTA */}
         <section className="mb-12 bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-6 text-center">

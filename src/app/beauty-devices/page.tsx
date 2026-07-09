@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 // =============================================
 // メタデータ（SEO）
@@ -372,6 +373,9 @@ export default function BeautyDevicesPage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="beauty-devices" />
 
         {/* 使い方のコツ */}
         <section className="mb-14">

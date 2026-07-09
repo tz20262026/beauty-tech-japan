@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "美容液の選び方完全ガイド2026年版【悩み別・成分別・タイプ別】",
@@ -175,6 +176,9 @@ export default function SerumGuidePage() {
           ))}
         </div>
       </section>
+
+      {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+      <ArticleAffiliateCard tags={[]} articleId="serum-guide" />
 
       {/* 美容液タイプ詳細 */}
       <section className="space-y-5">

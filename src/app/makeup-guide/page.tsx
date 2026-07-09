@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "メイクアップ 初心者完全ガイド2026年版【ベースメイク・アイメイク・リップの順番・やり方】",
@@ -212,6 +213,9 @@ export default function MakeupGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="makeup-guide" />
 
         {/* CTA */}
         <section className="mb-12 bg-gradient-to-r from-pink-900/20 to-purple-900/20 border border-pink-500/30 rounded-2xl p-6 text-center">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】",
@@ -180,6 +181,9 @@ export default function BbCcGuidePage() {
             ※ BBクリーム（Blemish Balm）＝ 傷ケア用クリームが起源のカバーファンデ。CCクリーム（Color Control）＝ 色補正＋スキンケア効果を重視したアイテム。
           </p>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="bb-cc-guide" />
 
         {/* 肌悩み別選び方 */}
         <section className="space-y-5">

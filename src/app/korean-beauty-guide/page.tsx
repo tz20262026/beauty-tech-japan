@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "韓国コスメ完全ガイド2026【最新トレンド・人気ブランド】",
@@ -256,6 +257,9 @@ export default function KoreanBeautyGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="korean-beauty-guide" />
 
         {/* 人気ブランド */}
         <section className="space-y-5">

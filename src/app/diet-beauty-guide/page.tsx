@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "美容ダイエット完全ガイド2026年版【食事・運動・サプリ・痩せる方法・短期間で効果】",
@@ -176,6 +177,9 @@ export default function DietBeautyGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="diet-beauty-guide" />
 
         {/* CTA */}
         <section className="mb-12 bg-gradient-to-r from-green-900/20 to-teal-900/20 border border-green-500/30 rounded-2xl p-6 text-center">

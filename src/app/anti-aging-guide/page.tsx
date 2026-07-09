@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "エイジングケア完全ガイド2026年版【年齢肌対策・成分・ルーティン】",
@@ -189,6 +190,9 @@ export default function AntiAgingGuidePage() {
           ))}
         </div>
       </section>
+
+      {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+      <ArticleAffiliateCard tags={[]} articleId="anti-aging-guide" />
 
       {/* 朝のルーティン */}
       <section className="space-y-5">

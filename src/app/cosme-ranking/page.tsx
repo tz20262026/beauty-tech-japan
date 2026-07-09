@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "プチプラコスメおすすめランキング2026年版【20代・30代・敏感肌・厳選12選】",
@@ -296,6 +297,9 @@ export default function CosmeRankingPage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="cosme-ranking" />
 
         {/* 肌タイプ別ガイド */}
         <section className="mb-12">

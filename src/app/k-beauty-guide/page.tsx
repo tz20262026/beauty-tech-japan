@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版【10ステップ＆おすすめ成分】",
@@ -190,6 +191,9 @@ export default function KBeautyGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="k-beauty-guide" />
 
         {/* 肌質別ケア */}
         <section className="space-y-5">

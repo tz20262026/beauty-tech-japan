@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "ナイアシンアミドの効果・選び方完全ガイド2026年【毛穴・美白・ニキビ跡に】",
@@ -205,6 +206,9 @@ export default function NiacinamideGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+      <ArticleAffiliateCard tags={[]} articleId="niacinamide-guide" />
 
       {/* 効果一覧 */}
       <section className="space-y-4">

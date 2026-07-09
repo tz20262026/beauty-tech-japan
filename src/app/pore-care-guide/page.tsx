@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "毛穴ケア完全ガイド2026年版【開き・黒ずみ・たるみ毛穴の種類別対策】",
@@ -169,6 +170,9 @@ export default function PoreCareGuidePage() {
           ))}
         </div>
       </section>
+
+      {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+      <ArticleAffiliateCard tags={[]} articleId="pore-care-guide" />
 
       {/* 毛穴タイプ別ケア詳細 */}
       <section className="space-y-6">

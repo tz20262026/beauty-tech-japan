@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "ヘアケア完全ガイド2026年版【髪質改善・ダメージ補修・おすすめシャンプー10選】",
@@ -250,6 +251,9 @@ export default function HaircareGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="haircare-guide" />
 
         {/* 髪タイプ別 */}
         <section className="mb-10">

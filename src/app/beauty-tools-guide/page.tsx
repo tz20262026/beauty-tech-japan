@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "AIで変わる美容ケア2026【最新ビューティーテック15選】",
@@ -256,6 +257,9 @@ export default function BeautyToolsGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="beauty-tools-guide" />
 
         {/* ARメイクの主要機能 */}
         <section className="space-y-5">

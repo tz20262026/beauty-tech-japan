@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】",
@@ -230,6 +231,9 @@ export default function ConcealerGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="concealer-guide" />
 
         {/* 悩み別選び方 */}
         <section className="space-y-5">

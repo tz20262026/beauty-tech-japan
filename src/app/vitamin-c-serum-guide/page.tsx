@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "ビタミンC美容液のおすすめ選び方2026年【シミ・毛穴・美白に効果的な使い方】",
@@ -200,6 +201,9 @@ export default function VitaminCSerumGuidePage() {
           ))}
         </div>
       </section>
+
+      {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+      <ArticleAffiliateCard tags={[]} articleId="vitamin-c-serum-guide" />
 
       {/* 種類の違い */}
       <section className="space-y-4">

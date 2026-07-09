@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "ボディケア・全身美容 完全ガイド2026年版【保湿・ボディスクラブ・脱毛・むくみ対策・おすすめアイテム】",
@@ -151,6 +152,9 @@ export default function BodycareGuidePage() {
             ))}
           </div>
         </section>
+
+        {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+        <ArticleAffiliateCard tags={[]} articleId="bodycare-guide" />
 
         {/* CTA */}
         <section className="mb-12 bg-gradient-to-r from-teal-900/20 to-green-900/20 border border-teal-500/30 rounded-2xl p-6 text-center">

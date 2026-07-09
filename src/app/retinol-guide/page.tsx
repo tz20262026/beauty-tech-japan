@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年【皮膚科医監修】",
@@ -202,6 +203,9 @@ export default function RetinolGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* 中間CTA：早期に読者の目に触れるアフィリエイト導線 */}
+      <ArticleAffiliateCard tags={[]} articleId="retinol-guide" />
 
       {/* 濃度の選び方 */}
       <section className="space-y-4">
