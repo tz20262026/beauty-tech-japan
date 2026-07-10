@@ -3454,5 +3454,830 @@
       "パーソナライズ"
     ],
     "source": "refinery29"
+  },
+  {
+    "id": "btj2026_291",
+    "name": "生体電位バランススキンケア",
+    "url": "https://www.allure.com/beauty-trends/bioelectric-skin-balance-2026",
+    "description": "This trend focuses on products and devices that stabilize the skin's subtle bioelectric potential, which can be disrupted by environmental factors, stress, and aging. By restoring this balance using specific minerals, trace elements, or microcurrents, the skin's natural barrier function and regenerative capabilities are enhanced. The goal is to optimize cellular communication and overall skin vitality, leading to improved resilience and a healthier complexion. This approach moves beyond traditional hydration and barrier repair to address the energetic aspects of skin health, offering a foundational boost to skin recovery and protection.",
+    "tags": [
+      "生体電位",
+      "バリア機能",
+      "微弱電流",
+      "細胞活性",
+      "肌再生"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_292",
+    "name": "環境光適応型ベースメイク",
+    "url": "https://www.vogue.com/beauty/smart-light-adaptive-foundation-future",
+    "description": "These innovative base makeup products intelligently detect and adapt to varying light conditions, whether natural sunlight, indoor artificial light, or digital screen glow. Utilizing advanced photochromatic pigments and smart sensors, they automatically adjust shade, finish, and luminosity to ensure a consistently flawless and harmonious look in any environment. This technology eliminates the need for multiple foundations for different settings, providing a truly versatile and optimized complexion that always appears perfect and natural, regardless of the ambient lighting challenges of modern life.",
+    "tags": [
+      "スマートメイク",
+      "ベースメイク",
+      "環境適応",
+      "AIコスメ",
+      "肌トーン補正"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_293",
+    "name": "スカルプマイクロカレントケア",
+    "url": "https://www.byrdie.com/hair-trends/microcurrent-scalp-therapy-2026",
+    "description": "This trend involves the use of devices and treatments that deliver gentle microcurrents to the scalp, aiming to stimulate cellular activity and improve overall scalp health. By enhancing blood circulation, optimizing nutrient delivery to hair follicles, and promoting the rejuvenation of hair matrix cells, it supports a healthy hair growth cycle. This advanced scalp care approach not only addresses issues like hair thinning and sluggish growth but also contributes to stronger, more resilient hair from the roots, making professional-grade scalp therapy accessible for home use.",
+    "tags": [
+      "スカルプケア",
+      "微弱電流",
+      "血行促進",
+      "毛母細胞",
+      "自宅美容"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_294",
+    "name": "脳波センシング香水",
+    "url": "https://www.cosmopolitan.com/beauty/future-fragrances-brainwave",
+    "description": "This futuristic fragrance category integrates brainwave sensing technology, often through wearable devices or smart jewelry, to detect the user's emotional or cognitive state. Based on real-time brainwave data (e.g., alpha, beta, theta waves indicating relaxation, focus, or stress), the device automatically releases specific aromatic compounds. These scents are scientifically formulated to either enhance desired states like calm or alertness, or mitigate negative feelings. It represents an evolution of aromatherapy, offering a personalized, adaptive, and scientifically-backed approach to mood and performance optimization through olfaction.",
+    "tags": [
+      "スマートフレグランス",
+      "脳波連動",
+      "アロマセラピー",
+      "心理効果",
+      "集中力向上"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_295",
+    "name": "量子肌分析テクノロジー",
+    "url": "https://www.refinery29.com/en-us/quantum-skin-analysis-beauty-tech",
+    "description": "Quantum skin analysis utilizes principles of quantum physics to provide an unprecedented, non-invasive examination of skin health at a cellular and even sub-cellular level. This technology can detect subtle energetic patterns and molecular vibrations, revealing potential skin issues and future risks long before they manifest visually. It moves beyond traditional diagnostics by offering insights into the quantum state of skin cells, enabling hyper-personalized skincare recommendations that target the most fundamental aspects of skin vitality and long-term well-being.",
+    "tags": [
+      "量子美容",
+      "肌診断",
+      "パーソナライズ",
+      "テクノロジー",
+      "未来予測"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_296",
+    "name": "肌の振動セラピー",
+    "url": "https://www.instyle.com/beauty-tech/skin-vibration-therapy-2026",
+    "description": "This trend explores devices and products that leverage specific low-frequency vibrations to stimulate cellular activity within the skin. Gentle sonic or pulsating vibrations are believed to improve microcirculation, enhance lymphatic drainage, and promote collagen production, leading to firmer, more radiant skin. Applied through handheld tools or integrated into masks, this therapy aims to optimize nutrient delivery and waste removal at a cellular level, offering a non-invasive method for skin rejuvenation and detoxification, mimicking the effects of a gentle massage on a deeper cellular plane.",
+    "tags": [
+      "振動美容",
+      "細胞活性",
+      "リンパドレナージュ",
+      "コラーゲン生成",
+      "自宅エステ"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_297",
+    "name": "デジタル疲労向けアイケア",
+    "url": "https://www.harpersbazaar.com/beauty/digital-fatigue-eye-care-2026",
+    "description": "With increased screen time, this category addresses the specific needs of eyes and the surrounding skin affected by digital fatigue. Products focus on reducing blue light damage, alleviating eye strain, combating dryness, and minimizing the appearance of dark circles and puffiness caused by prolonged digital exposure. Ingredients often include advanced antioxidants, anti-inflammatory agents, and specific peptides designed to protect and repair delicate periorbital skin from the cumulative stress of digital lifestyles, ensuring refreshed and vibrant eyes despite constant screen usage.",
+    "tags": [
+      "アイケア",
+      "ブルーライト対策",
+      "デジタル疲労",
+      "抗酸化",
+      "目元美容"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_298",
+    "name": "マイクロニードルパッチの進化",
+    "url": "https://www.allure.com/beauty-trends/advanced-microneedle-patches-2026",
+    "description": "Next-generation microneedle patches go beyond traditional hyaluronic acid delivery, incorporating advanced active ingredients like customized peptides, growth factors, and even targeted RNA for specific skin concerns. These patches offer precise, localized delivery of potent ingredients directly into the deeper layers of the epidermis, bypassing the skin barrier more effectively than topical creams. With enhanced dissolving capabilities and targeted formulations for concerns such as hyperpigmentation, deep wrinkles, and localized scarring, they provide a highly efficient and minimally invasive solution for at-home professional-level treatment.",
+    "tags": [
+      "マイクロニードル",
+      "集中ケア",
+      "ホームケア",
+      "浸透技術",
+      "部分用美容液"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_299",
+    "name": "肌のストレス適応美容液",
+    "url": "https://www.byrdie.com/skincare/stress-adaptive-serums-2026",
+    "description": "This trend focuses on skincare formulations designed to help the skin adapt and build resilience against various forms of stress, including environmental aggressors, emotional stress, and internal physiological changes. These 'adaptogenic' serums often contain bio-adaptive ingredients like advanced plant extracts, specialized peptides, and unique microbiome modulators that train the skin to better cope with and recover from stressors. The aim is to prevent stress-induced skin issues before they occur, maintaining skin balance and vitality even under challenging conditions, thus promoting long-term skin health and resilience.",
+    "tags": [
+      "アダプトゲン",
+      "抗ストレス",
+      "肌バリア",
+      "環境適応",
+      "レジリエンス"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_300",
+    "name": "非接触型スマート肌診断",
+    "url": "https://www.vogue.com/beauty/contactless-smart-skin-diagnosis-2026",
+    "description": "This innovative technology offers highly accurate skin analysis without any physical contact. Utilizing advanced imaging, spectral analysis, and AI algorithms, these devices can assess skin hydration, oil levels, pore size, pigmentation, elasticity, and even subtle subsurface conditions from a distance. Users can get professional-grade skin insights instantly via smartphone apps or smart mirrors, leading to highly personalized product recommendations and routine adjustments. This touchless approach ensures hygiene and convenience, making expert skincare advice more accessible and integrated into daily life.",
+    "tags": [
+      "肌診断",
+      "非接触",
+      "AI美容",
+      "パーソナライズ",
+      "スマートミラー"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_301",
+    "name": "肌の記憶回復美容液",
+    "url": "https://www.cosmopolitan.com/beauty/skin-memory-restoration-serums-2026",
+    "description": "This emerging skincare concept focuses on restoring the skin's 'memory' – its ability to recall and revert to a youthful, healthy state. These advanced serums utilize epigenetic activators, specific messenger peptides, and unique cellular reprogramming agents to encourage skin cells to behave as they did in their prime. By targeting the mechanisms that influence cellular memory, they aim to reverse signs of aging, improve elasticity, and restore a resilient, vibrant complexion, effectively reminding the skin how to regenerate and repair itself optimally.",
+    "tags": [
+      "エピジェネティクス",
+      "細胞記憶",
+      "抗老化",
+      "肌弾力",
+      "若返り"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_302",
+    "name": "パーソナルパフュームブレンダー",
+    "url": "https://www.refinery29.com/en-us/personal-perfume-blender-tech-2026",
+    "description": "This exciting technology allows users to custom-blend their own fragrances at home or in-store using an intelligent device. Linked to an app that analyzes scent preferences, mood, occasion, and even outfit, the blender dispenses precise amounts of various essential oils and aromatic compounds to create a unique, personalized perfume. This moves beyond pre-made scents, empowering individuals to become their own perfumers, crafting a signature fragrance that perfectly reflects their identity and adapts to their evolving desires, offering endless olfactory possibilities.",
+    "tags": [
+      "パーソナライズ香水",
+      "フレグランス",
+      "AI調香",
+      "自宅アトリエ",
+      "香りの体験"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_303",
+    "name": "爪のマイクロバイオームケア",
+    "url": "https://www.instyle.com/beauty-trends/nail-microbiome-care-2026",
+    "description": "Just as with skin, the microbiome of the nails and surrounding cuticles is gaining attention. This trend introduces nail care products specifically formulated to balance the beneficial bacteria on and around the nails, promoting healthier, stronger nails and preventing common issues like fungal infections or brittleness. Ingredients often include prebiotics, probiotics, and postbiotics tailored for the unique environment of the nail plate, fostering a robust microbial ecosystem that supports natural nail integrity and accelerates growth, moving beyond simple strengthening to biological optimization.",
+    "tags": [
+      "ネイルケア",
+      "マイクロバイオーム",
+      "爪の健康",
+      "プレバイオティクス",
+      "爪強化"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_304",
+    "name": "感情対応型リップカラー",
+    "url": "https://www.harpersbazaar.com/beauty/emotion-responsive-lip-color-2026",
+    "description": "This innovative makeup trend features lip colors that subtly shift in shade or intensity in response to the wearer's emotional state, body temperature, or even pulse. Utilizing advanced thermochromic pigments or pH-reactive ingredients, these lip products create a unique, personalized hue that mirrors internal feelings, adding an expressive and dynamic dimension to makeup. Beyond simple color change, some formulations might even release subtle, mood-enhancing aromas, transforming lip wear into a form of self-expression and emotional connection, making each application a unique experience.",
+    "tags": [
+      "スマートコスメ",
+      "リップメイク",
+      "感情表現",
+      "パーソナルカラー",
+      "pH反応"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_305",
+    "name": "スリープテックヘアマスク",
+    "url": "https://www.allure.com/beauty-trends/sleep-tech-hair-masks-2026",
+    "description": "This trend combines advanced hair care with sleep optimization. These overnight hair masks are infused with active ingredients that work synergistically with the body's nocturnal repair processes. Beyond deep conditioning, they often contain ingredients that regulate the scalp's circadian rhythm, reduce oxidative stress accumulated during the day, and promote follicle regeneration while you sleep. The formulations are lightweight, non-transferable, and sometimes include subtle aromatherapeutic elements to enhance sleep quality, ensuring you wake up to visibly healthier, stronger, and more lustrous hair.",
+    "tags": [
+      "ヘアマスク",
+      "オーバーナイトケア",
+      "スリープテック",
+      "頭皮ケア",
+      "再生美容"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_306",
+    "name": "肌の「音波」解析とケア",
+    "url": "https://www.byrdie.com/skincare/sonic-skin-analysis-care-2026",
+    "description": "This cutting-edge technology uses high-frequency sound waves (ultrasound) to non-invasively analyze the deeper layers of the skin, revealing insights into collagen density, hydration levels, and cellular structures that are invisible to the naked eye. Beyond diagnostics, devices are emerging that use specific sound frequencies to enhance product penetration, stimulate circulation, and promote cellular regeneration. This provides a holistic, deep-tissue approach to skincare, allowing for ultra-precise treatments based on an unparalleled understanding of the skin's internal architecture, optimizing both analysis and treatment efficacy.",
+    "tags": [
+      "音波美容",
+      "肌診断",
+      "浸透促進",
+      "コラーゲンブースト",
+      "美容機器"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_307",
+    "name": "毛髪の記憶形状補強ケア",
+    "url": "https://www.vogue.com/beauty/hair-memory-shape-enhancement-2026",
+    "description": "This innovative hair care trend focuses on products that help hair \"remember\" its desired style or natural pattern more effectively. Utilizing advanced polymer technology and heat-activated compounds, these treatments form a flexible, invisible scaffold around each strand, locking in shape and texture. This allows styles to last longer, reduces frizz, and enhances natural curls or waves with minimal effort, even in challenging humidity. It's a proactive approach to styling, training the hair to maintain its structure and finish for extended periods, providing lasting resilience.",
+    "tags": [
+      "ヘアスタイリング",
+      "形状記憶",
+      "アンチフリッツ",
+      "髪質改善",
+      "テクノロジー"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_308",
+    "name": "肌のカルボニル化対策",
+    "url": "https://www.cosmopolitan.com/beauty/skin-anti-carbonylation-skincare-2026",
+    "description": "Beyond glycation, this trend addresses carbonyl stress, another significant factor in skin aging caused by the accumulation of highly reactive carbonyl compounds that damage proteins like collagen and elastin. Skincare products in this category feature specialized anti-carbonyl agents, advanced antioxidants, and protein-protective peptides designed to neutralize these harmful compounds and repair existing damage. This targeted approach aims to prevent the loss of skin elasticity and firmness, reduce dullness, and maintain a youthful complexion by directly combatting a newly recognized form of intrinsic aging.",
+    "tags": [
+      "抗老化",
+      "糖化対策",
+      "肌弾力",
+      "プロテイン保護",
+      "最新エイジングケア"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_309",
+    "name": "3Dプリンターコスメ製造",
+    "url": "https://www.refinery29.com/en-us/3d-printed-custom-cosmetics-2026",
+    "description": "This revolutionary technology allows for on-demand, hyper-personalized cosmetic products created instantly via 3D printing. From customized foundations that perfectly match skin tone and texture, to bespoke eyeshadow palettes with unique color combinations and patterns, or even skincare masks tailored to facial contours, the possibilities are vast. Users can design their products through an app, select desired ingredients, and have them printed on the spot. This minimizes waste, offers unparalleled customization, and transforms the beauty manufacturing process into an immediate, consumer-driven experience.",
+    "tags": [
+      "3Dプリンター",
+      "パーソナライズ",
+      "カスタムコスメ",
+      "未来技術",
+      "オンデマンド生産"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_310",
+    "name": "ウェアラブル肌センサー",
+    "url": "https://www.instyle.com/beauty-tech/wearable-skin-sensors-2026",
+    "description": "These discreet, often invisible patches or integrated sensors in smart jewelry provide continuous, real-time monitoring of key skin parameters such as hydration levels, UV exposure, pollution impact, temperature, and even subtle inflammatory responses. Data is transmitted to a smartphone app, offering personalized insights and proactive alerts for optimal skincare management. This technology empowers users to understand their skin's dynamic needs throughout the day, enabling precise and timely interventions, moving beauty from reactive treatment to preventative and highly informed daily care.",
+    "tags": [
+      "ウェアラブルデバイス",
+      "肌診断",
+      "リアルタイム",
+      "パーソナライズ",
+      "UV対策"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_311",
+    "name": "ボディのリンパ活性化ケア",
+    "url": "https://www.harpersbazaar.com/beauty/lymphatic-body-care-2026",
+    "description": "This trend focuses on body care products and tools specifically designed to stimulate lymphatic drainage, promoting detoxification, reducing puffiness, and improving overall skin tone and texture. These include specialized body oils, creams, and dry brushes infused with circulation-boosting ingredients, often accompanied by innovative massage tools. The goal is to enhance the body's natural cleansing process, reduce fluid retention, and improve the appearance of cellulite, leading to smoother, firmer, and more energized skin, emphasizing holistic well-being through external application.",
+    "tags": [
+      "ボディケア",
+      "リンパドレナージュ",
+      "デトックス",
+      "セルライト対策",
+      "血行促進"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_312",
+    "name": "生分解性グリッターメイク",
+    "url": "https://www.allure.com/beauty-trends/biodegradable-glitter-makeup-2026",
+    "description": "Addressing environmental concerns, this trend highlights makeup products featuring glitter made from plant-based, renewable, and fully biodegradable materials. Unlike traditional plastic glitter, these eco-friendly alternatives break down naturally without contributing to microplastic pollution in waterways and ecosystems. Consumers can enjoy the festive sparkle of glitter in eyeshadows, highlighters, and body glitters with a clear conscience. This movement reflects a broader commitment to sustainable beauty, offering dazzling aesthetics without compromising the planet, aligning glamour with ecological responsibility.",
+    "tags": [
+      "サステナブルコスメ",
+      "グリッター",
+      "生分解性",
+      "環境配慮",
+      "エシカルメイク"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_313",
+    "name": "髪の静電気バリアケア",
+    "url": "https://www.byrdie.com/hair-trends/anti-static-hair-barrier-2026",
+    "description": "This innovative hair care trend focuses on developing products that create an invisible, weightless barrier around each hair strand to prevent static electricity. Utilizing advanced anti-static polymers and moisture-balancing agents, these formulas neutralize electrical charges that cause frizz, flyaways, and unruly hair. Ideal for dry climates or during winter months, these products ensure hair remains smooth, manageable, and sleek, providing long-lasting control and protection against external factors that contribute to static build-up, leaving hair effortlessly polished and free from static disruptions.",
+    "tags": [
+      "ヘアケア",
+      "静電気対策",
+      "アンチフリッツ",
+      "スムースヘア",
+      "バリア機能"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_314",
+    "name": "VR/AR美容シミュレーション",
+    "url": "https://www.vogue.com/beauty/vr-ar-beauty-simulation-2026",
+    "description": "This immersive technology allows users to virtually try on makeup, hair colors, and even simulate the results of aesthetic treatments in hyper-realistic virtual environments. Utilizing advanced VR headsets or AR smartphone apps, consumers can experience beauty transformations before committing to real products or procedures. This goes beyond simple filters, offering dynamic, personalized simulations that consider facial structure, skin tone, and lighting. It empowers informed decisions, enhances the online shopping experience, and allows for playful experimentation with diverse looks in a risk-free digital space.",
+    "tags": [
+      "ARメイク",
+      "VR体験",
+      "バーチャル試着",
+      "美容テクノロジー",
+      "パーソナライズ"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_315",
+    "name": "肌のマイクロバイオーム『構成』最適化",
+    "url": "https://www.cosmopolitan.com/beauty/skin-microbiome-composition-optimization-2026",
+    "description": "Moving beyond simply balancing the microbiome, this advanced trend aims to actively optimize the specific *composition* of beneficial bacteria on the skin. Products incorporate highly targeted prebiotics, precise probiotic strains, and postbiotic complexes designed to selectively foster the growth of particular microorganisms known to enhance skin health, immunity, and resilience. This bespoke approach fine-tunes the skin's microbial ecosystem for maximum protective and regenerative benefits, addressing concerns like sensitivity, acne, and aging by building a superior, tailored microbial shield for the skin.",
+    "tags": [
+      "マイクロバイオーム",
+      "肌免疫",
+      "バクテリアバランス",
+      "プレバイオティクス",
+      "精密美容"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_316",
+    "name": "非接触型美容成分送達システム",
+    "url": "https://www.refinery29.com/en-us/non-contact-ingredient-delivery-beauty-2026",
+    "description": "This cutting-edge technology allows active skincare ingredients to be delivered to the skin's surface without physical contact, ensuring maximum hygiene and minimizing irritation. Utilizing methods such as ultra-fine misting, electrostatic dispersion, or advanced vaporization, potent serums and treatments can be applied evenly and effectively. This system is ideal for sensitive skin, post-procedure care, or simply for a cleaner, more precise application. It redefines the application process, making it more hygienic, efficient, and sophisticated, promising a new era of effortless and precise skincare delivery.",
+    "tags": [
+      "非接触",
+      "テクノロジー",
+      "成分送達",
+      "衛生",
+      "高機能美容液"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_317",
+    "name": "肌の「エネルギー代謝」促進",
+    "url": "https://www.instyle.com/beauty-trends/skin-energy-metabolism-boost-2026",
+    "description": "This trend focuses on skincare products designed to directly enhance the energy production within skin cells, particularly ATP (adenosine triphosphate), the primary energy currency of cells. By boosting cellular metabolism, these formulations aim to revitalize sluggish skin, improve repair processes, and enhance overall skin function, leading to a more vibrant, resilient, and youthful complexion. Key ingredients often include mitochondrial activators, specialized amino acids, and coenzymes that optimize cellular respiration, providing a fundamental boost to skin vitality from within.",
+    "tags": [
+      "細胞活性",
+      "エネルギーブースト",
+      "抗老化",
+      "ミトコンドリア",
+      "肌活力"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_318",
+    "name": "体温適応型ボディケア",
+    "url": "https://www.harpersbazaar.com/beauty/body-temp-adaptive-skincare-2026",
+    "description": "This innovative body care category features products that adapt their benefits based on the user's body temperature or ambient heat. For example, lotions might release cooling sensations when the body is warm, or warming effects when cold. Others might adjust their scent profile or ingredient activation based on temperature changes, optimizing moisturization or firming effects. This personalized response ensures comfort and efficacy throughout the day and across different environments, transforming body care into a dynamic, sensory, and highly adaptive experience for ultimate skin well-being.",
+    "tags": [
+      "ボディケア",
+      "体温適応",
+      "パーソナライズ",
+      "センサリー体験",
+      "スマートコスメ"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_319",
+    "name": "超低分子ヒアルロン酸配合",
+    "url": "https://www.allure.com/beauty-trends/ultra-low-molecular-hyaluronic-acid-2026",
+    "description": "While hyaluronic acid is a classic, the trend is now moving towards extremely low molecular weight (ULMW) versions. These minuscule molecules can penetrate far deeper into the skin's layers than traditional or even low molecular weight HA, delivering hydration and plumping effects from within. This allows for more intense and long-lasting moisture retention, improved skin elasticity, and a visible reduction in fine lines, offering superior efficacy by targeting underlying dermal structures rather than just the surface, maximizing its hydrating and anti-aging potential.",
+    "tags": [
+      "ヒアルロン酸",
+      "ディープハイドレーション",
+      "浸透技術",
+      "抗老化",
+      "高機能保湿"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_320",
+    "name": "肌の「感覚過敏」対策",
+    "url": "https://www.byrdie.com/skincare/sensory-overload-skin-care-2026",
+    "description": "This specialized skincare trend addresses skin that exhibits heightened sensitivity to external stimuli, often described as 'sensory overload' for the skin. Products are formulated with ultra-calming, neuro-soothing ingredients that reduce nerve reactivity and inflammatory responses. They focus on strengthening the skin's barrier while actively dampening exaggerated sensations like stinging, burning, or itching, providing profound relief and comfort. This category uses biomimetic compounds and gentle, minimalist formulations to restore a sense of calm and resilience to highly reactive skin, preventing discomfort before it escalates.",
+    "tags": [
+      "敏感肌",
+      "鎮静ケア",
+      "バリア機能",
+      "刺激緩和",
+      "神経コスメ"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_321",
+    "name": "ヘアカラーのDNA最適化",
+    "url": "https://www.vogue.com/beauty/dna-optimized-hair-color-2026",
+    "description": "This groundbreaking technology analyzes an individual's DNA to determine their natural hair pigment profile, porosity, and genetic predispositions to color fading or damage. Based on this precise genetic blueprint, personalized hair color formulations are created, offering unprecedented color accuracy, longevity, and minimal damage. This bespoke approach ensures the perfect shade that complements skin tone, lasts longer, and maintains hair health, moving beyond generic color charts to a truly scientific and individualized coloring experience that respects each person's unique biology.",
+    "tags": [
+      "DNA美容",
+      "パーソナルカラー",
+      "ヘアカラー",
+      "遺伝子解析",
+      "ダメージレス"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_322",
+    "name": "肌の「自己修復能力」最大化",
+    "url": "https://www.cosmopolitan.com/beauty/skin-self-repair-maximization-2026",
+    "description": "This trend focuses on empowering the skin's inherent capacity for self-repair and regeneration, rather than simply supplying external repair agents. Products contain 'bio-activators' and signaling peptides that stimulate dormant cellular repair pathways, enhance autophagy, and optimize stem cell function within the skin. The goal is to fortify the skin's natural defense mechanisms and accelerate recovery from daily damage, promoting long-term resilience and a sustained youthful appearance. This represents a paradigm shift towards cultivating the skin's intrinsic healing intelligence.",
+    "tags": [
+      "肌再生",
+      "自己修復",
+      "細胞活性",
+      "オートファジー",
+      "幹細胞美容"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_323",
+    "name": "カスタマイズ香水カプセル",
+    "url": "https://www.refinery29.com/en-us/customizable-fragrance-capsules-2026",
+    "description": "This innovation offers highly personalized fragrance experiences through small, interchangeable capsules. Users can select and combine different scent profiles – from base notes to top notes – into a smart, portable device. The device then blends and releases the chosen combination on demand, adapting to mood or occasion. This allows for endless scent possibilities, reduces waste from single-use bottles, and empowers individuals to curate their unique olfactory wardrobe, providing an interactive and sustainable way to experience personalized fragrance throughout the day.",
+    "tags": [
+      "パーソナライズ香水",
+      "フレグランス",
+      "スマートデバイス",
+      "サステナブル",
+      "香りの体験"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_324",
+    "name": "水を使わない高機能美容機器",
+    "url": "https://www.instyle.com/beauty-tech/waterless-high-tech-beauty-devices-2026",
+    "description": "Responding to sustainability concerns and a desire for enhanced efficacy, this trend introduces beauty devices that operate entirely without water. These include advanced LED masks, microcurrent devices, or specialized sonic tools that deliver active ingredients directly to the skin via mist, dry sheets, or precise electrical pulses, eliminating the need for water-based gels or cleansing. This approach not only conserves water but also often ensures higher concentration and stability of active compounds, providing a more potent and environmentally conscious beauty treatment experience at home.",
+    "tags": [
+      "ウォーターレス美容",
+      "美容機器",
+      "サステナブル",
+      "高機能",
+      "ホームケア"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_325",
+    "name": "睡眠時美容最大化デバイス",
+    "url": "https://www.harpersbazaar.com/beauty/sleep-beauty-maximization-devices-2026",
+    "description": "These advanced devices are specifically designed to optimize skin and hair repair processes during sleep. They might include smart pillowcases with embedded sensors and precise active release, or gentle light/sound therapy devices that enhance cellular regeneration while promoting deeper sleep. Some monitor sleep patterns and adjust environmental factors (like humidity or temperature) to create an ideal regenerative microclimate for skin. The goal is to transform the sleeping hours into the most potent beauty treatment time, ensuring users wake up visibly refreshed and rejuvenated.",
+    "tags": [
+      "スリープテック",
+      "オーバーナイトケア",
+      "美容機器",
+      "肌再生",
+      "睡眠美容"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_326",
+    "name": "肌の「光沢」調整メイク",
+    "url": "https://www.allure.com/beauty-trends/skin-luminosity-control-makeup-2026",
+    "description": "This makeup innovation allows users to precisely control the level and type of luminosity on their skin. Products include foundations, highlighters, and setting powders that incorporate adaptive light-reflecting pigments and smart polymers. These formulations can either amplify natural radiance, create a subtle 'soft-focus' glow, or selectively mattify areas to achieve a desired balance of light and shadow. This trend moves beyond simple shimmer, offering sophisticated light manipulation to sculpt features and enhance skin texture with unparalleled precision, catering to diverse preferences for glow and finish.",
+    "tags": [
+      "ベースメイク",
+      "ハイライト",
+      "光沢調整",
+      "スマートメイク",
+      "肌質感"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_327",
+    "name": "頭皮の「血流」改善特化",
+    "url": "https://www.byrdie.com/hair-trends/scalp-microcirculation-boost-2026",
+    "description": "Focusing on the crucial role of robust blood flow for healthy hair, this trend features scalp care products and devices specifically engineered to significantly enhance microcirculation in the scalp. Ingredients like specialized botanical extracts, vasodilators, and bio-peptides work synergistically with invigorating scalp massage tools or low-level laser devices. This accelerated blood flow delivers essential nutrients and oxygen directly to hair follicles, promoting stronger, thicker hair growth and reducing hair loss. It's a targeted approach to creating an optimal environment for follicle vitality.",
+    "tags": [
+      "スカルプケア",
+      "血行促進",
+      "育毛",
+      "頭皮マッサージ",
+      "栄養供給"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_328",
+    "name": "肌の「細胞間コミュニケーション」促進",
+    "url": "https://www.vogue.com/beauty/intercellular-communication-skincare-2026",
+    "description": "This advanced skincare concept targets the intricate communication pathways between skin cells, crucial for maintaining skin health, repair, and regeneration. Products are formulated with 'cell-signaling' ingredients, such as specialized growth factors, messenger peptides, and exosomes, that optimize how cells interact. By enhancing these intercellular dialogues, they improve collagen synthesis, accelerate wound healing, reduce inflammation, and strengthen the skin barrier. This sophisticated approach unlocks the skin's inherent intelligence, promoting a more coordinated and efficient response to aging and environmental stressors.",
+    "tags": [
+      "細胞活性",
+      "抗老化",
+      "肌再生",
+      "バイオテクノロジー",
+      "シグナル伝達"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_329",
+    "name": "肌の「水分活性」最適化",
+    "url": "https://www.cosmopolitan.com/beauty/skin-water-activity-optimization-2026",
+    "description": "Moving beyond simply adding water, this trend focuses on optimizing the *water activity* within the skin – the amount of free, available water for biological processes. Products utilize innovative humectants, osmolytes, and 'water-binding' peptides that not only draw moisture but also regulate its distribution and bioavailability at a cellular level. This ensures that cells have optimal access to water for metabolic functions, enzyme activity, and structural integrity, leading to superior, long-lasting hydration, enhanced barrier function, and a visibly healthier, more resilient complexion, even in arid conditions.",
+    "tags": [
+      "ディープハイドレーション",
+      "バリア機能",
+      "細胞活性",
+      "水分保持",
+      "高機能保湿"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_330",
+    "name": "パーソナル体臭最適化",
+    "url": "https://www.refinery29.com/en-us/personal-body-odor-optimization-2026",
+    "description": "This innovative trend moves beyond simply masking or eliminating body odor, aiming to subtly modify and optimize an individual's natural scent profile. Through advanced microbiome analysis and personalized formulations, products can selectively enhance desirable compounds while neutralizing less pleasant ones. This might involve specific probiotics for the skin, targeted pheromone modulators, or personalized ingredient blends that interact uniquely with an individual's chemistry, creating a refined, appealing, and truly unique signature scent that works in harmony with the body's natural aroma, not against it.",
+    "tags": [
+      "パーソナルケア",
+      "体臭対策",
+      "マイクロバイオーム",
+      "フェロモン",
+      "自己表現"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_331",
+    "name": "デジタルツイン肌シミュレーション",
+    "url": "https://www.instyle.com/beauty-tech/digital-twin-skin-simulation-2026",
+    "description": "This cutting-edge technology creates a highly accurate, dynamic 3D digital replica (a 'digital twin') of an individual's skin. Utilizing advanced scanning and AI, this twin can simulate the effects of various skincare products, aesthetic treatments, environmental stressors, or aging processes over time. Users can visualize potential outcomes and optimize their routines without physical trials. This offers unparalleled personalization and predictive power, allowing for informed decisions and preventing unwanted results, revolutionizing how we plan and approach our long-term beauty journey.",
+    "tags": [
+      "デジタルツイン",
+      "肌診断",
+      "AI美容",
+      "パーソナライズ",
+      "未来予測"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_332",
+    "name": "再生医療由来ボディスカルプト",
+    "url": "https://www.harpersbazaar.com/beauty/regenerative-body-sculpting-2026",
+    "description": "This advanced body contouring trend utilizes principles from regenerative medicine, moving beyond traditional fat reduction or skin tightening. It involves non-invasive or minimally invasive techniques that harness the body's own regenerative capabilities, such as stimulating collagen and elastin production through bio-signaling agents, or targeted activation of fat metabolism with novel peptides. The focus is on natural-looking sculpting and toning by improving tissue quality and cellular function, offering a more holistic and biologically aligned approach to body aesthetics, ensuring lasting and harmonious results.",
+    "tags": [
+      "ボディスカルプト",
+      "再生美容",
+      "セルライト対策",
+      "肌弾力",
+      "非侵襲"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_333",
+    "name": "肌の「静電気」バリアケア",
+    "url": "https://www.allure.com/beauty-trends/skin-anti-static-barrier-care-2026",
+    "description": "This innovative skincare trend focuses on protecting the skin from the subtle yet damaging effects of static electricity, often generated by clothing, dry environments, or digital devices. Products create an invisible, breathable barrier that neutralizes static charges, reducing potential irritation, inflammation, and moisture loss. This barrier helps maintain skin integrity, minimizes particle adhesion (like dust or pollutants), and ensures a more comfortable, balanced complexion, especially for sensitive or reactive skin, offering a novel form of environmental protection in our increasingly electrified world.",
+    "tags": [
+      "静電気対策",
+      "バリア機能",
+      "敏感肌",
+      "環境ストレス",
+      "肌保護"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_334",
+    "name": "毛根の「細胞活性」促進",
+    "url": "https://www.byrdie.com/hair-trends/hair-follicle-cell-activation-2026",
+    "description": "This advanced hair care trend specifically targets the dormant or sluggish cells within hair follicles to reactivate and optimize their function. Products and treatments utilize powerful bio-stimulants, growth factors, and specific peptides that penetrate deep into the scalp to awaken quiescent follicles. The aim is to extend the hair growth (anagen) phase, improve hair density, and promote the growth of stronger, healthier strands. This represents a proactive and preventative approach to hair loss and thinning, focusing on the fundamental biology of hair growth at its source.",
+    "tags": [
+      "育毛",
+      "毛母細胞",
+      "細胞活性",
+      "ヘアロスケア",
+      "スカルプケア"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_335",
+    "name": "メイクとスキンケア融合デバイス",
+    "url": "https://www.vogue.com/beauty/makeup-skincare-fusion-devices-2026",
+    "description": "This innovative category features smart devices that seamlessly combine makeup application with advanced skincare benefits. For example, a device might apply a personalized foundation while simultaneously delivering targeted serums or LED light therapy. Another could be a compact that dispenses precise doses of tinted skincare with integrated microcurrents. These hybrid tools simplify routines, maximize efficacy by ensuring optimal ingredient penetration, and offer a truly integrated approach to enhancing both immediate appearance and long-term skin health, blurring the lines between cosmetic and therapeutic functions.",
+    "tags": [
+      "スマートデバイス",
+      "ハイブリッドコスメ",
+      "メイクアップ",
+      "スキンケア",
+      "時短美容"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_336",
+    "name": "肌の「弾性記憶」回復",
+    "url": "https://www.cosmopolitan.com/beauty/skin-elasticity-memory-restoration-2026",
+    "description": "This emerging skincare concept focuses on helping the skin regain its youthful 'elastic memory' – the ability to bounce back and maintain its firmness. Products contain specialized proteins, biomimetic peptides, and cellular communication enhancers that target the structural integrity of collagen and elastin fibers, and also reactivate fibroblasts. By improving the quality and organization of these key dermal components, they aim to visibly reduce sagging, improve skin resilience, and restore a firm, supple complexion, effectively reprogramming the skin to behave with more youthful elasticity.",
+    "tags": [
+      "肌弾力",
+      "抗老化",
+      "コラーゲンブースト",
+      "リフトアップ",
+      "ファーミング"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_337",
+    "name": "嗅覚記憶を刺激する香水",
+    "url": "https://www.refinery29.com/en-us/olfactory-memory-stimulating-fragrances-2026",
+    "description": "These innovative fragrances are meticulously crafted to evoke specific memories, emotions, or psychological states by tapping into the powerful connection between scent and memory. Utilizing neuroscientific insights and carefully selected aromatic compounds, these perfumes aim to trigger feelings of nostalgia, comfort, joy, or focus. This moves beyond simple pleasant smells, transforming fragrance into a tool for emotional well-being and a personal journey through one's own olfactory landscape, offering a unique and deeply personal sensory experience that connects to the wearer's inner world.",
+    "tags": [
+      "フレグランス",
+      "心理効果",
+      "アロマセラピー",
+      "記憶喚起",
+      "感情デザイン"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_338",
+    "name": "AI搭載型パーソナル美容コーチ",
+    "url": "https://www.instyle.com/beauty-tech/ai-powered-personal-beauty-coach-2026",
+    "description": "This advanced AI system acts as a personalized beauty expert, analyzing individual skin data (from wearable sensors, smart mirrors, or uploaded photos), lifestyle, diet, and even genetic predispositions. It provides real-time, dynamic recommendations for skincare products, makeup techniques, and lifestyle adjustments. This goes beyond simple product suggestions, offering comprehensive, adaptive guidance that evolves with the user's changing needs, ensuring optimal beauty outcomes and empowering informed decisions with a highly intelligent, always-on personal consultant.",
+    "tags": [
+      "AI美容",
+      "パーソナライズ",
+      "肌診断",
+      "スマートコーチ",
+      "美容アドバイス"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_339",
+    "name": "インナービューティー融合ボディケア",
+    "url": "https://www.harpersbazaar.com/beauty/inner-outer-body-care-fusion-2026",
+    "description": "This holistic trend combines topical body care with ingestible supplements designed to work synergistically for enhanced results. Products include body lotions paired with specific collagen peptides, or anti-cellulite creams complemented by lymphatic drainage teas or gut-health supplements. The approach recognizes that true skin health and body aesthetics stem from both external nourishment and internal well-being. By addressing concerns from the inside out and outside in, this fusion offers a more comprehensive and powerful path to achieving radiant skin, improved texture, and overall body vitality.",
+    "tags": [
+      "インナービューティー",
+      "ボディケア",
+      "ホリスティック",
+      "サプリメント",
+      "肌質改善"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_340",
+    "name": "肌の「熱」マネジメント",
+    "url": "https://www.allure.com/beauty-trends/skin-thermal-management-2026",
+    "description": "This trend focuses on products and devices designed to precisely regulate skin temperature, recognizing its impact on various skin concerns. Cooling agents can reduce inflammation and redness, while gentle warming can enhance circulation and product absorption. Smart masks or serums might contain ingredients that activate based on skin temperature, or devices could use targeted thermotherapy. This advanced approach aims to optimize cellular function, soothe reactive skin, and improve product efficacy by maintaining the skin's ideal thermal balance, ensuring comfort and promoting overall skin health.",
+    "tags": [
+      "温冷美容",
+      "肌鎮静",
+      "炎症ケア",
+      "循環促進",
+      "スマートコスメ"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_341",
+    "name": "空気中の水分を捕集する美容液",
+    "url": "https://www.byrdie.com/skincare/air-moisture-harvesting-serums-2026",
+    "description": "This innovative skincare technology features serums and creams formulated with hygroscopic polymers and advanced humectants that actively capture and bind atmospheric moisture directly onto the skin. Beyond traditional hydration, these products essentially create a continuous, self-replenishing moisture reservoir on the skin's surface. This provides unparalleled, long-lasting hydration, especially in dry environments, making the skin less reliant on external water application and more capable of sustaining its own optimal moisture levels, ensuring plumpness and elasticity throughout the day.",
+    "tags": [
+      "空中水分捕捉",
+      "ディープハイドレーション",
+      "高機能保湿",
+      "サステナブル",
+      "乾燥肌対策"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_342",
+    "name": "スマートネイル診断＆ケア",
+    "url": "https://www.vogue.com/beauty/smart-nail-diagnosis-care-2026",
+    "description": "This trend involves wearable tech or smart devices that analyze nail health, detecting issues like nutrient deficiencies, fungal infections, or potential systemic health indicators through subtle changes in nail texture, color, or growth patterns. Coupled with precise care, these systems can recommend personalized treatments, customized polishes with targeted active ingredients, or even dietary adjustments. This transforms nail care from purely aesthetic to a proactive health monitoring system, providing early detection and tailored solutions for optimal nail strength and overall well-being.",
+    "tags": [
+      "スマートネイル",
+      "ネイルケア",
+      "健康診断",
+      "パーソナライズ",
+      "テクノロジー"
+    ],
+    "source": "vogue_beauty"
+  },
+  {
+    "id": "btj2026_343",
+    "name": "肌の「疲労回復」特化ケア",
+    "url": "https://www.cosmopolitan.com/beauty/skin-fatigue-recovery-skincare-2026",
+    "description": "This specialized skincare category targets the cumulative effects of daily stress, lack of sleep, and environmental aggressors that lead to visible skin fatigue – dullness, loss of elasticity, and exacerbation of fine lines. Products are formulated with 'anti-fatigue' complexes including adaptogens, powerful antioxidants, and ingredients that boost cellular energy and detoxification. The goal is to rapidly restore skin vitality, promote efficient repair processes, and diminish signs of exhaustion, leaving the complexion looking refreshed, revitalized, and visibly more energized, even after demanding periods.",
+    "tags": [
+      "肌疲労回復",
+      "抗酸化",
+      "細胞活性",
+      "アダプトゲン",
+      "リフレッシュ"
+    ],
+    "source": "cosmopolitan"
+  },
+  {
+    "id": "btj2026_344",
+    "name": "感情最適化フレグランス",
+    "url": "https://www.refinery29.com/en-us/emotion-optimizing-fragrances-2026",
+    "description": "These advanced fragrances are designed with specific neuro-olfactory compounds scientifically proven to influence mood and emotional states. Beyond simply smelling pleasant, they aim to actively enhance feelings of calm, focus, energy, or joy. Leveraging neuroscience and advanced aroma chemistry, these perfumes act as invisible mood modulators, providing a personalized and immediate emotional uplift or soothing effect. This transforms fragrance from a passive accessory into an active tool for emotional well-being and psychological optimization, integrating scent into a holistic approach to mental health.",
+    "tags": [
+      "フレグランス",
+      "心理効果",
+      "感情デザイン",
+      "アロマテラピー",
+      "ウェルビーイング"
+    ],
+    "source": "refinery29"
+  },
+  {
+    "id": "btj2026_345",
+    "name": "ピコテクノロジー美容液",
+    "url": "https://www.instyle.com/beauty-tech/picotechnology-skincare-2026",
+    "description": "Moving beyond nanotechnology, picotechnology in skincare involves active ingredients engineered at the picometer scale (one trillionth of a meter). This ultra-fine scale allows for unprecedented penetration into skin cells and precise interaction at a molecular level. These 'pico-peptides' or 'pico-encapsulated' ingredients can deliver targeted treatments with enhanced efficacy, addressing concerns like DNA repair, deep cellular regeneration, and precise pigment modulation. This represents the ultimate frontier in ingredient delivery and cellular engagement, promising revolutionary advancements in skin transformation.",
+    "tags": [
+      "ピコテクノロジー",
+      "細胞美容",
+      "浸透技術",
+      "次世代成分",
+      "DNA修復"
+    ],
+    "source": "instyle"
+  },
+  {
+    "id": "btj2026_346",
+    "name": "非接触型スカルプケア",
+    "url": "https://www.harpersbazaar.com/beauty/contactless-scalp-care-2026",
+    "description": "This trend introduces advanced devices and systems for scalp care that operate without physical contact. Utilizing technologies like targeted light therapy (LED), focused air massage, or ultra-fine misting of active ingredients, these non-invasive methods stimulate circulation, soothe inflammation, and deliver nutrients to the scalp. This approach minimizes friction and potential irritation, making it ideal for sensitive scalps or those prone to hair loss. It offers a hygienic, gentle, and highly effective way to maintain optimal scalp health and promote robust hair growth, enhancing comfort and efficacy.",
+    "tags": [
+      "スカルプケア",
+      "非接触",
+      "LED美容",
+      "頭皮マッサージ",
+      "衛生"
+    ],
+    "source": "harpers_bazaar"
+  },
+  {
+    "id": "btj2026_347",
+    "name": "肌の「修復プロセス」高速化",
+    "url": "https://www.allure.com/beauty-trends/accelerated-skin-repair-processes-2026",
+    "description": "This trend focuses on highly advanced skincare designed to significantly accelerate the skin's natural healing and repair mechanisms. Products contain specialized bio-catalysts, rapid-acting growth factors, and signal peptides that kickstart cellular regeneration, reduce downtime after procedures, and mend daily micro-damage at an unprecedented pace. The goal is to minimize visible signs of wear and tear, improve wound healing, and quickly restore a flawless, healthy complexion, moving beyond gradual improvement to rapid and efficient skin recovery, essential for modern, demanding lifestyles.",
+    "tags": [
+      "肌再生",
+      "創傷治癒",
+      "細胞活性",
+      "リペアケア",
+      "高速回復"
+    ],
+    "source": "allure"
+  },
+  {
+    "id": "btj2026_348",
+    "name": "生体模倣成分ヘアケア",
+    "url": "https://www.byrdie.com/hair-trends/biomimetic-haircare-ingredients-2026",
+    "description": "This innovative hair care trend utilizes ingredients that mimic the natural structures and compounds found in healthy hair and scalp. Instead of simply coating the hair, these biomimetic peptides, lipids, and amino acids integrate with the hair's natural architecture to repair damage from within, strengthen the hair shaft, and improve overall resilience. This approach results in a more natural and long-lasting restoration of hair health, as the ingredients are recognized and utilized by the hair's biological systems, offering a highly sophisticated and effective form of hair repair and protection.",
+    "tags": [
+      "生体模倣",
+      "髪質改善",
+      "ヘアリペア",
+      "バイオテクノロジー",
+      "ダメージケア"
+    ],
+    "source": "byrdie"
+  },
+  {
+    "id": "btj2026_349",
+    "name": "肌色適応型光調整ファンデ",
+    "url": "https://www.vogue.com/beauty/skin-tone-adaptive-light-adjusting-foundation-2026",
+    "description": "This advanced foundation uses smart technology to not only match your skin tone but also adapt its light-reflecting properties to optimize how light interacts with your unique complexion. It features micro-reflectors that can soften harsh shadows, enhance natural luminosity, and blur imperfections, creating a customized 'lit-from-within' effect. This intelligent formulation ensures that the skin always looks radiant and flawlessly even, regardless of ambient lighting, by dynamically adjusting to individual skin undertones and surface textures, providing a truly personalized and optically perfected finish.",
+    "tags": [
+      "スマートメイク",
+      "ファンデーション",
+      "肌トーン補正",
+      "光反射",
+      "パーソナルカラー"
+    ]
   }
 ]

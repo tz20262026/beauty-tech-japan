@@ -87,13 +87,26 @@ else:
         sys.exit(1)
     json_str = raw[start:end+1]
 
-new_topics = json.loads(json_str)
+# Geminiの出力はJSONが壊れていることがあるので json_repair で修復して読む
+try:
+    new_topics = json.loads(json_str)
+except json.JSONDecodeError:
+    from json_repair import repair_json
+    new_topics = json.loads(repair_json(json_str))
 print(f"生成されたトピック: {len(new_topics)}件")
 
-# 重複チェック
+# 重複チェック（名前）＋ IDは既存の最大番号から動的に連番採番する
+# ※プロンプト内のID指定は当てにならないため、ここで必ず振り直す
+import re as _re
+_max_num = max(
+    (int(m.group(1)) for t in existing if (m := _re.search(r"(\d+)$", t.get("id", ""))) is not None),
+    default=0,
+)
 added = 0
 for t in new_topics:
     if t.get("name") not in existing_names:
+        _max_num += 1
+        t["id"] = f"btj2026_{_max_num:03d}"
         existing.append(t)
         existing_names.add(t["name"])
         added += 1
