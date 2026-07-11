@@ -24,6 +24,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 import TableOfContents, { extractHeadings, headingId } from "@/components/TableOfContents";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import InArticleCTA from "@/components/InArticleCTA";
 
 export const revalidate = 300;
 
@@ -54,6 +55,19 @@ function createHeadingComponents() {
     h2: renderHeading("h2"),
     h3: renderHeading("h3"),
   };
+}
+
+// 本文を中間のh2見出しで前半・後半に分割する（記事中CTAの挿入位置）
+// h2が3つ未満の短い記事は分割せずCTAを挿入しない
+function splitBodyForCta(body: string): [string, string | null] {
+  const lines = body.split("\n");
+  const h2Indexes: number[] = [];
+  lines.forEach((line, i) => {
+    if (/^##\s/.test(line)) h2Indexes.push(i);
+  });
+  if (h2Indexes.length < 3) return [body, null];
+  const splitAt = h2Indexes[Math.floor(h2Indexes.length / 2)];
+  return [lines.slice(0, splitAt).join("\n"), lines.slice(splitAt).join("\n")];
 }
 
 async function fetchAllArticles(): Promise<Article[]> {
@@ -116,6 +130,11 @@ export default async function ArticlePage({ params }: Props) {
   const related = getRelatedArticles(article, allArticles);
   const siteBase = "https://beauty-tech-japan.vercel.app";
   const headings = extractHeadings(article.body ?? "");
+  // 記事中CTA用に本文を中間見出しで分割（見出しidの連番は前後半で共有する）
+  const [bodyFirstHalf, bodySecondHalf] = splitBodyForCta(article.body ?? "");
+  const headingComponents = createHeadingComponents();
+  const proseClassName =
+    "prose prose-sm sm:prose max-w-none text-gray-800 dark:text-gray-200 leading-loose prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-pink-600 prose-strong:text-gray-900 dark:prose-strong:text-white prose-li:marker:text-pink-400 dark:prose-invert";
 
   // 前後の記事（日付降順で並べて隣接する記事を取得）
   const sorted = [...allArticles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
@@ -251,9 +270,19 @@ export default async function ArticlePage({ params }: Props) {
 
           <TableOfContents headings={headings} />
 
-          <div className="prose prose-sm sm:prose max-w-none text-gray-800 dark:text-gray-200 leading-loose prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-pink-600 prose-strong:text-gray-900 dark:prose-strong:text-white prose-li:marker:text-pink-400 dark:prose-invert">
-            <ReactMarkdown components={createHeadingComponents()}>{article.body}</ReactMarkdown>
+          <div className={proseClassName}>
+            <ReactMarkdown components={headingComponents}>{bodyFirstHalf}</ReactMarkdown>
           </div>
+
+          {/* 記事中CTA：本文の中間（商品言及の文脈近く）にテキストリンク型で挿入 */}
+          {bodySecondHalf && (
+            <>
+              <InArticleCTA tags={article.tags} />
+              <div className={proseClassName}>
+                <ReactMarkdown components={headingComponents}>{bodySecondHalf}</ReactMarkdown>
+              </div>
+            </>
+          )}
 
           {/* アフィリエイトカード（記事1本につき1つ） */}
           <ArticleAffiliateCard tags={article.tags} articleId={article.id} />
@@ -334,7 +363,7 @@ export default async function ArticlePage({ params }: Props) {
 
       {related.length > 0 && (
         <div className="mt-10">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">関連記事</h2>
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">📖 あわせて読みたい</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {related.map((r) => (
               <Link

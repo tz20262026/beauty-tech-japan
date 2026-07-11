@@ -139,7 +139,7 @@ export default function ArticleAffiliateCard({ tags, articleId }: Props) {
           {item.desc}
         </p>
         <span
-          className={`shrink-0 inline-flex items-center justify-center ${item.ctaBg} ${item.ctaText} font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-sm group-hover:shadow-md transition-all border border-gray-100 whitespace-nowrap`}
+          className={`shrink-0 inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto ${item.ctaBg} ${item.ctaText} font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-sm group-hover:shadow-md transition-all border border-gray-100 whitespace-nowrap`}
         >
           {item.cta}
         </span>

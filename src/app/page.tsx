@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ArticleList from "@/components/ArticleList";
 import RandomArticleButton from "@/components/RandomArticleButton";
+import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -159,10 +160,16 @@ export default async function Home() {
               <RandomArticleButton ids={articles.map((a) => a.id)} />
               <Link
                 href="/skincare-guide"
-                className="inline-flex items-center gap-2 bg-white/90 hover:bg-white text-pink-700 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md"
+                className="inline-flex items-center gap-2 min-h-[44px] bg-white/90 hover:bg-white text-pink-700 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md"
               >
                 ✨ ガイドを読む
               </Link>
+              <a
+                href="#latest-articles"
+                className="inline-flex items-center gap-2 min-h-[44px] bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition-all border border-white/30 hover:border-white/50"
+              >
+                📰 最新記事を見る
+              </a>
               {/* X シェアボタン */}
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Beauty Tech Japan — 海外コスメ・美容の最新情報を日本語でチェック🌸")}&url=${encodeURIComponent(SITE_URL)}`}
@@ -288,7 +295,11 @@ export default async function Home() {
         </div>
       </section>
 
-      <ArticleList articles={articles} />
+      <AffiliateSectionBeauty />
+
+      <div id="latest-articles" className="scroll-mt-20">
+        <ArticleList articles={articles} />
+      </div>
     </div>
   );
 }

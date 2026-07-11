@@ -78,7 +78,7 @@ const items = [
     title: "ラサーナ La Sana",
     tagline: "海藻ヘアエッセンスの人気ヘアケアブランド",
     desc: "ダメージヘア・アウトバストリートメントで話題の海藻由来ヘアケア。乾燥・パサつきが気になる髪に。",
-    cta: "公式サイトを見る →",
+    cta: "うるツヤ髪ケアを公式で見る →",
     color: "#0d9488",
   },
 ];
@@ -95,6 +95,18 @@ export default function AffiliateSectionBeauty() {
             美しさをもっと高めるおすすめサービス
           </h2>
           <p className="text-gray-500 text-sm">内側から輝くためのスクール・ツール・学習を厳選</p>
+          {/* 選ばれる理由（信頼要素） */}
+          <ul className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1.5">
+            <li className="text-xs font-semibold text-gray-700">
+              <span className="text-emerald-600">✓</span> すべて公式サイト直販のみ掲載
+            </li>
+            <li className="text-xs font-semibold text-gray-700">
+              <span className="text-emerald-600">✓</span> 無料体験・初回特典ありを優先
+            </li>
+            <li className="text-xs font-semibold text-gray-700">
+              <span className="text-emerald-600">✓</span> 美容記事との関連性で編集部が厳選
+            </li>
+          </ul>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -120,7 +132,7 @@ export default function AffiliateSectionBeauty() {
               </div>
               <p className="text-xs text-gray-600 leading-relaxed flex-1">{item.desc}</p>
               <span
-                className="inline-flex items-center text-xs font-bold mt-auto py-2 px-4 rounded-xl transition-all group-hover:opacity-80"
+                className="inline-flex items-center justify-center w-full min-h-[44px] text-xs font-bold mt-auto py-2 px-4 rounded-xl transition-all group-hover:opacity-80"
                 style={{ background: `${item.color}10`, color: item.color, border: `1px solid ${item.color}22` }}
               >
                 {item.cta}
