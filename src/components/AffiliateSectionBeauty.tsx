@@ -2,6 +2,17 @@
 
 const items = [
   {
+    // 2026-07-13追加・成果報酬10,000円(セミナー参加+モニター申込)
+    href: "https://px.a8.net/svt/ejp?a8mat=4B7QWS+6TW1MA+58KC+5YJRM",
+    badge: "💝 無料で美容体験",
+    badgeColor: "#e11d48",
+    title: "ヴィーナスウォーカー",
+    tagline: "美容モニターでコスメ・エステを実質無料体験",
+    desc: "気になるコスメ・エステ・脱毛を試して謝礼がもらえる女性向け美容モニター。無料電話セミナーに参加するだけで始められる。",
+    cta: "無料セミナーに申し込む →",
+    color: "#e11d48",
+  },
+  {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+7581E+4GDM+1BMW42",
     badge: "💃 体を動かす美",
     badgeColor: "#ec4899",
