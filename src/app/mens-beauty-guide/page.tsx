@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
@@ -208,6 +209,7 @@ export default function MensBeautyGuidePage() {
           </div>
         </section>
 
+        <MoshimoSectionBeauty />
         <AffiliateSectionBeauty />
       </div>
     </main>

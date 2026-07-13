@@ -4,6 +4,7 @@ import Link from "next/link";
 import ArticleList from "@/components/ArticleList";
 import RandomArticleButton from "@/components/RandomArticleButton";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -296,6 +297,8 @@ export default async function Home() {
       </section>
 
       <AffiliateSectionBeauty />
+
+      <MoshimoSectionBeauty />
 
       <div id="latest-articles" className="scroll-mt-20">
         <ArticleList articles={articles} />

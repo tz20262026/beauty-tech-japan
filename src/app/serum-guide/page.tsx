@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
@@ -249,6 +250,7 @@ export default function SerumGuidePage() {
       </section>
 
       {/* アフィリエイト */}
+      <MoshimoSectionBeauty />
       <AffiliateSectionBeauty />
     </div>
   );
