@@ -242,6 +242,26 @@ export default function KBeautyGuidePage() {
           </div>
         </section>
 
+        {/* 関連ガイド（役割の違う記事へ内部リンクし、検索評価の共食いを避ける） */}
+        <section className="mt-12">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">あわせて読みたい</h2>
+          <Link
+            href="/korean-beauty-guide"
+            className="block rounded-xl border border-pink-200 bg-pink-50 p-5 transition-colors hover:border-pink-400"
+          >
+            <p className="font-bold text-gray-900 text-sm mb-1">
+              最新トレンドと人気ブランドを知りたい方へ
+            </p>
+            <p className="text-xs text-gray-700 leading-relaxed">
+              このページはスキンケアの順番（ルーティン）の解説が中心です。2026年の韓国コスメトレンド・
+              人気ブランド・日本での買い方をまとめた「韓国コスメ完全ガイド」もあわせてどうぞ。
+            </p>
+            <span className="mt-3 inline-block text-xs font-bold text-pink-600">
+              トレンド・ブランド編を読む →
+            </span>
+          </Link>
+        </section>
+
         {/* アフィリエイト */}
         <AffiliateSectionBeauty />
       </div>

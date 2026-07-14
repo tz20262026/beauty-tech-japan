@@ -97,7 +97,7 @@ export default function Footer() {
                 <Link href="/lip-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-300">リップメイクガイド</Link>
               </li>
               <li>
-                <Link href="/suncare-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-yellow-300">日焼け止め選びガイド</Link>
+                <Link href="/sunscreen-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-yellow-300">日焼け止め選びガイド</Link>
               </li>
               <li>
               <Link href="/foundation-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-rose-400">ファンデーション選びガイド</Link>

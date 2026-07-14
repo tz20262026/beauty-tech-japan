@@ -112,12 +112,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/suncare-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
       url: `${BASE_URL}/foundation-guide`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
