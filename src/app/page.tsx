@@ -120,20 +120,13 @@ export default async function Home() {
               </div>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-2 leading-tight">
               Beauty Tech Japan
             </h1>
-            <p className="text-white/90 text-sm sm:text-base font-medium mb-1">
-              海外の最新コスメ・美容トレンドを日本語でチェック
-            </p>
-            <p className="text-white/70 text-xs sm:text-sm mb-6 max-w-md">
-              Allure・Vogue Beauty・Byrdieなど世界の美容メディアから最新トレンドを厳選してお届け
-            </p>
 
-            {/* 動画（スマホのみ）：見出し・説明の直後に置くことで、
-                スクロールせずに画面中央あたりで目に入るようにする。
+            {/* 動画（スマホのみ）：サイト名の直後に置き、その下に説明文を続ける。
                 文字とは重ならない独立ブロック。PCでは右カラムに表示するためここでは非表示。 */}
-            <div className="sm:hidden relative -mx-6 mb-6 overflow-hidden">
+            <div className="sm:hidden relative -mx-6 mb-4 overflow-hidden">
               <video
                 className="hero-video block w-full h-auto"
                 autoPlay
@@ -147,6 +140,13 @@ export default async function Home() {
                 <source src="/hero.mp4" type="video/mp4" />
               </video>
             </div>
+
+            <p className="text-white/90 text-sm sm:text-base font-medium mb-1">
+              海外の最新コスメ・美容トレンドを日本語でチェック
+            </p>
+            <p className="text-white/70 text-xs sm:text-sm mb-6 max-w-md">
+              Allure・Vogue Beauty・Byrdieなど世界の美容メディアから最新トレンドを厳選してお届け
+            </p>
 
             {/* 統計 */}
             <div className="flex items-center gap-4 sm:gap-6 mb-6 flex-wrap">
