@@ -6,6 +6,7 @@ import RandomArticleButton from "@/components/RandomArticleButton";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import VcSectionBeauty from "@/components/VcSectionBeauty";
+import AtSectionBeauty from "@/components/AtSectionBeauty";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -303,6 +304,9 @@ export default async function Home() {
 
       {/* バリューコマース枠（2026-07-14追加）。もしも／A8とは独立した別セクション */}
       <VcSectionBeauty limit={6} />
+
+      {/* アクセストレード枠（2026-07-14追加）。他ASPとは独立した別セクション */}
+      <AtSectionBeauty limit={6} />
 
       <div id="latest-articles" className="scroll-mt-20">
         <ArticleList articles={articles} />
