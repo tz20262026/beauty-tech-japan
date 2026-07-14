@@ -29,3 +29,15 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* ヒーロー背景動画：動きを減らす設定の人には再生させず、ポスター画像のみ見せる */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+  .hero-video + * {
+    background-image: url("/hero-poster.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}

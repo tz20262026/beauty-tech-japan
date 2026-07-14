@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import ArticleList from "@/components/ArticleList";
 import RandomArticleButton from "@/components/RandomArticleButton";
@@ -188,19 +187,40 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* 右: 女性画像（PCのみ） */}
+          {/* 右: 動画（PCのみ）。文字と重ならないよう独立したカラムに置く */}
           <div className="hidden sm:block relative sm:min-h-[340px] lg:min-h-[460px]">
-            <Image
-              src="/images/hero-woman.png"
-              alt="Beauty Tech Japan — 日本人女性・海外最新美容情報"
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="420px"
-            />
+            <video
+              className="hero-video absolute inset-0 h-full w-full object-cover object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/hero-poster.jpg"
+              aria-hidden="true"
+            >
+              <source src="/hero.mp4" type="video/mp4" />
+            </video>
             {/* 左側グラデーション（テキストエリアとのブレンド） */}
             <div className="absolute inset-0 bg-gradient-to-r from-rose-400 via-rose-400/30 to-transparent" />
           </div>
+        </div>
+
+        {/* 動画（スマホ）：文字と重ならないよう、テキストの下に独立したブロックとして置く。
+            等倍表示なので拡大による画質劣化がない。 */}
+        <div className="sm:hidden relative">
+          <video
+            className="hero-video block w-full h-auto"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/hero-poster.jpg"
+            aria-hidden="true"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 
@@ -298,6 +318,15 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* 記事一覧を広告より先に置く。
+          広告が上に集中していると「記事を読みに来た人」が離脱するため、
+          まず本来の価値（記事）を届けてから広告を出す順序にする。 */}
+      <div id="latest-articles" className="scroll-mt-20">
+        <ArticleList articles={articles} />
+      </div>
+
+      {/* 広告セクション（記事の後ろに配置）。
+          4ASPを連続で並べると広告色が強くなるため、間に余白を取って区切る。 */}
       <AffiliateSectionBeauty />
 
       <MoshimoSectionBeauty />
@@ -307,10 +336,6 @@ export default async function Home() {
 
       {/* アクセストレード枠（2026-07-14追加）。他ASPとは独立した別セクション */}
       <AtSectionBeauty limit={6} />
-
-      <div id="latest-articles" className="scroll-mt-20">
-        <ArticleList articles={articles} />
-      </div>
     </div>
   );
 }
