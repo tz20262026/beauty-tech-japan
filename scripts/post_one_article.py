@@ -142,6 +142,29 @@ SOURCE_NAMES = {
 def source_name(s: str) -> str:
     return SOURCE_NAMES.get(s.lower(), s.replace("_", " ").title())
 
+SITE_HOST    = "beauty-tech-japan.vercel.app"
+INDEXNOW_KEY = "c19fd83c92de42cf02648eb558a2eb3a"
+
+def ping_indexnow(article_id: str) -> None:
+    """新記事URLをIndexNow（Bing等の検索エンジン）へ通知する。失敗しても処理は継続。"""
+    try:
+        import urllib.request
+        payload = json.dumps({
+            "host": SITE_HOST,
+            "key": INDEXNOW_KEY,
+            "keyLocation": f"https://{SITE_HOST}/{INDEXNOW_KEY}.txt",
+            "urlList": [f"https://{SITE_HOST}/articles/{article_id}"],
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            "https://api.indexnow.org/indexnow",
+            data=payload,
+            headers={"Content-Type": "application/json; charset=utf-8"},
+        )
+        with urllib.request.urlopen(req, timeout=30) as res:
+            logger.info(f"IndexNow通知: HTTP {res.status}")
+    except Exception as e:
+        logger.warning(f"IndexNow通知スキップ: {e}")
+
 def load_posted() -> set:
     if not POSTED_LOG.exists():
         return set()
@@ -317,6 +340,7 @@ def main() -> int:
     logger.info(f"extra_articles.json 更新: 合計{len(updated)}件")
 
     append_posted(topic.get("id", ""))
+    ping_indexnow(article_id)
 
     # コスト記録
     run_cost = COST_PER_TEXT_RUN + (COST_PER_IMAGE_RUN if image_url else 0)
