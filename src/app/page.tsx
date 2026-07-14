@@ -130,6 +130,24 @@ export default async function Home() {
               Allure・Vogue Beauty・Byrdieなど世界の美容メディアから最新トレンドを厳選してお届け
             </p>
 
+            {/* 動画（スマホのみ）：見出し・説明の直後に置くことで、
+                スクロールせずに画面中央あたりで目に入るようにする。
+                文字とは重ならない独立ブロック。PCでは右カラムに表示するためここでは非表示。 */}
+            <div className="sm:hidden relative -mx-6 mb-6 overflow-hidden">
+              <video
+                className="hero-video block w-full h-auto"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/hero-poster.jpg"
+                aria-hidden="true"
+              >
+                <source src="/hero.mp4" type="video/mp4" />
+              </video>
+            </div>
+
             {/* 統計 */}
             <div className="flex items-center gap-4 sm:gap-6 mb-6 flex-wrap">
               <div className="text-center">
@@ -206,22 +224,6 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* 動画（スマホ）：文字と重ならないよう、テキストの下に独立したブロックとして置く。
-            等倍表示なので拡大による画質劣化がない。 */}
-        <div className="sm:hidden relative">
-          <video
-            className="hero-video block w-full h-auto"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster="/hero-poster.jpg"
-            aria-hidden="true"
-          >
-            <source src="/hero.mp4" type="video/mp4" />
-          </video>
-        </div>
       </div>
 
       {/* 人気ガイドリンクセクション */}
