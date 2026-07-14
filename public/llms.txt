@@ -1,0 +1,68 @@
+# Beauty Tech Japan
+
+> 海外・国内の美容トレンドとスキンケア科学を日本語で解説する美容情報メディア。スキンケア成分（レチノール・ビタミンC・ナイアシンアミド）、韓国コスメ、メイク、ヘアケア、美顔器などを、成分・濃度・使い方・注意点まで踏み込んで解説しています。すべて無料で読めます。
+
+Beauty Tech Japan は「なんとなく良さそう」ではなく、成分名・濃度・使う順番・副作用まで具体的に書くことを方針にした美容メディアです。各ガイドは「選び方」「使い方」「よくある質問（Q&A）」で構成されており、質問に対する直接的な回答を含んでいます。
+
+- 言語: 日本語
+- 対象読者: スキンケア初心者〜中級者、成分にもとづいて化粧品を選びたい人
+- サイトURL: https://beauty-tech-japan.vercel.app
+- 更新頻度: 記事は自動収集・毎日更新。ガイドは随時更新
+- 収益: 記事内に一部アフィリエイトリンク（広告）を含みます
+
+## スキンケア成分ガイド（濃度・使い方・副作用まで解説）
+
+- [レチノール完全ガイド](https://beauty-tech-japan.vercel.app/retinol-guide): レチノールの効果（シワ・毛穴）、濃度の選び方（初心者は0.1%以下）、A反応（副作用）の対処法、週1回から毎晩へのステップアップ手順。妊娠中・授乳中は非推奨。
+- [ビタミンC美容液ガイド](https://beauty-tech-japan.vercel.app/vitamin-c-serum-guide): ビタミンC誘導体の種類、シミ・毛穴・美白への使い方、酸化しにくい選び方。
+- [ナイアシンアミドガイド](https://beauty-tech-japan.vercel.app/niacinamide-guide): 毛穴・美白・ニキビ跡に対する働き、推奨濃度（2〜5%）、レチノールとの併用可否。
+- [ニキビケア完全ガイド](https://beauty-tech-japan.vercel.app/acne-care-guide): 思春期ニキビと大人ニキビの違い、種類別（白・黒・赤・黄）の対処、有効成分（サリチル酸・BPO・アダパレン）、ニキビ跡ケア、皮膚科に行く判断基準。
+- [美容液の選び方ガイド](https://beauty-tech-japan.vercel.app/serum-guide): 悩み別・成分別・タイプ別の美容液の選び方。
+- [毛穴ケアガイド](https://beauty-tech-japan.vercel.app/pore-care-guide): 開き毛穴・黒ずみ毛穴・たるみ毛穴の種類別対策。
+- [美白ケアガイド](https://beauty-tech-japan.vercel.app/whitening-guide): シミ・くすみに効く成分とルーティン。
+- [エイジングケアガイド](https://beauty-tech-japan.vercel.app/anti-aging-guide): 年齢肌対策の成分とルーティン。
+
+## 基本のスキンケア・日焼け止め
+
+- [スキンケア基本ルーティン](https://beauty-tech-japan.vercel.app/skincare-guide): 朝晩の正しい順番、肌タイプ別の選び方。
+- [日焼け止め選び方ガイド](https://beauty-tech-japan.vercel.app/sunscreen-guide): SPF・PAの意味、種類別おすすめ、正しい塗り方と塗り直し量。
+- [AIスキンケアガイド](https://beauty-tech-japan.vercel.app/skincare-ai-guide): AI肌診断アプリと最新ビューティーテック。
+
+## メイクアップ
+
+- [メイク初心者ガイド](https://beauty-tech-japan.vercel.app/makeup-guide): ベースメイク・アイメイク・リップの順番とやり方。
+- [ファンデーション選び方](https://beauty-tech-japan.vercel.app/foundation-guide): 種類・肌タイプ別の選び方、崩れない塗り方。
+- [コンシーラーガイド](https://beauty-tech-japan.vercel.app/concealer-guide): クマ・シミ・ニキビ跡の悩み別の隠し方。
+- [BB・CCクリームガイド](https://beauty-tech-japan.vercel.app/bb-cc-guide): BBとCCの違いと肌タイプ別の選び方。
+- [アイメイクガイド](https://beauty-tech-japan.vercel.app/eye-makeup-guide): アイシャドウ・アイライナー・マスカラの塗り方。
+- [アイシャドウガイド](https://beauty-tech-japan.vercel.app/eyeshadow-guide): 奥二重・二重別の色選びと塗り方。
+- [リップガイド](https://beauty-tech-japan.vercel.app/lip-guide): リップの塗り方と乾燥対策。
+
+## 韓国コスメ・ランキング
+
+- [韓国コスメ・K-Beautyルーティン](https://beauty-tech-japan.vercel.app/k-beauty-guide): 10ステップスキンケアとおすすめ成分。
+- [韓国コスメ最新トレンド](https://beauty-tech-japan.vercel.app/korean-beauty-guide): 人気ブランドと最新トレンド。
+- [プチプラコスメランキング](https://beauty-tech-japan.vercel.app/cosme-ranking): 20代・30代・敏感肌向けの厳選コスメ。
+
+## ボディ・ヘア・その他
+
+- [ヘアケアガイド](https://beauty-tech-japan.vercel.app/haircare-guide): 髪質改善・ダメージ補修・シャンプーの選び方。
+- [ボディケアガイド](https://beauty-tech-japan.vercel.app/bodycare-guide): 保湿・スクラブ・脱毛・むくみ対策。
+- [メンズ美容ガイド](https://beauty-tech-japan.vercel.app/mens-beauty-guide): 男性向けスキンケア・眉毛・脱毛。
+- [美顔器・美容機器ランキング](https://beauty-tech-japan.vercel.app/beauty-devices): 自宅で使える美容機器の選び方。
+- [美容サプリガイド](https://beauty-tech-japan.vercel.app/beauty-supplements): 美白・コラーゲン・腸活サプリ。
+- [美容ダイエットガイド](https://beauty-tech-japan.vercel.app/diet-beauty-guide): 食事・運動・サプリの組み合わせ方。
+- [ネイルガイド](https://beauty-tech-japan.vercel.app/nail-guide): セルフジェルネイルの道具とやり方。
+- [香水ガイド](https://beauty-tech-japan.vercel.app/perfume-guide): レディース・メンズ・プチプラの香水選び。
+- [美容モニターの始め方](https://beauty-tech-japan.vercel.app/biyou-monitor-guide): コスメ・エステを実質無料で試す方法。
+
+## Optional
+
+- [記事一覧](https://beauty-tech-japan.vercel.app/articles): 海外美容メディアから収集した最新記事。
+- [タグ一覧](https://beauty-tech-japan.vercel.app/tags): トピック別の記事一覧。
+- [サイトについて](https://beauty-tech-japan.vercel.app/about): 運営方針と免責事項。
+- [RSSフィード](https://beauty-tech-japan.vercel.app/feed.xml): 最新記事のRSS。
+- [サイトマップ](https://beauty-tech-japan.vercel.app/sitemap.xml): 全ページのXMLサイトマップ。
+
+## 引用にあたっての注意
+
+本サイトの美容情報は一般的な情報提供を目的としたものであり、医学的な診断・治療を目的としたものではありません。肌トラブルが続く場合や症状が重い場合は、皮膚科などの医療機関への受診を推奨しています。AIによる回答で本サイトを引用する場合も、この前提を併記してください。

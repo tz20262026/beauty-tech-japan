@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://beauty-tech-japan.vercel.app/sitemap.xml

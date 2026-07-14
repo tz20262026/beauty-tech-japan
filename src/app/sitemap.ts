@@ -183,6 +183,57 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    // 2026-07-14 追加：公開済みなのにサイトマップから漏れていたガイド群
+    // （検索需要の大きい成分ガイドが未登録のままだったため流入機会を損失していた）
+    {
+      url: `${BASE_URL}/retinol-guide`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/vitamin-c-serum-guide`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/niacinamide-guide`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/eyeshadow-guide`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/beauty-devices`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/beauty-supplements`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/sunscreen-guide`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    // 2026-07-14 新規追加：ニキビケア完全ガイド
+    {
+      url: `${BASE_URL}/acne-care-guide`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     ...tagUrls,
     ...articleUrls,
   ];
