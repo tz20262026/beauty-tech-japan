@@ -105,7 +105,7 @@ export default function AffiliateSectionBeauty() {
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
             美しさをもっと高めるおすすめサービス
           </h2>
-          <p className="text-gray-500 text-sm">内側から輝くためのスクール・ツール・学習を厳選</p>
+          <p className="text-gray-600 text-sm">内側から輝くためのスクール・ツール・学習を厳選</p>
           {/* 選ばれる理由（信頼要素） */}
           <ul className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1.5">
             <li className="text-xs font-semibold text-gray-700">

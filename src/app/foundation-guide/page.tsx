@@ -4,6 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/foundation-guide" },
   title: "ファンデーション選び方完全ガイド2026年版【種類・肌タイプ別おすすめ・塗り方・崩れない方法】",
   description:
     "ファンデーションの選び方を2026年版で完全解説。リキッド・パウダー・クッション・スティックの違い・肌タイプ別おすすめ・正しい塗り方・崩れない方法・プチプラ〜デパコス比較を詳しく解説します。",

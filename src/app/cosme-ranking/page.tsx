@@ -3,6 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/cosme-ranking" },
   title: "プチプラコスメおすすめランキング2026年版【20代・30代・敏感肌・厳選12選】",
   description:
     "プチプラコスメの2026年最新おすすめランキング。ドラッグストアで買える1,000円〜3,000円のベースメイク・スキンケア・リップを肌タイプ別に厳選12選紹介。",
@@ -291,7 +292,7 @@ export default function CosmeRankingPage() {
                   </h3>
                   <p className="text-pink-400 text-xs font-bold mt-0.5">{item.price}</p>
                   <p className="text-gray-600 text-xs mt-1 leading-relaxed">{item.merit}</p>
-                  <p className="text-gray-500 text-xs mt-0.5">向き: {item.skinType}</p>
+                  <p className="text-gray-600 text-xs mt-0.5">向き: {item.skinType}</p>
                 </div>
               </div>
             ))}

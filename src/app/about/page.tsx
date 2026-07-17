@@ -36,7 +36,7 @@ export default function AboutPage() {
       <div className="mb-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-pink-600 dark:text-gray-300 dark:hover:text-pink-400 transition-colors"
+          className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-pink-600 dark:text-gray-300 dark:hover:text-pink-400 transition-colors"
         >
           ← 記事一覧に戻る
         </Link>

@@ -4,6 +4,7 @@ import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/mens-beauty-guide" },
   title: "メンズ美容 入門ガイド2026年版【スキンケア・眉毛・脱毛・ヘアケア・初心者向け完全解説】",
   description:
     "メンズ美容の始め方を2026年版で完全解説。スキンケア・眉毛の整え方・脱毛・ヘアケア・メンズコスメ選びなど男性の美容ケアを初心者向けにわかりやすく解説します。",

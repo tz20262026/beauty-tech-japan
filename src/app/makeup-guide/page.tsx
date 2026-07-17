@@ -3,6 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/makeup-guide" },
   title: "メイクアップ 初心者完全ガイド2026年版【ベースメイク・アイメイク・リップの順番・やり方】",
   description:
     "メイクアップの基本を2026年版で完全解説。ベースメイク・アイシャドウ・リップの順番・やり方・初心者向けプチプラコスメを徹底解説。崩れにくいメイクの方法も紹介。",

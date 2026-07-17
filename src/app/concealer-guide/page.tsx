@@ -4,6 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/concealer-guide" },
   title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】",
   description: "コンシーラーの種類（スティック・リキッド・クリーム・ペンシル）から悩み別の選び方・正しい塗り方・色選びのコツまで徹底解説。クマ・シミ・ニキビ跡を自然にカバー。",
   keywords: ["コンシーラー 選び方", "クマ 隠し方", "コンシーラー 使い方", "シミ コンシーラー", "ニキビ跡 カバー", "コンシーラー 色選び"],
@@ -179,7 +180,7 @@ export default function ConcealerGuidePage() {
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
             コンシーラー<br className="sm:hidden" />
             <span className="text-purple-600">選び方・使い方完全ガイド</span>
-            <span className="text-lg ml-2 text-gray-500">2026年版</span>
+            <span className="text-lg ml-2 text-gray-600">2026年版</span>
           </h1>
           <p className="text-gray-600 text-base leading-relaxed">
             クマ・シミ・ニキビ跡・毛穴など悩み別のコンシーラー選び方・正しい使い方を徹底解説。スティック・リキッド・クリーム・ペンシルの4タイプを比較し、あなたに最適なコンシーラーを見つけましょう。
@@ -200,8 +201,8 @@ export default function ConcealerGuidePage() {
                   <p className="font-black text-lg" style={{ color }}>
                     {icon} {type}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">カバー力: {coverage}</p>
-                  <p className="text-xs text-gray-500">仕上がり: {finish}</p>
+                  <p className="text-xs text-gray-600 mt-1">カバー力: {coverage}</p>
+                  <p className="text-xs text-gray-600">仕上がり: {finish}</p>
                   <p
                     className="text-xs font-bold mt-2 px-2 py-1 rounded-lg inline-block"
                     style={{ background: `${color}15`, color }}

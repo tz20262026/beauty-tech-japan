@@ -220,7 +220,7 @@ export default function KoreanBeautyGuidePage() {
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
             韓国コスメ完全ガイド<span className="text-rose-600">2026</span><br className="sm:hidden" />
-            <span className="text-xl sm:text-2xl font-bold ml-0 sm:ml-2 text-gray-500">最新トレンド・人気ブランド</span>
+            <span className="text-xl sm:text-2xl font-bold ml-0 sm:ml-2 text-gray-600">最新トレンド・人気ブランド</span>
           </h1>
           <p className="text-gray-600 leading-relaxed">
             世界が注目する韓国コスメ（K-Beauty）の2026年最新トレンドから人気ブランド・購入方法まで徹底解説。
@@ -283,8 +283,8 @@ export default function KoreanBeautyGuidePage() {
                     <span className="text-gray-700">{b.flagship}</span>
                   </div>
                   <div className="flex items-start gap-1">
-                    <span className="font-bold flex-shrink-0 text-gray-500">購入先：</span>
-                    <span className="text-gray-500">{b.buy}</span>
+                    <span className="font-bold flex-shrink-0 text-gray-600">購入先：</span>
+                    <span className="text-gray-600">{b.buy}</span>
                   </div>
                 </div>
               </div>
@@ -312,7 +312,7 @@ export default function KoreanBeautyGuidePage() {
                   </div>
                   <div className="flex items-start gap-1.5">
                     <span className="text-orange-500 font-bold flex-shrink-0">△</span>
-                    <span className="text-gray-500">{shop.caution}</span>
+                    <span className="text-gray-600">{shop.caution}</span>
                   </div>
                 </div>
               </div>

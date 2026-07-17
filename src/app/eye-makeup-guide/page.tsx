@@ -4,6 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/eye-makeup-guide" },
   title: "アイメイクの正しいやり方2026年版【アイシャドウ・アイライナー・マスカラの塗り方・初心者向け完全ガイド】",
   description:
     "アイメイクのやり方を2026年版で完全解説。アイシャドウの塗り方・アイライナーの引き方・マスカラの付け方・二重まぶたの作り方・奥二重メイクを初心者向けに詳しく解説します。",

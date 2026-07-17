@@ -168,7 +168,7 @@ export default function VitaminCSerumGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
           ビタミンC美容液の<br className="sm:hidden" />
           <span className="text-orange-500">おすすめ選び方</span>
-          <span className="block text-lg text-gray-500 mt-1 font-bold">2026年版【シミ・毛穴・美白に効果的な使い方】</span>
+          <span className="block text-lg text-gray-600 mt-1 font-bold">2026年版【シミ・毛穴・美白に効果的な使い方】</span>
         </h1>
         <p className="text-gray-600 text-base leading-relaxed">
           「ビタミンC美容液は種類が多すぎてどれを選べばいいかわからない」という方へ。L-アスコルビン酸と誘導体の違い、シミ・毛穴・美白への効果、敏感肌向けの選び方まで完全ガイドします。

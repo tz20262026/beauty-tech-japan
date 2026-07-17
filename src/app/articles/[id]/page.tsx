@@ -435,7 +435,7 @@ export default async function ArticlePage({ params }: Props) {
       <div className="mt-6 text-center">
         <Link
           href="/"
-          className="inline-block text-sm text-gray-500 hover:text-pink-600 transition-colors"
+          className="inline-block text-sm text-gray-600 hover:text-pink-600 transition-colors"
         >
           ← 記事一覧に戻る
         </Link>

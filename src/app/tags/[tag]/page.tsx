@@ -107,7 +107,7 @@ export default async function TagPage({ params }: Props) {
       </div>
 
       <div className="mt-8 text-center">
-        <Link href="/" className="text-sm text-gray-500 hover:text-pink-600 transition-colors">
+        <Link href="/" className="text-sm text-gray-600 hover:text-pink-600 transition-colors">
           ← すべての記事を見る
         </Link>
       </div>

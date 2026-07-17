@@ -4,6 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/anti-aging-guide" },
   title: "エイジングケア完全ガイド2026年版【年齢肌対策・成分・ルーティン】",
   description: "レチノール・ナイアシンアミド・ビタミンC誘導体・ペプチドなど、エイジングケアに効く成分を徹底解説。年齢肌のお悩み別おすすめ成分と正しいルーティンを2026年最新情報でご紹介。",
   keywords: ["エイジングケア", "年齢肌", "レチノール", "ナイアシンアミド", "ビタミンC誘導体", "ペプチド", "アンチエイジング", "シワ 対策", "シミ 対策"],

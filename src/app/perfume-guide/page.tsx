@@ -3,6 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/perfume-guide" },
   title: "香水おすすめランキング2026年版【レディース・メンズ・プチプラ・デート向け】",
   description:
     "2026年版香水おすすめランキングを徹底解説。レディース・メンズ・プチプラ・デートに使える香水をシーン別・季節別・年代別に紹介。選び方・付け方のコツも解説。",

@@ -3,6 +3,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/diet-beauty-guide" },
   title: "美容ダイエット完全ガイド2026年版【食事・運動・サプリ・痩せる方法・短期間で効果】",
   description:
     "美容ダイエットの方法を2026年版で完全解説。食事制限・有酸素運動・筋トレ・サプリの活用法・短期間で効果を出すコツを医学的根拠を元に初心者向けに解説します。",

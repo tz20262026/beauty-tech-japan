@@ -152,7 +152,7 @@ export default function KBeautyGuidePage() {
         {/* 10ステップ */}
         <section className="space-y-5">
           <h2 className="text-xl font-black text-gray-900">K-Beautyの10ステップスキンケア完全ガイド</h2>
-          <p className="text-sm text-gray-500">※ すべてのステップを毎日行う必要はありません。自分の肌状態・生活スタイルに合わせてアレンジしてください。</p>
+          <p className="text-sm text-gray-600">※ すべてのステップを毎日行う必要はありません。自分の肌状態・生活スタイルに合わせてアレンジしてください。</p>
           <div className="space-y-3">
             {K_BEAUTY_STEPS.map(s => (
               <div key={s.step} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-pink-100 shadow-sm">

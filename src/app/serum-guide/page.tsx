@@ -5,6 +5,7 @@ import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/serum-guide" },
   title: "美容液の選び方完全ガイド2026年版【悩み別・成分別・タイプ別】",
   description: "保湿系・ビタミンC系・レチノール系・美白系・鎮静系など美容液の種類を徹底解説。乾燥・シミ・毛穴・シワなど悩み別に最適な美容液の選び方を2026年最新情報でご紹介。",
   keywords: ["美容液 選び方", "美容液 種類", "セラム おすすめ", "美容液 成分", "美容液 比較", "ビタミンC 美容液", "レチノール 美容液", "美白 美容液"],
@@ -152,7 +153,7 @@ export default function SerumGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
           美容液の選び方<br className="sm:hidden" />
           <span className="text-orange-500">完全ガイド</span>
-          <span className="text-lg ml-2 text-gray-500">2026年版</span>
+          <span className="text-lg ml-2 text-gray-600">2026年版</span>
         </h1>
         <p className="text-gray-600 text-base leading-relaxed">
           保湿系・ビタミンC系・レチノール系・美白系・鎮静系など美容液の種類を徹底解説。乾燥・シミ・毛穴・シワなどお悩み別に最適な美容液の選び方をご紹介します。
@@ -197,11 +198,11 @@ export default function SerumGuidePage() {
               </div>
               <div className="grid sm:grid-cols-2 gap-3">
                 <div className="bg-white rounded-xl p-3 border border-gray-100">
-                  <p className="text-xs font-bold text-gray-500 mb-1">主な成分</p>
+                  <p className="text-xs font-bold text-gray-600 mb-1">主な成分</p>
                   <p className="text-sm text-gray-700 leading-relaxed">{serum.mainIngredients}</p>
                 </div>
                 <div className="bg-white rounded-xl p-3 border border-gray-100">
-                  <p className="text-xs font-bold text-gray-500 mb-1">おすすめ悩み</p>
+                  <p className="text-xs font-bold text-gray-600 mb-1">おすすめ悩み</p>
                   <p className="text-sm text-gray-700 leading-relaxed">{serum.bestFor}</p>
                 </div>
               </div>

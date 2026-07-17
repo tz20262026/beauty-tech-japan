@@ -111,7 +111,7 @@ export default function SkincareGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
           スキンケアの正しい順番・<br className="sm:hidden" />
           <span className="text-pink-600">ルーティン完全ガイド</span>
-          <span className="text-lg ml-2 text-gray-500">2026年版</span>
+          <span className="text-lg ml-2 text-gray-600">2026年版</span>
         </h1>
         <p className="text-gray-600 text-base leading-relaxed">
           洗顔・化粧水・美容液・乳液・日焼け止めの正しい使い方と順番を徹底解説。肌質別の選び方・海外で話題の最新スキンケア法もご紹介します。

@@ -4,6 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/whitening-guide" },
   title: "美白ケア完全ガイド2026年版【シミ・くすみに効く成分・ルーティン】",
   description: "美白ケアの正しい方法を解説。ビタミンC・アルブチン・ナイアシンアミドなど有効成分別の選び方・使い方・朝夜ルーティンまで。2026年最新情報。",
   keywords: ["美白 成分", "シミ 対策", "くすみ 改善", "ビタミンC 美白", "ナイアシンアミド 効果", "美白ケア 順番"],
@@ -139,7 +140,7 @@ export default function WhiteningGuidePage() {
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
             美白ケア完全ガイド<br className="sm:hidden" />
             <span className="text-yellow-500">シミ・くすみ対策</span>
-            <span className="text-lg ml-2 text-gray-500">2026年版</span>
+            <span className="text-lg ml-2 text-gray-600">2026年版</span>
           </h1>
           <p className="text-gray-600 text-base leading-relaxed">
             シミ・くすみの根本原因であるメラニン生成を抑制する美白成分を徹底解説。ビタミンC・アルブチン・トラネキサム酸・ナイアシンアミドの選び方・使い方・朝夜ルーティンまで、2026年最新情報をお届けします。

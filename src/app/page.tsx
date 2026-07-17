@@ -61,7 +61,7 @@ export default async function Home() {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=512&q=80&fit=crop",
+        url: `${SITE_URL}/icon.png`,
         width: 512,
         height: 512,
       },
@@ -231,7 +231,7 @@ export default async function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">人気ガイド記事</h2>
-            <p className="text-gray-500 text-sm">スキンケア・コスメ・美容テックの基礎から最新トレンドまで</p>
+            <p className="text-gray-600 text-sm">スキンケア・コスメ・美容テックの基礎から最新トレンドまで</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -312,7 +312,7 @@ export default async function Home() {
                     </span>
                   </div>
                   <p className="font-black text-gray-900 text-sm leading-tight mb-0.5">{item.title}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               </Link>
             ))}

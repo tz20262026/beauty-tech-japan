@@ -227,7 +227,7 @@ export default function BeautyToolsGuidePage() {
         {/* AI肌診断・ARメイクアプリ */}
         <section className="space-y-5">
           <h2 className="text-xl font-black text-gray-900">🔬 AI肌診断・ARメイクアプリ 人気TOP5</h2>
-          <p className="text-sm text-gray-500">スマートフォンのカメラとAIを組み合わせた次世代美容ツール。無料で始めやすいものが多い。</p>
+          <p className="text-sm text-gray-600">スマートフォンのカメラとAIを組み合わせた次世代美容ツール。無料で始めやすいものが多い。</p>
           <div className="space-y-4">
             {AI_SKIN_TOOLS.map(tool => (
               <div key={tool.name} className="flex gap-4 p-5 rounded-2xl bg-white border shadow-sm" style={{ borderColor: `${tool.color}25` }}>
@@ -248,7 +248,7 @@ export default function BeautyToolsGuidePage() {
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-2">{tool.desc}</p>
-                  <div className="flex flex-wrap gap-3 text-xs text-gray-500">
+                  <div className="flex flex-wrap gap-3 text-xs text-gray-600">
                     <span className="font-semibold text-gray-700">✅ {tool.feature}</span>
                     <span>{tool.platform}</span>
                   </div>
@@ -280,7 +280,7 @@ export default function BeautyToolsGuidePage() {
         {/* 美容デバイス */}
         <section className="space-y-5">
           <h2 className="text-xl font-black text-gray-900">✨ おすすめ美容デバイス5選【2026年版】</h2>
-          <p className="text-sm text-gray-500">クリニック技術を家庭で再現。継続使用で本物の変化が出るものを厳選。</p>
+          <p className="text-sm text-gray-600">クリニック技術を家庭で再現。継続使用で本物の変化が出るものを厳選。</p>
           <div className="space-y-4">
             {BEAUTY_DEVICES.map(device => (
               <div key={device.name} className="rounded-2xl border bg-white p-5 space-y-3" style={{ borderColor: `${device.color}25` }}>

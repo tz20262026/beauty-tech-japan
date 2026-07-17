@@ -4,6 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/eyeshadow-guide" },
   title: "アイシャドウの使い方・色選びガイド2026年版【初心者・奥二重・二重別・プチプラおすすめ】",
   description:
     "アイシャドウの使い方・色選び・ぼかし方を2026年版で完全解説。一重・奥二重・二重別の塗り方・プチプラからデパコスまでのおすすめ・季節別カラー選びを初心者向けに詳しく紹介します。",

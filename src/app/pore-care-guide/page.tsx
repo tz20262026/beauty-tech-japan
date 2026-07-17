@@ -4,6 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/pore-care-guide" },
   title: "毛穴ケア完全ガイド2026年版【開き・黒ずみ・たるみ毛穴の種類別対策】",
   description: "開き毛穴・黒ずみ毛穴・たるみ毛穴の原因と正しいケア方法を完全解説。ナイアシンアミド・サリチル酸・レチノールなどおすすめ成分も紹介。2026年最新の毛穴ケア情報。",
   keywords: ["毛穴 ケア", "毛穴 開き", "毛穴 黒ずみ", "たるみ毛穴", "毛穴 原因", "毛穴 対策", "毛穴 成分", "毛穴 美容液"],
@@ -188,7 +189,7 @@ export default function PoreCareGuidePage() {
               <h3 className="text-xl font-black text-gray-900">{pore.name}</h3>
             </div>
             <div className="bg-white rounded-xl p-4 border border-gray-100">
-              <p className="text-xs font-bold text-gray-500 mb-1">原因</p>
+              <p className="text-xs font-bold text-gray-600 mb-1">原因</p>
               <p className="text-sm text-gray-700 leading-relaxed">{pore.cause}</p>
             </div>
             <div>

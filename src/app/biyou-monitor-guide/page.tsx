@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/biyou-monitor-guide" },
   title: "美容モニターの始め方完全ガイド2026年版【コスメ・エステを実質無料で試す方法】",
   description:
     "美容モニターの仕組み・始め方を2026年版で完全解説。コスメ・エステ・脱毛を実質無料で体験して謝礼までもらえる美容モニターの登録方法・報酬の目安・注意点・怪しい案件の見分け方を紹介します。",
@@ -157,7 +158,7 @@ export default function BiyouMonitorGuidePage() {
         >
           無料セミナーに申し込む →
         </a>
-        <p className="text-xs text-gray-500 mt-3">※ 登録・参加無料。合わなければ案件を受けなくてもOKです</p>
+        <p className="text-xs text-gray-600 mt-3">※ 登録・参加無料。合わなければ案件を受けなくてもOKです</p>
       </section>
 
       {/* 注意点 */}

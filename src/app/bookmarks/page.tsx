@@ -89,7 +89,7 @@ export default function BookmarksPage() {
       )}
 
       <div className="mt-8 text-center">
-        <Link href="/" className="text-sm text-gray-500 hover:text-pink-600 transition-colors">
+        <Link href="/" className="text-sm text-gray-600 hover:text-pink-600 transition-colors">
           ← 記事一覧に戻る
         </Link>
       </div>

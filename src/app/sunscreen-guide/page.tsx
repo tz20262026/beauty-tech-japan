@@ -4,6 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/sunscreen-guide" },
   title: "日焼け止め完全ガイド2026年版【SPF・PA・種類・正しい塗り方・おすすめ】",
   description:
     "日焼け止めの選び方を2026年版で完全解説。SPF・PAの意味・違い・正しい塗り方・塗り直しのタイミング・クリーム/スプレー/スティック種類別おすすめ・敏感肌向け選び方まで詳しく解説。",

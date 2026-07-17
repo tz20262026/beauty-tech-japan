@@ -4,6 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/lip-guide" },
   title: "リップメイク・リップケア完全ガイド2026年版【リップの塗り方・乾燥対策・おすすめリップ選び】",
   description:
     "リップメイク・リップケアの方法を2026年版で完全解説。リップの塗り方・乾燥ケア・リップライナーの使い方・プチプラ〜デパコスのおすすめリップを初心者向けに詳しく解説します。",

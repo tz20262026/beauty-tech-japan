@@ -4,6 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beauty-tech-japan.vercel.app/bb-cc-guide" },
   title: "BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】",
   description: "BBクリームとCCクリームの違いを徹底比較。カバー力・保湿力・UV効果・肌タイプ別の選び方から正しい使い方・重ねヅケの方法まで。2026年最新版。",
   keywords: ["BB クリーム CCクリーム 違い", "BBクリーム 選び方", "CCクリーム 効果", "BBクリーム 肌タイプ", "BBクリーム 使い方"],
@@ -147,7 +148,7 @@ export default function BbCcGuidePage() {
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
             BB・CCクリーム<br className="sm:hidden" />
             <span className="text-pink-600">完全ガイド</span>
-            <span className="text-lg ml-2 text-gray-500">2026年版</span>
+            <span className="text-lg ml-2 text-gray-600">2026年版</span>
           </h1>
           <p className="text-gray-600 text-base leading-relaxed">
             BBクリームとCCクリームの違い・肌タイプ別の選び方・正しい使い方を徹底解説。海外ブランドと日本ブランドの比較も。時短メイクで美しい仕上がりを実現するための完全ガイドです。
@@ -177,7 +178,7 @@ export default function BbCcGuidePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-xs text-gray-600 leading-relaxed">
             ※ BBクリーム（Blemish Balm）＝ 傷ケア用クリームが起源のカバーファンデ。CCクリーム（Color Control）＝ 色補正＋スキンケア効果を重視したアイテム。
           </p>
         </section>

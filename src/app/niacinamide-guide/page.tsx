@@ -169,7 +169,7 @@ export default function NiacinamideGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
           ナイアシンアミドの<br className="sm:hidden" />
           <span className="text-purple-500">効果・選び方</span>
-          <span className="block text-lg text-gray-500 mt-1 font-bold">完全ガイド2026年【毛穴・美白・ニキビ跡に】</span>
+          <span className="block text-lg text-gray-600 mt-1 font-bold">完全ガイド2026年【毛穴・美白・ニキビ跡に】</span>
         </h1>
         <p className="text-gray-600 text-base leading-relaxed">
           「万能スキンケア成分」として世界中で注目されるナイアシンアミド（ビタミンB3）。毛穴・美白・ニキビ跡・くすみ・ハリと複数のお悩みに同時アプローチできる理由を、推奨濃度・他成分との相性も含めて完全解説します。
@@ -200,7 +200,7 @@ export default function NiacinamideGuidePage() {
               <div key={title} className="bg-white rounded-xl p-3 border border-purple-100 text-center">
                 <span className="text-2xl">{icon}</span>
                 <p className="font-bold text-gray-800 text-xs mt-1">{title}</p>
-                <p className="text-gray-500 text-xs mt-1 leading-relaxed">{desc}</p>
+                <p className="text-gray-600 text-xs mt-1 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -309,7 +309,7 @@ export default function NiacinamideGuidePage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-4">
+          <p className="text-xs text-gray-600 mt-4">
             ※ ナイアシンアミドは朝晩両方に使用OK。朝夜の使用で効果を最大化できます。
           </p>
         </div>

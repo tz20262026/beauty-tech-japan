@@ -167,7 +167,7 @@ export default function RetinolGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
           レチノール美容液の<br className="sm:hidden" />
           <span className="text-amber-500">選び方・効果・副作用</span>
-          <span className="block text-lg text-gray-500 mt-1 font-bold">完全ガイド2026年【皮膚科医監修】</span>
+          <span className="block text-lg text-gray-600 mt-1 font-bold">完全ガイド2026年【皮膚科医監修】</span>
         </h1>
         <p className="text-gray-600 text-base leading-relaxed">
           スキンケア成分の中でも最も科学的根拠のある「レチノール」。シワ・毛穴・美白への効果から、A反応（副作用）の対処法、初心者向けの濃度選び・ステップアップ方法まで完全解説します。
@@ -197,7 +197,7 @@ export default function RetinolGuidePage() {
               <div key={title} className="bg-white rounded-xl p-3 border border-amber-100 text-center">
                 <span className="text-2xl">{icon}</span>
                 <p className="font-bold text-gray-800 text-xs mt-1">{title}</p>
-                <p className="text-gray-500 text-xs mt-1 leading-relaxed">{desc}</p>
+                <p className="text-gray-600 text-xs mt-1 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

@@ -285,7 +285,7 @@ export default function SkincareAiGuidePage() {
                         {app.category}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-500">{app.price}</p>
+                    <p className="text-xs text-gray-600">{app.price}</p>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">{app.desc}</p>

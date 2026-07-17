@@ -15,7 +15,9 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-const OG_IMAGE = "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80&fit=crop";
+// サイト全体のデフォルトOGP画像。外部Unsplash画像への依存をやめ、
+// 自サイトの動的OG生成API（/api/og）でブランドロゴ入りの画像を都度生成する。
+const OG_IMAGE = "https://beauty-tech-japan.vercel.app/api/og";
 
 export const metadata: Metadata = {
   verification: {
@@ -85,7 +87,9 @@ const beautyJsonLd = [
     url: "https://beauty-tech-japan.vercel.app",
     logo: {
       "@type": "ImageObject",
-      url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&q=80&fit=crop",
+      url: "https://beauty-tech-japan.vercel.app/icon.png",
+      width: 512,
+      height: 512,
     },
     description: "Allure・Vogue Beauty・Byrdieなど海外人気美容メディアの最新情報を日本語でお届けするメディア",
     sameAs: [],
