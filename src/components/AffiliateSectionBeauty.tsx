@@ -2,6 +2,28 @@
 
 const items = [
   {
+    // 2026-07-17追加・成果報酬10,767円・医療脱毛クリニックの無料カウンセリング
+    href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+B5A6IA+2NSW+BWVTE",
+    badge: "✨ 医療脱毛・高単価",
+    badgeColor: "#c026d3",
+    title: "カルミア美肌クリニック",
+    tagline: "92.4%が満足した永久脱毛・最長5年保証",
+    desc: "全国展開の医療脱毛クリニック。無料カウンセリング予約だけで成果になる高単価プログラム。美容医療に興味がある読者へ。",
+    cta: "無料カウンセリングを予約 →",
+    color: "#c026d3",
+  },
+  {
+    // 2026-07-17追加・成果報酬10,000円・医療従事者推奨のNMNサプリ
+    href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+B2B0HE+4P4W+C465T",
+    badge: "💊 NMNサプリ・高単価",
+    badgeColor: "#16a34a",
+    title: "GAAH",
+    tagline: "医療従事者が推奨するNMNサプリ No.1",
+    desc: "エイジングケア・美容意識の高い読者に響くNMNサプリメント。医療従事者推奨という信頼性の高い訴求ポイント。",
+    cta: "詳細を見る →",
+    color: "#16a34a",
+  },
+  {
     // 2026-07-13追加・成果報酬10,000円(セミナー参加+モニター申込)
     href: "https://px.a8.net/svt/ejp?a8mat=4B7QWS+6TW1MA+58KC+5YJRM",
     badge: "💝 無料で美容体験",
