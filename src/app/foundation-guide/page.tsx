@@ -415,6 +415,12 @@ export default function FoundationGuidePage() {
             >
               コンシーラーの選び方を見る →
             </Link>
+            <Link
+              href="/summer-makeup-guide"
+              className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"
+            >
+              夏のメイク崩れ防止ガイド →
+            </Link>
           </div>
         </section>
 

@@ -228,6 +228,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    // 2026-07-19 新規追加：夏のメイク崩れ防止ガイド（季節需要ページ）
+    {
+      url: `${BASE_URL}/summer-makeup-guide`,
+      lastModified: new Date("2026-07-19"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     ...tagUrls,
     ...articleUrls,
   ];
