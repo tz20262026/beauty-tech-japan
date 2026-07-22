@@ -230,6 +230,13 @@ export default function SkincareGuidePage() {
           >
             日焼け止め完全ガイド →
           </Link>
+          <Link
+            href="/josei-usuge-guide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #ec4899, #a855f7)" }}
+          >
+            女性の薄毛対策ガイド →
+          </Link>
         </div>
       </section>
 
