@@ -70,6 +70,29 @@ function splitBodyForCta(body: string): [string, string | null] {
   return [lines.slice(0, splitAt).join("\n"), lines.slice(splitAt).join("\n")];
 }
 
+// 見出し＋直後の本文からFAQPage用のQ&Aを自動生成する（生成AIに引用されやすいFAQ構造を付与）
+function extractFaqFromBody(body: string): { question: string; answer: string }[] {
+  if (!body) return [];
+  const lines = body.split("\n");
+  const items: { question: string; answer: string }[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^##\s+(.+)/);
+    if (!m) continue;
+    let answer = "";
+    for (let j = i + 1; j < lines.length && answer.length < 60; j++) {
+      const line = lines[j].trim();
+      if (/^#{1,3}\s/.test(line)) break;
+      if (!line) {
+        if (answer) break;
+        continue;
+      }
+      answer += line;
+    }
+    if (answer) items.push({ question: m[1].trim(), answer: answer.slice(0, 200) });
+  }
+  return items;
+}
+
 async function fetchAllArticles(): Promise<Article[]> {
   try {
     const remote = await getAllArticles();
@@ -191,6 +214,18 @@ export default async function ArticlePage({ params }: Props) {
       ],
     },
   };
+  const faqItems = extractFaqFromBody(article.body ?? "");
+  const faqJsonLd = faqItems.length >= 2
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -198,6 +233,12 @@ export default async function ArticlePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <ReadingProgress />
 
       {/* パンくず */}

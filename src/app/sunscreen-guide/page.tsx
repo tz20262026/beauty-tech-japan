@@ -402,6 +402,12 @@ export default function SunscreenGuidePage() {
             >
               夏のメイク崩れ防止ガイド →
             </Link>
+            <Link
+              href="/sensitive-skin-guide"
+              className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"
+            >
+              敏感肌スキンケアガイド →
+            </Link>
           </div>
         </section>
 

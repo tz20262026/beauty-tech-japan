@@ -241,6 +241,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    // 2026-07-23 新規追加：敏感肌スキンケア完全ガイド
+    {
+      url: `${BASE_URL}/sensitive-skin-guide`,
+      lastModified: new Date("2026-07-23"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    // 2026-07-23 新規追加：肌のくすみ対策完全ガイド
+    {
+      url: `${BASE_URL}/kusumi-care-guide`,
+      lastModified: new Date("2026-07-23"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     ...tagUrls,
     ...articleUrls,
   ];

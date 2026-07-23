@@ -277,6 +277,12 @@ export default function WhiteningGuidePage() {
             >
               美容液選び方ガイド →
             </Link>
+            <Link
+              href="/kusumi-care-guide"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-sm bg-white border border-yellow-200 text-gray-700 hover:bg-yellow-50 transition-all"
+            >
+              肌のくすみ対策ガイド →
+            </Link>
           </div>
         </section>
       </div>
