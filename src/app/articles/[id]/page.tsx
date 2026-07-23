@@ -38,8 +38,9 @@ function createHeadingComponents() {
     function HeadingRenderer({
       children,
       className,
+      node: _node,
       ...rest
-    }: ComponentPropsWithoutRef<"h2">) {
+    }: ComponentPropsWithoutRef<"h2"> & { node?: unknown }) {
       const id = headingId(counter);
       counter += 1;
       const Tag = tag;
