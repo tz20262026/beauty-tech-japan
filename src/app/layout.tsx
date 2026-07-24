@@ -62,6 +62,7 @@ export const metadata: Metadata = {
 };
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
 // JSON-LD: WebSite + NewsMediaOrganization 構造化データ
 const beautyJsonLd = [
@@ -110,6 +111,15 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased transition-colors">
+        {/* ─── Google AdSense ─────────────────────────────── */}
+        {ADSENSE_ID && (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
+        )}
+
         {/* ─── Google Analytics 4 ─────────────────────────── */}
         {GA_ID && GA_ID !== "G-XXXXXXXXXX" && (
           <>

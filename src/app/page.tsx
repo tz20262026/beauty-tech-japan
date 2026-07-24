@@ -6,6 +6,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import VcSectionBeauty from "@/components/VcSectionBeauty";
 import AtSectionBeauty from "@/components/AtSectionBeauty";
+import AdUnit from "@/components/AdUnit";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -325,6 +326,11 @@ export default async function Home() {
           まず本来の価値（記事）を届けてから広告を出す順序にする。 */}
       <div id="latest-articles" className="scroll-mt-20">
         <ArticleList articles={articles} />
+      </div>
+
+      {/* Google AdSense枠（未設定時は何も表示されない） */}
+      <div className="max-w-3xl mx-auto my-6">
+        <AdUnit slot="1234567890" />
       </div>
 
       {/* 広告セクション（記事の後ろに配置）。
