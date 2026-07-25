@@ -9,6 +9,7 @@ type SisterSite = {
 const SELF_URL = "https://beauty-tech-japan.vercel.app";
 
 const SISTER_SITES: readonly SisterSite[] = [
+  { name: "和-Nagomiトラベル", url: "https://rakutentr.vercel.app", description: "日本の観光地・ホテル予約情報" },
   { name: "AI News Japan", url: "https://ai-news-site-wheat.vercel.app", description: "AIの最新ニュースを日本語で毎日配信" },
   { name: "Beauty Tech Japan", url: "https://beauty-tech-japan.vercel.app", description: "海外の美容・コスメ最新トレンド" },
   { name: "暴露仙人のAI占い", url: "https://fortune-site-neon.vercel.app", description: "AIが本音で告げる無料占い・相性診断" },
