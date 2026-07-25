@@ -19,12 +19,14 @@ export const metadata: Metadata = {
     "ワキガ 対策 セルフケア",
   ],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "汗・ニオイ対策 完全ガイド2026｜制汗剤の選び方と正しい使い方",
     description: "制汗剤とデオドラントの違いから、タイプ別の選び方・夜に塗る使い方・シーン別対策まで完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "汗・ニオイ対策 完全ガイド2026",
     description: "制汗剤の選び方と「夜に塗る」正しい使い方を完全解説",

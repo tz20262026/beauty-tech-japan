@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description:
     "アイメイクのやり方を2026年版で完全解説。アイシャドウの塗り方・アイライナーの引き方・マスカラの付け方・二重まぶたの作り方・奥二重メイクを初心者向けに詳しく解説します。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "アイメイクの正しいやり方2026年版【アイシャドウ・アイライナー・マスカラ完全ガイド】",
     description: "アイシャドウ・アイライナー・マスカラの基本から応用まで初心者向けに完全解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "アイメイクの正しいやり方2026年版",
     description: "アイシャドウ・アイライナー・マスカラの基本を完全解説。",

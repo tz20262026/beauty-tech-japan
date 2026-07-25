@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description: "2026年最新の韓国コスメトレンド・人気ブランド・購入方法を完全解説。K-Beautyの注目成分・おすすめアイテム・日本での買い方まで網羅。韓国コスメ初心者から上級者まで対応。",
   keywords: ["韓国コスメ 2026", "韓国コスメ トレンド", "K-Beauty おすすめ", "韓国コスメ ブランド", "韓国コスメ 購入"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "韓国コスメ完全ガイド2026【最新トレンド・人気ブランド】",
     description: "2026年最新の韓国コスメトレンド・人気ブランド・購入方法を完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "韓国コスメ完全ガイド2026【最新トレンド・人気ブランド】",
     description: "2026年最新の韓国コスメトレンド・人気ブランド・購入方法を完全解説",

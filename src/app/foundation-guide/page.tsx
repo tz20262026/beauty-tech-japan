@@ -14,12 +14,14 @@ export const metadata: Metadata = {
     "ファンデーション プチプラ", "ファンデーション 2026"
   ],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "ファンデーション選び方完全ガイド2026年版【種類・肌タイプ別・崩れない方法】",
     description: "ファンデーションの種類・肌タイプ別おすすめ・正しい塗り方・崩れない方法・プチプラ〜デパコス比較を完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "ファンデーション選び方完全ガイド2026年版",
     description: "種類・肌タイプ別おすすめ・塗り方・崩れない方法・プチプラ〜デパコス比較を完全解説",

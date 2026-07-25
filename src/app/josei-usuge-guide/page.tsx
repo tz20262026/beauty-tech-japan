@@ -8,12 +8,14 @@ export const metadata: Metadata = {
     "産後や更年期に増える抜け毛の原因と、自宅でできるケア・専門クリニックへの相談タイミングを解説。女性特有の薄毛悩みに向き合うための完全ガイド。",
   keywords: ["女性 薄毛", "産後 抜け毛", "更年期 抜け毛", "女性 AGA", "分け目 薄い 女性 対策"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "産後・更年期の抜け毛が気になったら【2026年版】",
     description: "女性特有の抜け毛の原因と、自宅ケア・専門クリニック相談のタイミングを解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "産後・更年期の抜け毛が気になったら【2026年版】",
     description: "女性特有の抜け毛の原因と、自宅ケア・専門クリニック相談のタイミングを解説。",

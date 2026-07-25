@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description:
     "リップメイク・リップケアの方法を2026年版で完全解説。リップの塗り方・乾燥ケア・リップライナーの使い方・プチプラ〜デパコスのおすすめリップを初心者向けに詳しく解説します。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "リップメイク・リップケア完全ガイド2026年版【塗り方・乾燥対策・おすすめリップ】",
     description: "リップの正しい塗り方・乾燥対策・リップライナーの使い方を初心者向けに解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "リップメイク・リップケア完全ガイド2026年版",
     description: "リップの塗り方・乾燥対策・おすすめリップを初心者向けに完全解説。",

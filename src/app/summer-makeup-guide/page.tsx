@@ -19,12 +19,14 @@ export const metadata: Metadata = {
     "フィックスミスト",
   ],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "夏のメイク崩れ防止 完全ガイド2026｜テカリ・皮脂・汗に負けないベースメイク",
     description: "皮脂崩れ・汗崩れ・乾燥崩れのタイプ別対策と、崩れないベースメイクの手順を完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "夏のメイク崩れ防止 完全ガイド2026",
     description: "テカリ・皮脂・汗に負けないベースメイクの作り方を完全解説",

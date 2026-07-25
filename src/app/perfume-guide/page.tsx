@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description:
     "2026年版香水おすすめランキングを徹底解説。レディース・メンズ・プチプラ・デートに使える香水をシーン別・季節別・年代別に紹介。選び方・付け方のコツも解説。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "香水おすすめランキング2026年版【レディース・メンズ・プチプラ】",
     description: "2026年版人気香水をシーン別・季節別にランキング紹介。デート・仕事・普段使いの香水選びを完全ガイド。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "香水おすすめランキング2026年版",
     description: "レディース・メンズ・プチプラ香水をシーン別に完全ガイド。",

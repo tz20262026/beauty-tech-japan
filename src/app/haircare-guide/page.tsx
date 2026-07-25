@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description:
     "ヘアケアの正しい方法を2026年版で完全解説。髪質改善・ダメージ補修・乾燥対策・パサつき改善に効果的なシャンプー・トリートメント・ヘアオイルを肌タイプ別に紹介。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "ヘアケア完全ガイド2026年版【髪質改善・おすすめ10選】",
     description: "髪質改善・ダメージ補修に効果的なヘアケア方法とおすすめアイテムを徹底解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "ヘアケア完全ガイド2026年版",
     description: "髪質改善・ダメージ補修の正しいヘアケア方法を解説。おすすめアイテム10選。",

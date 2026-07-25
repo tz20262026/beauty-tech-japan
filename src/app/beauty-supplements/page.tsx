@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: "https://beauty-tech-japan.vercel.app/beauty-supplements",
   },
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "飲む美容サプリ最強ランキング2026年【美白・コラーゲン・腸活】",
     description:
       "目的別・美容サプリ最強ランキング。美白・コラーゲン・腸活・抗酸化など成分別に選ぶポイントと飲み方を完全解説。",
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     siteName: "Beauty Tech Japan",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "飲む美容サプリ最強ランキング2026年【美白・コラーゲン・腸活】",
     description:

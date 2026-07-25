@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description: "AI肌診断・ARメイクアプリ・美容デバイスを徹底比較。スマホで使える最新ビューティーテックツール15選を解説。2026年の美容テクノロジートレンドを完全網羅。",
   keywords: ["AI 肌診断", "美容テック", "ARメイク アプリ", "美容デバイス おすすめ", "ビューティーテック 2026"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "AIで変わる美容ケア2026【最新ビューティーテック15選】",
     description: "AI肌診断・ARメイク・美容デバイスを徹底比較。2026年最新ビューティーテックツール15選",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "AIで変わる美容ケア2026【最新ビューティーテック15選】",
     description: "AI肌診断・ARメイク・美容デバイスを徹底比較。2026年最新ビューティーテックツール15選",

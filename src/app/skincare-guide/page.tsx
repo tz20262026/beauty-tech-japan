@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description: "スキンケアの正しい順番・使い方を完全解説。洗顔・化粧水・乳液・美容液・日焼け止めの順番から、肌質別（乾燥・混合・脂性）の選び方まで。2026年最新の海外美容法も紹介。",
   keywords: ["スキンケア 順番", "スキンケア ルーティン", "洗顔 化粧水 順番", "スキンケア 基本", "肌荒れ 対策"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "2026年版 スキンケア完全ガイド｜朝晩のルーティン・順番・選び方",
     description: "スキンケアの正しい順番・使い方を完全解説。肌質別の選び方・海外最新美容法も紹介",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "2026年版 スキンケア完全ガイド｜朝晩のルーティン・順番・選び方",
     description: "スキンケアの正しい順番・使い方を完全解説。肌質別の選び方・海外最新美容法も紹介",

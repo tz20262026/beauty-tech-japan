@@ -13,12 +13,14 @@ export const metadata: Metadata = {
     "紫外線対策", "日焼け止め 種類", "敏感肌 日焼け止め", "日焼け止め 2026"
   ],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "日焼け止め完全ガイド2026年版【SPF・PA・種類・正しい塗り方】",
     description: "SPF・PAの意味・正しい塗り方・種類別おすすめ・敏感肌向け選び方を2026年最新情報で完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "日焼け止め完全ガイド2026年版",
     description: "SPF・PA・塗り方・種類別おすすめを完全解説",

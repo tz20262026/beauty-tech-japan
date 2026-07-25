@@ -9,12 +9,14 @@ export const metadata: Metadata = {
     "美容モニターの仕組み・始め方を2026年版で完全解説。コスメ・エステ・脱毛を実質無料で体験して謝礼までもらえる美容モニターの登録方法・報酬の目安・注意点・怪しい案件の見分け方を紹介します。",
   keywords: ["美容モニター", "コスメ モニター", "エステ モニター", "美容 モニター 始め方", "ヴィーナスウォーカー", "美容 副業"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "美容モニターの始め方完全ガイド2026年版｜コスメ・エステを実質無料で試す",
     description: "美容モニターの仕組み・報酬・始め方・注意点を完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "美容モニターの始め方完全ガイド2026年版",
     description: "コスメ・エステを実質無料で試せる美容モニターの始め方を解説",

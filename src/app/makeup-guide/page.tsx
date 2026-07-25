@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description:
     "メイクアップの基本を2026年版で完全解説。ベースメイク・アイシャドウ・リップの順番・やり方・初心者向けプチプラコスメを徹底解説。崩れにくいメイクの方法も紹介。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "メイクアップ初心者完全ガイド2026年版【順番・やり方・プチプラ】",
     description: "ベースメイク・アイメイク・リップの順番・やり方を初心者向けに解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "メイクアップ初心者完全ガイド2026年版",
     description: "ベースメイク・アイメイク・リップの基本順番を解説。",

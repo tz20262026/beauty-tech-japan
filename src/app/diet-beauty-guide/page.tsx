@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description:
     "美容ダイエットの方法を2026年版で完全解説。食事制限・有酸素運動・筋トレ・サプリの活用法・短期間で効果を出すコツを医学的根拠を元に初心者向けに解説します。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "美容ダイエット完全ガイド2026年版【食事・運動・サプリ・痩せる方法】",
     description: "食事・運動・サプリを組み合わせた美容ダイエット方法を解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "美容ダイエット完全ガイド2026年版",
     description: "食事・運動・サプリを組み合わせた効果的なダイエット方法を解説。",

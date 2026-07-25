@@ -6,11 +6,13 @@ export const metadata: Metadata = {
   title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
   description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
     description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
     type: "website",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
     description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",

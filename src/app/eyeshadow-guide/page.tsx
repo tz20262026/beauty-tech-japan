@@ -14,12 +14,14 @@ export const metadata: Metadata = {
     "アイシャドウ 二重", "アイシャドウ 2026"
   ],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "アイシャドウの使い方・色選びガイド2026年版【初心者・奥二重・二重別】",
     description: "アイシャドウの正しい使い方・色選び・ぼかし方を初心者向けに完全解説。まぶたの形別テクニックも紹介。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "アイシャドウの使い方・色選びガイド2026年版",
     description: "初心者でもできるアイシャドウの使い方・色選び・ぼかし方を完全解説",

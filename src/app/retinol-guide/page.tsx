@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     canonical: "https://beauty-tech-japan.vercel.app/retinol-guide",
   },
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年【皮膚科医監修】",
     description: "レチノールの効果・副作用・濃度の選び方を完全解説。A反応の対処法・使い方ステップアップまでわかる",
     type: "article",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     url: "https://beauty-tech-japan.vercel.app/retinol-guide",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年",
     description: "レチノールの効果・濃度・副作用・使い方ステップアップを徹底解説",

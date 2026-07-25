@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     canonical: PAGE_URL,
   },
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "ニキビケア完全ガイド2026年版【大人ニキビの原因・種類別の対策】",
     description:
       "ニキビの種類別の状態と対策、大人ニキビの原因、成分の選び方、NG習慣、皮膚科を受診する判断基準を解説。",
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     publishedTime: PUBLISHED_AT,
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "ニキビケア完全ガイド2026年版",
     description: "ニキビの種類別対策・大人ニキビの原因・成分の選び方・受診の目安を解説。",

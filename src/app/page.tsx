@@ -17,9 +17,26 @@ export const metadata: Metadata = {
     "Allure・Byrdie・Vogue Beautyなど海外の人気美容メディアから、スキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け。3日おきに新記事を自動更新。",
   alternates: { canonical: "https://beauty-tech-japan.vercel.app" },
   openGraph: {
+    siteName: "Beauty Tech Japan",
     title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
     description: "Allure・Byrdie・Vogue Beautyなど海外美容メディアから最新トレンドを日本語でお届け。",
     type: "website",
+    locale: "ja_JP",
+    url: "https://beauty-tech-japan.vercel.app",
+    images: [
+      {
+        url: "https://beauty-tech-japan.vercel.app/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Beauty Tech Japan — 海外美容・コスメ最新情報",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
+    description: "Allure・Byrdie・Vogue Beautyなど海外美容メディアから最新トレンドを日本語でお届け。",
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
   },
 };
 

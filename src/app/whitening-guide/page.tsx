@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description: "美白ケアの正しい方法を解説。ビタミンC・アルブチン・ナイアシンアミドなど有効成分別の選び方・使い方・朝夜ルーティンまで。2026年最新情報。",
   keywords: ["美白 成分", "シミ 対策", "くすみ 改善", "ビタミンC 美白", "ナイアシンアミド 効果", "美白ケア 順番"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "美白ケア完全ガイド2026年版【シミ・くすみに効く成分・ルーティン】| Beauty Tech Japan",
     description: "美白ケアの正しい方法を解説。ビタミンC・アルブチン・ナイアシンアミドなど有効成分別の選び方・使い方・朝夜ルーティンまで。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "美白ケア完全ガイド2026年版【シミ・くすみに効く成分・ルーティン】| Beauty Tech Japan",
     description: "美白ケアの正しい方法を解説。ビタミンC・アルブチン・ナイアシンアミドなど有効成分別の選び方・使い方・朝夜ルーティンまで。",

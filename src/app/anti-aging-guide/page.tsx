@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description: "レチノール・ナイアシンアミド・ビタミンC誘導体・ペプチドなど、エイジングケアに効く成分を徹底解説。年齢肌のお悩み別おすすめ成分と正しいルーティンを2026年最新情報でご紹介。",
   keywords: ["エイジングケア", "年齢肌", "レチノール", "ナイアシンアミド", "ビタミンC誘導体", "ペプチド", "アンチエイジング", "シワ 対策", "シミ 対策"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "エイジングケア完全ガイド2026年版｜年齢肌対策・成分・ルーティン",
     description: "レチノール・ナイアシンアミド・ペプチドなどエイジングケア成分を徹底解説。正しいルーティンで年齢肌に効果的にアプローチ",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "エイジングケア完全ガイド2026年版",
     description: "年齢肌対策・エイジングケア成分・ルーティンを完全解説",

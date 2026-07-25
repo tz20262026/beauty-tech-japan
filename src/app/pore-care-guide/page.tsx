@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description: "開き毛穴・黒ずみ毛穴・たるみ毛穴の原因と正しいケア方法を完全解説。ナイアシンアミド・サリチル酸・レチノールなどおすすめ成分も紹介。2026年最新の毛穴ケア情報。",
   keywords: ["毛穴 ケア", "毛穴 開き", "毛穴 黒ずみ", "たるみ毛穴", "毛穴 原因", "毛穴 対策", "毛穴 成分", "毛穴 美容液"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "毛穴ケア完全ガイド2026年版｜開き・黒ずみ・たるみ毛穴の種類別対策",
     description: "毛穴の種類（開き・黒ずみ・たるみ）別の原因と正しいケア方法を完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "毛穴ケア完全ガイド2026年版",
     description: "開き毛穴・黒ずみ毛穴・たるみ毛穴の種類別ケア方法を完全解説",

@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description:
     "メンズ美容の始め方を2026年版で完全解説。スキンケア・眉毛の整え方・脱毛・ヘアケア・メンズコスメ選びなど男性の美容ケアを初心者向けにわかりやすく解説します。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "メンズ美容 入門ガイド2026年版【スキンケア・眉毛・脱毛・ヘアケア】",
     description: "メンズスキンケア・眉毛・脱毛・ヘアケアの始め方を解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "メンズ美容入門ガイド2026年版",
     description: "メンズスキンケア・眉毛・脱毛・ヘアケアの始め方を解説。",

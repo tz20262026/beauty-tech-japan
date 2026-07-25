@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description:
     "プチプラコスメの2026年最新おすすめランキング。ドラッグストアで買える1,000円〜3,000円のベースメイク・スキンケア・リップを肌タイプ別に厳選12選紹介。",
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "プチプラコスメおすすめランキング2026年版【12選】",
     description: "1,000円〜3,000円で使えるドラッグストアコスメを徹底比較。肌タイプ別おすすめも掲載。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "プチプラコスメおすすめランキング2026年版【12選】",
     description: "1,000円〜3,000円のプチプラコスメを肌タイプ別に厳選紹介。",

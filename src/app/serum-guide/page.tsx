@@ -10,12 +10,14 @@ export const metadata: Metadata = {
   description: "保湿系・ビタミンC系・レチノール系・美白系・鎮静系など美容液の種類を徹底解説。乾燥・シミ・毛穴・シワなど悩み別に最適な美容液の選び方を2026年最新情報でご紹介。",
   keywords: ["美容液 選び方", "美容液 種類", "セラム おすすめ", "美容液 成分", "美容液 比較", "ビタミンC 美容液", "レチノール 美容液", "美白 美容液"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "美容液の選び方完全ガイド2026年版｜悩み別・成分別・タイプ別",
     description: "保湿・ビタミンC・レチノール・美白・鎮静など美容液の種類と選び方を完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "美容液の選び方完全ガイド2026年版",
     description: "悩み別・成分別・タイプ別の美容液選びを完全解説",

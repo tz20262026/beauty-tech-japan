@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://beauty-tech-japan.vercel.app/beauty-devices",
   },
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "美顔器・美容機器おすすめランキング2026年【自宅エステ完全版】",
     description:
       "EMS・RF・LED・超音波・ハイフ家庭用。種類別に美顔器の効果・使い方・予算を徹底比較した完全ランキング。",
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     siteName: "Beauty Tech Japan",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "美顔器・美容機器おすすめランキング2026年【自宅エステ完全版】",
     description:

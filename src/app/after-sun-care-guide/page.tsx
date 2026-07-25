@@ -19,12 +19,14 @@ export const metadata: Metadata = {
     "日焼け後 スキンケア",
   ],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "日焼け後ケア（アフターサンケア）完全ガイド2026｜72時間が勝負",
     description: "冷却→保湿→美白ケアのタイムライン別セルフケアと、シミにしないための1週間ケアを完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "日焼け後ケア完全ガイド2026【72時間が勝負】",
     description: "冷却→保湿→美白ケアのタイムライン別アフターサンケアを完全解説",

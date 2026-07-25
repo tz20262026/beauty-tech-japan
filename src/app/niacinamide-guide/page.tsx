@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     canonical: "https://beauty-tech-japan.vercel.app/niacinamide-guide",
   },
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "ナイアシンアミドの効果・選び方完全ガイド2026年【毛穴・美白・ニキビ跡に】",
     description: "毛穴・美白・ニキビ跡効果から推奨濃度・他成分との使い分けまで完全解説",
     type: "article",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     url: "https://beauty-tech-japan.vercel.app/niacinamide-guide",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "ナイアシンアミドの効果・選び方完全ガイド2026年",
     description: "毛穴・美白・ニキビ跡への効果・濃度選び・使い方を徹底解説",

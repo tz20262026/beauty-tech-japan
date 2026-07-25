@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description: "AI肌診断の仕組み・おすすめアプリ・自宅でできるAIスキンケアを完全解説。2026年最新のAI美容技術でパーソナライズされたスキンケアルーティンを構築する方法。",
   keywords: ["AI スキンケア", "AI 肌診断 アプリ", "パーソナライズ スキンケア", "AI 美容", "肌分析 AI"],
   openGraph: {
+    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "AIスキンケア完全ガイド2026【肌診断・おすすめアプリ】",
     description: "AI肌診断の仕組み・おすすめアプリ・自宅でできるAIスキンケアを完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
+    images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
     title: "AIスキンケア完全ガイド2026【肌診断・おすすめアプリ】",
     description: "AI肌診断の仕組み・おすすめアプリ・自宅でできるAIスキンケアを完全解説",
