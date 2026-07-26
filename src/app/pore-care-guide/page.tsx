@@ -151,6 +151,22 @@ export default function PoreCareGuidePage() {
         </p>
       </section>
 
+      {/* 動画で見る:毛穴の黒ずみ */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-black text-gray-900">🎬 動画で見る｜毛穴の黒ずみ、その洗い方は逆効果かも</h2>
+        <div className="rounded-2xl overflow-hidden border border-rose-200 bg-black max-w-xs mx-auto">
+          <video
+            controls
+            preload="none"
+            poster="/videos/pore-care.jpg"
+            playsInline
+            className="w-full aspect-[9/16]"
+          >
+            <source src="/videos/pore-care.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
       {/* 毛穴タイプ診断ガイド */}
       <section className="space-y-4">
         <h2 className="text-xl font-black text-gray-900">🔍 あなたの毛穴タイプはどれ？</h2>
