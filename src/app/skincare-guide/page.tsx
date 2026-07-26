@@ -120,6 +120,22 @@ export default function SkincareGuidePage() {
         </p>
       </section>
 
+      {/* 動画で見る:スキンケアの順番 */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-black text-gray-900">🎬 動画で見る｜スキンケアの正しい順番</h2>
+        <div className="rounded-2xl overflow-hidden border border-pink-200 bg-black max-w-xs mx-auto">
+          <video
+            controls
+            preload="none"
+            poster="/videos/skincare-order.jpg"
+            playsInline
+            className="w-full aspect-[9/16]"
+          >
+            <source src="/videos/skincare-order.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
       {/* 朝のルーティン */}
       <section className="space-y-5">
         <h2 className="text-xl font-black text-gray-900">☀️ 朝のスキンケア順番（5ステップ）</h2>
