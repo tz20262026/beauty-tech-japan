@@ -25,6 +25,7 @@ const SISTER_SITES: readonly SisterSite[] = [
   { name: "公営ギャンブル入門", url: "https://koueigyannburu.vercel.app", description: "競馬・競艇などの基礎知識" },
   { name: "沖縄不動産", url: "https://realestate-ivory.vercel.app", description: "沖縄の不動産情報" },
   { name: "PlanGenius AI", url: "https://plangenius-ai.vercel.app", description: "AI事業計画書ジェネレーター" },
+  { name: "KINTORE BASE", url: "https://kintore-six.vercel.app", description: "自宅筋トレ・プロテイン完全ガイド" },
 ];
 
 export default function SisterSites() {
