@@ -183,6 +183,22 @@ export default function RetinolGuidePage() {
         </div>
       </section>
 
+      {/* 動画で見る:よくある3つの失敗 */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-black text-gray-900">🎬 動画で見る｜レチノールでよくある3つの失敗</h2>
+        <div className="rounded-2xl overflow-hidden border border-amber-200 bg-black max-w-xs mx-auto">
+          <video
+            controls
+            preload="none"
+            poster="/videos/retinol-mistakes.jpg"
+            playsInline
+            className="w-full aspect-[9/16]"
+          >
+            <source src="/videos/retinol-mistakes.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
       {/* レチノールとは */}
       <section className="space-y-4">
         <h2 className="text-xl font-black text-gray-900">🧬 レチノールとは？作用のメカニズム</h2>
