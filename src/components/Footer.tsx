@@ -113,6 +113,9 @@ export default function Footer() {
                 <Link href="/pore-care-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-rose-300">毛穴ケアガイド</Link>
               </li>
               <li>
+                <Link href="/widget" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-300">無料ウィジェット配布</Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-xs hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>

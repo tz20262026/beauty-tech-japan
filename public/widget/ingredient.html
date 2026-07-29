@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日の美容成分辞典 | Beauty Tech Japan</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #2a0f22;
+    --color-bg2: #1c0a1a;
+    --color-pink: #f472b6;
+    --color-rose: #fb7185;
+    --color-text: #fce7f3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; background: transparent; }
+  body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: var(--color-text);
+    display: flex;
+  }
+  .widget {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 18px 12px;
+    background: linear-gradient(160deg, var(--color-bg), var(--color-bg2));
+    border: 1px solid rgba(244, 114, 182, 0.35);
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  }
+  .widget__eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .widget__date { color: rgba(252,231,243,0.5); font-size: 10px; letter-spacing: 0.05em; font-weight: 400; }
+  .widget__term {
+    font-weight: 900;
+    color: #fff;
+    font-size: clamp(18px, 5.6vw, 22px);
+    line-height: 1.3;
+    margin: 10px 0 4px;
+  }
+  .widget__en {
+    font-size: 12px;
+    color: var(--color-rose);
+    margin: 0 0 6px;
+    font-weight: 500;
+  }
+  .widget__def {
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(252,231,243,0.85);
+    margin: 0 0 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .widget__cta {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #db2777, var(--color-rose));
+    color: #fff;
+    font-weight: 700;
+  }
+  .widget__footer { margin-top: 10px; text-align: right; }
+  .widget__footer a {
+    font-size: 10px;
+    color: rgba(252,231,243,0.5);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .widget__footer a:hover { color: var(--color-pink); }
+</style>
+</head>
+<body>
+  <div class="widget">
+    <div>
+      <div class="widget__eyebrow">
+        <span>今日の美容成分</span>
+        <span class="widget__date" id="w-date"></span>
+      </div>
+      <p class="widget__term" id="w-term"></p>
+      <p class="widget__en" id="w-en"></p>
+      <p class="widget__def" id="w-def"></p>
+    </div>
+    <div>
+      <a class="widget__cta" id="w-cta" href="https://beauty-tech-japan.vercel.app/" target="_blank" rel="noopener">美容成分をもっと知る →</a>
+      <p class="widget__footer"><a href="https://beauty-tech-japan.vercel.app/" target="_blank" rel="noopener">Beauty Tech Japan 提供</a></p>
+    </div>
+  </div>
+
+<script>
+  /* [成分名, 別称/英語表記, 解説] 20選 */
+  var TERMS = [
+    ["レチノール", "Retinol", "ビタミンA誘導体。肌のターンオーバーを促し、小じわ・毛穴の目立ちにアプローチする代表的なエイジングケア成分。刺激が出やすいため少量から慣らすのが基本。"],
+    ["ナイアシンアミド", "Niacinamide", "ビタミンB3の一種。皮脂バランスを整え、キメや毛穴の目立ちをケアする働きが報告されている低刺激な万能成分。"],
+    ["ヒアルロン酸", "Hyaluronic Acid", "自重の約6000倍の水分を抱え込むといわれる保湿成分。分子量により肌表面〜角層内での保水アプローチが変わる。"],
+    ["セラミド", "Ceramide", "角層細胞の間を満たし、バリア機能を支える脂質成分。乾燥・外部刺激から肌を守る土台づくりに欠かせない。"],
+    ["ビタミンC誘導体(APPS)", "Ascorbyl Phosphate", "浸透性を高めたビタミンC誘導体。皮脂バランスやハリ・透明感ケアを目的に配合されることが多い。"],
+    ["コラーゲン", "Collagen", "肌の弾力を支えるタンパク質。分子が大きく角層への浸透は限定的なため、化粧品では主に保湿膜としての働きが中心。"],
+    ["ペプチド", "Peptide", "アミノ酸が数個つながった成分。特定の配列によってハリ・エイジングケアに着目した製品に配合される。"],
+    ["グリコール酸(AHA)", "Glycolic Acid", "サトウキビ由来のフルーツ酸。古い角質のケアを促し、なめらかな肌印象づくりに使われるピーリング系成分。"],
+    ["サリチル酸(BHA)", "Salicylic Acid", "油性の角質ケア成分で毛穴の奥まで届きやすい。皮脂詰まりが気になる肌向けのケア製品によく使われる。"],
+    ["プラセンタ", "Placenta Extract", "動物由来の胎盤エキス。アミノ酸・ビタミン類を含み、うるおい・ハリケアを目的に配合される美容液の定番成分。"],
+    ["ヒト幹細胞培養液", "Human Stem Cell Conditioned Media", "幹細胞を培養する際に生じる液由来の成分。ハリ・うるおいケアを目的とした高価格帯の美容液に使われることが多い。"],
+    ["スクワラン", "Squalane", "皮脂に近い構造を持つ植物・動物由来の油分。ベタつきにくく、肌をやわらかく保つ保湿オイルとして幅広く使われる。"],
+    ["アルブチン", "Arbutin", "コケモモなどに含まれる美白有効成分（医薬部外品）。メラニンの生成に関わる酵素の働きに着目したケアに使われる。"],
+    ["トラネキサム酸", "Tranexamic Acid", "美白・肌荒れケアの有効成分として医薬部外品に配合されることが多いアミノ酸誘導体。"],
+    ["ツボクサエキス(シカ)", "Centella Asiatica Extract", "通称「シカ」。肌荒れ後のゆらぎ肌を落ち着かせる目的で韓国コスメを中心に広まった植物エキス。"],
+    ["パンテノール", "Panthenol", "ビタミンB5誘導体（プロビタミンB5）。うるおいを保持しやすくし、肌や髪のコンディショニング成分として幅広く使われる。"],
+    ["グルタチオン", "Glutathione", "アミノ酸から構成される成分。サプリメントや美容ドリンクで透明感ケアの目的で語られることが多い。"],
+    ["フラーレン", "Fullerene", "炭素原子だけで構成される球状の成分。抗酸化に着目したエイジングケア化粧品に採用されることがある。"],
+    ["ビタミンE(トコフェロール)", "Tocopherol", "抗酸化作用で知られる脂溶性ビタミン。乾燥や外部刺激から肌を守るケア製品の定番配合成分。"],
+    ["EGF/FGF(グロースファクター)", "Growth Factor", "肌の生まれ変わりに関わるとされるタンパク質由来成分。エイジングケア美容液で「幹細胞」と並んで語られることが多い。"]
+  ];
+
+  function dayIndex(len) {
+    var now = new Date();
+    var utcMidnight = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    var days = Math.floor(utcMidnight / 86400000);
+    return ((days % len) + len) % len;
+  }
+
+  var t = TERMS[dayIndex(TERMS.length)];
+  document.getElementById("w-term").textContent = t[0];
+  document.getElementById("w-en").textContent = t[1];
+  document.getElementById("w-def").textContent = t[2];
+
+  var now = new Date();
+  document.getElementById("w-date").textContent =
+    now.getFullYear() + "." + (now.getMonth() + 1) + "." + now.getDate();
+</script>
+</body>
+</html>
