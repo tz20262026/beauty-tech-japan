@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "image.pollinations.ai" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "thumbnail.image.rakuten.co.jp" },
     ],
     deviceSizes: [375, 640, 768, 1024, 1280],
     imageSizes: [32, 64, 128, 256, 400],

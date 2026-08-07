@@ -6,6 +6,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import VcSectionBeauty from "@/components/VcSectionBeauty";
 import AtSectionBeauty from "@/components/AtSectionBeauty";
+import RakutenBeautyPicks from "@/components/RakutenBeautyPicks";
 import AdUnit from "@/components/AdUnit";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
@@ -351,7 +352,7 @@ export default async function Home() {
       </div>
 
       {/* 広告セクション（記事の後ろに配置）。
-          4ASPを連続で並べると広告色が強くなるため、間に余白を取って区切る。 */}
+          複数ASPを連続で並べると広告色が強くなるため、間に余白を取って区切る。 */}
       <AffiliateSectionBeauty />
 
       <MoshimoSectionBeauty />
@@ -361,6 +362,9 @@ export default async function Home() {
 
       {/* アクセストレード枠（2026-07-14追加）。他ASPとは独立した別セクション */}
       <AtSectionBeauty limit={6} />
+
+      {/* 楽天アフィリエイト枠（2026-08-08追加）。5つ目のASPとして新規投入。他ASPとは独立した別セクション */}
+      <RakutenBeautyPicks />
     </div>
   );
 }
