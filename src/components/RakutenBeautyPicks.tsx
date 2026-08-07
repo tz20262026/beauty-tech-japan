@@ -1,8 +1,11 @@
 // 楽天アフィリエイト「おすすめ美容アイテム」ウィジェット（2026-08-08新設）
 // A8/もしも/VC/ATに次ぐ5つ目の収益源。既存の他ASPセクションのコードには一切触れないこと。
 // 商品データは threads_auto/site/new_site_products.json の "beauty" キーを移植（アフィリエイトID: 55a43f8e.d3c105e6.55a43f8f.a9af72fc）
-
-import Image from "next/image";
+//
+// 画像は next/image ではなく素の <img> タグを使用。
+// 理由：VercelチームのImage Optimizationが無料枠上限に達しており（2026-07-25確認済みの既存課題）、
+// next/image経由だと本番で 402 Payment Required になり画像が表示されない。
+// 楽天CDN側で既に300x300にリサイズ済みの軽量画像のため、追加最適化がなくても実害は小さい。
 
 /** 商品カード1件分のデータ型 */
 type RakutenProduct = {
@@ -98,12 +101,13 @@ export default function RakutenBeautyPicks({ className = "" }: RakutenBeautyPick
               className="group flex flex-col rounded-2xl border border-red-100 bg-white overflow-hidden hover:shadow-lg hover:border-red-200 hover:-translate-y-0.5 transition-all duration-200"
             >
               <div className="relative w-full aspect-square bg-gray-50 overflow-hidden">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={product.img}
                   alt={product.name}
-                  fill
-                  sizes="(max-width: 640px) 46vw, (max-width: 1024px) 30vw, 22vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="flex flex-col flex-1 p-3">
