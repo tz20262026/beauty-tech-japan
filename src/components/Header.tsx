@@ -13,6 +13,9 @@ export default function Header() {
           </span>
         </Link>
         <nav className="flex items-center gap-3 text-sm text-gray-300">
+          <Link href="/skin-type-diagnosis" className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-pink-500 text-white font-bold text-xs hover:bg-pink-400 transition-colors">
+            🧴 肌タイプ診断
+          </Link>
           <Link href="/" className="hover:text-white transition-colors hidden sm:block">記事一覧</Link>
           <Link href="/about" className="hover:text-white transition-colors hidden sm:block">About</Link>
           <Link href="/bookmarks" aria-label="保存した記事" className="hover:text-pink-400 transition-colors">

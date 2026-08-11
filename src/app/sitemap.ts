@@ -255,6 +255,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    // 2026-08-11 新規追加：肌タイプ診断ツール（滞在時間・再訪・シェア向上のためのインタラクティブ機能）
+    {
+      url: `${BASE_URL}/skin-type-diagnosis`,
+      lastModified: new Date("2026-08-11"),
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
     ...tagUrls,
     ...articleUrls,
   ];

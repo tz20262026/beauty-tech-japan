@@ -196,6 +196,12 @@ export default async function Home() {
 
             {/* CTA ボタン群 */}
             <div className="flex flex-wrap gap-3 items-center">
+              <Link
+                href="/skin-type-diagnosis"
+                className="inline-flex items-center gap-2 min-h-[44px] bg-white hover:bg-pink-50 text-pink-700 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg"
+              >
+                🧴 肌タイプ診断（無料）
+              </Link>
               <RandomArticleButton ids={articles.map((a) => a.id)} />
               <Link
                 href="/skincare-guide"
@@ -254,6 +260,16 @@ export default async function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
+              {
+                href: "/skin-type-diagnosis",
+                emoji: "🧴",
+                color: "#ec4899",
+                bg: "from-pink-50 to-fuchsia-100",
+                border: "border-pink-200",
+                label: "無料診断",
+                title: "肌タイプ診断",
+                desc: "30秒の質問であなたの肌タイプとケア方法がわかる",
+              },
               {
                 href: "/beauty-tools-guide",
                 emoji: "🤖",
