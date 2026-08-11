@@ -26,6 +26,16 @@ const SISTER_SITES: readonly SisterSite[] = [
   { name: "沖縄不動産", url: "https://realestate-ivory.vercel.app", description: "沖縄の不動産情報" },
   { name: "PlanGenius AI", url: "https://plangenius-ai.vercel.app", description: "AI事業計画書ジェネレーター" },
   { name: "KINTORE BASE", url: "https://kintore-six.vercel.app", description: "自宅筋トレ・プロテイン完全ガイド" },
+  { name: "線香花火.exe", url: "https://senkohanabi-viral.vercel.app", description: "消えるまで見届ける線香花火のブラウザ再現" },
+  { name: "カップ麺タイマー.exe", url: "https://cupnoodle-viral.vercel.app", description: "3分間、湯気を眺めるだけの美しいタイマー" },
+  { name: "金魚すくい.exe", url: "https://kingyo-sukui.vercel.app", description: "ポイが破れる本格ブラウザ金魚すくい" },
+  { name: "東京の地下鉄3D", url: "https://tokyo-metro-3d-teal.vercel.app", description: "全13路線・287駅を実寸で再現した立体模型" },
+  { name: "文字、光らせてみた。", url: "https://moji-hikaru.vercel.app", description: "名前や言葉をネオン発光で演出・画像保存" },
+  { name: "叩き割れ！ストレス発散マシーン", url: "https://stress-smash-tau.vercel.app", description: "嫌なことを書いて叩き割ってスッキリ" },
+  { name: "叩ける和太鼓", url: "https://taiko-pad.vercel.app", description: "音源不要、ブラウザで連打できる和太鼓" },
+  { name: "おみくじ、無限に引ける。", url: "https://omikuji-gacha.vercel.app", description: "大吉が出るまで何度でも引けるおみくじ" },
+  { name: "瑞慶覧達成 著者ページ", url: "https://zukeran-author.vercel.app", description: "AI活用術・沖縄文化のKindle書籍一覧" },
+  { name: "和柄の教科書ラジオ", url: "https://wagara-kyokasho-podcast.vercel.app", description: "伝統文様をめぐる無料朗読ポッドキャスト" },
 ];
 
 export default function SisterSites() {

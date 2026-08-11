@@ -75,16 +75,6 @@ const items = [
     color: "#0891b2",
   },
   {
-    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+1SBLE+38W2+5YJRM",
-    badge: "🎬 動画で映え",
-    badgeColor: "#d97706",
-    title: "Aiseesoft 動画ソフト",
-    tagline: "美容動画・ルーティン動画を簡単編集",
-    desc: "スキンケアルーティン・メイク動画をサクッと編集してSNSに投稿。AI美肌補正・フィルター機能搭載の高機能ソフト。",
-    cta: "無料版を試す →",
-    color: "#d97706",
-  },
-  {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS6+EMWN5E+4V0U+BX3J6",
     badge: "✍️ 発信で収益化",
     badgeColor: "#059669",

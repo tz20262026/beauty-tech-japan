@@ -63,18 +63,6 @@ const AFFILIATES: AffiliateItem[] = [
     ctaText: "text-violet-600",
   },
   {
-    href: "https://px.a8.net/svt/ejp?a8mat=4B5RS7+1SBLE+38W2+5YJRM",
-    emoji: "🎬",
-    label: "美容動画を簡単編集",
-    title: "Aiseesoft 動画ソフト",
-    tagline: "スキンケアルーティン動画をプロ仕上げに",
-    desc: "AI美肌補正・フィルター搭載の動画編集ソフト。メイク・スキンケア動画をサクッと編集してSNS投稿できる。",
-    cta: "無料版を試す →",
-    gradient: "from-amber-500 to-orange-600",
-    ctaBg: "bg-white",
-    ctaText: "text-amber-600",
-  },
-  {
     href: "https://px.a8.net/svt/ejp?a8mat=4B5RS6+EMWN5E+4V0U+BX3J6",
     emoji: "✍️",
     label: "美容ブログで副収入",
