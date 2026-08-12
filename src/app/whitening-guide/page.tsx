@@ -285,6 +285,12 @@ export default function WhiteningGuidePage() {
             >
               肌のくすみ対策ガイド →
             </Link>
+            <Link
+              href="/autumn-skin-reset-guide"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-sm bg-white border border-yellow-200 text-gray-700 hover:bg-yellow-50 transition-all"
+            >
+              夏ダメージ肌の秋リセットガイド →
+            </Link>
           </div>
         </section>
       </div>

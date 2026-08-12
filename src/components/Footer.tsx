@@ -113,6 +113,72 @@ export default function Footer() {
                 <Link href="/pore-care-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-rose-300">毛穴ケアガイド</Link>
               </li>
               <li>
+                <Link href="/skin-type-diagnosis" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-400">肌タイプ診断（無料）</Link>
+              </li>
+              <li>
+                <Link href="/retinol-guide" className="text-xs hover:text-pink-400 transition-colors">レチノール完全ガイド</Link>
+              </li>
+              <li>
+                <Link href="/vitamin-c-serum-guide" className="text-xs hover:text-pink-400 transition-colors">ビタミンC美容液ガイド</Link>
+              </li>
+              <li>
+                <Link href="/niacinamide-guide" className="text-xs hover:text-pink-400 transition-colors">ナイアシンアミドガイド</Link>
+              </li>
+              <li>
+                <Link href="/acne-care-guide" className="text-xs hover:text-pink-400 transition-colors">ニキビケア完全ガイド</Link>
+              </li>
+              <li>
+                <Link href="/whitening-guide" className="text-xs hover:text-pink-400 transition-colors">美白ケアガイド</Link>
+              </li>
+              <li>
+                <Link href="/sensitive-skin-guide" className="text-xs hover:text-pink-400 transition-colors">敏感肌スキンケアガイド</Link>
+              </li>
+              <li>
+                <Link href="/kusumi-care-guide" className="text-xs hover:text-pink-400 transition-colors">肌のくすみ対策ガイド</Link>
+              </li>
+              <li>
+                <Link href="/after-sun-care-guide" className="text-xs hover:text-pink-400 transition-colors">日焼け後ケアガイド</Link>
+              </li>
+              <li>
+                <Link href="/summer-makeup-guide" className="text-xs hover:text-pink-400 transition-colors">夏のメイク崩れ防止ガイド</Link>
+              </li>
+              <li>
+                <Link href="/ase-taisaku-guide" className="text-xs hover:text-pink-400 transition-colors">汗・ニオイ対策ガイド</Link>
+              </li>
+              <li>
+                <Link href="/eyeshadow-guide" className="text-xs hover:text-pink-400 transition-colors">アイシャドウガイド</Link>
+              </li>
+              <li>
+                <Link href="/bb-cc-guide" className="text-xs hover:text-pink-400 transition-colors">BB/CCクリームガイド</Link>
+              </li>
+              <li>
+                <Link href="/concealer-guide" className="text-xs hover:text-pink-400 transition-colors">コンシーラーガイド</Link>
+              </li>
+              <li>
+                <Link href="/korean-beauty-guide" className="text-xs hover:text-pink-400 transition-colors">韓国コスメガイド</Link>
+              </li>
+              <li>
+                <Link href="/beauty-devices" className="text-xs hover:text-pink-400 transition-colors">美顔器・美容家電ガイド</Link>
+              </li>
+              <li>
+                <Link href="/beauty-supplements" className="text-xs hover:text-pink-400 transition-colors">美容サプリガイド</Link>
+              </li>
+              <li>
+                <Link href="/beauty-tools-guide" className="text-xs hover:text-pink-400 transition-colors">美容ツール活用ガイド</Link>
+              </li>
+              <li>
+                <Link href="/skincare-ai-guide" className="text-xs hover:text-pink-400 transition-colors">AIスキンケアガイド</Link>
+              </li>
+              <li>
+                <Link href="/biyou-monitor-guide" className="text-xs hover:text-pink-400 transition-colors">美容モニターガイド</Link>
+              </li>
+              <li>
+                <Link href="/josei-usuge-guide" className="text-xs hover:text-pink-400 transition-colors">女性の薄毛ケアガイド</Link>
+              </li>
+              <li>
+                <Link href="/autumn-skin-reset-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-orange-300">夏ダメージ肌の秋リセットガイド</Link>
+              </li>
+              <li>
                 <Link href="/widget" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-300">無料ウィジェット配布</Link>
               </li>
               <li>

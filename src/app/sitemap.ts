@@ -262,6 +262,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.95,
     },
+    // 2026-08-13 技術SEO監査で発見：公開済み（2026-07-25公開）なのにサイトマップ登録漏れだったガイド2件を追加
+    {
+      url: `${BASE_URL}/after-sun-care-guide`,
+      lastModified: new Date("2026-07-25"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/ase-taisaku-guide`,
+      lastModified: new Date("2026-07-25"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    // 2026-08-13 新規追加：夏ダメージ肌の秋リセットガイド（季節先取りの需要ページ）
+    {
+      url: `${BASE_URL}/autumn-skin-reset-guide`,
+      lastModified: new Date("2026-08-13"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     ...tagUrls,
     ...articleUrls,
   ];

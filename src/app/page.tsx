@@ -271,6 +271,16 @@ export default async function Home() {
                 desc: "30秒の質問であなたの肌タイプとケア方法がわかる",
               },
               {
+                href: "/autumn-skin-reset-guide",
+                emoji: "🍂",
+                color: "#f97316",
+                bg: "from-orange-50 to-amber-100",
+                border: "border-orange-200",
+                label: "NEW",
+                title: "夏ダメージ肌の秋リセットガイド",
+                desc: "紫外線・乾燥・ゆらぎ肌を7日間で立て直す方法",
+              },
+              {
                 href: "/beauty-tools-guide",
                 emoji: "🤖",
                 color: "#8b5cf6",

@@ -303,6 +303,13 @@ export default function SensitiveSkinGuidePage() {
           >
             スキンケア基本ガイド →
           </Link>
+          <Link
+            href="/autumn-skin-reset-guide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}
+          >
+            夏ダメージ肌の秋リセットガイド →
+          </Link>
         </div>
       </section>
 
