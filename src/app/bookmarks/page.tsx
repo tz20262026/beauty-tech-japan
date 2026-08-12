@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { allArticles, getArticleImageUrl, getReadTime, getRelativeTime } from "@/lib/articles";
 import { Bookmark } from "lucide-react";
 
@@ -60,12 +59,13 @@ export default function BookmarksPage() {
               className="flex gap-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-800 transition-all group"
             >
               <div className="relative w-24 sm:w-32 shrink-0">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={getArticleImageUrl(article, allArticles)}
                   alt={article.title}
-                  fill
-                  className="object-cover"
-                  sizes="128px"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
               <div className="py-3 pr-4 flex flex-col justify-center min-w-0">

@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Scissors,
   Droplets,
@@ -238,12 +237,13 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                 className="flex-none w-[160px] sm:w-auto snap-start block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all group"
               >
                 <div className="relative w-full h-24 overflow-hidden">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={brokenImages.has(getArticleImageUrl(a, articles)) ? getFallbackImage(a.id) : getArticleImageUrl(a, articles)}
                     alt={a.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 160px, 200px"
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={() => handleImageError(getArticleImageUrl(a, articles))}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -358,13 +358,13 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           className="block bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-6 hover:shadow-xl transition-all duration-300 group"
         >
           <div className="relative w-full h-56 sm:h-72 lg:h-96 overflow-hidden">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={getSrc(getArticleImageUrl(featured, articles), featured.id)}
               alt={featured.title}
-              fill
-              priority
-              className="object-cover article-image"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) calc(100vw - 32px), 992px"
+              loading="eager"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover article-image"
               onError={() => handleImageError(getArticleImageUrl(featured, articles))}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -419,12 +419,13 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
             className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg hover:scale-[1.02] transition-all duration-300 group"
           >
             <div className="relative w-full h-40 overflow-hidden">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={getSrc(getArticleImageUrl(article, articles), article.id)}
                 alt={article.title}
-                fill
-                className="object-cover article-image"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover article-image"
                 onError={() => handleImageError(getArticleImageUrl(article, articles))}
               />
               {isNew(article.publishedAt) && (

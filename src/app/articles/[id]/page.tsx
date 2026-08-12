@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { ComponentPropsWithoutRef } from "react";
@@ -259,13 +258,13 @@ export default async function ArticlePage({ params }: Props) {
 
       <article className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
         <div className="relative w-full h-52 sm:h-72 overflow-hidden">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={getArticleImageUrl(article)}
             alt={article.title}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 672px"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           <div className="absolute bottom-5 left-6 right-6">
@@ -338,12 +337,13 @@ export default async function ArticlePage({ params }: Props) {
                 className="flex gap-4 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 border border-pink-100 dark:border-pink-900 rounded-xl overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all group"
               >
                 <div className="relative w-24 sm:w-32 shrink-0">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={getArticleImageUrl(related[0], allArticles)}
                     alt={related[0].title}
-                    fill
-                    className="object-cover"
-                    sizes="128px"
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
                 <div className="py-4 pr-4 flex flex-col justify-center min-w-0">
@@ -414,12 +414,13 @@ export default async function ArticlePage({ params }: Props) {
                 className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 group"
               >
                 <div className="relative w-full h-28 overflow-hidden">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={getArticleImageUrl(r, allArticles)}
                     alt={r.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 224px"
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
