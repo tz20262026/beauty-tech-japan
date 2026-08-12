@@ -1,9 +1,46 @@
 import type { MetadataRoute } from "next";
+import fs from "fs";
+import path from "path";
 import { allArticles } from "@/lib/articles";
 
 const BASE_URL = "https://beauty-tech-japan.vercel.app";
 
+// src/app 直下のディレクトリを自動走査してガイドページを検出する。
+// 手動リストだと新規ページの登録漏れが繰り返し発生していたため（2026-07-14, 2026-08-13の2回）、
+// ページを作れば自動的にサイトマップへ載る方式に切り替えて漏れを構造的に防ぐ。
+const NON_GUIDE_DIRS = new Set([
+  "api",
+  "articles",
+  "bookmarks",
+  "feed.xml",
+  "rss",
+  "tags",
+  "widget",
+  "about",
+]);
+
+function discoverGuidePages(): { slug: string; lastModified: Date }[] {
+  const appDir = path.join(process.cwd(), "src", "app");
+  const entries = fs.readdirSync(appDir, { withFileTypes: true });
+  return entries
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .filter((name) => !NON_GUIDE_DIRS.has(name) && !name.startsWith("[") && !name.startsWith("_"))
+    .filter((name) => fs.existsSync(path.join(appDir, name, "page.tsx")))
+    .map((slug) => {
+      const stat = fs.statSync(path.join(appDir, slug, "page.tsx"));
+      return { slug, lastModified: stat.mtime };
+    });
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const guideUrls = discoverGuidePages().map((g) => ({
+    url: `${BASE_URL}/${g.slug}`,
+    lastModified: g.lastModified,
+    changeFrequency: "monthly" as const,
+    priority: g.slug === "skin-type-diagnosis" ? 0.95 : 0.9,
+  }));
+
   const articleUrls = allArticles.map((article) => ({
     url: `${BASE_URL}/articles/${article.id}`,
     lastModified: new Date(article.publishedAt),
@@ -39,249 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.3,
     },
-    {
-      url: `${BASE_URL}/skincare-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/josei-usuge-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/k-beauty-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/cosme-ranking`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/haircare-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/perfume-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/nail-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/makeup-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/diet-beauty-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/mens-beauty-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/bodycare-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/eye-makeup-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/lip-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/foundation-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/anti-aging-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/serum-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/biyou-monitor-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/pore-care-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/whitening-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/bb-cc-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/concealer-guide`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/beauty-tools-guide`,
-      lastModified: new Date("2026-06-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/skincare-ai-guide`,
-      lastModified: new Date("2026-06-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/korean-beauty-guide`,
-      lastModified: new Date("2026-06-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-07-14 追加：公開済みなのにサイトマップから漏れていたガイド群
-    // （検索需要の大きい成分ガイドが未登録のままだったため流入機会を損失していた）
-    {
-      url: `${BASE_URL}/retinol-guide`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/vitamin-c-serum-guide`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/niacinamide-guide`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/eyeshadow-guide`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/beauty-devices`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/beauty-supplements`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/sunscreen-guide`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-07-14 新規追加：ニキビケア完全ガイド
-    {
-      url: `${BASE_URL}/acne-care-guide`,
-      lastModified: new Date("2026-07-14"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-07-19 新規追加：夏のメイク崩れ防止ガイド（季節需要ページ）
-    {
-      url: `${BASE_URL}/summer-makeup-guide`,
-      lastModified: new Date("2026-07-19"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-07-23 新規追加：敏感肌スキンケア完全ガイド
-    {
-      url: `${BASE_URL}/sensitive-skin-guide`,
-      lastModified: new Date("2026-07-23"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-07-23 新規追加：肌のくすみ対策完全ガイド
-    {
-      url: `${BASE_URL}/kusumi-care-guide`,
-      lastModified: new Date("2026-07-23"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-08-11 新規追加：肌タイプ診断ツール（滞在時間・再訪・シェア向上のためのインタラクティブ機能）
-    {
-      url: `${BASE_URL}/skin-type-diagnosis`,
-      lastModified: new Date("2026-08-11"),
-      changeFrequency: "monthly" as const,
-      priority: 0.95,
-    },
-    // 2026-08-13 技術SEO監査で発見：公開済み（2026-07-25公開）なのにサイトマップ登録漏れだったガイド2件を追加
-    {
-      url: `${BASE_URL}/after-sun-care-guide`,
-      lastModified: new Date("2026-07-25"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/ase-taisaku-guide`,
-      lastModified: new Date("2026-07-25"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    // 2026-08-13 新規追加：夏ダメージ肌の秋リセットガイド（季節先取りの需要ページ）
-    {
-      url: `${BASE_URL}/autumn-skin-reset-guide`,
-      lastModified: new Date("2026-08-13"),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
+    ...guideUrls,
     ...tagUrls,
     ...articleUrls,
   ];

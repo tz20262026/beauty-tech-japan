@@ -122,7 +122,7 @@ export default function AboutPage() {
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">更新頻度</h2>
         </div>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-5">
-          3日おきに自動更新。新しい美容トレンドやコスメ情報が定期的に追加されます。
+          2日おきに自動更新。新しい美容トレンドやコスメ情報が定期的に追加されます。
         </p>
         <div className="pt-4 border-t border-gray-200 dark:border-gray-700 flex items-start gap-2">
           <ExternalLink size={14} className="text-gray-600 mt-0.5 shrink-0" />

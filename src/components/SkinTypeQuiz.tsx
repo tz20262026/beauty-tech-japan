@@ -284,7 +284,7 @@ export default function SkinTypeQuiz() {
         {step > 0 && (
           <button
             onClick={handleBack}
-            className="mt-6 text-xs font-semibold text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            className="mt-6 text-xs font-semibold text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
           >
             ← 前の質問に戻る
           </button>

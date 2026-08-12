@@ -26,16 +26,17 @@ const CTA_ITEMS = [
 
 export default function MobileStickyCTA() {
   const [visible, setVisible] = useState(false);
-  const [closed, setClosed] = useState(true);
+  const [closed, setClosed] = useState(
+    () => typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "1"
+  );
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") return;
-    setClosed(false);
+    if (closed) return;
     const onScroll = () => setVisible(window.scrollY > 350);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [closed]);
 
   function handleClose() {
     sessionStorage.setItem(STORAGE_KEY, "1");

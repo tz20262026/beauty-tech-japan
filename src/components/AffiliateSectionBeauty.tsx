@@ -132,14 +132,14 @@ export default function AffiliateSectionBeauty() {
           </ul>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="flex flex-wrap justify-center gap-5">
           {items.map((item) => (
             <a
               key={item.title}
               href={item.href}
               rel="nofollow sponsored noopener"
               target="_blank"
-              className="group flex flex-col gap-3 p-5 rounded-2xl border border-pink-100 bg-white hover:shadow-lg hover:border-pink-200 hover:-translate-y-0.5 transition-all duration-200"
+              className="group flex flex-col gap-3 p-5 rounded-2xl border border-pink-100 bg-white hover:shadow-lg hover:border-pink-200 hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
             >
               <div>
                 <span

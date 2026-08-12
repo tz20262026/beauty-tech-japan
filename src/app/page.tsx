@@ -8,6 +8,7 @@ import VcSectionBeauty from "@/components/VcSectionBeauty";
 import AtSectionBeauty from "@/components/AtSectionBeauty";
 import RakutenBeautyPicks from "@/components/RakutenBeautyPicks";
 import AdUnit from "@/components/AdUnit";
+import NewsletterForm from "@/components/NewsletterForm";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
 import { allArticles as localArticles } from "@/lib/articles";
@@ -15,7 +16,7 @@ import { allArticles as localArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
   description:
-    "Allure・Byrdie・Vogue Beautyなど海外の人気美容メディアから、スキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け。3日おきに新記事を自動更新。",
+    "Allure・Byrdie・Vogue Beautyなど海外の人気美容メディアから、スキンケア・メイク・ヘアケアの最新トレンドを日本語でお届け。2日おきに新記事を自動更新。",
   alternates: { canonical: "https://beauty-tech-japan.vercel.app" },
   openGraph: {
     siteName: "Beauty Tech Japan",
@@ -132,7 +133,7 @@ export default async function Home() {
             <div className="flex flex-wrap items-center gap-2 mb-4">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium">
                 <span className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse" />
-                毎週新記事を自動更新中
+                2日おきに新記事を自動更新中
               </div>
               <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium border border-white/20">
                 🌏 海外5メディア厳選
@@ -370,6 +371,11 @@ export default async function Home() {
           まず本来の価値（記事）を届けてから広告を出す順序にする。 */}
       <div id="latest-articles" className="scroll-mt-20">
         <ArticleList articles={articles} />
+      </div>
+
+      {/* メルマガ登録（記事一覧を読んだ後の見込み客に、リード獲得導線を提示） */}
+      <div className="max-w-3xl mx-auto my-8 px-4">
+        <NewsletterForm />
       </div>
 
       {/* Google AdSense枠（未設定時は何も表示されない） */}

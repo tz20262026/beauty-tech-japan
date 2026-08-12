@@ -33,7 +33,7 @@ export async function GET() {
   <channel>
     <title>Beauty Tech Japan</title>
     <link>${SITE_URL}</link>
-    <description>海外美容・コスメ最新情報を日本語で3日おきにお届け</description>
+    <description>海外美容・コスメ最新情報を日本語で2日おきにお届け</description>
     <language>ja</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
