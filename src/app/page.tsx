@@ -60,33 +60,11 @@ export default async function Home() {
   const articles = await fetchArticles();
   const latestDate = articles.map((a) => a.publishedAt).sort().at(-1) ?? "";
 
+  // WebSite / Organization は src/app/layout.tsx で全ページ共通のJSON-LDとして
+  // 既に出力しているため、ここでは重複させずItemListのみを追加する
+  // （同一ページにWebSite/Organizationが2つ出ると構造化データが重複し、
+  // Google Rich Results Testで警告の原因になるため2026-08-18に統合）。
   const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Beauty Tech Japan",
-      url: SITE_URL,
-      description: "海外美容・コスメ最新情報を日本語でお届けするメディア",
-      inLanguage: "ja",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/?q={search_term_string}` },
-        "query-input": "required name=search_term_string",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Beauty Tech Japan",
-      url: SITE_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_URL}/icon.png`,
-        width: 512,
-        height: 512,
-      },
-      description: "海外の最新美容トレンド・コスメ・スキンケア情報をAIが日本語でお届けするメディア",
-    },
     {
       "@context": "https://schema.org",
       "@type": "ItemList",

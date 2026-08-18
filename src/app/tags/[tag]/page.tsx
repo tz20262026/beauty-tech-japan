@@ -26,6 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `#${decoded} の記事一覧`,
     description: `${decoded} に関する美容・コスメの最新情報をまとめました。`,
+    alternates: {
+      canonical: `https://beauty-tech-japan.vercel.app/tags/${encodeURIComponent(decoded)}`,
+    },
     openGraph: {
       title: `#${decoded} | Beauty Tech Japan`,
       description: `${decoded} に関する美容・コスメ最新情報`,

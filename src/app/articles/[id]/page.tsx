@@ -122,6 +122,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article.title}`,
     description: article.summary,
+    alternates: {
+      canonical: `https://beauty-tech-japan.vercel.app/articles/${article.id}`,
+    },
     openGraph: {
       title: article.title,
       description: article.summary,
