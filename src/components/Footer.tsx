@@ -116,6 +116,9 @@ export default function Footer() {
                 <Link href="/skin-type-diagnosis" className="text-xs hover:text-pink-400 transition-colors font-semibold text-pink-400">肌タイプ診断（無料）</Link>
               </li>
               <li>
+                <Link href="/menopause-check" className="text-xs hover:text-pink-400 transition-colors font-semibold text-orange-300">更年期セルフチェック（無料）</Link>
+              </li>
+              <li>
                 <Link href="/retinol-guide" className="text-xs hover:text-pink-400 transition-colors">レチノール完全ガイド</Link>
               </li>
               <li>

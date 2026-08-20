@@ -250,6 +250,16 @@ export default async function Home() {
                 desc: "30秒の質問であなたの肌タイプとケア方法がわかる",
               },
               {
+                href: "/menopause-check",
+                emoji: "🌿",
+                color: "#f97316",
+                bg: "from-pink-50 to-orange-100",
+                border: "border-pink-200",
+                label: "NEW・無料診断",
+                title: "更年期セルフチェック",
+                desc: "7つの質問で今の不調タイプとセルフケアがわかる",
+              },
+              {
                 href: "/autumn-skin-reset-guide",
                 emoji: "🍂",
                 color: "#f97316",
