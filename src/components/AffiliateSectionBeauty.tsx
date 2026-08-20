@@ -2,6 +2,28 @@
 
 const items = [
   {
+    // 2026-08-20追加・成果報酬45,000円・EPC581.89・無料カウンセリング予約orモニター応募
+    href: "https://px.a8.net/svt/ejp?a8mat=4BA9H7+912S5U+5U8M+5ZEMP",
+    badge: "💎 高単価・美容整形",
+    badgeColor: "#db2777",
+    title: "THE CLINIC バスト豊胸",
+    tagline: "形も触感も自然なバレないバストアップ",
+    desc: "自然な仕上がりにこだわる美容外科の豊胸手術。無料カウンセリング予約やモニター応募だけで成果になる高単価プログラム。",
+    cta: "無料カウンセリングを予約 →",
+    color: "#db2777",
+  },
+  {
+    // 2026-08-20追加・成果報酬35,000円・EPC741.52・無料カウンセリング予約orモニター応募
+    href: "https://px.a8.net/svt/ejp?a8mat=4BA9H7+8QCZ9U+5U8M+BWVTE",
+    badge: "💎 高単価・美容整形",
+    badgeColor: "#be123c",
+    title: "THE CLINIC 脂肪吸引",
+    tagline: "自然でどこから見ても美しい痩せ効果",
+    desc: "パーツ別に狙い撃ちできる脂肪吸引。ダウンタイムを抑えた施術で理想のボディラインへ。無料カウンセリングから始められる。",
+    cta: "無料カウンセリングを予約 →",
+    color: "#be123c",
+  },
+  {
     // 2026-07-17追加・成果報酬10,767円・医療脱毛クリニックの無料カウンセリング
     href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+B5A6IA+2NSW+BWVTE",
     badge: "✨ 医療脱毛・高単価",
