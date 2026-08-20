@@ -2,6 +2,17 @@
 
 const items = [
   {
+    // 2026-08-20追加・成果報酬購入5%・EPC244.46・LED美容機器
+    href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+AQZRZM+54TM+5YRHE",
+    badge: "💡 LED美容機器・高EPC",
+    badgeColor: "#0891b2",
+    title: "CurrentBody",
+    tagline: "イギリス発 美容機器のスペシャリスト",
+    desc: "LED光美容マスク・頭皮頭髪ケアデバイスなど、芸能人・美容家も愛用する世界的人気ブランド。クーポンコード【FANCB】で常時10%OFF。",
+    cta: "公式サイトで詳細を見る →",
+    color: "#0891b2",
+  },
+  {
     // 2026-08-20追加・成果報酬45,000円・EPC581.89・無料カウンセリング予約orモニター応募
     href: "https://px.a8.net/svt/ejp?a8mat=4BA9H7+912S5U+5U8M+5ZEMP",
     badge: "💎 高単価・美容整形",
