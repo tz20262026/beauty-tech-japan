@@ -5,7 +5,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/autumn-skin-reset-guide" },
-  title: "夏ダメージ肌の秋リセット 完全ガイド2026【紫外線・乾燥・ゆらぎからの立て直し】",
+  title: "夏ダメージ肌の秋リセット完全ガイド2026【紫外線・乾燥・ゆらぎ対策】",
   description:
     "夏に蓄積した紫外線ダメージ・エアコン乾燥・ゆらぎ肌を秋に立て直す完全ガイド。ダメージタイプ別の見分け方と対策、肌リセット7日間ルーティン、季節の変わり目にやってはいけないNG習慣まで解説。2026年最新版。",
   keywords: [

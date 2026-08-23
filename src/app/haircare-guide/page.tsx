@@ -4,7 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/haircare-guide" },
-  title: "ヘアケア完全ガイド2026年版【髪質改善・ダメージ補修・おすすめシャンプー10選】",
+  title: "ヘアケア完全ガイド2026年版【髪質改善・おすすめシャンプー10選】",
   description:
     "ヘアケアの正しい方法を2026年版で完全解説。髪質改善・ダメージ補修・乾燥対策・パサつき改善に効果的なシャンプー・トリートメント・ヘアオイルを肌タイプ別に紹介。",
   openGraph: {

@@ -36,7 +36,7 @@ export default function DarkModeToggle() {
     <button
       onClick={toggle}
       aria-label={dark ? "ライトモードに切り替え" : "ダークモードに切り替え"}
-      className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors text-sm"
+      className="relative w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors text-sm after:content-[''] after:absolute after:-inset-1.5"
     >
       {dark ? "☀️" : "🌙"}
     </button>

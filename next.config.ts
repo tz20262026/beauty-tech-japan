@@ -23,6 +23,21 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // セキュリティヘッダー。
+  // /widget/ingredient.html は他サイトへのiframe埋め込みを前提とした静的パーツなので
+  // X-Frame-Options の対象から除外し、それ以外の全ページに適用する。
+  async headers() {
+    return [
+      {
+        source: "/((?!widget/ingredient.html).*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

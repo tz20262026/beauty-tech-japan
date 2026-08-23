@@ -13,12 +13,17 @@ export default function Header() {
           </span>
         </Link>
         <nav className="flex items-center gap-3 text-sm text-gray-300">
-          <Link href="/skin-type-diagnosis" className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-pink-500 text-white font-bold text-xs hover:bg-pink-400 transition-colors">
+          <Link href="/skin-type-diagnosis" className="flex items-center gap-1 min-h-[44px] px-2.5 py-1 rounded-full bg-pink-500 text-white font-bold text-xs hover:bg-pink-400 transition-colors">
             🧴 肌タイプ診断
           </Link>
           <Link href="/" className="hover:text-white transition-colors hidden sm:block">記事一覧</Link>
           <Link href="/about" className="hover:text-white transition-colors hidden sm:block">About</Link>
-          <Link href="/bookmarks" aria-label="保存した記事" className="hover:text-pink-400 transition-colors">
+          {/* タップ領域44px確保: アイコン自体は18pxのまま、疑似要素で見た目を変えずに当たり判定だけ拡張する */}
+          <Link
+            href="/bookmarks"
+            aria-label="保存した記事"
+            className="relative flex items-center justify-center hover:text-pink-400 transition-colors after:content-[''] after:absolute after:-inset-[13px]"
+          >
             <Bookmark size={18} />
           </Link>
           <DarkModeToggle />

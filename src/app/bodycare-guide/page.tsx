@@ -4,7 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/bodycare-guide" },
-  title: "ボディケア・全身美容 完全ガイド2026年版【保湿・ボディスクラブ・脱毛・むくみ対策・おすすめアイテム】",
+  title: "ボディケア・全身美容 完全ガイド2026年版【保湿・脱毛・むくみ対策】",
   description:
     "ボディケア・全身美容の方法を2026年版で完全解説。保湿・ボディスクラブ・バスケア・脱毛・むくみ対策・セルライトケアのおすすめアイテムと方法を初心者向けに解説します。",
   openGraph: {

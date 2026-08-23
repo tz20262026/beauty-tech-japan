@@ -4,7 +4,7 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/nail-guide" },
-  title: "セルフネイルおすすめ完全ガイド2026年版【ジェルネイル・マニキュア・初心者向け道具・やり方】",
+  title: "セルフネイルおすすめ完全ガイド2026年版【道具・やり方を解説】",
   description:
     "セルフネイルの始め方を2026年版で完全解説。ジェルネイル・マニキュアの道具・やり方・デザイン・おすすめポリッシュを初心者向けに紹介。オフの方法も解説。",
   openGraph: {

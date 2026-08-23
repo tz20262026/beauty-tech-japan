@@ -4,7 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 
 export const metadata: Metadata = {
-  title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版【10ステップ＆おすすめ成分】",
+  title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版【10ステップ解説】",
   description: "韓国美容（K-Beauty）の10ステップスキンケアを日本語で完全解説。おすすめの成分・使い方・肌質別の選び方から、K-Beautyブームの秘密まで2026年最新版で網羅。",
   keywords: ["韓国コスメ おすすめ", "K-Beauty スキンケア", "韓国スキンケア 順番", "トナーパッド 使い方", "韓国コスメ 成分"],
   openGraph: {
