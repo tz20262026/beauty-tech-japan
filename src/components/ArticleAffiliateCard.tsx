@@ -11,6 +11,8 @@ type AffiliateItem = {
   gradient: string;
   ctaBg: string;
   ctaText: string;
+  /** この商材が関連するtags。一致するtagsを持つ記事では優先的に表示される(省略時は汎用枠としてどのtagsでも候補になる) */
+  tags?: string[];
 };
 
 const AFFILIATES: AffiliateItem[] = [
@@ -85,9 +87,11 @@ function hashId(id: string): number {
   return Math.abs(h);
 }
 
-function pickAffiliate(_tags: string[], articleId: string): AffiliateItem {
-  // IDハッシュで6種を均等ローテーション（記事ごとに必ず異なる広告が出る）
-  return AFFILIATES[hashId(articleId) % AFFILIATES.length];
+function pickAffiliate(tags: string[], articleId: string): AffiliateItem {
+  // tagsに一致する専用商材があればそちらを優先。無ければ全件からIDハッシュで均等ローテーション。
+  const matched = AFFILIATES.filter((a) => a.tags?.some((t) => tags.includes(t)));
+  const pool = matched.length > 0 ? matched : AFFILIATES;
+  return pool[hashId(articleId) % pool.length];
 }
 
 type Props = {
