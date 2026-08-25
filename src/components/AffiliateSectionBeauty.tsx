@@ -148,6 +148,39 @@ const items = [
     cta: "公式サイトで詳細を見る →",
     color: "#be185d",
   },
+  {
+    // 2026-08-25追加・初回購入1500円・毛穴の黒ずみ美容液
+    href: "https://px.a8.net/svt/ejp?a8mat=4BADDD+FJ24WI+5XN4+5YJRM",
+    badge: "🌸 毛穴ケア",
+    badgeColor: "#c026d3",
+    title: "CHPT.9 ポアクリアセラム",
+    tagline: "毛穴の黒ずみ・開きに特化した美容液",
+    desc: "気になる毛穴の黒ずみ・開きにアプローチする集中ケア美容液。初回購入だけで成果になるプログラム。",
+    cta: "詳細を見る →",
+    color: "#c026d3",
+  },
+  {
+    // 2026-08-25追加・初回購入1000円・EPC8.59
+    href: "https://px.a8.net/svt/ejp?a8mat=4BADDD+FK9042+5CYY+609HT",
+    badge: "🧴 オールインワン",
+    badgeColor: "#0891b2",
+    title: "ZIGENオールインワンフェイスジェル",
+    tagline: "圧倒的な保湿力なのにベタつかない",
+    desc: "化粧水・乳液・美容液・クリームこれ1つ。忙しい朝夜のスキンケアを時短しながらしっかり保湿したい人に。",
+    cta: "詳細を見る →",
+    color: "#0891b2",
+  },
+  {
+    // 2026-08-25追加・初回購入1500円・浴びる美容液シャワーカートリッジ
+    href: "https://px.a8.net/svt/ejp?a8mat=4BADDD+FKUFPU+49ES+1BMW42",
+    badge: "🚿 浴びる美容液",
+    badgeColor: "#7c3aed",
+    title: "ミラセル シャワーカートリッジ",
+    tagline: "ヒト幹細胞培養液エキス配合の塩素除去シャワー",
+    desc: "毎日のシャワーがそのままスキンケアタイムに。塩素除去+美容成分配合で、全身をやさしくケア。",
+    cta: "詳細を見る →",
+    color: "#7c3aed",
+  },
 ];
 
 export default function AffiliateSectionBeauty() {
