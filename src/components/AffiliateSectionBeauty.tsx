@@ -137,6 +137,17 @@ const items = [
     cta: "うるツヤ髪ケアを公式で見る →",
     color: "#0d9488",
   },
+  {
+    // 2026-08-25追加・成果報酬8,000円・EPC65.05・楽天ランキング1位の美顔器
+    href: "https://px.a8.net/svt/ejp?a8mat=4BADDD+FIGPAQ+5VXQ+5YJRM",
+    badge: "💎 高単価・美顔器",
+    badgeColor: "#be185d",
+    title: "BIOAESTECH デュアルオーブ ディープリフト",
+    tagline: "楽天ランキング1位獲得の高性能美顔器",
+    desc: "自宅ケアでプロ級のリフトケアを目指せる美顔器。忙しくてサロンに通えない人にも。初回購入だけで成果になる高単価プログラム。",
+    cta: "公式サイトで詳細を見る →",
+    color: "#be185d",
+  },
 ];
 
 export default function AffiliateSectionBeauty() {
