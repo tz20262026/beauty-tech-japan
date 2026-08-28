@@ -172,7 +172,13 @@ function getPickupArticles(articles: Article[], count = 5): Article[] {
   return selected;
 }
 
-export default function ArticleList({ articles }: { articles: Article[] }) {
+// ホームページからは body を空にした軽量データ＋事前計算済みの読了時間(readMinutes)が渡ってくる。
+// body が無い場合に getReadTime へフォールバックすると全記事1分になってしまうため、
+// readMinutes を優先して使う。
+type ListArticle = Article & { readMinutes?: number };
+const readMin = (a: ListArticle) => a.readMinutes ?? getReadTime(a.body);
+
+export default function ArticleList({ articles }: { articles: ListArticle[] }) {
   const [search, setSearch] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [sort, setSort] = useState<SortKey>("new");
@@ -206,7 +212,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
 
     if (sort === "new") result = [...result].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
     else if (sort === "old") result = [...result].sort((a, b) => a.publishedAt.localeCompare(b.publishedAt));
-    else if (sort === "short") result = [...result].sort((a, b) => getReadTime(a.body) - getReadTime(b.body));
+    else if (sort === "short") result = [...result].sort((a, b) => readMin(a) - readMin(b));
 
     return result;
   }, [articles, search, selectedTag, sort]);
@@ -274,6 +280,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
           <input
             type="text"
             placeholder="キーワードで検索..."
+            aria-label="記事をキーワードで検索"
             value={search}
             onChange={(e) => { setSearch(e.target.value); resetPage(); }}
             className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white dark:bg-gray-800 dark:text-white"
@@ -403,7 +410,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                 ))}
               </div>
               <span className="text-xs text-gray-600 dark:text-gray-300">
-                {getReadTime(featured.body)}分で読める
+                {readMin(featured)}分で読める
               </span>
             </div>
           </div>
@@ -452,7 +459,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
                 <span>
                   {getRelativeTime(article.publishedAt)} · {article.source}
                 </span>
-                <span>{getReadTime(article.body)}分</span>
+                <span>{readMin(article)}分</span>
               </div>
               <h2 className="text-sm font-semibold text-gray-900 dark:text-white leading-snug mb-1.5 group-hover:text-pink-600 transition-colors line-clamp-2">
                 {article.title}

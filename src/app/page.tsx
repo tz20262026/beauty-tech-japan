@@ -11,7 +11,7 @@ import AdUnit from "@/components/AdUnit";
 import NewsletterForm from "@/components/NewsletterForm";
 
 import { getAllArticles, adaptMicroCMSArticle } from "@/lib/microcms";
-import { allArticles as localArticles } from "@/lib/articles";
+import { allArticles as localArticles, getReadTime } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
@@ -59,6 +59,15 @@ async function fetchArticles() {
 export default async function Home() {
   const articles = await fetchArticles();
   const latestDate = articles.map((a) => a.publishedAt).sort().at(-1) ?? "";
+
+  // 記事一覧（クライアントコンポーネント）へは本文を渡さない。
+  // 281記事分の body をHTML/RSCペイロードに載せると数百KB単位で肥大化するため、
+  // 読了時間だけサーバー側で計算し、body は空文字にして軽量化する。
+  const listArticles = articles.map((a) => ({
+    ...a,
+    body: "",
+    readMinutes: getReadTime(a.body),
+  }));
 
   // WebSite / Organization は src/app/layout.tsx で全ページ共通のJSON-LDとして
   // 既に出力しているため、ここでは重複させずItemListのみを追加する
@@ -358,7 +367,7 @@ export default async function Home() {
           広告が上に集中していると「記事を読みに来た人」が離脱するため、
           まず本来の価値（記事）を届けてから広告を出す順序にする。 */}
       <div id="latest-articles" className="scroll-mt-20">
-        <ArticleList articles={articles} />
+        <ArticleList articles={listArticles} />
       </div>
 
       {/* メルマガ登録（記事一覧を読んだ後の見込み客に、リード獲得導線を提示） */}

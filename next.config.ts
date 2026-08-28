@@ -34,6 +34,12 @@ const nextConfig: NextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          // Vercel は常時HTTPSのためHSTSを有効化（preload込み・2年）
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          // カメラ/マイク/位置情報は当サイトで未使用のため明示的に無効化。
+          // 広告の関心事API(browsing-topics)はAdSense収益に影響するため制限しない。
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+          { key: "X-DNS-Prefetch-Control", value: "on" },
         ],
       },
     ];

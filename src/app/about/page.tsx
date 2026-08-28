@@ -2,23 +2,49 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Globe, Cpu, BookOpen, Tag, RefreshCw, ExternalLink } from "lucide-react";
 
+// レイアウトの title.template が「%s | Beauty Tech Japan」のため、
+// ここではブランド名を重ねず「サイトについて」始まりの短いタイトルにする。
+const ABOUT_TITLE = "サイトについて｜海外美容メディアの最新情報を日本語で";
+const ABOUT_DESC = "Beauty Tech Japan について — Allure・Byrdie・Vogue Beautyなど海外の美容・コスメトレンドを自動収集し、AIが日本語に要約・翻訳してお届けするニュースメディアです。";
+
 export const metadata: Metadata = {
-  title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
-  description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
+  title: ABOUT_TITLE,
+  description: ABOUT_DESC,
   openGraph: {
     images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
-    title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
-    description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
+    title: ABOUT_TITLE,
+    description: ABOUT_DESC,
     type: "website",
   },
   twitter: {
     images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
-    title: "Beauty Tech Japanとは｜海外美容メディアの最新情報を日本語で",
-    description: "Beauty Tech Japan について — 海外美容・コスメトレンドを自動収集して日本語でお届けするサービスの紹介",
+    title: ABOUT_TITLE,
+    description: ABOUT_DESC,
   },
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/about" },
 };
+
+// AboutPage + パンくずの構造化データ（AI検索・リッチリザルト向け）
+const aboutJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "Beauty Tech Japan とは",
+    url: "https://beauty-tech-japan.vercel.app/about",
+    description: ABOUT_DESC,
+    inLanguage: "ja",
+    isPartOf: { "@id": "https://beauty-tech-japan.vercel.app/#website" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: "https://beauty-tech-japan.vercel.app" },
+      { "@type": "ListItem", position: 2, name: "サイトについて", item: "https://beauty-tech-japan.vercel.app/about" },
+    ],
+  },
+];
 
 const MEDIA_LIST = [
   "Allure", "Byrdie", "Vogue Beauty", "Harper's Bazaar",
@@ -35,6 +61,10 @@ const STEPS = [
 export default function AboutPage() {
   return (
     <div className="max-w-2xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <div className="mb-6">
         <Link
           href="/"
@@ -68,7 +98,7 @@ export default function AboutPage() {
             </div>
             <div className="w-px h-10 bg-white/30" />
             <div className="text-center">
-              <div className="text-2xl font-bold">3日</div>
+              <div className="text-2xl font-bold">2日</div>
               <div className="text-xs text-white/70">おきに更新</div>
             </div>
             <div className="w-px h-10 bg-white/30" />
