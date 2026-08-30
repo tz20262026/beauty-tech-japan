@@ -240,14 +240,13 @@ export default async function Home() {
       </div>
 
       {/* 人気ガイドリンクセクション */}
-      <section className="py-10 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">人気ガイド記事</h2>
-            <p className="text-gray-600 text-sm">スキンケア・コスメ・美容テックの基礎から最新トレンドまで</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
+      <section className="py-10">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">人気ガイド記事</h2>
+          <p className="text-gray-600 dark:text-gray-300 text-sm">スキンケア・コスメ・美容テックの基礎から最新トレンドまで</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
               {
                 href: "/skin-type-diagnosis",
                 emoji: "🧴",
@@ -342,7 +341,7 @@ export default async function Home() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`group flex gap-4 items-start p-5 rounded-2xl bg-gradient-to-br ${item.bg} border ${item.border} hover:shadow-md hover:-translate-y-0.5 transition-all duration-200`}
+                className={`group flex gap-4 items-start p-5 rounded-2xl bg-gradient-to-br ${item.bg} border ${item.border} hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 dark:bg-none dark:bg-gray-800/60 dark:border-gray-700 dark:hover:bg-gray-800`}
               >
                 <span className="text-3xl flex-shrink-0">{item.emoji}</span>
                 <div className="flex-1 min-w-0">
@@ -354,12 +353,11 @@ export default async function Home() {
                       {item.label}
                     </span>
                   </div>
-                  <p className="font-black text-gray-900 text-sm leading-tight mb-0.5">{item.title}</p>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="font-black text-gray-900 dark:text-white text-sm leading-tight mb-0.5">{item.title}</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">{item.desc}</p>
                 </div>
               </Link>
             ))}
-          </div>
         </div>
       </section>
 

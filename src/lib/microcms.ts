@@ -1,18 +1,18 @@
 /**
- * microCMS ??????
- * Read API(???????)? Write API(????)???????
+ * microCMS クライアント
+ * Read API（記事の取得）と Write API（記事の作成）をまとめて扱う。
  */
 
 const SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
 const API_KEY = process.env.MICROCMS_API_KEY ?? "";
 const ENDPOINT = process.env.MICROCMS_ENDPOINT ?? "news";
 
-// ??????????????????????????????
+// 環境変数が未設定なら microCMS 連携は無効（ローカルデータにフォールバック）
 const IS_CONFIGURED = SERVICE_DOMAIN !== "" && API_KEY !== "";
 
 const BASE_URL = `https://${SERVICE_DOMAIN}.microcms.io/api/v1`;
 
-// ??? ??? ?????????????????????????????????????????????
+// ─── 型定義 ───────────────────────────────────────────────
 
 export type MicroCMSImage = {
   url: string;
@@ -31,7 +31,7 @@ export type MicroCMSArticle = {
   content: string;
   source_name: string;
   source_url: string;
-  tags: string; // ??????????
+  tags: string; // カンマ区切り文字列
   eyecatch?: MicroCMSImage;
 };
 
@@ -49,12 +49,12 @@ export type ArticleWritePayload = {
   source_name: string;
   source_url: string;
   tags: string;
-  eyecatch?: string; // ??URL???????????????
+  eyecatch?: string; // 画像URL（アップロード済みメディアの参照）
 };
 
-// ??? Read API ????????????????????????????????????????????
+// ─── Read API ─────────────────────────────────────────────
 
-/** ???????(???????100??publishedAt???) */
+/** 記事一覧を取得（デフォルトは最大100件・publishedAt降順） */
 export async function getArticles(options?: {
   limit?: number;
   offset?: number;
@@ -72,7 +72,7 @@ export async function getArticles(options?: {
 
   const res = await fetch(`${BASE_URL}/${ENDPOINT}?${params}`, {
     headers: { "X-MICROCMS-API-KEY": API_KEY },
-    next: { revalidate: 300 }, // 5??????
+    next: { revalidate: 300 }, // 5分キャッシュ
   });
 
   if (!res.ok) {
@@ -81,7 +81,7 @@ export async function getArticles(options?: {
   return res.json();
 }
 
-/** ID????1??? */
+/** ID指定で1件取得 */
 export async function getArticleById(id: string): Promise<MicroCMSArticle> {
   if (!IS_CONFIGURED) {
     throw new Error("microCMS is not configured");
@@ -97,7 +97,7 @@ export async function getArticleById(id: string): Promise<MicroCMSArticle> {
   return res.json();
 }
 
-/** ??????(?????????????) */
+/** 全記事を取得（ページングして全件まとめて返す） */
 export async function getAllArticles(): Promise<MicroCMSArticle[]> {
   const first = await getArticles({ limit: 1 });
   const total = first.totalCount;
@@ -110,9 +110,9 @@ export async function getAllArticles(): Promise<MicroCMSArticle[]> {
   return results.flatMap((r) => r.contents);
 }
 
-// ??? Write API ???????????????????????????????????????????
+// ─── Write API ────────────────────────────────────────────
 
-/** ????? microCMS ????? */
+/** 新規記事を microCMS に作成する */
 export async function createArticle(
   payload: ArticleWritePayload
 ): Promise<{ id: string }> {
@@ -132,7 +132,7 @@ export async function createArticle(
   return res.json();
 }
 
-/** microCMS ? Article ???? Article ??????????? */
+/** microCMS の記事を当サイト共通の Article 形へ変換する */
 export function adaptMicroCMSArticle(a: MicroCMSArticle) {
   return {
     id: a.id,
@@ -143,7 +143,7 @@ export function adaptMicroCMSArticle(a: MicroCMSArticle) {
     sourceUrl: a.source_url,
     tags: a.tags ? a.tags.split(",").map((t) => t.trim()).filter(Boolean) : [],
     publishedAt: a.publishedAt.slice(0, 10),
-    // eyecatch ????????????????????Unsplash ??????
+    // eyecatch は未使用。画像は getArticleImageUrl 側で Unsplash プールから補完する
     imageUrl: undefined as undefined,
   };
 }

@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ページが見つかりません",
+  // 404ページは検索結果に出す価値がないためインデックス対象から除外する
+  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {
@@ -32,6 +34,25 @@ export default function NotFound() {
         >
           Beauty Tech Japan とは
         </Link>
+      </div>
+
+      {/* 人気ガイドへの回遊導線。行き止まりにせず、ユーザーとクローラーを実在ページへ誘導する */}
+      <div className="mt-10">
+        <p className="text-xs text-gray-400 mb-2">人気のガイド</p>
+        <div className="flex flex-wrap gap-2 justify-center">
+          <Link href="/skin-type-diagnosis" className="text-xs text-gray-500 dark:text-gray-400 hover:text-pink-500 transition-colors">
+            肌タイプ診断
+          </Link>
+          <Link href="/skincare-guide" className="text-xs text-gray-500 dark:text-gray-400 hover:text-pink-500 transition-colors">
+            スキンケア完全ガイド
+          </Link>
+          <Link href="/korean-beauty-guide" className="text-xs text-gray-500 dark:text-gray-400 hover:text-pink-500 transition-colors">
+            韓国コスメガイド
+          </Link>
+          <Link href="/haircare-guide" className="text-xs text-gray-500 dark:text-gray-400 hover:text-pink-500 transition-colors">
+            ヘアケア完全ガイド
+          </Link>
+        </div>
       </div>
     </div>
   );

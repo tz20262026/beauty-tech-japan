@@ -1,6 +1,6 @@
 import extraArticlesData from "@/data/extra_articles.json";
 
-// ????????Unsplash?????(????)
+// 記事画像のフォールバック用 Unsplash 画像プール（美容関連の汎用ビジュアル）
 const BEAUTY_IMAGE_POOL = [
   "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80&fit=crop",
   "https://images.unsplash.com/photo-1571781565036-d3f759be73e4?w=800&q=80&fit=crop",
@@ -53,7 +53,7 @@ const BEAUTY_IMAGE_POOL = [
   "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&q=80&fit=crop",
 ];
 
-// djb2??????(????)
+// djb2 ハッシュ（記事IDから決定的に画像を選ぶための簡易ハッシュ）
 function hashId(id: string): number {
   let hash = 5381;
   for (let i = 0; i < id.length; i++) {
@@ -67,7 +67,7 @@ export function getArticleImageUrl(
   article: { id?: string; imageUrl?: string; tags?: string[] },
   allArticles?: { id?: string }[]
 ): string {
-  // ?????undefined?null ?????????????
+  // imageUrl が undefined / null / 空文字のときはフォールバック画像を使う
   if (article.imageUrl && article.imageUrl.trim() !== "") return article.imageUrl;
   if (allArticles && article.id) {
     const idx = allArticles.findIndex((a) => a.id === article.id);

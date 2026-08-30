@@ -26,24 +26,27 @@ const AI_CRAWLERS = [
 
 export default function robots(): MetadataRoute.Robots {
   return {
+    // /api 全体をブロックすると、OGP画像エンドポイント /api/og まで弾かれ
+    // SNSシェア時のカード画像が表示されなくなる。ブロックは自動実行系の
+    // /api/cron/ ・ /api/generate/ に限定し、/api/og はクロール可能なまま残す。
     rules: [
       // 通常の検索エンジン（既存ルールを維持）
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/cron/", "/api/generate/"],
       },
       // Bing：Copilot経由の流入があるため明示的に許可
       {
         userAgent: "Bingbot",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/cron/", "/api/generate/"],
       },
       // AIクローラーを名指しで許可（GEO対策）
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/cron/", "/api/generate/"],
       })),
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,

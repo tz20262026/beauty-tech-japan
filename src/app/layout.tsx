@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -39,6 +39,13 @@ export const metadata: Metadata = {
       "application/rss+xml": "https://beauty-tech-japan.vercel.app/feed.xml",
     },
   },
+  manifest: "/manifest.webmanifest",
+  // ブラウザ／iOSに明示的にファビコンとホーム画面アイコンを渡す（自動検出頼みにしない）
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: { url: "/icon.png", sizes: "512x512", type: "image/png" },
+  },
   openGraph: {
     siteName: "Beauty Tech Japan",
     title: "Beauty Tech Japan — 海外美容・コスメ最新情報を日本語で",
@@ -59,6 +66,16 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+};
+
+// モバイルのブラウザUI（アドレスバー等）の配色をブランドカラーに合わせる。
+// ライト時はピンク、ダーク時はサイト背景（gray-950相当）に追従させる。
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ec4899" },
+    { media: "(prefers-color-scheme: dark)", color: "#030712" },
+  ],
 };
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -105,6 +122,10 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${notoSansJP.variable} h-full`} suppressHydrationWarning>
       <head>
+        {/* 記事サムネイルは全て images.unsplash.com から素の<img>で読み込むため、
+            事前にコネクションを確立してファーストビュー画像の表示を早める */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(beautyJsonLd) }}
