@@ -14,4 +14,5 @@
 ## 既知の注意点
 - 記事・関連記事・タグ画像は意図的に`<img>`タグ使用(next/imageだとVercel無料枠の画像最適化上限で402エラーになるための既知の回避策)。next/imageに戻さないこと
 - `/widget`ページは他サイトへのiframe埋め込み機能があるため、X-Frame-Options等のセキュリティヘッダーを追加する際は慎重に設計する(安易に追加すると埋め込み機能を壊す)
-- 未着手の宿題(Medium/Low): セキュリティヘッダー未設定、一部titleタグが60字超
+- セキュリティヘッダー(X-Content-Type-Options/X-Frame-Options/Referrer-Policy/HSTS等)は`next.config.ts`の`headers()`で設定済み(`/widget/ingredient.html`は埋め込み用のため対象外)
+- 一部の常時ダーク背景ガイドページ(bg-gray-950固定)で本文にtext-gray-400/500/600が使われコントラスト不足になるバグが繰り返し発生しやすい。新規ガイドページ作成時は本文にtext-gray-300以上の明るさを使うこと(2026-09-17に14ページ・87箇所を修正済み)
