@@ -260,7 +260,7 @@ export default function CosmeRankingPage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【20代・30代・敏感肌・厳選12選】</span>
           </h1>
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className="text-gray-300 text-sm leading-relaxed">
             ドラッグストアで買える1,000円〜3,000円のプチプラコスメを徹底比較。<br />
             肌タイプ別・カテゴリ別に厳選しました。
           </p>
@@ -293,8 +293,8 @@ export default function CosmeRankingPage() {
                     {item.brand} {item.name}
                   </h3>
                   <p className="text-pink-400 text-xs font-bold mt-0.5">{item.price}</p>
-                  <p className="text-gray-600 text-xs mt-1 leading-relaxed">{item.merit}</p>
-                  <p className="text-gray-600 text-xs mt-0.5">向き: {item.skinType}</p>
+                  <p className="text-gray-300 text-xs mt-1 leading-relaxed">{item.merit}</p>
+                  <p className="text-gray-300 text-xs mt-0.5">向き: {item.skinType}</p>
                 </div>
               </div>
             ))}
@@ -322,7 +322,7 @@ export default function CosmeRankingPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-gray-600 text-xs leading-relaxed">{g.tips}</p>
+                <p className="text-gray-300 text-xs leading-relaxed">{g.tips}</p>
               </div>
             ))}
           </div>
@@ -353,7 +353,7 @@ export default function CosmeRankingPage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

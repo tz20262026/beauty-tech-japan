@@ -149,7 +149,7 @@ export default function NailGuidePage() {
             <br />
             <span className="text-xl text-gray-300 font-bold">【ジェル・マニキュア・初心者道具・やり方】</span>
           </h1>
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className="text-gray-300 text-sm leading-relaxed">
             ジェルネイル・マニキュアの始め方・道具・デザインを<br />
             2026年版で初心者向けに完全解説します。
           </p>
@@ -172,11 +172,11 @@ export default function NailGuidePage() {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3 text-xs">
                   <div className="bg-gray-800 rounded px-2.5 py-1.5">
-                    <span className="text-gray-600 block mb-0.5">⏳ 持ち</span>
+                    <span className="text-gray-300 block mb-0.5">⏳ 持ち</span>
                     <span className="text-white">{n.duration}</span>
                   </div>
                   <div className="bg-gray-800 rounded px-2.5 py-1.5">
-                    <span className="text-gray-600 block mb-0.5">💰 コスト</span>
+                    <span className="text-gray-300 block mb-0.5">💰 コスト</span>
                     <span className="text-white">{n.cost}</span>
                   </div>
                 </div>
@@ -184,13 +184,13 @@ export default function NailGuidePage() {
                   <div>
                     <p className="text-green-400 text-xs font-bold mb-1">✅ メリット</p>
                     <ul className="space-y-0.5">
-                      {n.pros.map((p, j) => <li key={j} className="text-gray-600 text-xs">・{p}</li>)}
+                      {n.pros.map((p, j) => <li key={j} className="text-gray-300 text-xs">・{p}</li>)}
                     </ul>
                   </div>
                   <div>
                     <p className="text-red-400 text-xs font-bold mb-1">❌ デメリット</p>
                     <ul className="space-y-0.5">
-                      {n.cons.map((c, j) => <li key={j} className="text-gray-600 text-xs">・{c}</li>)}
+                      {n.cons.map((c, j) => <li key={j} className="text-gray-300 text-xs">・{c}</li>)}
                     </ul>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default function NailGuidePage() {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm mb-1">{s.action}</p>
-                  <p className="text-gray-600 text-xs leading-relaxed">{s.detail}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed">{s.detail}</p>
                 </div>
               </div>
             ))}
@@ -248,7 +248,7 @@ export default function NailGuidePage() {
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-gray-900 border border-gray-700 rounded-xl p-4">
                 <p className="text-white font-bold text-sm mb-2">Q. {faq.q}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

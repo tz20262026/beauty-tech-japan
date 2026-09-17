@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: ["コンシーラー 選び方", "クマ 隠し方", "コンシーラー 使い方", "シミ コンシーラー", "ニキビ跡 カバー", "コンシーラー 色選び"],
   openGraph: {
     images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
-    title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】| Beauty Tech Japan",
+    title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】",
     description: "コンシーラーの種類・悩み別の選び方・正しい塗り方・色選びのコツまで徹底解説。クマ・シミ・ニキビ跡を自然にカバー。",
     type: "article",
     locale: "ja_JP",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     images: ["https://beauty-tech-japan.vercel.app/api/og"],
     card: "summary_large_image",
-    title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】| Beauty Tech Japan",
+    title: "コンシーラー完全ガイド2026年版【悩み別選び方・クマ・シミ・ニキビ跡の隠し方】",
     description: "コンシーラーの種類・悩み別の選び方・正しい塗り方・色選びのコツまで徹底解説。クマ・シミ・ニキビ跡を自然にカバー。",
   },
 };

@@ -153,7 +153,7 @@ export default function CurrentBodyScalpCareGuidePage() {
             <br />
             そして「かぶるだけ」で続けられるLED頭皮・頭髪ケアデバイスまで。
           </p>
-          <p className="text-gray-400 text-xs mt-3">公開日：{PUBLISHED}</p>
+          <p className="text-gray-300 text-xs mt-3">公開日：{PUBLISHED}</p>
         </div>
 
         {/* 導入 */}
@@ -231,7 +231,7 @@ export default function CurrentBodyScalpCareGuidePage() {
               <tbody>
                 {DEVICE_SPECS.map((row, i) => (
                   <tr key={i} className="border-b border-gray-800">
-                    <th className="text-left align-top py-2.5 pr-3 text-gray-400 font-bold whitespace-nowrap w-24">
+                    <th className="text-left align-top py-2.5 pr-3 text-gray-300 font-bold whitespace-nowrap w-24">
                       {row.label}
                     </th>
                     <td className="py-2.5 text-gray-300 leading-7">{row.value}</td>
@@ -262,7 +262,7 @@ export default function CurrentBodyScalpCareGuidePage() {
             >
               カレントボディ LED頭皮・頭髪ケアデバイスを見る →
             </a>
-            <p className="text-gray-500 text-[11px] mt-3">
+            <p className="text-gray-300 text-[11px] mt-3">
               ※本記事はアフィリエイトプログラム（A8.net）を利用しており、リンク経由の購入で報酬を得ることがあります。
             </p>
           </div>
