@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/serum-guide" },
@@ -146,6 +147,7 @@ export default function SerumGuidePage() {
           }),
         }}
       />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "美容液の選び方ガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">

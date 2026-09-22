@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "ビタミンC美容液のおすすめ選び方2026年【シミ・毛穴・美白に効果的な使い方】",
@@ -161,6 +162,7 @@ export default function VitaminCSerumGuidePage() {
           }),
         }}
       />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "ビタミンC美容液ガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">

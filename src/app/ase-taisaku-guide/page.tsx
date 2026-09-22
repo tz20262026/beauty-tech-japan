@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/ase-taisaku-guide" },
@@ -233,6 +234,7 @@ export default function AseTaisakuGuidePage() {
           }),
         }}
       />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "汗・ニオイ対策ガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">

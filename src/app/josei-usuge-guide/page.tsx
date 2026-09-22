@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AtSectionBeauty from "@/components/AtSectionBeauty";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "産後・更年期の抜け毛が気になったら【2026年版 女性の薄毛対策ガイド】",
@@ -65,6 +66,7 @@ export default function JoseiUsugeGuidePage() {
         dateModified: "2026-07-22",
         url: "https://beauty-tech-japan.vercel.app/josei-usuge-guide",
       })}} />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "女性の薄毛対策ガイド" }]} />
 
       <section className="space-y-4">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-pink-50 text-pink-600 border border-pink-200">

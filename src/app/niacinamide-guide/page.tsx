@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "ナイアシンアミドの効果・選び方完全ガイド2026年【毛穴・美白・ニキビ跡に】",
@@ -162,6 +163,8 @@ export default function NiacinamideGuidePage() {
           }),
         }}
       />
+
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "ナイアシンアミドガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">

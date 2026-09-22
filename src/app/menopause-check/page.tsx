@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MenopauseCheckQuiz from "@/components/MenopauseCheckQuiz";
+import Breadcrumb from "@/components/Breadcrumb";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -78,6 +79,7 @@ export default function MenopauseCheckPage() {
       ))}
 
       <div className="max-w-2xl mx-auto px-4 py-10 space-y-12">
+        <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "更年期セルフチェック" }]} />
         {/* ヘッダー */}
         <section className="space-y-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-pink-100 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 border border-pink-200 dark:border-pink-900">

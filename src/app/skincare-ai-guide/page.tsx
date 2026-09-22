@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "AIスキンケア完全ガイド2026【肌診断・おすすめアプリ】",
@@ -228,6 +229,7 @@ export default function SkincareAiGuidePage() {
       ))}
 
       <div className="max-w-3xl mx-auto px-4 py-10 space-y-14">
+        <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "AIスキンケアガイド" }]} />
         {/* ヘッダー */}
         <section className="space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-blue-100 text-blue-700 border border-blue-200">

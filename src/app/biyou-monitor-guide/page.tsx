@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/biyou-monitor-guide" },
@@ -86,6 +87,7 @@ export default function BiyouMonitorGuidePage() {
           }),
         }}
       />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "美容モニターガイド" }]} />
 
       {/* ヒーロー */}
       <header className="text-center space-y-4">

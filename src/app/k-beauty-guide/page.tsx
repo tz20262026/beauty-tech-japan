@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "韓国コスメ・K-Beautyルーティン完全ガイド2026年版【10ステップ解説】",
@@ -130,6 +131,8 @@ export default function KBeautyGuidePage() {
       })}} />
 
       <div className="max-w-3xl mx-auto px-4 py-10 space-y-14">
+        <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "K-Beautyルーティンガイド" }]} />
+
         {/* ヘッダー */}
         <section className="space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-pink-100 text-pink-700 border border-pink-200">

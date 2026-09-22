@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/mens-beauty-guide" },
@@ -129,6 +130,7 @@ export default function MensBeautyGuidePage() {
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
+        <Breadcrumb variant="dark" items={[{ name: "ホーム", href: "/" }, { name: "メンズ美容ガイド" }]} />
 
         {/* ヒーロー */}
         <div className="text-center mb-12">

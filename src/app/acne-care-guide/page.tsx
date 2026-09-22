@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const PAGE_URL = "https://beauty-tech-japan.vercel.app/acne-care-guide";
 const PUBLISHED_AT = "2026-07-14";
@@ -244,6 +245,7 @@ export default function AcneCareGuidePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "ニキビケアガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">

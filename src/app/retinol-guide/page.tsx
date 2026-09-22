@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年【皮膚科医監修】",
@@ -160,6 +161,7 @@ export default function RetinolGuidePage() {
           }),
         }}
       />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "レチノールガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">

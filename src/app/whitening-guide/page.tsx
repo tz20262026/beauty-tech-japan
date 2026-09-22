@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/whitening-guide" },
@@ -133,6 +134,7 @@ export default function WhiteningGuidePage() {
             }),
           }}
         />
+        <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "美白ケアガイド" }]} />
 
         {/* ヘッダー */}
         <section className="space-y-4">

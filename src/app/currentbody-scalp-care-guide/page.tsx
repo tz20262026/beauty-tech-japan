@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/currentbody-scalp-care-guide" },
@@ -136,6 +137,8 @@ export default function CurrentBodyScalpCareGuidePage() {
       <img src={CB_PIXEL} width={1} height={1} alt="" style={{ position: "absolute", opacity: 0 }} />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
+        <Breadcrumb variant="dark" items={[{ name: "ホーム", href: "/" }, { name: "頭皮ケアガイド" }]} />
+
         {/* ヒーロー */}
         <div className="text-center mb-10">
           <span className="inline-block text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full px-4 py-1 mb-4">

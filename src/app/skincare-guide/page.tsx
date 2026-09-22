@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "2026年版 スキンケアの基本ルーティン完全ガイド【朝晩の順番・選び方】",
@@ -104,6 +105,7 @@ export default function SkincareGuidePage() {
           text: s.point,
         })),
       })}} />
+      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "スキンケア完全ガイド" }]} />
 
       {/* ヘッダー */}
       <section className="space-y-4">
