@@ -23,7 +23,8 @@ export default function AdUnit({ slot }: { slot: string }) {
   if (!clientId) return null;
 
   return (
-    <div className="overflow-hidden">
+    // min-height を確保し、広告読み込み前後でのレイアウトシフト（CLS悪化）を防ぐ
+    <div className="overflow-hidden min-h-[100px]">
       <ins
         className="adsbygoogle block"
         data-ad-client={clientId}

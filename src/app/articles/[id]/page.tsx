@@ -396,6 +396,21 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </article>
 
+      {/* 無料診断ツールへの導線（記事を読んだ後の見込み客を診断ツールへ誘導し、
+          診断結果ページ側のアフィリエイトCTAへの接触機会を増やす） */}
+      <div className="mt-8 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 p-6 sm:p-8 text-center">
+        <p className="text-white/90 text-xs font-bold mb-2">🧴 無料・30秒でわかる</p>
+        <h2 className="text-white text-lg sm:text-xl font-black mb-4">
+          あなたの肌タイプ、正確に把握できていますか？
+        </h2>
+        <Link
+          href="/skin-type-diagnosis"
+          className="inline-flex items-center gap-2 min-h-[44px] px-6 py-3 rounded-xl font-black text-pink-700 text-sm bg-white hover:opacity-90 transition-all"
+        >
+          肌タイプ診断をやってみる →
+        </Link>
+      </div>
+
       {/* おすすめサービス（記事内のみ表示・メインページには非表示） */}
       <div className="mt-8">
         <AffiliateSectionBeauty />

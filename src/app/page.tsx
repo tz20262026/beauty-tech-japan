@@ -56,7 +56,10 @@ async function fetchArticles() {
   return localArticles;
 }
 
-export default async function Home() {
+type HomeProps = { searchParams: Promise<{ thanks?: string }> };
+
+export default async function Home({ searchParams }: HomeProps) {
+  const { thanks } = await searchParams;
   const articles = await fetchArticles();
   const latestDate = articles.map((a) => a.publishedAt).sort().at(-1) ?? "";
 
@@ -95,6 +98,14 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* メルマガ登録完了メッセージ（NewsletterFormのformsubmit.co送信後リダイレクト先） */}
+      {thanks === "1" && (
+        <div className="mb-6 flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 px-5 py-4 text-sm font-bold text-green-700 dark:border-green-900 dark:bg-green-950/30 dark:text-green-400">
+          <span className="text-lg">✅</span>
+          メルマガ登録が完了しました。最新の美容トレンドをお届けします！
+        </div>
+      )}
 
       {/* ヒーローバナー */}
       <div className="relative overflow-hidden rounded-2xl mb-8 bg-gradient-to-br from-pink-500 via-rose-400 to-purple-600 min-h-[220px] sm:min-h-[340px] lg:min-h-[460px]">
