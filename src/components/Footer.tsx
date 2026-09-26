@@ -179,6 +179,9 @@ export default function Footer() {
                 <Link href="/josei-usuge-guide" className="text-xs hover:text-pink-400 transition-colors">女性の薄毛ケアガイド</Link>
               </li>
               <li>
+                <Link href="/currentbody-scalp-care-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-cyan-300">40〜50代男性の頭皮ケアガイド</Link>
+              </li>
+              <li>
                 <Link href="/autumn-skin-reset-guide" className="text-xs hover:text-pink-400 transition-colors font-semibold text-orange-300">夏ダメージ肌の秋リセットガイド</Link>
               </li>
               <li>

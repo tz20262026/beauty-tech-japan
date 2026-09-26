@@ -214,6 +214,22 @@ export default function MensBeautyGuidePage() {
           </div>
         </section>
 
+        {/* 関連：40〜50代向け頭皮ケアガイドへの導線 */}
+        <section className="mb-12 bg-gradient-to-r from-cyan-900/20 to-sky-900/20 border border-cyan-500/30 rounded-2xl p-6 text-center">
+          <h2 className="text-lg font-bold text-white mb-2">💇 40〜50代なら頭皮ケアも</h2>
+          <p className="text-gray-300 text-sm mb-4">
+            抜け毛・ボリューム低下が気になり始めたら、
+            <br />
+            頭皮ケア専用ガイドで自宅ケアの選択肢をチェック。
+          </p>
+          <a
+            href="/currentbody-scalp-care-guide"
+            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"
+          >
+            頭皮ケアガイドを見る →
+          </a>
+        </section>
+
         <MoshimoSectionBeauty />
         <AffiliateSectionBeauty />
       </div>

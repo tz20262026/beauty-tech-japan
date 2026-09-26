@@ -289,6 +289,16 @@ export default async function Home({ searchParams }: HomeProps) {
                 desc: "紫外線・乾燥・ゆらぎ肌を7日間で立て直す方法",
               },
               {
+                href: "/currentbody-scalp-care-guide",
+                emoji: "💇",
+                color: "#06b6d4",
+                bg: "from-cyan-50 to-sky-100",
+                border: "border-cyan-200",
+                label: "NEW",
+                title: "40〜50代男性の頭皮ケアガイド",
+                desc: "自宅ケアの新しい選択肢、LEDデバイスも解説",
+              },
+              {
                 href: "/beauty-tools-guide",
                 emoji: "🤖",
                 color: "#8b5cf6",

@@ -325,6 +325,24 @@ export default function HaircareGuidePage() {
           </div>
         </section>
 
+        {/* 関連：薄毛・頭皮の悩み別ガイド */}
+        <section className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="/josei-usuge-guide"
+            className="block bg-gray-900 border border-gray-700 hover:border-pink-500/50 rounded-2xl p-5 transition-colors"
+          >
+            <p className="text-white font-bold text-sm mb-1">💁‍♀️ 女性の薄毛が気になるなら</p>
+            <p className="text-gray-300 text-xs">女性の薄毛ケアガイドを見る →</p>
+          </a>
+          <a
+            href="/currentbody-scalp-care-guide"
+            className="block bg-gray-900 border border-gray-700 hover:border-cyan-500/50 rounded-2xl p-5 transition-colors"
+          >
+            <p className="text-white font-bold text-sm mb-1">💇‍♂️ 40〜50代男性の頭皮ケアなら</p>
+            <p className="text-gray-300 text-xs">頭皮ケア完全ガイドを見る →</p>
+          </a>
+        </section>
+
         {/* アフィリエイト */}
         <AffiliateSectionBeauty />
       </div>
