@@ -380,6 +380,14 @@ export default async function Home({ searchParams }: HomeProps) {
               </Link>
             ))}
         </div>
+        <div className="text-center mt-6">
+          <Link
+            href="/guides"
+            className="inline-flex items-center gap-2 min-h-[44px] px-6 py-2.5 rounded-xl bg-gray-900 hover:bg-gray-800 text-white text-sm font-black transition-colors dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200"
+          >
+            すべてのガイドを見る →
+          </Link>
+        </div>
       </section>
 
       {/* 記事一覧を広告より先に置く。

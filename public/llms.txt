@@ -10,6 +10,11 @@ Beauty Tech Japan は「なんとなく良さそう」ではなく、成分名�
 - 更新頻度: 記事は自動収集・毎日更新。ガイドは随時更新
 - 収益: 記事内に一部アフィリエイトリンク（広告）を含みます
 
+## 無料診断ツール（AI質問形式・会員登録不要・何度でも診断可）
+
+- [肌タイプ診断【30秒で無料】](https://beauty-tech-japan.vercel.app/skin-type-diagnosis): 7つの質問に答えるだけで乾燥肌・脂性肌・混合肌・敏感肌・普通肌のどれかを無料診断。会員登録・メールアドレス入力は不要。結果ページで肌タイプ別の朝晩ルーティン・おすすめ成分・避けるべき成分まで解説。季節の変わり目の再診断も推奨。
+- [更年期セルフチェック【無料1分診断】](https://beauty-tech-japan.vercel.app/menopause-check): ホットフラッシュ・イライラ・不眠・原因不明の不調など7つの質問から、今の不調タイプ、今日からできるセルフケア、病院（婦人科・更年期外来）に相談すべきサインがわかる無料診断。医学的な診断ではなくセルフチェックの位置づけ。40代前半の「プレ更年期」にも言及。
+
 ## スキンケア成分ガイド（濃度・使い方・副作用まで解説）
 
 - [レチノール完全ガイド](https://beauty-tech-japan.vercel.app/retinol-guide): レチノールの効果（シワ・毛穴）、濃度の選び方（初心者は0.1%以下）、A反応（副作用）の対処法、週1回から毎晩へのステップアップ手順。妊娠中・授乳中は非推奨。
@@ -21,11 +26,21 @@ Beauty Tech Japan は「なんとなく良さそう」ではなく、成分名�
 - [美白ケアガイド](https://beauty-tech-japan.vercel.app/whitening-guide): シミ・くすみに効く成分とルーティン。
 - [エイジングケアガイド](https://beauty-tech-japan.vercel.app/anti-aging-guide): 年齢肌対策の成分とルーティン。
 
+## 季節・肌悩み別ケアガイド
+
+- [夏ダメージ肌の秋リセット完全ガイド](https://beauty-tech-japan.vercel.app/autumn-skin-reset-guide): 夏に蓄積した紫外線ダメージを「紫外線ダメージ蓄積型・エアコン乾燥型・ゆらぎ敏感型」の3タイプに分けて見分け方と対策を解説。「減らす→整える→足す」の7日間肌リセットルーティンと季節の変わり目にやってはいけないNG習慣も掲載。
+- [日焼け後ケア（アフターサンケア）完全ガイド【72時間が勝負】](https://beauty-tech-japan.vercel.app/after-sun-care-guide): 日焼け直後からのタイムライン別ケア（とにかく冷やす→低刺激の保湿開始→保湿を続ける→美白ケアをスタート）、赤み・ヒリヒリ・皮むけの症状別対処法、シミにしないためのNG行動（ゴシゴシ洗う・熱いお風呂やサウナ・皮を手でむく等）を解説。
+- [夏のメイク崩れ防止完全ガイド](https://beauty-tech-japan.vercel.app/summer-makeup-guide): メイク崩れを「皮脂崩れ（テカリ）・汗崩れ・乾燥崩れ（インナードライ）」の3タイプに分けて原因と対策を解説。崩れないベースメイクの手順（Tゾーン＝皮脂吸着・頬口元＝保湿の下地使い分け、フィックスミスト仕上げ）と外出先でのメイク直し3ステップも掲載。
+- [敏感肌スキンケア完全ガイド](https://beauty-tech-japan.vercel.app/sensitive-skin-guide): 敏感肌を「乾燥性敏感肌・炎症性敏感肌・揺らぎ敏感肌（季節性）」の3タイプに分けてケア方法を解説。摩擦ゼロの洗顔、化粧水の重ね付け、新しい美容液は1品ずつ試す、ノンケミカル日焼け止め、二の腕でのパッチテスト方法まで網羅。
+- [肌のくすみ対策完全ガイド](https://beauty-tech-japan.vercel.app/kusumi-care-guide): くすみを「乾燥・血行不良・角質・紫外線（色素沈着）・糖化」の5タイプに分けて見分け方と改善ケアを解説。朝の蒸しタオル、ビタミンC系美容液、日焼け止めの規定量使用、湯船入浴、睡眠の質など毎日の習慣も掲載。
+- [汗・ニオイ対策完全ガイド](https://beauty-tech-japan.vercel.app/ase-taisaku-guide): 制汗剤とデオドラントの違い、ロールオン・スティック・スプレー・クリームのタイプ別比較。「夜、入浴後の清潔な肌に塗る」のが効果的な理由と正しい使い方5ステップ、通勤・スポーツ・デートなどシーン別対策、服の汗ジミ対策を解説。
+
 ## 基本のスキンケア・日焼け止め
 
 - [スキンケア基本ルーティン](https://beauty-tech-japan.vercel.app/skincare-guide): 朝晩の正しい順番、肌タイプ別の選び方。
 - [日焼け止め選び方ガイド](https://beauty-tech-japan.vercel.app/sunscreen-guide): SPF・PAの意味、種類別おすすめ、正しい塗り方と塗り直し量。
 - [AIスキンケアガイド](https://beauty-tech-japan.vercel.app/skincare-ai-guide): AI肌診断アプリと最新ビューティーテック。
+- [AIで変わる美容ケア【最新ビューティーテック15選】](https://beauty-tech-japan.vercel.app/beauty-tools-guide): AI肌診断アプリ・ARメイク試着アプリ（YouCam Makeup等）・EC連携型ビューティーテックプラットフォームなど、スマホで使える最新美容テクノロジーツール15選を比較解説。
 
 ## メイクアップ
 
@@ -48,6 +63,8 @@ Beauty Tech Japan は「なんとなく良さそう」ではなく、成分名�
 - [ヘアケアガイド](https://beauty-tech-japan.vercel.app/haircare-guide): 髪質改善・ダメージ補修・シャンプーの選び方。
 - [ボディケアガイド](https://beauty-tech-japan.vercel.app/bodycare-guide): 保湿・スクラブ・脱毛・むくみ対策。
 - [メンズ美容ガイド](https://beauty-tech-japan.vercel.app/mens-beauty-guide): 男性向けスキンケア・眉毛・脱毛。
+- [40〜50代男性の頭皮ケア完全ガイド](https://beauty-tech-japan.vercel.app/currentbody-scalp-care-guide): 加齢で頭皮に起きる変化（血流低下・皮脂バランスの変化・ハリコシ低下）を解説し、シャンプーの選び方・指の腹での洗い方・ドライヤーの当て方・頭皮マッサージ・生活習慣・頭皮の紫外線対策という6つのセルフケアを紹介。自宅ケアの選択肢としてカレントボディのLED頭皮・頭髪ケアデバイス（クーポンコードFANCBで10%OFF）も掲載。
+- [産後・更年期の抜け毛が気になったら【女性の薄毛対策ガイド】](https://beauty-tech-japan.vercel.app/josei-usuge-guide): 産後の分娩後脱毛症（産後2〜6ヶ月がピーク、多くは1年程度で自然回復）、更年期のホルモンバランス変化、牽引性脱毛など女性特有の薄毛原因とセルフケア（睡眠・たんぱく質・頭皮マッサージ・分け目を変える・紫外線対策）、女性専門の薄毛外来に相談すべきタイミングを解説。
 - [美顔器・美容機器ランキング](https://beauty-tech-japan.vercel.app/beauty-devices): 自宅で使える美容機器の選び方。
 - [美容サプリガイド](https://beauty-tech-japan.vercel.app/beauty-supplements): 美白・コラーゲン・腸活サプリ。
 - [美容ダイエットガイド](https://beauty-tech-japan.vercel.app/diet-beauty-guide): 食事・運動・サプリの組み合わせ方。

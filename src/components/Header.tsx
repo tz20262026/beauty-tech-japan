@@ -17,6 +17,7 @@ export default function Header() {
             🧴 肌タイプ診断
           </Link>
           <Link href="/" className="hover:text-white transition-colors hidden sm:block">記事一覧</Link>
+          <Link href="/guides" className="hover:text-white transition-colors hidden sm:block">ガイド一覧</Link>
           <Link href="/about" className="hover:text-white transition-colors hidden sm:block">About</Link>
           {/* タップ領域44px確保: アイコン自体は18pxのまま、疑似要素で見た目を変えずに当たり判定だけ拡張する */}
           <Link
