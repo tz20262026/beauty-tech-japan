@@ -78,7 +78,7 @@ export default function WidgetPage() {
           <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
             <span className="text-lg">👀</span> プレビュー
           </h2>
-          <p className="text-sm text-gray-500 dark:text-gray-300 mb-4">実際に表示されるウィジェットです（本日の美容成分が表示されます）。</p>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">実際に表示されるウィジェットです（本日の美容成分が表示されます）。</p>
           <div className="flex justify-center">
             <iframe
               src="/widget/ingredient.html"
@@ -95,7 +95,7 @@ export default function WidgetPage() {
           <h2 className="text-base font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
             <span className="text-lg">🔧</span> 設置方法
           </h2>
-          <p className="text-sm text-gray-500 dark:text-gray-300 mb-4">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
             下のコードをコピーして、ブログやサイトのHTMLに貼り付けるだけです。サイドバー・記事末尾・フッターなど、お好きな場所に設置できます。
           </p>
           <div className="bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-700 rounded-xl p-4">

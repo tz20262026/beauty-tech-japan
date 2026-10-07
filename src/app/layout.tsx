@@ -126,6 +126,8 @@ export default function RootLayout({
             事前にコネクションを確立してファーストビュー画像の表示を早める */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        {/* ホームのファーストビューで表示されるhero動画のposter画像をLCP対象として先読み */}
+        <link rel="preload" as="image" href="/hero-poster.jpg" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(beautyJsonLd) }}

@@ -80,7 +80,7 @@ export default function JoseiUsugeGuidePage() {
         <p className="text-gray-600 text-base leading-relaxed">
           「最近、分け目が目立つ気がする」「シャンプーの時の抜け毛が増えた」——そう感じたら、まず原因を知ることが第一歩です。産後・更年期に起こりやすい抜け毛の仕組みと、今日からできるケア、専門家に相談すべきタイミングを整理しました。
         </p>
-        <p className="text-xs text-gray-500">公開日：2026年7月22日</p>
+        <p className="text-xs text-gray-600">公開日：2026年7月22日</p>
       </section>
 
       <section className="space-y-5">

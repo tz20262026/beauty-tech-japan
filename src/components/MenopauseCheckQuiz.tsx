@@ -205,7 +205,7 @@ export default function MenopauseCheckQuiz() {
           <span className="text-xs font-bold text-pink-600 dark:text-pink-400">
             質問 {step + 1} / {total}
           </span>
-          <span className="text-xs text-gray-500 dark:text-gray-400">{progress}%</span>
+          <span className="text-xs text-gray-600 dark:text-gray-300">{progress}%</span>
         </div>
         <div className="w-full h-2 rounded-full bg-gray-100 dark:bg-gray-800 mb-6 overflow-hidden">
           <div
@@ -321,7 +321,7 @@ export default function MenopauseCheckQuiz() {
 
       <ShareButtons title={`私の更年期タイプは「${r.name}」でした🌿 #BeautyTechJapan 更年期セルフチェック`} url={SHARE_URL} />
 
-      <p className="text-[11px] text-gray-400 dark:text-gray-500 leading-relaxed">
+      <p className="text-[11px] text-gray-600 dark:text-gray-300 leading-relaxed">
         ※この診断は一般的な傾向をもとにしたセルフチェックであり、医学的な診断ではありません。症状が続く場合や不安がある場合は、婦人科・更年期外来などの医療機関にご相談ください。
       </p>
     </div>

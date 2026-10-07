@@ -256,7 +256,7 @@ export default function SkinTypeQuiz() {
           <span className="text-xs font-bold text-pink-600 dark:text-pink-400">
             質問 {step + 1} / {total}
           </span>
-          <span className="text-xs text-gray-500 dark:text-gray-400">{progress}%</span>
+          <span className="text-xs text-gray-600 dark:text-gray-300">{progress}%</span>
         </div>
         <div className="w-full h-2 rounded-full bg-gray-100 dark:bg-gray-800 mb-6 overflow-hidden">
           <div

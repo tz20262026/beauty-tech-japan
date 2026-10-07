@@ -197,6 +197,16 @@ const FAQ: FaqItem[] = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 // =============================================
 // ページコンポーネント
 // =============================================
@@ -216,17 +226,20 @@ export default function BeautySupplementsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "飲む美容サプリ最強ランキング2026年【美白・コラーゲン・腸活】",
-            description:
-              "目的別・美容サプリ最強ランキング。美白・コラーゲン・腸活・抗酸化など成分別に選ぶポイントと飲み方を完全解説。",
-            author: { "@type": "Organization", name: "Beauty Tech Japan" },
-            datePublished: "2026-06-30",
-            dateModified: "2026-06-30",
-            url: "https://beauty-tech-japan.vercel.app/beauty-supplements",
-          }),
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: "飲む美容サプリ最強ランキング2026年【美白・コラーゲン・腸活】",
+              description:
+                "目的別・美容サプリ最強ランキング。美白・コラーゲン・腸活・抗酸化など成分別に選ぶポイントと飲み方を完全解説。",
+              author: { "@type": "Organization", name: "Beauty Tech Japan" },
+              datePublished: "2026-06-30",
+              dateModified: "2026-06-30",
+              url: "https://beauty-tech-japan.vercel.app/beauty-supplements",
+            },
+            faqJsonLd,
+          ]),
         }}
       />
 

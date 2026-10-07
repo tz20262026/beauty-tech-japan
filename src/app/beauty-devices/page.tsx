@@ -192,6 +192,16 @@ const FAQ: FaqItem[] = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 // =============================================
 // ページコンポーネント
 // =============================================
@@ -211,17 +221,20 @@ export default function BeautyDevicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "美顔器・美容機器おすすめランキング2026年【自宅エステ完全版】",
-            description:
-              "EMS・RF・LED・超音波・ハイフ家庭用など種類別に効果・使い方・予算を徹底比較した美顔器ランキング。",
-            author: { "@type": "Organization", name: "Beauty Tech Japan" },
-            datePublished: "2026-06-30",
-            dateModified: "2026-06-30",
-            url: "https://beauty-tech-japan.vercel.app/beauty-devices",
-          }),
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: "美顔器・美容機器おすすめランキング2026年【自宅エステ完全版】",
+              description:
+                "EMS・RF・LED・超音波・ハイフ家庭用など種類別に効果・使い方・予算を徹底比較した美顔器ランキング。",
+              author: { "@type": "Organization", name: "Beauty Tech Japan" },
+              datePublished: "2026-06-30",
+              dateModified: "2026-06-30",
+              url: "https://beauty-tech-japan.vercel.app/beauty-devices",
+            },
+            faqJsonLd,
+          ]),
         }}
       />
 
