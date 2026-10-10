@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description: "BBクリームとCCクリームの違いを徹底比較。カバー力・保湿力・UV効果・肌タイプ別の選び方から正しい使い方・重ねヅケの方法まで。2026年最新版。",
   keywords: ["BB クリーム CCクリーム 違い", "BBクリーム 選び方", "CCクリーム 効果", "BBクリーム 肌タイプ", "BBクリーム 使い方"],
   openGraph: {
-    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    images: [{ url: `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】")}`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】",
     description: "BBクリームとCCクリームの違いを徹底比較。カバー力・保湿力・UV効果・肌タイプ別の選び方から正しい使い方まで。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
-    images: ["https://beauty-tech-japan.vercel.app/api/og"],
+    images: [`https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】")}`],
     card: "summary_large_image",
     title: "BB・CCクリーム完全ガイド2026年版【違い・選び方・肌タイプ別おすすめ】",
     description: "BBクリームとCCクリームの違いを徹底比較。カバー力・保湿力・UV効果・肌タイプ別の選び方から正しい使い方まで。",

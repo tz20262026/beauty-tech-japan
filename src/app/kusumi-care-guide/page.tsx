@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "顔色 悪い 改善",
   ],
   openGraph: {
-    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    images: [{ url: `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("肌のくすみ対策完全ガイド2026｜原因タイプ別の改善法")}`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "肌のくすみ対策完全ガイド2026｜原因タイプ別の改善法",
     description: "くすみの5つの原因タイプを見分け、それぞれに合った改善ケアを完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
-    images: ["https://beauty-tech-japan.vercel.app/api/og"],
+    images: [`https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("肌のくすみ対策完全ガイド2026")}`],
     card: "summary_large_image",
     title: "肌のくすみ対策完全ガイド2026",
     description: "くすみの原因タイプ別の見分け方と改善ケアを完全解説",

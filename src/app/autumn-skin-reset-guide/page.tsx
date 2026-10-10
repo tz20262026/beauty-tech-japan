@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "肌荒れ 季節性",
   ],
   openGraph: {
-    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    images: [{ url: `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("夏ダメージ肌の秋リセット 完全ガイド2026｜紫外線・乾燥・ゆらぎからの立て直し")}`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "夏ダメージ肌の秋リセット 完全ガイド2026｜紫外線・乾燥・ゆらぎからの立て直し",
     description: "紫外線蓄積・エアコン乾燥・ゆらぎ肌のタイプ別対策と、秋の肌リセット7日間ルーティンを完全解説",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
-    images: ["https://beauty-tech-japan.vercel.app/api/og"],
+    images: [`https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("夏ダメージ肌の秋リセット 完全ガイド2026")}`],
     card: "summary_large_image",
     title: "夏ダメージ肌の秋リセット 完全ガイド2026",
     description: "紫外線・乾燥・ゆらぎからの立て直し方を完全解説",

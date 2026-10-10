@@ -74,6 +74,7 @@ Beauty Tech Japan は「なんとなく良さそう」ではなく、成分名�
 
 ## Optional
 
+- [全ガイド一覧](https://beauty-tech-japan.vercel.app/guides): 本サイトの全スキンケア・メイク・ヘアケアガイドをカテゴリ別に一覧できるハブページ。
 - [記事一覧](https://beauty-tech-japan.vercel.app/articles): 海外美容メディアから収集した最新記事。
 - [タグ一覧](https://beauty-tech-japan.vercel.app/tags): トピック別の記事一覧。
 - [サイトについて](https://beauty-tech-japan.vercel.app/about): 運営方針と免責事項。

@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description:
     "40〜50代で気になり始める頭皮のベタつき・抜け毛・ボリューム低下。加齢で頭皮に何が起きるのか、今日から見直せるシャンプー・マッサージ・ドライヤー・生活習慣、そして自宅ケアの新しい選択肢としてカレントボディのLED頭皮・頭髪ケアデバイスを解説。クーポンコードFANCBで10%OFF。",
   openGraph: {
-    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    images: [{ url: `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("40〜50代男性の頭皮ケア完全ガイド｜カレントボディLEDデバイスという選択肢")}`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "40〜50代男性の頭皮ケア完全ガイド｜カレントボディLEDデバイスという選択肢",
     description: "加齢で頭皮に起きる変化と、自宅でできる頭皮ケア。LEDデバイスの取り入れ方まで解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
-    images: ["https://beauty-tech-japan.vercel.app/api/og"],
+    images: [`https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("40〜50代男性の頭皮ケア完全ガイド｜カレントボディLEDデバイス")}`],
     card: "summary_large_image",
     title: "40〜50代男性の頭皮ケア完全ガイド｜カレントボディLEDデバイス",
     description: "加齢で頭皮に起きる変化と、自宅でできる頭皮ケア。",

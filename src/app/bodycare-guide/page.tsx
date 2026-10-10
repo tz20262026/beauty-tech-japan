@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description:
     "ボディケア・全身美容の方法を2026年版で完全解説。保湿・ボディスクラブ・バスケア・脱毛・むくみ対策・セルライトケアのおすすめアイテムと方法を初心者向けに解説します。",
   openGraph: {
-    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    images: [{ url: `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("ボディケア・全身美容 完全ガイド2026年版")}`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "ボディケア・全身美容 完全ガイド2026年版",
     description: "保湿・ボディスクラブ・バスケア・脱毛・むくみ対策を解説。",
     type: "article",
     locale: "ja_JP",
   },
   twitter: {
-    images: ["https://beauty-tech-japan.vercel.app/api/og"],
+    images: [`https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("ボディケア完全ガイド2026年版")}`],
     card: "summary_large_image",
     title: "ボディケア完全ガイド2026年版",
     description: "保湿・スクラブ・バスケア・脱毛・むくみ対策を解説。",

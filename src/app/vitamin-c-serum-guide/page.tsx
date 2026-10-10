@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: "https://beauty-tech-japan.vercel.app/vitamin-c-serum-guide",
   },
   openGraph: {
-    images: [{ url: "https://beauty-tech-japan.vercel.app/api/og", width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    images: [{ url: `https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("ビタミンC美容液のおすすめ選び方2026年【シミ・毛穴・美白に効果的な使い方】")}`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
     title: "ビタミンC美容液のおすすめ選び方2026年【シミ・毛穴・美白に効果的な使い方】",
     description: "L-アスコルビン酸と誘導体の違い、美白・シミ・毛穴効果、使い方を完全解説",
     type: "article",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://beauty-tech-japan.vercel.app/vitamin-c-serum-guide",
   },
   twitter: {
-    images: ["https://beauty-tech-japan.vercel.app/api/og"],
+    images: [`https://beauty-tech-japan.vercel.app/api/og?title=${encodeURIComponent("ビタミンC美容液のおすすめ選び方2026年")}`],
     card: "summary_large_image",
     title: "ビタミンC美容液のおすすめ選び方2026年",
     description: "種類の違い・効果・使い方・選び方を徹底解説",
