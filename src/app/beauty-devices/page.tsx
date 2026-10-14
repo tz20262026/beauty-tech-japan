@@ -509,6 +509,34 @@ export default function BeautyDevicesPage() {
           </div>
         </div>
 
+        {/* 関連ガイド */}
+        <section className="mb-6 rounded-2xl p-6 space-y-4" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.10), rgba(236,72,153,0.10))", border: "1px solid rgba(139,92,246,0.25)" }}>
+          <h2 className="font-black text-white">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/beauty-tools-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #8b5cf6, #ec4899)" }}
+            >
+              ビューティーテックガイド →
+            </Link>
+            <Link
+              href="/skincare-ai-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #3b82f6, #8b5cf6)" }}
+            >
+              AIスキンケアガイド →
+            </Link>
+            <Link
+              href="/currentbody-scalp-care-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #06b6d4, #3b82f6)" }}
+            >
+              頭皮ケアガイド →
+            </Link>
+          </div>
+        </section>
+
         {/* 関連リンク */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[

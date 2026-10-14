@@ -175,12 +175,33 @@ const faqJsonLd = {
   })),
 };
 
+const PUBLISHED_AT = "2026-06-10";
+
+/** 記事構造化データ */
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "ヘアケア完全ガイド2026年版【髪質改善・おすすめシャンプー10選】",
+  description:
+    "ヘアケアの正しい方法を2026年版で完全解説。髪質改善・ダメージ補修・乾燥対策・パサつき改善に効果的なシャンプー・トリートメント・ヘアオイルを肌タイプ別に紹介する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://beauty-tech-japan.vercel.app/haircare-guide" },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function HaircareGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -201,6 +222,7 @@ export default function HaircareGuidePage() {
             ダメージ毛・くせ毛・パサつきを改善する正しいヘアケア方法と<br />
             2026年のおすすめアイテムを髪質別に徹底解説します。
           </p>
+          <p className="text-gray-300 text-xs mt-3">公開日：2026年6月10日</p>
         </div>
 
         {/* 朝のルーティン */}
@@ -341,6 +363,34 @@ export default function HaircareGuidePage() {
             <p className="text-white font-bold text-sm mb-1">💇‍♂️ 40〜50代男性の頭皮ケアなら</p>
             <p className="text-gray-300 text-xs">頭皮ケア完全ガイドを見る →</p>
           </a>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-10 bg-gray-900 border border-gray-700 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-white">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <a
+              href="/currentbody-scalp-care-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #06b6d4, #3b82f6)" }}
+            >
+              頭皮ケアガイド →
+            </a>
+            <a
+              href="/josei-usuge-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #a855f7)" }}
+            >
+              女性の薄毛ケアガイド →
+            </a>
+            <a
+              href="/mens-beauty-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f59e0b, #ef4444)" }}
+            >
+              メンズ美容入門ガイド →
+            </a>
+          </div>
         </section>
 
         {/* アフィリエイト */}

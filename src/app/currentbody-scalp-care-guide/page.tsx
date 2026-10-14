@@ -127,12 +127,31 @@ const faqJsonLd = {
   })),
 };
 
+/** 記事構造化データ */
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "40〜50代男性の頭皮ケア完全ガイド｜自宅ケアにカレントボディLEDデバイスという選択肢【2026年版】",
+  description:
+    "40〜50代で気になり始める頭皮のベタつき・抜け毛・ボリューム低下。加齢で頭皮に何が起きるのか、今日から見直せるシャンプー・マッサージ・ドライヤー・生活習慣、そして自宅ケアの新しい選択肢としてカレントボディのLED頭皮・頭髪ケアデバイスを解説。",
+  datePublished: "2026-09-02",
+  dateModified: "2026-09-02",
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://beauty-tech-japan.vercel.app/currentbody-scalp-care-guide" },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function CurrentBodyScalpCareGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <img src={CB_PIXEL} width={1} height={1} alt="" style={{ position: "absolute", opacity: 0 }} />
 
@@ -315,6 +334,34 @@ export default function CurrentBodyScalpCareGuidePage() {
           >
             メンズ美容入門ガイドを見る →
           </a>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gray-900 border border-gray-700 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-white">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <a
+              href="/haircare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f59e0b, #ef4444)" }}
+            >
+              ヘアケア完全ガイド →
+            </a>
+            <a
+              href="/beauty-devices"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #8b5cf6, #ec4899)" }}
+            >
+              美顔器・美容機器ランキング →
+            </a>
+            <a
+              href="/mens-beauty-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #06b6d4, #3b82f6)" }}
+            >
+              メンズ美容入門ガイド →
+            </a>
+          </div>
         </section>
 
         <MoshimoSectionBeauty />

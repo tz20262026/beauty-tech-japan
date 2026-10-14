@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import Link from "next/link";
+
+const PAGE_URL = "https://beauty-tech-japan.vercel.app/perfume-guide";
+const PUBLISHED_AT = "2026-06-10";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/perfume-guide" },
@@ -154,12 +158,31 @@ const typeColor: Record<Perfume["type"], string> = {
   "ユニセックス": "bg-purple-500/20 text-purple-300 border-purple-500/30",
 };
 
+/** 記事構造化データ */
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "香水おすすめランキング2026年版【レディース・メンズ・プチプラ・デート向け】",
+  description:
+    "2026年版香水おすすめランキングを紹介。レディース・メンズ・プチプラ・デートに使える香水をシーン別・季節別・年代別に解説。選び方・付け方のコツも扱う。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function PerfumeGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -180,6 +203,7 @@ export default function PerfumeGuidePage() {
             2026年に人気の香水をレディース・メンズ・プチプラ別に<br />
             シーン・季節・年代を考慮してランキング形式で紹介します。
           </p>
+          <p className="text-gray-300 text-xs mt-3">公開日：2026年6月10日</p>
         </div>
 
         {/* ランキング */}
@@ -288,6 +312,34 @@ export default function PerfumeGuidePage() {
                 <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gray-900 border border-gray-700 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-white">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/bodycare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #f59e0b)" }}
+            >
+              ボディケアガイド →
+            </Link>
+            <Link
+              href="/nail-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #a855f7, #ec4899)" }}
+            >
+              ネイルケアガイド →
+            </Link>
+            <Link
+              href="/mens-beauty-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #3b82f6, #06b6d4)" }}
+            >
+              メンズ美容ガイド →
+            </Link>
           </div>
         </section>
 

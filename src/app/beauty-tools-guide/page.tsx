@@ -226,6 +226,7 @@ export default function BeautyToolsGuidePage() {
               <span key={tag} className="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-600 font-semibold">{tag}</span>
             ))}
           </div>
+          <p className="text-gray-600 text-xs">公開日：2026年6月14日</p>
         </section>
 
         {/* AI肌診断・ARメイクアプリ */}
@@ -336,6 +337,34 @@ export default function BeautyToolsGuidePage() {
                 <p className="text-gray-600 text-sm leading-relaxed">A. {a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-gray-900">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/beauty-devices"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #8b5cf6, #ec4899)" }}
+            >
+              美顔器・美容機器ランキング →
+            </Link>
+            <Link
+              href="/skincare-ai-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #3b82f6, #8b5cf6)" }}
+            >
+              AIスキンケアガイド →
+            </Link>
+            <Link
+              href="/currentbody-scalp-care-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #06b6d4, #3b82f6)" }}
+            >
+              頭皮ケアガイド →
+            </Link>
           </div>
         </section>
 

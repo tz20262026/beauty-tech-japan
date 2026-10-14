@@ -3,8 +3,11 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import Breadcrumb from "@/components/Breadcrumb";
 
+const PAGE_URL = "https://beauty-tech-japan.vercel.app/biyou-monitor-guide";
+const PUBLISHED_AT = "2026-07-13";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://beauty-tech-japan.vercel.app/biyou-monitor-guide" },
+  alternates: { canonical: PAGE_URL },
   title: "美容モニターの始め方完全ガイド2026年版【コスメ・エステを実質無料で試す方法】",
   description:
     "美容モニターの仕組み・始め方を2026年版で完全解説。コスメ・エステ・脱毛を実質無料で体験して謝礼までもらえる美容モニターの登録方法・報酬の目安・注意点・怪しい案件の見分け方を紹介します。",
@@ -70,6 +73,20 @@ const STEPS = [
   },
 ];
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "美容モニターの始め方完全ガイド2026年版【コスメ・エステを実質無料で試す方法】",
+  description:
+    "美容モニターの仕組み・始め方を2026年版で完全解説。コスメ・エステ・脱毛を実質無料で体験して謝礼までもらえる美容モニターの登録方法・報酬の目安・注意点・怪しい案件の見分け方を紹介する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function BiyouMonitorGuidePage() {
   return (
     <div className="max-w-3xl mx-auto py-8 px-4 space-y-12">
@@ -86,6 +103,10 @@ export default function BiyouMonitorGuidePage() {
             })),
           }),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "美容モニターガイド" }]} />
 
@@ -104,6 +125,7 @@ export default function BiyouMonitorGuidePage() {
           <br />
           美容好きにいちばん相性のいい「お得な仕組み」を解説します。
         </p>
+        <p className="text-gray-600 text-xs">公開日：2026年7月13日</p>
       </header>
 
       {/* 仕組み */}
@@ -222,6 +244,34 @@ export default function BiyouMonitorGuidePage() {
             className="inline-block min-h-[44px] bg-rose-100 hover:bg-rose-200 text-rose-600 font-bold px-6 py-3 rounded-xl transition-colors text-sm"
           >
             コスメランキング →
+          </Link>
+        </div>
+      </section>
+
+      {/* 関連ガイド */}
+      <section className="bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-200 rounded-2xl p-6 space-y-4">
+        <h2 className="font-black text-gray-900">関連ガイドもチェック</h2>
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+          <Link
+            href="/diet-beauty-guide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #10b981, #06b6d4)" }}
+          >
+            美容ダイエットガイド →
+          </Link>
+          <Link
+            href="/skincare-guide"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #ec4899, #a855f7)" }}
+          >
+            スキンケア基本ガイド →
+          </Link>
+          <Link
+            href="/beauty-supplements"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #f59e0b, #ec4899)" }}
+          >
+            美容サプリランキング →
           </Link>
         </div>
       </section>

@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
 
+const PAGE_URL = "https://beauty-tech-japan.vercel.app/nail-guide";
+const PUBLISHED_AT = "2026-06-10";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://beauty-tech-japan.vercel.app/nail-guide" },
+  alternates: { canonical: PAGE_URL },
   title: "セルフネイルおすすめ完全ガイド2026年版【道具・やり方を解説】",
   description:
     "セルフネイルの始め方を2026年版で完全解説。ジェルネイル・マニキュアの道具・やり方・デザイン・おすすめポリッシュを初心者向けに紹介。オフの方法も解説。",
@@ -129,12 +133,30 @@ const difficultyStyle: Record<NailType["difficulty"], string> = {
   "上級者向け": "bg-red-500/20 text-red-300 border-red-500/30",
 };
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "セルフネイルおすすめ完全ガイド2026年版【道具・やり方を解説】",
+  description:
+    "セルフネイルの始め方を2026年版で完全解説する。ジェルネイル・マニキュアの道具・やり方・デザイン・おすすめポリッシュを初心者向けに紹介し、オフの方法も整理する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function NailGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -155,6 +177,7 @@ export default function NailGuidePage() {
             ジェルネイル・マニキュアの始め方・道具・デザインを<br />
             2026年版で初心者向けに完全解説します。
           </p>
+          <p className="text-gray-300 text-xs mt-2">公開日：2026年6月10日</p>
         </div>
 
         {/* ネイルタイプ比較 */}
@@ -253,6 +276,34 @@ export default function NailGuidePage() {
                 <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gradient-to-r from-pink-900/20 to-purple-900/20 border border-pink-500/30 rounded-2xl p-6">
+          <h2 className="text-xl font-bold text-white mb-4">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/makeup-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #f43f5e)" }}
+            >
+              メイクガイド →
+            </Link>
+            <Link
+              href="/bodycare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #14b8a6, #10b981)" }}
+            >
+              ボディケアガイド →
+            </Link>
+            <Link
+              href="/perfume-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #a855f7, #8b5cf6)" }}
+            >
+              香水ガイド →
+            </Link>
           </div>
         </section>
 

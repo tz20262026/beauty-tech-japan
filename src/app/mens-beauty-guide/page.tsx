@@ -115,6 +115,23 @@ const faqJsonLd = {
   })),
 };
 
+const PUBLISHED_AT = "2026-06-10";
+
+/** 記事構造化データ */
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "メンズ美容入門ガイド2026年版【スキンケア・眉毛・脱毛・ヘアケア】",
+  description:
+    "メンズ美容の始め方を2026年版で完全解説。スキンケア・眉毛の整え方・脱毛・ヘアケア・メンズコスメ選びなど男性の美容ケアを初心者向けにわかりやすく解説する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://beauty-tech-japan.vercel.app/mens-beauty-guide" },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 const priorityStyle: Record<CareItem["priority"], string> = {
   "必須": "bg-red-500/20 text-red-300 border-red-500/30",
   "おすすめ": "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
@@ -127,6 +144,10 @@ export default function MensBeautyGuidePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -147,6 +168,7 @@ export default function MensBeautyGuidePage() {
             男性のための美容ケア入門ガイド。<br />
             スキンケアから脱毛まで優先順位・予算・方法を解説。
           </p>
+          <p className="text-gray-300 text-xs mt-3">公開日：2026年6月10日</p>
         </div>
 
         {/* ケア項目一覧 */}
@@ -228,6 +250,34 @@ export default function MensBeautyGuidePage() {
           >
             頭皮ケアガイドを見る →
           </a>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gray-900 border border-gray-700 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-white">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <a
+              href="/haircare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f59e0b, #ef4444)" }}
+            >
+              ヘアケア完全ガイド →
+            </a>
+            <a
+              href="/currentbody-scalp-care-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #06b6d4, #3b82f6)" }}
+            >
+              頭皮ケアガイド →
+            </a>
+            <a
+              href="/skincare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #a855f7)" }}
+            >
+              スキンケア基本ガイド →
+            </a>
+          </div>
         </section>
 
         <MoshimoSectionBeauty />

@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
 
+const PAGE_URL = "https://beauty-tech-japan.vercel.app/diet-beauty-guide";
+const PUBLISHED_AT = "2026-06-10";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://beauty-tech-japan.vercel.app/diet-beauty-guide" },
+  alternates: { canonical: PAGE_URL },
   title: "美容ダイエット完全ガイド2026年版【食事・運動・サプリで痩せる方法】",
   description:
     "美容ダイエットの方法を2026年版で完全解説。食事制限・有酸素運動・筋トレ・サプリの活用法・短期間で効果を出すコツを医学的根拠を元に初心者向けに解説します。",
@@ -125,12 +129,30 @@ const difficultyStyled: Record<DietMethod["difficulty"], string> = {
   "難": "bg-red-500/20 text-red-300 border-red-500/30",
 };
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "美容ダイエット完全ガイド2026年版【食事・運動・サプリで痩せる方法】",
+  description:
+    "美容ダイエットの方法を2026年版で完全解説する。食事制限・有酸素運動・筋トレ・サプリの活用法・短期間で効果を出すコツを初心者向けに整理する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function DietBeautyGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -151,6 +173,7 @@ export default function DietBeautyGuidePage() {
             食事・運動・サプリを組み合わせた<br />
             効果的な美容ダイエット方法を2026年版で完全解説。
           </p>
+          <p className="text-gray-300 text-xs mt-2">公開日：2026年6月10日</p>
         </div>
 
         {/* ダイエット方法 */}
@@ -215,6 +238,34 @@ export default function DietBeautyGuidePage() {
                 <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gradient-to-r from-green-900/20 to-teal-900/20 border border-green-500/30 rounded-2xl p-6">
+          <h2 className="text-xl font-bold text-white mb-4">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/bodycare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #14b8a6, #10b981)" }}
+            >
+              ボディケアガイド →
+            </Link>
+            <Link
+              href="/beauty-supplements"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #f59e0b)" }}
+            >
+              美容サプリランキング →
+            </Link>
+            <Link
+              href="/biyou-monitor-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f43f5e, #ec4899)" }}
+            >
+              美容モニターガイド →
+            </Link>
           </div>
         </section>
 

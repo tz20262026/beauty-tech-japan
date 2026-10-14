@@ -4,6 +4,9 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
+const PAGE_URL = "https://beauty-tech-japan.vercel.app/eye-makeup-guide";
+const PUBLISHED_AT = "2026-06-10";
+
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/eye-makeup-guide" },
   title: "アイメイクの正しいやり方2026年版【初心者向け完全ガイド】",
@@ -114,12 +117,31 @@ const faqJsonLd = {
   })),
 };
 
+/** 記事構造化データ */
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "アイメイクの正しいやり方2026年版【初心者向け完全ガイド】",
+  description:
+    "アイメイクのやり方を2026年版で完全解説。アイシャドウの塗り方・アイライナーの引き方・マスカラの付け方・二重まぶたの作り方・奥二重メイクを初心者向けに詳しく解説する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function EyeMakeupGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -140,6 +162,7 @@ export default function EyeMakeupGuidePage() {
             アイメイクの正しい順番・塗り方・コツを<br />
             初心者向けに2026年版で完全解説します。
           </p>
+          <p className="text-gray-300 text-xs mt-3">公開日：2026年6月10日</p>
         </div>
 
         {/* ステップ */}
@@ -203,6 +226,34 @@ export default function EyeMakeupGuidePage() {
                 <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gray-900 border border-gray-700 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-white">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/eyeshadow-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #8b5cf6, #ec4899)" }}
+            >
+              アイシャドウガイド →
+            </Link>
+            <Link
+              href="/lip-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #f43f5e)" }}
+            >
+              リップメイク・ケアガイド →
+            </Link>
+            <Link
+              href="/makeup-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f43f5e, #f59e0b)" }}
+            >
+              メイクアップ初心者ガイド →
+            </Link>
           </div>
         </section>
 

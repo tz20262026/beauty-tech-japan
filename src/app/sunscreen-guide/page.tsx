@@ -4,8 +4,11 @@ import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
+const PAGE_URL = "https://beauty-tech-japan.vercel.app/sunscreen-guide";
+const PUBLISHED_AT = "2026-06-11";
+
 export const metadata: Metadata = {
-  alternates: { canonical: "https://beauty-tech-japan.vercel.app/sunscreen-guide" },
+  alternates: { canonical: PAGE_URL },
   title: "日焼け止め完全ガイド2026年版【SPF・PA・種類・正しい塗り方・おすすめ】",
   description:
     "日焼け止めの選び方を2026年版で完全解説。SPF・PAの意味・違い・正しい塗り方・塗り直しのタイミング・クリーム/スプレー/スティック種類別おすすめ・敏感肌向け選び方まで詳しく解説。",
@@ -172,12 +175,30 @@ const faqJsonLd = {
   })),
 };
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "日焼け止め完全ガイド2026年版【SPF・PA・種類・正しい塗り方・おすすめ】",
+  description:
+    "日焼け止めの選び方を2026年版で完全解説する。SPF・PAの意味・違い・正しい塗り方・塗り直しのタイミング・種類別おすすめ・敏感肌向け選び方を整理する。",
+  datePublished: PUBLISHED_AT,
+  dateModified: PUBLISHED_AT,
+  inLanguage: "ja",
+  mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  author: { "@type": "Organization", name: "Beauty Tech Japan" },
+  publisher: { "@type": "Organization", name: "Beauty Tech Japan" },
+};
+
 export default function SunscreenGuidePage() {
   return (
     <main className="bg-gray-950 min-h-screen text-gray-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -198,6 +219,7 @@ export default function SunscreenGuidePage() {
             日焼け止めのSPF・PAの意味・種類の違い・正しい塗り方・<br />
             塗り直しタイミング・肌タイプ別おすすめを2026年最新情報で完全解説。
           </p>
+          <p className="text-gray-300 text-xs mt-2">公開日：2026年6月11日</p>
         </div>
 
         {/* SPFとPA早わかり表 */}
@@ -427,6 +449,34 @@ export default function SunscreenGuidePage() {
                 <p className="text-gray-300 text-sm leading-relaxed">A. {faq.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 関連ガイド */}
+        <section className="mb-12 bg-gradient-to-r from-yellow-900/20 to-amber-900/20 border border-yellow-500/30 rounded-2xl p-6">
+          <h2 className="text-xl font-bold text-white mb-4">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/after-sun-care-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f97316, #f59e0b)" }}
+            >
+              日焼け後のアフターケアガイド →
+            </Link>
+            <Link
+              href="/whitening-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #8b5cf6, #ec4899)" }}
+            >
+              美白ケアガイド →
+            </Link>
+            <Link
+              href="/skincare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #a855f7)" }}
+            >
+              スキンケア基本ガイド →
+            </Link>
           </div>
         </section>
 

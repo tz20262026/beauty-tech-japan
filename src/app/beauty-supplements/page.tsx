@@ -498,6 +498,40 @@ export default function BeautySupplementsPage() {
           </div>
         </div>
 
+        {/* 関連ガイド */}
+        <section
+          className="rounded-2xl p-6 mb-6"
+          style={{
+            background: "linear-gradient(135deg, rgba(236,72,153,0.08), rgba(245,158,11,0.08))",
+            border: "1px solid rgba(236,72,153,0.2)",
+          }}
+        >
+          <h2 className="font-black text-white mb-4">関連ガイドもチェック</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link
+              href="/diet-beauty-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #10b981, #06b6d4)" }}
+            >
+              美容ダイエットガイド →
+            </Link>
+            <Link
+              href="/biyou-monitor-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #f43f5e, #ec4899)" }}
+            >
+              美容モニターガイド →
+            </Link>
+            <Link
+              href="/skincare-guide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+              style={{ background: "linear-gradient(135deg, #ec4899, #8b5cf6)" }}
+            >
+              スキンケア基本ガイド →
+            </Link>
+          </div>
+        </section>
+
         {/* 関連リンク */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
