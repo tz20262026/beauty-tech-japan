@@ -331,33 +331,38 @@ export default async function ArticlePage({ params }: Props) {
           {/* アフィリエイトカード（記事1本につき1つ） */}
           <ArticleAffiliateCard tags={article.tags} articleId={article.id} />
 
-          {/* 読了後CTA：次に読む記事 */}
-          {related[0] && (
+          {/* 読了後CTA：次に読む記事（最大3件） */}
+          {related.length > 0 && (
             <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
-              <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-3">✨ 次にこれを読む</p>
-              <Link
-                href={`/articles/${related[0].id}`}
-                className="flex gap-4 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 border border-pink-100 dark:border-pink-900 rounded-xl overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all group"
-              >
-                <div className="relative w-24 sm:w-32 shrink-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={getArticleImageUrl(related[0], allArticles)}
-                    alt={related[0].title}
-                    loading="lazy"
-                    decoding="async"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-                <div className="py-4 pr-4 flex flex-col justify-center min-w-0">
-                  <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">
-                    {getRelativeTime(related[0].publishedAt)} · {getReadTime(related[0].body)}分で読める
-                  </p>
-                  <p className="text-sm font-bold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-pink-600 transition-colors">
-                    {related[0].title}
-                  </p>
-                </div>
-              </Link>
+              <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-3">✨ こちらもおすすめ</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {related.slice(0, 3).map((item) => (
+                  <Link
+                    key={item.id}
+                    href={`/articles/${item.id}`}
+                    className="flex flex-col bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 border border-pink-100 dark:border-pink-900 rounded-xl overflow-hidden hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all group"
+                  >
+                    <div className="relative w-full aspect-[16/9] shrink-0">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={getArticleImageUrl(item, allArticles)}
+                        alt={item.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-3 flex flex-col justify-center min-w-0">
+                      <p className="text-[11px] text-gray-600 dark:text-gray-300 mb-1">
+                        {getRelativeTime(item.publishedAt)} · {getReadTime(item.body)}分で読める
+                      </p>
+                      <p className="text-sm font-bold text-gray-900 dark:text-white leading-snug line-clamp-2 group-hover:text-pink-600 transition-colors">
+                        {item.title}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
 

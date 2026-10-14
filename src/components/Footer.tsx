@@ -12,7 +12,9 @@ const CATEGORIES = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-300 border-t border-gray-800 mt-16">
+    <footer className="bg-gray-950 text-gray-300 border-t border-gray-800 mt-16 pb-20 md:pb-0">
+      {/* pb-20(スマホのみ)は画面下部に固定表示されるMobileStickyCTA(高さ約56px+セーフエリア)と
+          著作権表示が重ならないようにするための余白。PCではCTAバーが出ないため不要(md:pb-0)。 */}
       <div className="max-w-5xl mx-auto px-4 pt-10 pb-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           {/* ブランド */}

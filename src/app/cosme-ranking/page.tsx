@@ -231,6 +231,27 @@ const faqJsonLd = {
   })),
 };
 
+// ランキング用のItemList構造化データ
+// 注意: ratingは編集部独自の評価（第三者レビューの集計ではない）ため、
+// Googleの構造化データガイドライン（自己評価レビューの偽装禁止）に抵触しないよう
+// AggregateRating・Reviewは付与せず、ItemList + Productのみに留める
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: COSME_RANKING.length,
+  itemListElement: COSME_RANKING.map((item) => ({
+    "@type": "ListItem",
+    position: item.rank,
+    item: {
+      "@type": "Product",
+      name: `${item.brand} ${item.name}`,
+      category: item.category,
+      description: item.merit,
+    },
+  })),
+};
+
 const categoryColors: Record<Category, string> = {
   ベースメイク: "bg-pink-500/20 text-pink-300 border-pink-500/30",
   スキンケア: "bg-green-500/20 text-green-300 border-green-500/30",
@@ -246,6 +267,10 @@ export default function CosmeRankingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
