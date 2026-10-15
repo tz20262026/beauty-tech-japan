@@ -56,10 +56,10 @@ async function fetchArticles() {
   return localArticles;
 }
 
-type HomeProps = { searchParams: Promise<{ thanks?: string }> };
+type HomeProps = { searchParams: Promise<{ thanks?: string; q?: string }> };
 
 export default async function Home({ searchParams }: HomeProps) {
-  const { thanks } = await searchParams;
+  const { thanks, q } = await searchParams;
   const articles = await fetchArticles();
   const latestDate = articles.map((a) => a.publishedAt).sort().at(-1) ?? "";
 
@@ -394,7 +394,7 @@ export default async function Home({ searchParams }: HomeProps) {
           広告が上に集中していると「記事を読みに来た人」が離脱するため、
           まず本来の価値（記事）を届けてから広告を出す順序にする。 */}
       <div id="latest-articles" className="scroll-mt-20">
-        <ArticleList articles={listArticles} />
+        <ArticleList articles={listArticles} initialSearch={q ?? ""} />
       </div>
 
       {/* メルマガ登録（記事一覧を読んだ後の見込み客に、リード獲得導線を提示） */}

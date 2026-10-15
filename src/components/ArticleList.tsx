@@ -178,8 +178,8 @@ function getPickupArticles(articles: Article[], count = 5): Article[] {
 type ListArticle = Article & { readMinutes?: number };
 const readMin = (a: ListArticle) => a.readMinutes ?? getReadTime(a.body);
 
-export default function ArticleList({ articles }: { articles: ListArticle[] }) {
-  const [search, setSearch] = useState("");
+export default function ArticleList({ articles, initialSearch }: { articles: ListArticle[]; initialSearch?: string }) {
+  const [search, setSearch] = useState(initialSearch ?? "");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [sort, setSort] = useState<SortKey>("new");
   const [page, setPage] = useState(1);
