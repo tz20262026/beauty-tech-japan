@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AtSectionBeauty from "@/components/AtSectionBeauty";
+import NewsletterForm from "@/components/NewsletterForm";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
@@ -148,6 +149,8 @@ export default function JoseiUsugeGuidePage() {
           </Link>
         </div>
       </section>
+
+      <NewsletterForm />
 
       <AtSectionBeauty />
     </div>

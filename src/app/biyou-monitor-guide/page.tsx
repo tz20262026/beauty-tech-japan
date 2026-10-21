@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const PAGE_URL = "https://beauty-tech-japan.vercel.app/biyou-monitor-guide";
 const PUBLISHED_AT = "2026-07-13";
@@ -276,6 +277,7 @@ export default function BiyouMonitorGuidePage() {
         </div>
       </section>
 
+      <NewsletterForm />
       <AffiliateSectionBeauty />
     </div>
   );

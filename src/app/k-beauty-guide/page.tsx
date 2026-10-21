@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import NewsletterForm from "@/components/NewsletterForm";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -266,6 +267,8 @@ export default function KBeautyGuidePage() {
             </span>
           </Link>
         </section>
+
+        <NewsletterForm />
 
         {/* アフィリエイト */}
         <AffiliateSectionBeauty />

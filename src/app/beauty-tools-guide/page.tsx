@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "AIで変わる美容ケア2026【最新ビューティーテック15選】",
@@ -369,6 +370,7 @@ export default function BeautyToolsGuidePage() {
         </section>
 
         {/* アフィリエイト */}
+        <NewsletterForm />
         <AffiliateSectionBeauty />
       </div>
     </main>

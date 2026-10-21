@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import NewsletterForm from "@/components/NewsletterForm";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
 
@@ -477,6 +478,8 @@ export default function AcneCareGuidePage() {
           化粧品は医薬品ではなく、疾患を治療するものではありません。
         </p>
       </section>
+
+      <NewsletterForm />
 
       {/* アフィリエイト（既存コンポーネントを再利用） */}
       <AffiliateSectionBeauty />

@@ -4,6 +4,7 @@ import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/serum-guide" },
@@ -255,6 +256,7 @@ export default function SerumGuidePage() {
       </section>
 
       {/* アフィリエイト */}
+      <NewsletterForm />
       <MoshimoSectionBeauty />
       <AffiliateSectionBeauty />
     </div>

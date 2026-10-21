@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/sensitive-skin-guide" },
@@ -316,6 +317,7 @@ export default function SensitiveSkinGuidePage() {
       </section>
 
       {/* アフィリエイト */}
+      <NewsletterForm />
       <AffiliateSectionBeauty />
     </div>
   );

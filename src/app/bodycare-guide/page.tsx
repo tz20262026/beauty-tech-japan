@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const PAGE_URL = "https://beauty-tech-japan.vercel.app/bodycare-guide";
 const PUBLISHED_AT = "2026-06-10";
@@ -244,6 +245,7 @@ export default function BodycareGuidePage() {
           </div>
         </section>
 
+        <NewsletterForm />
         <AffiliateSectionBeauty />
       </div>
     </main>

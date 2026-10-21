@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import NewsletterForm from "@/components/NewsletterForm";
 import MoshimoSectionBeauty from "@/components/MoshimoSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -364,6 +365,7 @@ export default function CurrentBodyScalpCareGuidePage() {
           </div>
         </section>
 
+        <NewsletterForm />
         <MoshimoSectionBeauty />
         <AffiliateSectionBeauty />
       </div>

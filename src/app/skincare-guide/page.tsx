@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "2026年版 スキンケアの基本ルーティン完全ガイド【朝晩の順番・選び方】",
@@ -261,6 +262,7 @@ export default function SkincareGuidePage() {
       </section>
 
       {/* アフィリエイト */}
+      <NewsletterForm />
       <AffiliateSectionBeauty />
     </div>
   );

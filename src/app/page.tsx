@@ -46,6 +46,31 @@ export const revalidate = 300;
 
 const SITE_URL = "https://beauty-tech-japan.vercel.app";
 
+// サイトについてのよくある質問。FAQPage構造化データと合わせてGoogle/AI検索からの
+// 引用（GEO）を狙う。個別の肌悩みへの医学的な回答ではなく、サイトの使い方・運営方針に関する内容に限定する。
+const HOME_FAQ = [
+  {
+    q: "Beauty Tech Japanは無料で読めますか？",
+    a: "はい、記事・ガイド・肌タイプ診断・更年期セルフチェックを含め、すべてのコンテンツを無料でご利用いただけます。会員登録も不要です。",
+  },
+  {
+    q: "記事はどのくらいの頻度で更新されますか？",
+    a: "海外の美容メディアから収集した記事は2日おきに自動更新しています。成分解説などのガイド記事は随時見直し・更新しています。",
+  },
+  {
+    q: "肌タイプ診断・更年期セルフチェックは何度でも利用できますか？",
+    a: "はい、どちらも会員登録不要・何度でも無料でご利用いただけます。季節の変わり目や体調の変化に合わせて再診断することをおすすめしています。",
+  },
+  {
+    q: "サイト内の広告・アフィリエイトリンクについて教えてください",
+    a: "本サイトの運営の一部は、記事内の広告・アフィリエイトリンク経由の収益でまかなわれています。リンク先での購入によって当サイトに紹介料が入ることがありますが、価格が高くなることはありません。",
+  },
+  {
+    q: "記事の情報源・正確性についてはどうなっていますか？",
+    a: "記事はAllure・Byrdie・Vogue Beautyなど海外の人気美容メディアの情報をもとにAIが要約・翻訳しています。一般的な情報提供を目的としており、医学的な診断を目的としたものではありません。肌トラブルが続く場合は皮膚科などの医療機関にご相談ください。",
+  },
+];
+
 async function fetchArticles() {
   try {
     const remote = await getAllArticles();
@@ -88,6 +113,15 @@ export default async function Home({ searchParams }: HomeProps) {
         position: i + 1,
         url: `${SITE_URL}/articles/${a.id}`,
         name: a.title,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: HOME_FAQ.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
       })),
     },
   ];
@@ -396,6 +430,31 @@ export default async function Home({ searchParams }: HomeProps) {
       <div id="latest-articles" className="scroll-mt-20">
         <ArticleList articles={listArticles} initialSearch={q ?? ""} />
       </div>
+
+      {/* よくある質問（FAQPage構造化データと対応）。
+          Google・AI検索からの引用（GEO）を狙うため、サイトの使い方・運営方針に関する
+          質問に限定し、個別の肌悩みへの医学的回答は扱わない。 */}
+      <section className="max-w-3xl mx-auto my-10 px-4">
+        <h2 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white mb-5 text-center">
+          よくある質問
+        </h2>
+        <div className="space-y-3">
+          {HOME_FAQ.map((item) => (
+            <details
+              key={item.q}
+              className="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-5 py-4"
+            >
+              <summary className="flex cursor-pointer items-start justify-between gap-3 font-bold text-sm text-gray-900 dark:text-white list-none">
+                <span>Q. {item.q}</span>
+                <span className="shrink-0 text-gray-600 dark:text-gray-300 group-open:rotate-45 transition-transform">＋</span>
+              </summary>
+              <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                A. {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
 
       {/* メルマガ登録（記事一覧を読んだ後の見込み客に、リード獲得導線を提示） */}
       <div className="max-w-3xl mx-auto my-8 px-4">

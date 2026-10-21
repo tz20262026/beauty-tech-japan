@@ -5,28 +5,6 @@ import Breadcrumb from "@/components/Breadcrumb";
 const SITE_URL = "https://beauty-tech-japan.vercel.app";
 const PAGE_URL = `${SITE_URL}/guides`;
 
-export const metadata: Metadata = {
-  title: "美容ガイド一覧【全41ガイド】スキンケア成分・メイク・ヘアケアを徹底解説",
-  description:
-    "Beauty Tech Japanの全ガイド記事をカテゴリ別に一覧できるページ。レチノール・ビタミンCなどの成分解説から、メイク・韓国コスメ・ヘアケアまで、知りたいテーマから探せます。無料の肌タイプ診断・更年期セルフチェックもこちらから。",
-  keywords: ["美容ガイド 一覧", "スキンケア 成分 一覧", "美容メディア まとめ", "肌タイプ診断", "更年期 セルフチェック"],
-  alternates: { canonical: PAGE_URL },
-  openGraph: {
-    images: [{ url: `${SITE_URL}/api/og`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
-    title: "美容ガイド一覧【全41ガイド】スキンケア成分・メイク・ヘアケアを徹底解説",
-    description: "成分解説からメイク・韓国コスメ・ヘアケアまで、全ガイドをカテゴリ別に一覧。無料診断ツールもこちら。",
-    type: "website",
-    locale: "ja_JP",
-    url: PAGE_URL,
-  },
-  twitter: {
-    images: [`${SITE_URL}/api/og`],
-    card: "summary_large_image",
-    title: "美容ガイド一覧【全41ガイド】",
-    description: "成分解説からメイク・韓国コスメ・ヘアケアまで、全ガイドをカテゴリ別に一覧できます。",
-  },
-};
-
 interface GuideItem {
   href: string;
   title: string;
@@ -133,6 +111,30 @@ const CATEGORIES: GuideCategory[] = [
 
 const TOTAL_GUIDE_COUNT =
   DIAGNOSIS_TOOLS.length + CATEGORIES.reduce((sum, c) => sum + c.items.length, 0);
+
+// タイトル・説明文のガイド件数はCATEGORIES/DIAGNOSIS_TOOLSから自動算出したTOTAL_GUIDE_COUNTを参照する。
+// 以前は件数を文字列に直書きしていたため、ガイド追加時に本文の件数とズレる不整合が起きていた。
+export const metadata: Metadata = {
+  title: `美容ガイド一覧【全${TOTAL_GUIDE_COUNT}ガイド】スキンケア成分・メイク・ヘアケアを徹底解説`,
+  description:
+    "Beauty Tech Japanの全ガイド記事をカテゴリ別に一覧できるページ。レチノール・ビタミンCなどの成分解説から、メイク・韓国コスメ・ヘアケアまで、知りたいテーマから探せます。無料の肌タイプ診断・更年期セルフチェックもこちらから。",
+  keywords: ["美容ガイド 一覧", "スキンケア 成分 一覧", "美容メディア まとめ", "肌タイプ診断", "更年期 セルフチェック"],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    images: [{ url: `${SITE_URL}/api/og`, width: 1200, height: 630, alt: "Beauty Tech Japan" }],
+    title: `美容ガイド一覧【全${TOTAL_GUIDE_COUNT}ガイド】スキンケア成分・メイク・ヘアケアを徹底解説`,
+    description: "成分解説からメイク・韓国コスメ・ヘアケアまで、全ガイドをカテゴリ別に一覧。無料診断ツールもこちら。",
+    type: "website",
+    locale: "ja_JP",
+    url: PAGE_URL,
+  },
+  twitter: {
+    images: [`${SITE_URL}/api/og`],
+    card: "summary_large_image",
+    title: `美容ガイド一覧【全${TOTAL_GUIDE_COUNT}ガイド】`,
+    description: "成分解説からメイク・韓国コスメ・ヘアケアまで、全ガイドをカテゴリ別に一覧できます。",
+  },
+};
 
 export default function GuidesPage() {
   // CollectionPage + ItemList: 全ガイドをitemListElementとして列挙し、

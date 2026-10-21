@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
+import NewsletterForm from "@/components/NewsletterForm";
 
 // =============================================
 // メタデータ（SEO）
@@ -552,6 +553,7 @@ export default function BeautySupplementsPage() {
       </div>
 
       {/* アフィリエイトセクション */}
+      <NewsletterForm />
       <AffiliateSectionBeauty />
     </div>
   );

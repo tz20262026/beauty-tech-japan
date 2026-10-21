@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://beauty-tech-japan.vercel.app/cosme-ranking" },
@@ -387,6 +388,7 @@ export default function CosmeRankingPage() {
         </section>
 
         {/* アフィリエイト */}
+        <NewsletterForm />
         <AffiliateSectionBeauty />
       </div>
     </main>

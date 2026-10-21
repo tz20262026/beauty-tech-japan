@@ -3,6 +3,7 @@ import Link from "next/link";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "レチノール美容液の選び方・効果・副作用完全ガイド2026年【皮膚科医監修】",
@@ -387,6 +388,7 @@ export default function RetinolGuidePage() {
       </section>
 
       {/* アフィリエイト */}
+      <NewsletterForm />
       <AffiliateSectionBeauty />
     </div>
   );

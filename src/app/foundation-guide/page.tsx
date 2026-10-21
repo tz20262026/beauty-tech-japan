@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
+import NewsletterForm from "@/components/NewsletterForm";
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -494,6 +495,7 @@ export default function FoundationGuidePage() {
           </div>
         </section>
 
+        <NewsletterForm />
         <AffiliateSectionBeauty />
       </div>
     </main>
