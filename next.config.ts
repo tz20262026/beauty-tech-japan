@@ -29,6 +29,22 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // hero.mp4はPC/スマホ用に<video>を2つ同時にマウントして同じファイルを参照しており、
+        // デフォルトのmax-age=0(毎回revalidate)だと2つの並行レンジリクエストがキャッシュ書き込みで
+        // 競合し、Chromeで net::ERR_CACHE_OPERATION_NOT_SUPPORTED が発生していた。
+        // 静止画と同様に変更されないアセットのため長期キャッシュ化して解消する。
+        source: "/hero.mp4",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/hero-poster.jpg",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
         source: "/((?!widget/ingredient.html).*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
