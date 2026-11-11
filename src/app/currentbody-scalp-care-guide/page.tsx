@@ -179,6 +179,25 @@ export default function CurrentBodyScalpCareGuidePage() {
           <p className="text-gray-300 text-xs mt-3">公開日：{PUBLISHED}</p>
         </div>
 
+        {/* 独身の日＆ブラックフライデーセール告知(2026/11/1〜12/7、クーポンFANCBで最大20%OFF) */}
+        <div className="mb-10 bg-gradient-to-r from-pink-900/40 to-blue-900/40 border border-pink-500/30 rounded-xl p-5 text-center">
+          <p className="text-pink-300 text-xs font-bold mb-1">🔥 2026年11月1日〜12月7日 期間限定</p>
+          <p className="text-white font-bold text-base mb-2">独身の日＆ブラックフライデーセール開催中</p>
+          <p className="text-gray-300 text-sm leading-6">
+            クーポンコード<span className="text-white font-bold">「FANCB」</span>で単品商品が20%OFF、セット商品は最大32%OFFに。
+            <br className="hidden sm:block" />
+            公式サイトの決済画面でクーポンコードを入力するだけで適用されます（12月8日以降は通常の10%OFFに戻ります）。
+          </p>
+          <a
+            href={CB_DEVICE_LINK}
+            target="_blank"
+            rel="noopener sponsored"
+            className="inline-block mt-3 bg-pink-500 hover:bg-pink-400 text-white text-sm font-bold px-5 py-2 rounded-lg"
+          >
+            セール価格を見る →
+          </a>
+        </div>
+
         {/* 導入 */}
         <section className="mb-10">
           <p className="text-gray-300 text-sm leading-7">

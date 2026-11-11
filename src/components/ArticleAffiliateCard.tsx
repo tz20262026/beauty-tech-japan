@@ -89,6 +89,20 @@ const AFFILIATES: AffiliateItem[] = [
     ctaText: "text-rose-600",
     tags: ["更年期", "サプリメント"],
   },
+  {
+    // 2026-11-02追加・成果報酬10,000円・2026-09-05承認分の未設置を発見・設置
+    href: "https://px.a8.net/svt/ejp?a8mat=4BACLG+CM9UFM+46BE+BWVTE",
+    emoji: "💆‍♀️",
+    label: "女性用育毛・薄毛ケア",
+    title: "ラミナス",
+    tagline: "特許成分配合｜元神賢太医師が開発した女性用育毛剤",
+    desc: "更年期以降に増えるボリューム不足・薄毛悩みに着目した女性専用育毛剤。医師監修の特許成分で頭皮環境からケアします。",
+    cta: "詳細を見る →",
+    gradient: "from-fuchsia-500 to-pink-600",
+    ctaBg: "bg-white",
+    ctaText: "text-fuchsia-600",
+    tags: ["更年期", "薄毛", "育毛", "ヘアケア"],
+  },
   // 【2026-08-25追加】スキンケア関連タグ(全記事の約4割を占める最多タグ)が
   // これまでAFFILIATESに1件もマッチせず、資格スクール/ダンス等の無関係な広告が
   // ランダム表示されていたため、既存承認済みリンク(AffiliateSectionBeautyで設置済み)を

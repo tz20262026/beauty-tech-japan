@@ -24,6 +24,7 @@ import TableOfContents, { extractHeadings, headingId } from "@/components/TableO
 import ArticleAffiliateCard from "@/components/ArticleAffiliateCard";
 import AffiliateSectionBeauty from "@/components/AffiliateSectionBeauty";
 import InArticleCTA from "@/components/InArticleCTA";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const revalidate = 300;
 
@@ -206,16 +207,6 @@ export default async function ArticlePage({ params }: Props) {
       "@type": "WebPage",
       "@id": articleUrl,
     },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "ホーム", item: siteBase },
-        ...(article.tags[0]
-          ? [{ "@type": "ListItem", position: 2, name: article.tags[0], item: `${siteBase}/tags/${encodeURIComponent(article.tags[0])}` }]
-          : []),
-        { "@type": "ListItem", position: article.tags[0] ? 3 : 2, name: article.title, item: articleUrl },
-      ],
-    },
   };
   const faqItems = extractFaqFromBody(article.body ?? "");
   const faqJsonLd = faqItems.length >= 2
@@ -244,20 +235,18 @@ export default async function ArticlePage({ params }: Props) {
       )}
       <ReadingProgress />
 
-      {/* パンくず */}
-      <nav className="text-xs text-gray-600 dark:text-gray-300 mb-4 flex items-center gap-1.5">
-        <Link href="/" className="hover:text-pink-500 transition-colors">ホーム</Link>
-        <span>/</span>
-        {article.tags[0] && (
-          <>
-            <Link href={`/tags/${encodeURIComponent(article.tags[0])}`} className="hover:text-pink-500 transition-colors">
-              {article.tags[0]}
-            </Link>
-            <span>/</span>
-          </>
-        )}
-        <span className="text-gray-600 dark:text-gray-300 truncate max-w-[200px]">{article.title}</span>
-      </nav>
+      {/* パンくず（構造化データ付き） */}
+      <div className="mb-4">
+        <Breadcrumb
+          items={[
+            { name: "ホーム", href: "/" },
+            ...(article.tags[0]
+              ? [{ name: article.tags[0], href: `/tags/${encodeURIComponent(article.tags[0])}` }]
+              : []),
+            { name: article.title },
+          ]}
+        />
+      </div>
 
       <article className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
         <div className="relative w-full h-52 sm:h-72 overflow-hidden">
