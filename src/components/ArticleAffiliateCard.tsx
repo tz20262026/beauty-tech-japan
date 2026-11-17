@@ -134,19 +134,7 @@ const AFFILIATES: AffiliateItem[] = [
     tags: ["ヘアケア", "スカルプケア", "ダメージケア"],
   },
   {
-    href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+B2B0HE+4P4W+C465T",
-    emoji: "💊",
-    label: "エイジングケア・サプリ",
-    title: "GAAH",
-    tagline: "医療従事者が推奨するNMNサプリ No.1",
-    desc: "エイジングケア・美容意識の高い読者に響くNMNサプリメント。医療従事者推奨という信頼性の高い訴求ポイント。",
-    cta: "詳細を見る →",
-    gradient: "from-lime-500 to-green-600",
-    ctaBg: "bg-white",
-    ctaText: "text-green-600",
-    tags: ["エイジングケア", "アンチエイジング", "サプリメント", "抗酸化", "インナービューティー", "インナーケア"],
-  },
-  {
+    // 2026-11-17: GAAH(NMNサプリ)はA8でプログラム終了(2026-10-31)・無効クリック発生のため削除済み（旧a8mat=4B82L5+B2B0HE+4P4W+C465T）
     href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+AQZRZM+54TM+5YRHE",
     emoji: "💡",
     label: "美容機器",

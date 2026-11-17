@@ -46,17 +46,7 @@ const items = [
     color: "#c026d3",
   },
   {
-    // 2026-07-17追加・成果報酬10,000円・医療従事者推奨のNMNサプリ
-    href: "https://px.a8.net/svt/ejp?a8mat=4B82L5+B2B0HE+4P4W+C465T",
-    badge: "💊 NMNサプリ・高単価",
-    badgeColor: "#16a34a",
-    title: "GAAH",
-    tagline: "医療従事者が推奨するNMNサプリ No.1",
-    desc: "エイジングケア・美容意識の高い読者に響くNMNサプリメント。医療従事者推奨という信頼性の高い訴求ポイント。",
-    cta: "詳細を見る →",
-    color: "#16a34a",
-  },
-  {
+    // 2026-11-17: GAAH(NMNサプリ)はA8でプログラム終了(2026-10-31)・無効クリック発生のため削除
     // 2026-07-13追加・成果報酬10,000円(セミナー参加+モニター申込)
     href: "https://px.a8.net/svt/ejp?a8mat=4B7QWS+6TW1MA+58KC+5YJRM",
     badge: "💝 無料で美容体験",
