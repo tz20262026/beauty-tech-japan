@@ -71,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${BASE_URL}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
       url: `${BASE_URL}/bookmarks`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

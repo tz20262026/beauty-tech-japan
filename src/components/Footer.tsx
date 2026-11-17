@@ -196,6 +196,9 @@ export default function Footer() {
                 <Link href="/about" className="text-xs hover:text-pink-400 transition-colors">About</Link>
               </li>
               <li>
+                <Link href="/privacy" className="text-xs hover:text-pink-400 transition-colors">プライバシーポリシー</Link>
+              </li>
+              <li>
                 <Link href="/rss" className="text-xs hover:text-pink-400 transition-colors">
                   RSSフィード
                 </Link>
