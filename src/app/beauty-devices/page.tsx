@@ -268,7 +268,7 @@ export default function BeautyDevicesPage() {
           <p className="text-white/60 text-base leading-relaxed mb-4">
             EMS・RF（ラジオ波）・LED・超音波・家庭用ハイフなど、美顔器の種類は多種多様。「どれを買えばいいかわからない」という方向けに、種類別の効果・科学的根拠・使い方・予算を完全比較します。
           </p>
-          <div className="flex items-center gap-4 text-sm text-white/40">
+          <div className="flex items-center gap-4 text-sm text-white/55">
             <span>📅 2026年6月30日</span>
             <span>⏱️ 読了時間：約12分</span>
           </div>
@@ -296,7 +296,7 @@ export default function BeautyDevicesPage() {
                   <span className="text-3xl">{device.icon}</span>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 flex-wrap mb-1">
-                      <span className="text-xs font-bold text-white/40">第{index + 1}位</span>
+                      <span className="text-xs font-bold text-white/55">第{index + 1}位</span>
                       <h3 className="font-black text-white text-xl">{device.name}</h3>
                       <span className="text-yellow-400 text-sm">{device.scienceScore}</span>
                     </div>
@@ -307,7 +307,7 @@ export default function BeautyDevicesPage() {
                       >
                         {device.priceRange}
                       </span>
-                      <span className="text-xs text-white/40">{device.frequency}</span>
+                      <span className="text-xs text-white/55">{device.frequency}</span>
                     </div>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function BeautyDevicesPage() {
                 {/* ボディ */}
                 <div className="px-6 py-5 space-y-4">
                   <div>
-                    <p className="text-xs text-white/40 mb-1 font-bold">主な効果</p>
+                    <p className="text-xs text-white/55 mb-1 font-bold">主な効果</p>
                     <p
                       className="text-sm font-bold"
                       style={{ color: device.color }}
@@ -325,12 +325,12 @@ export default function BeautyDevicesPage() {
                   </div>
 
                   <div>
-                    <p className="text-xs text-white/40 mb-1 font-bold">仕組み</p>
+                    <p className="text-xs text-white/55 mb-1 font-bold">仕組み</p>
                     <p className="text-sm text-white/65 leading-relaxed">{device.howItWorks}</p>
                   </div>
 
                   <div>
-                    <p className="text-xs text-white/40 mb-2 font-bold">こんな方におすすめ</p>
+                    <p className="text-xs text-white/55 mb-2 font-bold">こんな方におすすめ</p>
                     <ul className="space-y-1">
                       {device.bestFor.map((item) => (
                         <li key={item} className="flex items-start gap-2 text-sm text-white/65">
@@ -423,7 +423,7 @@ export default function BeautyDevicesPage() {
             {[
               {
                 budget: "〜5,000円",
-                color: "#6b7280",
+                color: "#9ca3af",
                 recommendation: "超音波美顔器（浸透促進タイプ）・イオン導入器",
                 note: "まずは手軽に試したい方向け。美容液の浸透を高める機器から始めるのが正解。",
               },

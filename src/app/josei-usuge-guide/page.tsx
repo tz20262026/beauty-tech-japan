@@ -147,6 +147,13 @@ export default function JoseiUsugeGuidePage() {
           >
             最新記事を読む →
           </Link>
+          <Link
+            href="/beauty-devices"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #8b5cf6, #06b6d4)" }}
+          >
+            美顔器・美容機器ランキング →
+          </Link>
         </div>
       </section>
 

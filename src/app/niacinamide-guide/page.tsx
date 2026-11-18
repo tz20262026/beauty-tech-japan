@@ -359,6 +359,13 @@ export default function NiacinamideGuidePage() {
           >
             毛穴ケアガイド →
           </Link>
+          <Link
+            href="/beauty-supplements"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #ec4899, #f59e0b)" }}
+          >
+            美容サプリガイド →
+          </Link>
         </div>
       </section>
 

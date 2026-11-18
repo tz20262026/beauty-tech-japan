@@ -384,6 +384,13 @@ export default function RetinolGuidePage() {
           >
             美容液選び方ガイド →
           </Link>
+          <Link
+            href="/beauty-supplements"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #10b981, #06b6d4)" }}
+          >
+            美容サプリガイド →
+          </Link>
         </div>
       </section>
 
